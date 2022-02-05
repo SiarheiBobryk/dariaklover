@@ -3,18 +3,23 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
+import { ReactComponent as Logo } from '../../images/logo.svg';
+
+function FourLeafClover(props: SvgIconProps) {
+  return (
+    <SvgIcon {...props}>
+      <Logo />
+    </SvgIcon>
+  );
+}
 
 function TopBar() {
   return (
     <Box>
       <AppBar position="static">
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          {/* App menu */}
-          <IconButton size="large" edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
+          <FourLeafClover sx={{ fontSize: 32 }} />
           {/* Right block */}
           <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2 }}>
             <Typography variant="h6">Главная</Typography>
