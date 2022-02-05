@@ -24,6 +24,12 @@
     "@babel/plugin-syntax-flow": "7.16.7",
     "@babel/plugin-transform-react-jsx": "7.16.7",
     "autoprefixer": "10.4.2",
-    "postcss": "8.4.6"
+    "postcss": "8.4.6",
+    "prettier": "2.5.1"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "all"
   }
 }
