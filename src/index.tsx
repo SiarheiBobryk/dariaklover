@@ -1,5 +1,6 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import AppConfigProvider from './providers/AppConfigProvider';
 import ColorModeProvider from './providers/ColorModeProvider';
@@ -17,7 +18,9 @@ ReactDOM.render(
   <AppConfigProvider>
     <ColorModeProvider>
       <ThemeProvider>
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </ThemeProvider>
     </ColorModeProvider>
   </AppConfigProvider>,
