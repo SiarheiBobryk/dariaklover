@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { Link as RouterLink } from 'react-router-dom';
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,6 +14,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import MenuIcon from '@mui/icons-material/Menu';
 import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
+import Button from '@mui/material/Button';
 
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
 import { ReactComponent as Logo } from '../../images/logo.svg';
@@ -91,9 +94,9 @@ function TopBar() {
               {pages.map(({ to, label }) => {
                 return (
                   <MenuItem key={to} onClick={handleCloseNavMenu}>
-                    <Link color="inherit" href={to} underline="hover">
+                    <Button key={to} to={to} component={RouterLink} variant="text" color="inherit">
                       {label}
-                    </Link>
+                    </Button>
                   </MenuItem>
                 );
               })}
@@ -104,9 +107,9 @@ function TopBar() {
           <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 1 }}>
             {pages.map(({ to, label }) => {
               return (
-                <Link key={to} color="inherit" href={to} underline="hover">
+                <Button key={to} to={to} component={RouterLink} variant="text" color="inherit">
                   {label}
-                </Link>
+                </Button>
               );
             })}
           </Box>
