@@ -13,11 +13,10 @@ import { useTheme } from '@mui/material/styles';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import MenuIcon from '@mui/icons-material/Menu';
-import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
 import Button from '@mui/material/Button';
 
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
-import { ReactComponent as Logo } from '../../images/logo.svg';
+import { FourLeafClover } from '../../icons';
 
 const pages = [
   {
@@ -33,14 +32,6 @@ const pages = [
     label: 'Архив',
   },
 ];
-
-function FourLeafClover(props: SvgIconProps) {
-  return (
-    <SvgIcon {...props}>
-      <Logo />
-    </SvgIcon>
-  );
-}
 
 function TopBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
