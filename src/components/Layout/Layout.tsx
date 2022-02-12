@@ -19,6 +19,7 @@ function Layout(props: LayoutProps) {
       <Container maxWidth="md">
         <Box sx={{ py: 7 }}>{children}</Box>
       </Container>
+      {/* TODO: Add the site version block here */}
       <Copyright />
     </Box>
   );
