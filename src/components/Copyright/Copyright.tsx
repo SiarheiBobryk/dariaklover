@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
+    <Typography sx={{ my: 2 }} variant="body2" color="text.secondary" align="center">
       Дарья Кловер {new Date().getFullYear()}
     </Typography>
   );
