@@ -1,3 +1,3 @@
-export { default as Copyright } from './Copyright';
+export { default as Footer } from './Footer';
 export { default as TopBar } from './TopBar';
 export { default as Layout } from './Layout';

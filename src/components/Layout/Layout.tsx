@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
 import TopBar from '../TopBar';
-import Copyright from '../Copyright';
+import Footer from '../Footer';
 
 export interface LayoutProps {
   children: React.ReactNode;
@@ -20,7 +20,7 @@ function Layout(props: LayoutProps) {
         <Box sx={{ py: 7 }}>{children}</Box>
       </Container>
       {/* TODO: Add the site version block here */}
-      <Copyright />
+      <Footer />
     </Box>
   );
 }
