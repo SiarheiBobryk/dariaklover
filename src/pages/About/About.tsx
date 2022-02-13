@@ -44,8 +44,10 @@ function About() {
       </Typography>
       <Typography>
         Познакомиться со мной получше вы можете через мой Инстаграм{' '}
-        <Link href="https://www.instagram.com/daria.klover">@daria.klover</Link> аккаунт. Там я время от времени
-        выкладываю сториз и посты о себе, своих осознаниях и важных для меня событиях.
+        <Link href="https://www.instagram.com/daria.klover" target="_blank">
+          @daria.klover
+        </Link>{' '}
+        аккаунт. Там я время от времени выкладываю сториз и посты о себе, своих осознаниях и важных для меня событиях.
       </Typography>
       <Typography>А данный сайт - это площадка для профессионального творчества.</Typography>
       <Typography>Добро пожаловать в гости!</Typography>
