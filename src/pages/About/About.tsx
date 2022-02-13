@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
@@ -7,6 +8,9 @@ import Link from '@mui/material/Link';
 function About() {
   return (
     <>
+      <Helmet>
+        <title>Обо мне</title>
+      </Helmet>
       <Typography variant="h4" component="h1" gutterBottom>
         Обо мне
       </Typography>
