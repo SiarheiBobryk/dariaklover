@@ -22,7 +22,13 @@ function createThemeOptions(mode: PaletteMode): ThemeOptions {
         main: deepOrange[200],
       },
     },
-    // ...components
+    components: {
+      MuiTypography: {
+        defaultProps: {
+          gutterBottom: true,
+        },
+      },
+    },
     // ...typography
   };
 }
