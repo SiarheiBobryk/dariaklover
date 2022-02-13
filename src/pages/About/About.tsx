@@ -10,9 +10,12 @@ function About() {
 
   return (
     <>
+      {/* Metadata */}
       <Helmet>
         <title>{title}</title>
       </Helmet>
+
+      {/* Page content */}
       <Typography variant="h4" component="h1">
         {title}
       </Typography>
