@@ -1,6 +1,5 @@
 import * as React from 'react';
-
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -36,7 +35,9 @@ const pages = [
 function TopBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const theme = useTheme();
+
   const colorMode: ColorModeContextValue = React.useContext(ColorModeContext);
+  const { pathname } = useLocation();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -85,7 +86,24 @@ function TopBar() {
               {pages.map(({ to, label }) => {
                 return (
                   <MenuItem key={to} onClick={handleCloseNavMenu}>
-                    <Button key={to} to={to} component={RouterLink} variant="text" color="inherit">
+                    {/* TODO: Encapsulate it */}
+                    <Button
+                      sx={{
+                        ...(pathname === to &&
+                          theme.palette.mode === 'light' && {
+                            backgroundColor: theme.palette.grey[100],
+                          }),
+                        ...(pathname === to &&
+                          theme.palette.mode === 'dark' && {
+                            backgroundColor: theme.palette.grey[900],
+                          }),
+                      }}
+                      key={to}
+                      to={to}
+                      component={RouterLink}
+                      variant="text"
+                      color="inherit"
+                    >
                       {label}
                     </Button>
                   </MenuItem>
@@ -98,7 +116,23 @@ function TopBar() {
           <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 1 }}>
             {pages.map(({ to, label }) => {
               return (
-                <Button key={to} to={to} component={RouterLink} variant="text" color="inherit">
+                <Button
+                  sx={{
+                    ...(pathname === to &&
+                      theme.palette.mode === 'light' && {
+                        backgroundColor: theme.palette.grey[100],
+                      }),
+                    ...(pathname === to &&
+                      theme.palette.mode === 'dark' && {
+                        backgroundColor: theme.palette.grey[900],
+                      }),
+                  }}
+                  key={to}
+                  to={to}
+                  component={RouterLink}
+                  variant="text"
+                  color="inherit"
+                >
                   {label}
                 </Button>
               );
