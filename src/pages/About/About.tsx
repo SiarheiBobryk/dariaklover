@@ -6,13 +6,15 @@ import Link from '@mui/material/Link';
 
 // TODO: It would be great to add a pic here
 function About() {
+  const title = 'Обо мне';
+
   return (
     <>
       <Helmet>
-        <title>Обо мне</title>
+        <title>{title}</title>
       </Helmet>
       <Typography variant="h4" component="h1">
-        Обо мне
+        {title}
       </Typography>
       <Typography>Привет! Я - Дарья Кловер.</Typography>
       <Typography>
