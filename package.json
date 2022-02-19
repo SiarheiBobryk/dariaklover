@@ -84,8 +84,8 @@
     "reportUnusedDisableDirectives": true,
     "settings": {},
     "rules": {
-      "import/no-extraneous-dependencies": "off",
       "prettier/prettier": "error",
+      "import/no-extraneous-dependencies": "off",
       "max-len": [
         "error",
         {
