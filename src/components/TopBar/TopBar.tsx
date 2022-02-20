@@ -26,10 +26,11 @@ const pages = [
     to: '/about',
     label: 'Обо мне',
   },
-  {
-    to: '/archive',
-    label: 'Архив',
-  },
+  // TODO: Uncomment it when we'll have something to archive
+  // {
+  //   to: '/archive',
+  //   label: 'Архив',
+  // },
 ];
 
 function TopBar() {
