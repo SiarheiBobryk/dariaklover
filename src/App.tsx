@@ -22,6 +22,7 @@ function App() {
       </Helmet>
       <Layout>
         <Routes>
+          {/* TODO: Use lazy modules here */}
           <Route path="/about" element={<About />} />
           <Route path="/archive" element={<Archive />} />
           <Route path="/" element={<Main />} />
