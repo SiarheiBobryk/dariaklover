@@ -14,6 +14,7 @@ interface ReferenceData {
   title: string;
 }
 
+// TODO: Double-check the possibility to reveal a blurred photo ❗️
 const referenceData: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_1125.png`,
@@ -117,7 +118,7 @@ const referenceData: ReferenceData[] = [
       ${PUBLIC_PATH}004/reference_004_l7vi5b_c_scale,w_1087.png 1087w,
       ${PUBLIC_PATH}004/reference_004_l7vi5b_c_scale,w_1125.png 1125w`,
     alt: 'Отзыв 4',
-    title: 'Помогаю освоить полезные привычки',
+    title: 'Помогаю в освоении полезных привычек',
   },
   {
     src: `${PUBLIC_PATH}005/reference_005_rtxopi_c_scale,w_1125.png`,
