@@ -222,7 +222,7 @@ const referenceData: ReferenceData[] = [
       ${PUBLIC_PATH}008/reference_008_g9udvj_c_scale,w_1083.png 1083w,
       ${PUBLIC_PATH}008/reference_008_g9udvj_c_scale,w_1125.png 1125w`,
     alt: 'Отзыв 8',
-    title: 'TODO: Add the name here',
+    title: 'Помогаю понять себя и свое тело',
   },
   {
     src: `${PUBLIC_PATH}009/reference_009_vzitye_c_scale,w_1125.png`,
