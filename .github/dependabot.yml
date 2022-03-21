@@ -11,3 +11,4 @@ updates:
     # Raise all npm pull requests with an assignee
     assignees:
       - 'SiarheiBobryk'
+    open-pull-requests-limit: 10
