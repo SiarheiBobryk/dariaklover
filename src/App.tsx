@@ -21,14 +21,14 @@ const Main = React.lazy(function lazyLoadMain() {
   return import('./pages/Main');
 });
 
-// TODO: Remove it after testing
+// TODO: Uncomment if for testing the Fallback component
 // const Main = React.lazy(() => {
 //   return import('./pages/Main').then((module) => {
 //     return new Promise((resolve) => {
 //       setTimeout(() => {
 //         // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 //         resolve(module as any);
-//       }, 2000);
+//       }, 2000000);
 //     });
 //   });
 // });
