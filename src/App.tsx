@@ -3,9 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import { Theme, useTheme } from '@mui/material/styles';
-import LinearProgress from '@mui/material/LinearProgress';
 
 import Layout from './components/Layout';
+import Fallback from './components/Fallback';
 
 import { AppConfigContext, Config } from './providers/AppConfigProvider';
 
@@ -17,7 +17,6 @@ const Archive = React.lazy(function lazyLoadArchive() {
   return import('./pages/Archive');
 });
 
-// TODO: Uncomment it when I've done testing
 const Main = React.lazy(function lazyLoadMain() {
   return import('./pages/Main');
 });
@@ -40,8 +39,7 @@ interface SuspenseProps {
 
 function Suspense(props: SuspenseProps) {
   const { children } = props;
-  // TODO: Add the appropriate fallback component here
-  return <React.Suspense fallback={<LinearProgress />}>{children}</React.Suspense>;
+  return <React.Suspense fallback={<Fallback />}>{children}</React.Suspense>;
 }
 
 function App() {
@@ -56,15 +54,15 @@ function App() {
         <meta name="keywords" content={keywords} />
         <meta name="theme-color" content={theme.palette.background.default} />
       </Helmet>
-      <Suspense>
-        <Layout>
+      <Layout>
+        <Suspense>
           <Routes>
             <Route path="/about" element={<About />} />
             <Route path="/archive" element={<Archive />} />
             <Route path="/" element={<Main />} />
           </Routes>
-        </Layout>
-      </Suspense>
+        </Suspense>
+      </Layout>
     </>
   );
 }
