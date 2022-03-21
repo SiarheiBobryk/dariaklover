@@ -23,7 +23,7 @@
     "lint": "eslint . --ext .js,.ts,.tsx --max-warnings 0"
   },
   "devDependencies": {
-    "@babel/core": "7.17.7",
+    "@babel/core": "7.17.8",
     "@babel/plugin-syntax-flow": "7.16.7",
     "@babel/plugin-transform-react-jsx": "7.17.3",
     "@babel/preset-env": "7.16.11",
