@@ -14,7 +14,7 @@ function Main() {
       </Helmet>
 
       {/* Introduction block */}
-      <Introduction component="h2" variant="h5" />
+      <Introduction />
 
       {/* References block */}
       <Typography component="h2" variant="h5">
