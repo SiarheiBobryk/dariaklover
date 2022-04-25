@@ -3,37 +3,26 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
+import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
+
 export const aboutConstants = {
   title: 'Обо мне',
   spell: `ˈkləʊvər`,
-  instagramLink: {
-    // TODO: Move the urls into a global constants
-    props: {
-      href: 'https://www.instagram.com/daria.klover',
-      target: '_blank',
-    },
-    children: '@daria.klover',
-  },
 };
 
-function LinkWithSpaces() {
-  return (
-    <>
-      {' '}
-      <Link {...aboutConstants.instagramLink.props}>{aboutConstants.instagramLink.children}</Link>{' '}
-    </>
-  );
-}
-
 function About() {
+  const {
+    instagram: { href: instagramHref, id: instagramId },
+    fullName,
+  }: Config = React.useContext(AppConfigContext);
+
   return (
     <>
       {/* TODO: encapsulate it into a separate component */}
       <Typography component="h2" variant="h5">
         {aboutConstants.title}
       </Typography>
-      {/* TODO: Use a constant here */}
-      <Typography>Привет! Я - Дарья Кловер.</Typography>
+      <Typography>Привет! Я - {fullName}.</Typography>
       <Typography>
         Кловер - мой псевдоним. От английского <Typography component="i">{aboutConstants.spell}</Typography> - клевер 🍀
       </Typography>
@@ -57,9 +46,11 @@ function About() {
         своим здоровьем.
       </Typography>
       <Typography>
-        Познакомиться со мной получше вы можете через мой Инстаграм
-        <LinkWithSpaces /> аккаунт. Там я время от времени выкладываю сториз и посты о себе, своих осознаниях и важных
-        для меня событиях.
+        Познакомиться со мной получше вы можете через мой Инстаграм{' '}
+        <Link href={instagramHref} target="_blank">
+          {instagramId}
+        </Link>{' '}
+        аккаунт. Там я время от времени выкладываю сториз и посты о себе, своих осознаниях и важных для меня событиях.
       </Typography>
       <Typography>А данный сайт - это площадка для профессионального творчества.</Typography>
       <Typography>Добро пожаловать в гости!</Typography>

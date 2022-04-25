@@ -10,7 +10,9 @@ Array [
   <p
     className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
   >
-    Привет! Я - Дарья Кловер.
+    Привет! Я - 
+    Дарья Кловер
+    .
   </p>,
   <p
     className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
@@ -58,7 +60,7 @@ Array [
       @daria.klover
     </a>
      
-     аккаунт. Там я время от времени выкладываю сториз и посты о себе, своих осознаниях и важных для меня событиях.
+    аккаунт. Там я время от времени выкладываю сториз и посты о себе, своих осознаниях и важных для меня событиях.
   </p>,
   <p
     className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
