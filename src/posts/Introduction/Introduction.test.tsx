@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import Introduction from './Introduction';
 
 describe('<Introduction />', () => {
-  describe('snapshoting', () => {
+  describe('snapshotting', () => {
     it('renders correctly', () => {
       // TODO: Investigate the lint violations below
       const introduction = renderer.create(<Introduction />).toJSON();
