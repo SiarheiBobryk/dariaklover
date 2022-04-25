@@ -7,7 +7,6 @@ import Introduction from './Introduction';
 describe('<Introduction />', () => {
   describe('snapshotting', () => {
     it('renders correctly', () => {
-      // TODO: Investigate the lint violations below
       const introduction = renderer.create(<Introduction />).toJSON();
       expect(introduction).toMatchSnapshot();
     });
