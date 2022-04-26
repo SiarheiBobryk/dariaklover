@@ -1,25 +1,15 @@
 import * as React from 'react';
 
-import { OverridableStringUnion } from '@mui/types';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-// eslint-disable-next-line no-restricted-imports
-import { Variant } from '@mui/material/styles/createTypography';
 
-interface IntroductionProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  component?: React.ElementType<any>;
-  variant?: OverridableStringUnion<Variant | 'inherit'>;
-}
+import Heading from '../../components/Heading';
 
-function Introduction(props: IntroductionProps) {
-  const { component = 'h2', variant = 'h5' } = props;
+function Introduction() {
   return (
     <>
-      <Typography component={component} variant={variant}>
-        Кто я и что я делаю
-      </Typography>
+      <Heading>Кто я и что я делаю</Heading>
       <Typography>Всем привет, я - Дарья Кловер!</Typography>
       <Typography>
         Я прохожу обучение в{' '}

@@ -2,18 +2,30 @@ import * as React from 'react';
 import { render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 
+import { typographyClasses } from '@mui/material/Typography';
+
 import About, { aboutConstants } from './About';
 import { config } from '../../providers/AppConfigProvider';
 
 describe('<About />', () => {
   describe('snapshotting', () => {
-    it('renders correctly', () => {
+    it('should render correctly', () => {
       const about = renderer.create(<About />).toJSON();
       expect(about).toMatchSnapshot();
     });
   });
 
   describe('Elements inspection', () => {
+    it('should have the `h2` HTML element as heading', () => {
+      render(<About />);
+      expect(document.querySelector('h2')).toBeInTheDocument();
+    });
+
+    it('should have the CSS classes from `h5` Typography variant by default', () => {
+      render(<About />);
+      expect(document.querySelector('h2')).toHaveClass(typographyClasses.h5);
+    });
+
     it('should have the right constants', () => {
       render(<About />);
       expect(document.querySelector('h2')).toHaveTextContent(aboutConstants.title);
@@ -23,12 +35,11 @@ describe('<About />', () => {
     it('should have the right `a` element with the right attributes', () => {
       render(<About />);
       const a = document.querySelector('a');
-
       expect(a).toHaveTextContent(config.instagram.id);
       expect(a).toHaveAttribute('href', config.instagram.href);
       expect(a).toHaveAttribute('target', '_blank');
     });
 
-    // TODO: find our how to check the space char between the link here and for other component 🤔
+    // TODO: find out how to check the space char between the link here and for other component 🤔
   });
 });
