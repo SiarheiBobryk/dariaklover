@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Paragraph /> snapshotting should render correctly with a content 1`] = `
+<p
+  className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+>
+  Lorem Ipsulum
+</p>
+`;
+
+exports[`<Paragraph /> snapshotting should render correctly without a content 1`] = `
+<p
+  className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+/>
+`;
