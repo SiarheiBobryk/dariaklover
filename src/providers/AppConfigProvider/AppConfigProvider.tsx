@@ -3,6 +3,7 @@ import * as React from 'react';
 import { PaletteMode } from '@mui/material';
 
 export interface Config {
+  fullName: string;
   title: string;
   url: string;
   description: string;
@@ -10,9 +11,14 @@ export interface Config {
   language: string;
   pageNameBase: string;
   colorModeDefault: PaletteMode;
+  instagram: {
+    id: string;
+    href: string;
+  };
 }
 
 export const config: Config = {
+  fullName: 'Дарья Кловер',
   title: 'Дарья Кловер - Специалист и коуч по здоровью',
   url: 'https://dariaklover.health',
   description:
@@ -22,6 +28,10 @@ export const config: Config = {
   language: 'ru',
   pageNameBase: 'Дарья Кловер',
   colorModeDefault: 'light',
+  instagram: {
+    id: '@daria.klover',
+    href: 'https://www.instagram.com/daria.klover',
+  },
 };
 
 export const AppConfigContext = React.createContext<Config>(config);
