@@ -1,4 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn lint && yarn format
+# NOTE: Linting and formatting checks have been moved to GitHub CI (workflows)
+# TODO: Find out what to do with husky
+# yarn lint && yarn format
