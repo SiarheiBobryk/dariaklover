@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Typography from '@mui/material/Typography';
-
+import Heading from '../../components/Heading';
 import References from '../../components/References';
 import Introduction from '../../posts/Introduction/Introduction';
 
@@ -17,9 +16,7 @@ function Main() {
       <Introduction />
 
       {/* References block */}
-      <Typography component="h2" variant="h5">
-        Отзывы клиентов
-      </Typography>
+      <Heading>Отзывы клиентов</Heading>
       <References />
     </>
   );
