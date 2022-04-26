@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
+import Heading from '../../components/Heading';
 
 export const aboutConstants = {
   title: 'Обо мне',
@@ -18,10 +19,7 @@ function About() {
 
   return (
     <>
-      {/* TODO: encapsulate it into a separate component */}
-      <Typography component="h2" variant="h5">
-        {aboutConstants.title}
-      </Typography>
+      <Heading>{aboutConstants.title}</Heading>
       <Typography>Привет! Я - {fullName}.</Typography>
       <Typography>
         Кловер - мой псевдоним. От английского <Typography component="i">{aboutConstants.spell}</Typography> - клевер 🍀

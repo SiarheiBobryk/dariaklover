@@ -2,20 +2,27 @@ import * as React from 'react';
 import { render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 
+import { typographyClasses } from '@mui/material/Typography';
+
 import Introduction from './Introduction';
 
 describe('<Introduction />', () => {
   describe('snapshotting', () => {
-    it('renders correctly', () => {
+    it('should render correctly', () => {
       const introduction = renderer.create(<Introduction />).toJSON();
       expect(introduction).toMatchSnapshot();
     });
   });
 
   describe('Elements inspection', () => {
-    it('should be the `h2` element', () => {
+    it('should have the `h2` HTML element as heading', () => {
       render(<Introduction />);
       expect(document.querySelector('h2')).toBeInTheDocument();
+    });
+
+    it('should have the CSS classes from `h5` Typography variant by default', () => {
+      render(<Introduction />);
+      expect(document.querySelector('h2')).toHaveClass(typographyClasses.h5);
     });
 
     it('should have a link with the right attributes', () => {
