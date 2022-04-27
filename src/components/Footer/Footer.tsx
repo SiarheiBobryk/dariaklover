@@ -6,31 +6,36 @@ import Box from '@mui/material/Box';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
 
+import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
+import packageJson from '../../../package.json';
+
 function Footer() {
+  const {
+    instagram: { href: instagramHref, label: instagramLabel },
+    telegram: { href: telegramHref, label: telegramLabel },
+    fullName,
+  }: Config = React.useContext(AppConfigContext);
+
+  const iconButtonA11yProps = {
+    rel: 'noopener',
+    target: '_blank',
+  };
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1 }}>
       <Box>
-        <IconButton
-          aria-label="Инстаграм Дарьи"
-          href="https://www.instagram.com/daria.klover"
-          rel="noopener"
-          target="_blank"
-          color="inherit"
-        >
+        <IconButton aria-label={instagramLabel} href={instagramHref} color="inherit" {...iconButtonA11yProps}>
           <InstagramIcon />
         </IconButton>
-        <IconButton
-          aria-label="Телеграм Дарьи"
-          href="https://t.me/dariaklover"
-          rel="noopener"
-          target="_blank"
-          color="inherit"
-        >
+        <IconButton aria-label={telegramLabel} href={telegramHref} color="inherit" {...iconButtonA11yProps}>
           <TelegramIcon />
         </IconButton>
       </Box>
       <Typography variant="body2" color="text.secondary" align="center">
-        Дарья Кловер {new Date().getFullYear()}
+        {fullName} {new Date().getFullYear()}
+      </Typography>
+      <Typography variant="body2" color="text.secondary" align="center">
+        v.{packageJson.version}
       </Typography>
     </Box>
   );
