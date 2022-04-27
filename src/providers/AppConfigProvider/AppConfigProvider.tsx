@@ -14,6 +14,12 @@ export interface Config {
   instagram: {
     id: string;
     href: string;
+    label: string;
+  };
+  telegram: {
+    id: string;
+    href: string;
+    label: string;
   };
 }
 
@@ -31,6 +37,12 @@ export const config: Config = {
   instagram: {
     id: '@daria.klover',
     href: 'https://www.instagram.com/daria.klover',
+    label: 'Инстаграм Дарьи',
+  },
+  telegram: {
+    id: 'dariaklower',
+    href: 'https://t.me/dariaklover',
+    label: 'Телеграм Дарьи',
   },
 };
 
