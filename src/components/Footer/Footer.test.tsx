@@ -1,13 +1,24 @@
 import * as React from 'react';
+
 import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import Footer, { iconButtonA11yProps } from './Footer';
 import { config } from '../../providers/AppConfigProvider';
 import packageJson from '../../../package.json';
 
+expect.extend(toHaveNoViolations);
+
 describe('<Footer />', () => {
-  // TODO: Setup a11y testing by axe
+  describe('a11y', () => {
+    it('should match a11y standards', async () => {
+      const { container } = render(<Footer />);
+      const results = await axe(container);
+      expect(results).toHaveNoViolations();
+    });
+  });
+
   describe('snapshotting', () => {
     it('should render correctly', () => {
       // TODO: Add types for all test files
