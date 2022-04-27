@@ -1,13 +1,25 @@
 import * as React from 'react';
+
 import { render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import { typographyClasses } from '@mui/material/Typography';
 
 import About, { aboutConstants } from './About';
 import { config } from '../../providers/AppConfigProvider';
 
+expect.extend(toHaveNoViolations);
+
 describe('<About />', () => {
+  describe('a11y', () => {
+    it('should match a11y standards', async () => {
+      const { container } = render(<About />);
+      const results = await axe(container);
+      expect(results).toHaveNoViolations();
+    });
+  });
+
   describe('snapshotting', () => {
     it('should render correctly', () => {
       const about = renderer.create(<About />).toJSON();

@@ -1,12 +1,24 @@
 import * as React from 'react';
+
 import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import { typographyClasses } from '@mui/material/Typography';
 
 import Paragraph from './Paragraph';
 
+expect.extend(toHaveNoViolations);
+
 describe('<Paragraph />', () => {
+  describe('a11y', () => {
+    it('should match a11y standards', async () => {
+      const { container } = render(<Paragraph>Lorem Imsulum</Paragraph>);
+      const results = await axe(container);
+      expect(results).toHaveNoViolations();
+    });
+  });
+
   describe('snapshotting', () => {
     it('should render correctly without a content', () => {
       const paragraph = renderer.create(<Paragraph />).toJSON();

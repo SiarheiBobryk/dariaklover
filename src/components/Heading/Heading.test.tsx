@@ -1,12 +1,24 @@
 import * as React from 'react';
+
 import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import { typographyClasses } from '@mui/material/Typography';
 
 import Heading from './Heading';
 
+expect.extend(toHaveNoViolations);
+
 describe('<Heading />', () => {
+  describe('a11y', () => {
+    it('should match a11y standards', async () => {
+      const { container } = render(<Heading>Lorem Ipsulum</Heading>);
+      const results = await axe(container);
+      expect(results).toHaveNoViolations();
+    });
+  });
+
   describe('snapshotting', () => {
     it('should render correctly without a content', () => {
       const heading = renderer.create(<Heading />).toJSON();
