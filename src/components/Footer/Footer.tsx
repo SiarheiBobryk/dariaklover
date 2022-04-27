@@ -9,20 +9,25 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import packageJson from '../../../package.json';
 
-function Footer() {
+export const iconButtonA11yProps = {
+  rel: 'noopener',
+  target: '_blank',
+};
+
+interface FooterProps {
+  // TODO: Add `data-testid` for all components
+  'data-testid'?: string;
+}
+
+function Footer(props: FooterProps) {
   const {
     instagram: { href: instagramHref, label: instagramLabel },
     telegram: { href: telegramHref, label: telegramLabel },
     fullName,
   }: Config = React.useContext(AppConfigContext);
 
-  const iconButtonA11yProps = {
-    rel: 'noopener',
-    target: '_blank',
-  };
-
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1 }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1 }} {...props}>
       <Box>
         <IconButton aria-label={instagramLabel} href={instagramHref} color="inherit" {...iconButtonA11yProps}>
           <InstagramIcon />
@@ -31,10 +36,11 @@ function Footer() {
           <TelegramIcon />
         </IconButton>
       </Box>
-      <Typography variant="body2" color="text.secondary" align="center">
+      <Typography variant="body2" color="text.secondary">
         {fullName} {new Date().getFullYear()}
       </Typography>
-      <Typography variant="body2" color="text.secondary" align="center">
+      <Typography variant="body2" color="text.secondary">
+        {/* TODO: Figure out how to make nice version changelogs 🤔 */}
         v.{packageJson.version}
       </Typography>
     </Box>
