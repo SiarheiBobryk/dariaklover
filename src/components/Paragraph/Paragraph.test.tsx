@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { render, screen } from '@testing-library/react';
-import renderer from 'react-test-renderer';
+import { render, RenderResult, screen } from '@testing-library/react';
+import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 import { axe, toHaveNoViolations } from 'jest-axe';
 
 import { typographyClasses } from '@mui/material/Typography';
@@ -13,7 +13,8 @@ expect.extend(toHaveNoViolations);
 describe('<Paragraph />', () => {
   describe('a11y', () => {
     it('should match a11y standards', async () => {
-      const { container } = render(<Paragraph>Lorem Imsulum</Paragraph>);
+      const { container }: RenderResult = render(<Paragraph>Lorem Imsulum</Paragraph>);
+
       const results = await axe(container);
       expect(results).toHaveNoViolations();
     });
@@ -21,11 +22,13 @@ describe('<Paragraph />', () => {
 
   describe('snapshotting', () => {
     it('should render correctly without a content', () => {
-      const paragraph = renderer.create(<Paragraph />).toJSON();
+      const paragraph: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer.create(<Paragraph />).toJSON();
       expect(paragraph).toMatchSnapshot();
     });
     it('should render correctly with a content', () => {
-      const paragraph = renderer.create(<Paragraph>Lorem Ipsulum</Paragraph>).toJSON();
+      const paragraph: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer
+        .create(<Paragraph>Lorem Ipsulum</Paragraph>)
+        .toJSON();
       expect(paragraph).toMatchSnapshot();
     });
   });
@@ -33,26 +36,30 @@ describe('<Paragraph />', () => {
   describe('Elements inspection', () => {
     it('should be the `p` HTML element by default', () => {
       render(<Paragraph>Дарья Кловер</Paragraph>);
-      const paragraph = document.querySelector('p');
-      expect(paragraph).toBeInTheDocument();
+
+      const paragraph: HTMLParagraphElement | null = document.querySelector('p');
       expect(paragraph).toHaveTextContent('Дарья Кловер');
     });
 
     it('should be the `i` HTML element', () => {
       render(<Paragraph component="i">Дарья Кловер</Paragraph>);
-      const paragraph = document.querySelector('i');
-      expect(paragraph).toBeInTheDocument();
+
+      const paragraph: HTMLElement | null = document.querySelector('i');
       expect(paragraph).toHaveTextContent('Дарья Кловер');
     });
 
     it('should have the CSS classes from `p` Typography variant by default', () => {
       render(<Paragraph>Дарья Кловер</Paragraph>);
-      expect(screen.getByText('Дарья Кловер')).toHaveClass(typographyClasses.body1);
+
+      const p: HTMLParagraphElement = screen.getByText('Дарья Кловер');
+      expect(p).toHaveClass(typographyClasses.body1);
     });
 
     it('should have the CSS classes from `strong` Typography variant', () => {
       render(<Paragraph variant="caption">Дарья Кловер</Paragraph>);
-      expect(screen.getByText('Дарья Кловер')).toHaveClass(typographyClasses.caption);
+
+      const p: HTMLParagraphElement = screen.getByText('Дарья Кловер');
+      expect(p).toHaveClass(typographyClasses.caption);
     });
   });
 });

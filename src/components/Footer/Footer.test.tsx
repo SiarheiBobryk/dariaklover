@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
-import { render, screen } from '@testing-library/react';
+import { render, RenderResult, screen } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 
 import Footer, { iconButtonA11yProps } from './Footer';
@@ -13,7 +13,8 @@ expect.extend(toHaveNoViolations);
 describe('<Footer />', () => {
   describe('a11y', () => {
     it('should match a11y standards', async () => {
-      const { container } = render(<Footer />);
+      const { container }: RenderResult = render(<Footer />);
+
       const results = await axe(container);
       expect(results).toHaveNoViolations();
     });
@@ -21,8 +22,8 @@ describe('<Footer />', () => {
 
   describe('snapshotting', () => {
     it('should render correctly', () => {
-      // TODO: Add types for all test files
       const footer: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer.create(<Footer />).toJSON();
+
       expect(footer).toMatchSnapshot();
     });
   });
@@ -30,35 +31,39 @@ describe('<Footer />', () => {
   describe('Elements inspection', () => {
     it('should have the right instagram icon button', () => {
       render(<Footer />);
-      const a: HTMLElement | null = document.querySelector(`a[href="${config.instagram.href}"]`);
+
+      const a: HTMLAnchorElement | null = document.querySelector(`a[href="${config.instagram.href}"]`);
       expect(a).toHaveAttribute('rel', iconButtonA11yProps.rel);
       expect(a).toHaveAttribute('target', iconButtonA11yProps.target);
       expect(a).toHaveAttribute('aria-label', config.instagram.label);
 
-      const svg: ChildNode | null | undefined = a?.firstChild;
-      expect(svg).toHaveAttribute('data-testid', 'InstagramIcon');
+      const svg: SVGElement | null = document.querySelector('svg[data-testid="InstagramIcon"]');
+      expect(svg).toBeInTheDocument();
     });
 
     it('should have the right telegram icon button', () => {
       render(<Footer />);
-      const a: HTMLElement | null = document.querySelector(`a[href="${config.telegram.href}"]`);
+
+      const a: HTMLAnchorElement | null = document.querySelector(`a[href="${config.telegram.href}"]`);
       expect(a).toHaveAttribute('rel', iconButtonA11yProps.rel);
       expect(a).toHaveAttribute('target', iconButtonA11yProps.target);
       expect(a).toHaveAttribute('aria-label', config.telegram.label);
 
-      const svg: ChildNode | null | undefined = a?.firstChild;
-      expect(svg).toHaveAttribute('data-testid', 'TelegramIcon');
+      const svg: SVGElement | null = document.querySelector('svg[data-testid="TelegramIcon"]');
+      expect(svg).toBeInTheDocument();
     });
 
     it('should render name and year', () => {
       render(<Footer />);
-      const p: HTMLElement = screen.getByText(`${config.fullName} ${new Date().getFullYear()}`);
+
+      const p: HTMLParagraphElement = screen.getByText(`${config.fullName} ${new Date().getFullYear()}`);
       expect(p).toBeInTheDocument();
     });
 
     it('should render the application version', () => {
       render(<Footer />);
-      const p: HTMLElement = screen.getByText(`v.${packageJson.version}`);
+
+      const p: HTMLParagraphElement = screen.getByText(`v.${packageJson.version}`);
       expect(p).toBeInTheDocument();
     });
   });
@@ -66,7 +71,8 @@ describe('<Footer />', () => {
   describe('Styling inspection', () => {
     it('should be centered, direction column and have a gap', () => {
       render(<Footer data-testid="footer" />);
-      const footer: HTMLElement = screen.getByTestId('footer');
+
+      const footer: HTMLDivElement = screen.getByTestId('footer');
       expect(footer).toHaveStyle({
         display: 'flex',
         flexDirection: 'column',
