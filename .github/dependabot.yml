@@ -7,8 +7,8 @@ updates:
     directory: '/'
     # Check the npm registry for updates every day (weekdays)
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
     # Raise all npm pull requests with an assignee
     assignees:
       - 'SiarheiBobryk'
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 20
