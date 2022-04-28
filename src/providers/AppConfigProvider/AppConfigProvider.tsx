@@ -2,14 +2,19 @@ import * as React from 'react';
 
 import { PaletteMode } from '@mui/material';
 
-export interface Config {
+export interface MetaTags {
+  description: string;
+  keywords: string;
+  'msapplication-config': string;
+  'msapplication-TileColor': string;
+  'theme-color'?: string; // `theme-color` is managed by `ColorModeProvider` dynamically
+}
+
+export interface Config extends MetaTags {
   fullName: string;
   title: string;
   url: string;
-  description: string;
-  keywords: string;
   language: string;
-  pageNameBase: string;
   colorModeDefault: PaletteMode;
   instagram: {
     id: string;
@@ -21,6 +26,10 @@ export interface Config {
     href: string;
     label: string;
   };
+  description: string;
+  keywords: string;
+  'msapplication-config': string;
+  'msapplication-TileColor': string;
 }
 
 export const config: Config = {
@@ -32,7 +41,6 @@ export const config: Config = {
     'Образовательный сайт о здоровом образе жизни, инструментах и способах его достижения. Дарья Кловер - врач общей практики, косметик, блогер, зож-энтузиаст, будущий специалист и коуч по здоровью.',
   keywords: 'хелс коуч, health coach, здоровье, красота, питание, гармония, сопровождение, антиэйдж',
   language: 'ru',
-  pageNameBase: 'Дарья Кловер',
   colorModeDefault: 'light',
   instagram: {
     id: '@daria.klover',
@@ -44,6 +52,8 @@ export const config: Config = {
     href: 'https://t.me/dariaklover',
     label: 'Телеграм Дарьи',
   },
+  'msapplication-config': '/icon/browserconfig.xml',
+  'msapplication-TileColor': '#ffc40d',
 };
 
 export const AppConfigContext = React.createContext<Config>(config);
