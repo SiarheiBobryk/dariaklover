@@ -13,12 +13,9 @@ function Introduction() {
       <Paragraph>Всем привет, я - Дарья Кловер!</Paragraph>
       <Paragraph>
         Я прохожу обучение в{' '}
-        <Link
-          href="https://uom.education/university"
-          sx={{ display: 'inline-flex', alignItems: 'center', marginBottom: 0 }}
-          rel="noopener"
-        >
-          Университете образовательной медицины (УОМ) <OpenInNewIcon fontSize="small" />
+        <Link href="https://uom.education/university" rel="noopener">
+          Университете образовательной медицины (УОМ){' '}
+          <OpenInNewIcon fontSize="small" sx={{ verticalAlign: 'middle' }} />
         </Link>{' '}
         {/* TODO: The better (React) alternative for `i` here? */}и <i>PreventAge LifeStyle School</i> на интегративного
         health-коуча - специалиста по модификации образа жизни и немедикаментозному оздоровлению.

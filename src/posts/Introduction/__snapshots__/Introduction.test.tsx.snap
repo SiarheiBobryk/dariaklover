@@ -18,16 +18,17 @@ Array [
     Я прохожу обучение в
      
     <a
-      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1rx407p-MuiTypography-root-MuiLink-root"
+      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
       href="https://uom.education/university"
       onBlur={[Function]}
       onFocus={[Function]}
       rel="noopener"
     >
-      Университете образовательной медицины (УОМ) 
+      Университете образовательной медицины (УОМ)
+       
       <svg
         aria-hidden={true}
-        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1xzgpfl-MuiSvgIcon-root"
         data-testid="OpenInNewIcon"
         focusable="false"
         viewBox="0 0 24 24"
