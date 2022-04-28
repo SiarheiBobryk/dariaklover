@@ -54,11 +54,12 @@ describe('<Introduction />', () => {
       expect(link).toHaveAttribute('rel', 'noopener');
     });
 
-    it('should have the open-in-new-window icon`', () => {
+    it('should have the open-in-new-window icon with the right styling`', () => {
       render(<Introduction />);
 
       const icon: SVGElement | null = document.querySelector('a[href="https://uom.education/university"] > svg');
       expect(icon).toBeInTheDocument();
+      expect(icon).toHaveStyle({ verticalAlign: 'middle' });
     });
 
     it('should have an italic (the `i` HTML element) school name', () => {
