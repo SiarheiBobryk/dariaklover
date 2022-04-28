@@ -1,15 +1,11 @@
 import * as React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { Helmet, HelmetPropsToState } from 'react-helmet';
 
-import { render, RenderResult } from '@testing-library/react';
-import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
-import { axe, toHaveNoViolations } from 'jest-axe';
+import { render } from '@testing-library/react';
+import { toHaveNoViolations } from 'jest-axe';
 
 import Head from './Head';
 import AppConfigProvider, { config, MetaTags } from '../../providers/AppConfigProvider';
-import ColorModeProvider, { ColorModeContext } from '../../providers/ColorModeProvider/ColorModeProvider';
-import ThemeProvider from '../../providers/ThemeProvider/ThemeProvider';
 import packageJson from '../../../package.json';
 
 expect.extend(toHaveNoViolations);

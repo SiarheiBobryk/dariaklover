@@ -92,7 +92,8 @@
     ],
     "reportUnusedDisableDirectives": true,
     "ignorePatterns": [
-      "coverage"
+      "coverage",
+      "build"
     ],
     "settings": {},
     "rules": {
