@@ -11,6 +11,7 @@ import { config } from '../../providers/AppConfigProvider';
 
 expect.extend(toHaveNoViolations);
 
+// TODO: Test `title` metatag here
 describe('<About />', () => {
   describe('a11y', () => {
     it('should match a11y standards', async () => {
