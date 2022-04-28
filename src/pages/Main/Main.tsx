@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Heading from '../../components/Heading';
-import References from '../../components/References';
+// import Heading from '../../components/Heading';
+// import References from '../../components/References';
 import Introduction from '../../posts/Introduction/Introduction';
 
 function Main() {
@@ -16,8 +16,9 @@ function Main() {
       <Introduction />
 
       {/* References block */}
-      <Heading>Отзывы клиентов</Heading>
-      <References />
+      {/* <Heading>Отзывы клиентов</Heading> */}
+      {/* TODO: Double-check the pictures from security perspective */}
+      {/* <References /> */}
     </>
   );
 }
