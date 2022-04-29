@@ -6,7 +6,7 @@ import { Theme, useTheme } from '@mui/material/styles';
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import packageJson from '../../../package.json';
 
-// TODO: Forward ref for the main components
+// TODO: Forward ref for the main components (where it's necessary)
 function Head() {
   const theme: Theme = useTheme();
   const { fullName, language, description, keywords }: Config = React.useContext(AppConfigContext);
