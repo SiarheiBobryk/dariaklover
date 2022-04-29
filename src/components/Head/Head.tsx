@@ -9,7 +9,7 @@ import packageJson from '../../../package.json';
 // TODO: Forward ref for the main components (where it's necessary)
 function Head() {
   const theme: Theme = useTheme();
-  const { fullName, language, description, keywords }: Config = React.useContext(AppConfigContext);
+  const { fullName, language, description, keywords, ...configs }: Config = React.useContext(AppConfigContext);
 
   return (
     // NOTE: We set the actual HTML `title` in the body of the `App` children
@@ -24,7 +24,7 @@ function Head() {
       <link rel="manifest" href={`/icon/site.webmanifest?v=${packageJson.version}`} />
       <link rel="mask-icon" href={`/icon/safari-pinned-tab.svg?v=${packageJson.version}`} color="#5bbad5" />
       <link rel="icon" href={`/icon/favicon.ico?v=${packageJson.version}`} />
-      <meta name="msapplication-TileColor" content="#ffc40d" />
+      <meta name="msapplication-TileColor" content={configs['msapplication-TileColor']} />
       <meta name="msapplication-config" content={`/icon/browserconfig.xml?v=${packageJson.version}`} />
     </Helmet>
   );

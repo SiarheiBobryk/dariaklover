@@ -5,7 +5,7 @@ import { render } from '@testing-library/react';
 import { toHaveNoViolations } from 'jest-axe';
 
 import Head from './Head';
-import AppConfigProvider, { config, MetaTags } from '../../providers/AppConfigProvider';
+import AppConfigProvider, { Config, config, MetaTags } from '../../providers/AppConfigProvider';
 import packageJson from '../../../package.json';
 
 expect.extend(toHaveNoViolations);
@@ -32,20 +32,18 @@ describe('<App />', () => {
       );
 
       const { metaTags }: HelmetPropsToState = Helmet.peek();
-      const tags = ['description', 'keywords', 'msapplication-config', 'msapplication-TileColor', 'theme-color'];
-      const metaTagsMapped: MetaTags = metaTags.reduce(function reduceMetaTags(tagsReduced, tag) {
+      const tags: Array<keyof MetaTags> = ['description', 'keywords', 'msapplication-TileColor'];
+      const metaTagsMapped: MetaTags = metaTags.reduce(function reduceMetaTags(tagsReduced: MetaTags, tag) {
         const { name, content }: HTMLMetaElement = tag;
         return {
           ...tagsReduced,
-          ...(tags.includes(name) && { [name]: content }),
+          ...(tags.includes(name as keyof MetaTags) && { [name]: content }),
         };
       }, {} as MetaTags);
-      expect(metaTagsMapped.description).toBe(config.description);
-      expect(metaTagsMapped.keywords).toBe(config.keywords);
-      expect(metaTagsMapped['msapplication-TileColor']).toBe(config['msapplication-TileColor']);
-      expect(metaTagsMapped['msapplication-config']).toBe(`${config['msapplication-config']}?v=${packageJson.version}`);
+      tags.forEach(function checkMetaTags(tag) {
+        expect(metaTagsMapped[tag]).toBe(config[tag as keyof Config]);
+      });
       // TODO: Implement color-mode tests
-      expect(metaTagsMapped['theme-color']).toBe('#fff'); // White by default
     });
 
     it('should have the right application version in the URL', () => {
