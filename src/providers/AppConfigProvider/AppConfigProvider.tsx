@@ -5,9 +5,7 @@ import { PaletteMode } from '@mui/material';
 export interface MetaTags {
   description: string;
   keywords: string;
-  'msapplication-config': string;
   'msapplication-TileColor': string;
-  'theme-color'?: string; // `theme-color` is managed by `ColorModeProvider` dynamically
 }
 
 export interface Config extends MetaTags {
@@ -26,10 +24,6 @@ export interface Config extends MetaTags {
     href: string;
     label: string;
   };
-  description: string;
-  keywords: string;
-  'msapplication-config': string;
-  'msapplication-TileColor': string;
 }
 
 export const config: Config = {
@@ -41,7 +35,7 @@ export const config: Config = {
     'Образовательный сайт о здоровом образе жизни, инструментах и способах его достижения. Дарья Кловер - врач общей практики, косметик, блогер, зож-энтузиаст, будущий специалист и коуч по здоровью.',
   keywords: 'хелс коуч, health coach, здоровье, красота, питание, гармония, сопровождение, антиэйдж',
   language: 'ru',
-  colorModeDefault: 'light',
+  colorModeDefault: 'light', // NOTE: the color-mode is managed by `ColorModeProvider`
   instagram: {
     id: '@daria.klover',
     href: 'https://www.instagram.com/daria.klover',
@@ -52,7 +46,6 @@ export const config: Config = {
     href: 'https://t.me/dariaklover',
     label: 'Телеграм Дарьи',
   },
-  'msapplication-config': '/icon/browserconfig.xml',
   'msapplication-TileColor': '#ffc40d',
 };
 
