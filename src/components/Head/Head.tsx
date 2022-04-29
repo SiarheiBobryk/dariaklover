@@ -12,6 +12,7 @@ function Head() {
   const { fullName, language, description, keywords }: Config = React.useContext(AppConfigContext);
 
   return (
+    // NOTE: We set the actual HTML `title` in the body of the `App` children
     <Helmet titleTemplate={`%s | ${fullName}`}>
       <html lang={language} />
       <meta name="description" content={description} />
