@@ -1,13 +1,9 @@
 import * as React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
-
-import { Theme, useTheme } from '@mui/material/styles';
 
 import Layout from './components/Layout';
 import Fallback from './components/Fallback';
-
-import { AppConfigContext, Config } from './providers/AppConfigProvider';
+import Head from './components/Head';
 
 const About = React.lazy(function lazyLoadAbout() {
   return import('./pages/About');
@@ -43,17 +39,9 @@ function Suspense(props: SuspenseProps) {
 }
 
 function App() {
-  const theme: Theme = useTheme();
-  const { pageNameBase, language, description, keywords }: Config = React.useContext(AppConfigContext);
-
   return (
     <>
-      <Helmet titleTemplate={`%s | ${pageNameBase}`}>
-        <html lang={language} />
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="theme-color" content={theme.palette.background.default} />
-      </Helmet>
+      <Head />
       <Layout>
         <Suspense>
           <Routes>

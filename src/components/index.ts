@@ -5,3 +5,4 @@ export { default as References } from './References';
 export { default as Fallback } from './Fallback';
 export { default as Heading } from './Heading';
 export { default as Paragraph } from './Paragraph';
+export { default as Head } from './Head';
