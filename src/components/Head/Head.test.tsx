@@ -56,8 +56,9 @@ describe('<App />', () => {
       );
 
       const { linkTags }: HelmetPropsToState = Helmet.peek();
-      linkTags.forEach(function checkApplicationVersion(link) {
-        expect(link.href).toContain(`?v=${packageJson.version}`);
+      linkTags.forEach(function checkApplicationVersion(link: HTMLLinkElement) {
+        const { href } = link;
+        expect(href).toContain(`?v=${packageJson.version}`);
       });
     });
   });
