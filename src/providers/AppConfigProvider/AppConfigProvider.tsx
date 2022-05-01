@@ -14,6 +14,10 @@ export interface Config extends MetaTags {
   url: string;
   language: string;
   colorModeDefault: PaletteMode;
+  themeColor: {
+    light: string;
+    dark: string;
+  };
   instagram: {
     id: string;
     href: string;
@@ -36,6 +40,10 @@ export const config: Config = {
   keywords: 'хелс коуч, health coach, здоровье, красота, питание, гармония, сопровождение, антиэйдж',
   language: 'ru',
   colorModeDefault: 'light', // NOTE: the color-mode is managed by `ColorModeProvider`
+  themeColor: {
+    light: '#fff',
+    dark: '#121212',
+  },
   instagram: {
     id: '@daria.klover',
     href: 'https://www.instagram.com/daria.klover',
