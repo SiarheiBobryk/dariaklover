@@ -33,7 +33,14 @@ const pages = [
   // },
 ];
 
-function TopBar() {
+interface TopBarProps {
+  ColorSwitcherButtonProps?: {
+    'data-testid'?: string;
+  };
+}
+
+function TopBar(props: TopBarProps) {
+  const { ColorSwitcherButtonProps } = props;
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const theme = useTheme();
 
@@ -59,7 +66,7 @@ function TopBar() {
         {/* App menu items */}
         <Box sx={{ display: 'flex', alignContent: 'center', gap: 1 }}>
           {/* The color mode switcher */}
-          <IconButton onClick={colorMode.toggleColorCallback} color="inherit">
+          <IconButton onClick={colorMode.toggleColorCallback} color="inherit" {...ColorSwitcherButtonProps}>
             {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
           </IconButton>
           {/* Pages menu for small screens */}
