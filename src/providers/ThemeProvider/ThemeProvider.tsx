@@ -14,9 +14,12 @@ function ThemeProvider(props: ThemeProviderProps) {
   const { children } = props;
   const { mode }: ColorModeContextValue = React.useContext(ColorModeContext);
 
-  const theme: Theme = React.useMemo(() => {
-    return createTheme(mode);
-  }, [mode]);
+  const theme: Theme = React.useMemo(
+    function memoizeCreateTheme() {
+      return createTheme(mode);
+    },
+    [mode],
+  );
 
   return (
     <ThemeProviderMui theme={theme}>
