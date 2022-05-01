@@ -83,7 +83,7 @@ exports[`<Footer /> snapshotting should render correctly 1`] = `
     className="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
   >
     v.
-    0.0.1
+    0.0.2
   </p>
 </div>
 `;

@@ -66,7 +66,7 @@ function TopBar(props: TopBarProps) {
         {/* App menu items */}
         <Box sx={{ display: 'flex', alignContent: 'center', gap: 1 }}>
           {/* The color mode switcher */}
-          <IconButton onClick={colorMode.toggleColorCallback} color="inherit" {...ColorSwitcherButtonProps}>
+          <IconButton onClick={colorMode?.toggleColorCallback} color="inherit" {...ColorSwitcherButtonProps}>
             {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
           </IconButton>
           {/* Pages menu for small screens */}
