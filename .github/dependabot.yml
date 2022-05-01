@@ -12,3 +12,4 @@ updates:
     assignees:
       - 'SiarheiBobryk'
     open-pull-requests-limit: 20
+    target-branch: 'develop'
