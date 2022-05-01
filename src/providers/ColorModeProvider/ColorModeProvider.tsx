@@ -2,11 +2,11 @@ import * as React from 'react';
 
 import { PaletteMode } from '@mui/material';
 
-import { AppConfigContext } from '../AppConfigProvider';
+import { AppConfigContext, Config } from '../AppConfigProvider';
 
 export interface ColorModeContextValue {
   mode: PaletteMode;
-  toggleColorMode: () => void;
+  toggleColorCallback(this: void): void;
 }
 
 export interface ColorModeProviderProps {
@@ -15,25 +15,27 @@ export interface ColorModeProviderProps {
 
 export const ColorModeContext = React.createContext<ColorModeContextValue>({
   mode: 'light',
-  toggleColorMode: () => {},
+  toggleColorCallback(this: void): void {},
 });
 
 function ColorModeProvider(props: ColorModeProviderProps) {
   const { children } = props;
 
-  const appConfig = React.useContext(AppConfigContext);
-  const [mode, setMode] = React.useState<PaletteMode>(appConfig.colorModeDefault);
-  const colorMode: ColorModeContextValue = React.useMemo(() => {
-    return {
-      // The dark mode switch would invoke this method
-      toggleColorMode: (): void => {
-        setMode((prevMode: PaletteMode): PaletteMode => {
-          return prevMode === 'light' ? 'dark' : 'light';
-        });
-      },
-      mode,
-    };
-  }, [mode]);
+  const { colorModeDefault }: Config = React.useContext(AppConfigContext);
+  const [mode, setMode] = React.useState<PaletteMode>(colorModeDefault);
+  const colorMode: ColorModeContextValue = React.useMemo(
+    function memoizeColorMode() {
+      return {
+        toggleColorCallback(this: void): void {
+          setMode(function switchMode(prevMode: PaletteMode): PaletteMode {
+            return prevMode === 'light' ? 'dark' : 'light';
+          });
+        },
+        mode,
+      };
+    },
+    [mode],
+  );
 
   return <ColorModeContext.Provider value={colorMode}>{children}</ColorModeContext.Provider>;
 }
