@@ -22,7 +22,15 @@ function ColorModeProvider(props: ColorModeProviderProps) {
   const { children } = props;
 
   const { colorModeDefault }: Config = React.useContext(AppConfigContext);
-  const [mode, setMode] = React.useState<PaletteMode>(colorModeDefault);
+  const colorModeInit: PaletteMode = (localStorage.getItem('colorMode') as PaletteMode) ?? colorModeDefault;
+  const [mode, setMode] = React.useState<PaletteMode>(colorModeInit);
+  React.useEffect(
+    function backupColorMode() {
+      localStorage.setItem('colorMode', mode);
+    },
+    [mode],
+  );
+
   const colorMode: ColorModeContextValue = React.useMemo(
     function memoizeColorMode() {
       return {
