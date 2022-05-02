@@ -13,6 +13,10 @@ import ColorModeProvider, { ColorModeContext, ColorModeContextValue } from '../.
 import ThemeProvider from '../../providers/ThemeProvider';
 import AppConfigProvider, { config } from '../../providers/AppConfigProvider';
 
+afterEach(() => {
+  localStorage.clear();
+});
+
 describe('ColorModeProvider/`TopBar` integration', () => {
   it('should produce the right values in `ColorModeContext`', async () => {
     const user = userEvent.setup();
