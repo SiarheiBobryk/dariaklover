@@ -3,14 +3,6 @@ import { createTheme as createThemeMui, responsiveFontSizes, Theme, ThemeOptions
 
 import createThemeOptions from './createThemeOptions';
 
-/**
- * The result of this function running should be memozed in order to avoid performance issues
- * For example:
- *
- * const theme: Theme = React.useMemo(() => {
- *   return createTheme(mode); //
- * }, [mode]);
- */
 function createTheme(mode: PaletteMode): Theme {
   const themeOptions: ThemeOptions = createThemeOptions(mode);
   const theme: Theme = createThemeMui(themeOptions);
