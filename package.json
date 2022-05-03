@@ -2,6 +2,12 @@
   "name": "DariaKlover-website",
   "version": "0.0.3",
   "private": true,
+  "description": "Daria Klover's personal website sources",
+  "author": "Siarhei Bobryk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SiarheiBobryk/DariaKlover-website.git"
+  },
   "dependencies": {
     "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
