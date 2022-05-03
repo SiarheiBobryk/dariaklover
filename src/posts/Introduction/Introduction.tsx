@@ -13,7 +13,7 @@ function Introduction() {
       <Paragraph>Всем привет, я - Дарья Кловер!</Paragraph>
       <Paragraph>
         Я прохожу обучение в{' '}
-        <Link href="https://uom.education/university" rel="noopener">
+        <Link href="https://uom.education/university" rel="noopener" target="_blank">
           Университете образовательной медицины (УОМ){' '}
           <OpenInNewIcon fontSize="small" sx={{ verticalAlign: 'middle' }} />
         </Link>{' '}

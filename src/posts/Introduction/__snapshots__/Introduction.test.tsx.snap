@@ -23,6 +23,7 @@ Array [
       onBlur={[Function]}
       onFocus={[Function]}
       rel="noopener"
+      target="_blank"
     >
       Университете образовательной медицины (УОМ)
        
