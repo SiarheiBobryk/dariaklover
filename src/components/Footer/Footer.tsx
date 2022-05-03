@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -24,6 +25,7 @@ function Footer(props: FooterProps) {
     instagram: { href: instagramHref, label: instagramLabel },
     telegram: { href: telegramHref, label: telegramLabel },
     fullName,
+    github,
   }: Config = React.useContext(AppConfigContext);
 
   return (
@@ -39,10 +41,9 @@ function Footer(props: FooterProps) {
       <Typography variant="body2" color="text.secondary">
         {fullName} {new Date().getFullYear()}
       </Typography>
-      <Typography variant="body2" color="text.secondary">
-        {/* TODO: Figure out how to make nice version changelogs 🤔 */}
-        v.{packageJson.version}
-      </Typography>
+      <Link variant="body2" color="text.secondary" href={`${github}/releases/tag/${packageJson.version}`}>
+        {packageJson.version}
+      </Link>
     </Box>
   );
 }

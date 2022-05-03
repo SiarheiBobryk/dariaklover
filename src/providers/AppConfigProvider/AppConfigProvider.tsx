@@ -28,6 +28,7 @@ export interface Config extends MetaTags {
     href: string;
     label: string;
   };
+  github: string;
 }
 
 export const config: Config = {
@@ -55,6 +56,7 @@ export const config: Config = {
     label: 'Телеграм Дарьи',
   },
   'msapplication-TileColor': '#ffc40d',
+  github: 'https://github.com/SiarheiBobryk/DariaKlover-website',
 };
 
 export const AppConfigContext = React.createContext<Config>(config);

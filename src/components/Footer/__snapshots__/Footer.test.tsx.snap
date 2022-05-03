@@ -79,11 +79,13 @@ exports[`<Footer /> snapshotting should render correctly 1`] = `
      
     2022
   </p>
-  <p
-    className="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+  <a
+    className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineAlways css-1x1e5md-MuiTypography-root-MuiLink-root"
+    href="https://github.com/SiarheiBobryk/DariaKlover-website/releases/tag/0.0.3"
+    onBlur={[Function]}
+    onFocus={[Function]}
   >
-    v.
     0.0.3
-  </p>
+  </a>
 </div>
 `;
