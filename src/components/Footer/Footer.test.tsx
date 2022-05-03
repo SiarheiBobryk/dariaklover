@@ -63,8 +63,8 @@ describe('<Footer />', () => {
     it('should render the application version', () => {
       render(<Footer />);
 
-      const p: HTMLParagraphElement = screen.getByText(`v.${packageJson.version}`);
-      expect(p).toBeInTheDocument();
+      const a: HTMLAnchorElement = screen.getByText(packageJson.version);
+      expect(a).toBeInTheDocument();
     });
   });
 
@@ -79,6 +79,16 @@ describe('<Footer />', () => {
         alignItems: 'center',
         gap: '8px',
       });
+    });
+  });
+
+  describe('The application version', () => {
+    it('should match the tag on the GigHub side', () => {
+      render(<Footer />);
+
+      const a: HTMLAnchorElement = screen.getByText(packageJson.version);
+      const [, githubTag]: string[] = a.href.split(`${config.github}/releases/tag/`);
+      expect(a.innerHTML).toBe(githubTag);
     });
   });
 });
