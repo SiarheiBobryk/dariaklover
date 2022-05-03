@@ -33,6 +33,33 @@ const pages = [
   // },
 ];
 
+interface NavButtonProps {
+  pathname: string;
+  to: string;
+  children: React.ReactNode;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const NavButton = React.forwardRef(function NavButton(props: NavButtonProps, ref: React.Ref<any>) {
+  const { pathname, to, children } = props;
+  const theme = useTheme();
+
+  return (
+    <Button
+      sx={{
+        ...(pathname === to && { backgroundColor: theme.palette.action.selected }),
+      }}
+      to={to}
+      component={RouterLink}
+      variant="text"
+      color="inherit"
+      ref={ref}
+    >
+      {children}
+    </Button>
+  );
+});
+
 interface TopBarProps {
   ColorSwitcherButtonProps?: {
     'data-testid'?: string;
@@ -94,26 +121,9 @@ function TopBar(props: TopBarProps) {
               {pages.map(({ to, label }) => {
                 return (
                   <MenuItem key={to} onClick={handleCloseNavMenu}>
-                    {/* TODO: Encapsulate it */}
-                    <Button
-                      sx={{
-                        ...(pathname === to &&
-                          theme.palette.mode === 'light' && {
-                            backgroundColor: theme.palette.grey[100],
-                          }),
-                        ...(pathname === to &&
-                          theme.palette.mode === 'dark' && {
-                            backgroundColor: theme.palette.grey[900],
-                          }),
-                      }}
-                      key={to}
-                      to={to}
-                      component={RouterLink}
-                      variant="text"
-                      color="inherit"
-                    >
+                    <NavButton to={to} pathname={pathname}>
                       {label}
-                    </Button>
+                    </NavButton>
                   </MenuItem>
                 );
               })}
@@ -124,25 +134,9 @@ function TopBar(props: TopBarProps) {
           <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 1 }}>
             {pages.map(({ to, label }) => {
               return (
-                <Button
-                  sx={{
-                    ...(pathname === to &&
-                      theme.palette.mode === 'light' && {
-                        backgroundColor: theme.palette.grey[100],
-                      }),
-                    ...(pathname === to &&
-                      theme.palette.mode === 'dark' && {
-                        backgroundColor: theme.palette.grey[900],
-                      }),
-                  }}
-                  key={to}
-                  to={to}
-                  component={RouterLink}
-                  variant="text"
-                  color="inherit"
-                >
+                <NavButton key={to} to={to} pathname={pathname}>
                   {label}
-                </Button>
+                </NavButton>
               );
             })}
           </Box>
