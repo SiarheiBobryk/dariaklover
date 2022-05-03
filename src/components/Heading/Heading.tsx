@@ -25,7 +25,6 @@ export interface HeadingProps {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Heading = React.forwardRef(function Heading(props: HeadingProps, ref: React.Ref<any>) {
-  // TODO: Move default props to the global config
   const { children, component = 'h2', variant = 'h5', ...other } = props;
 
   return (
