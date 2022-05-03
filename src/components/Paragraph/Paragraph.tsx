@@ -23,14 +23,15 @@ export interface ParagraphProps {
     | undefined;
 }
 
-function Paragraph(props: ParagraphProps) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Paragraph = React.forwardRef(function Paragraph(props: ParagraphProps, ref: React.Ref<any>) {
   const { children, component = 'p', variant = 'body1', ...other } = props;
 
   return (
-    <Typography component={component} variant={variant} {...other}>
+    <Typography ref={ref} component={component} variant={variant} {...other}>
       {children}
     </Typography>
   );
-}
+});
 
 export default Paragraph;
