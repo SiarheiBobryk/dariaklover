@@ -1,26 +1,26 @@
 import { PaletteMode } from '@mui/material';
-import {
-  PaletteOptions as PaletteOptionsMui,
-  SimplePaletteColorOptions as SimplePaletteColorOptionsMui,
-  ThemeOptions as ThemeOptionsMui,
-} from '@mui/material/styles';
-import { deepOrange } from '@mui/material/colors';
+import { ThemeOptions as ThemeOptionsMui } from '@mui/material/styles';
+import { blue, grey, deepOrange } from '@mui/material/colors';
 
-export interface PaletteOptions extends PaletteOptionsMui {
-  primary: SimplePaletteColorOptionsMui; // TODO: Make it required once we have a custom palette
-}
-
-export interface ThemeOptions extends ThemeOptionsMui {
-  palette: PaletteOptions;
-}
-
-function createThemeOptions(mode: PaletteMode): ThemeOptions {
+function createThemeOptions(mode: PaletteMode): ThemeOptionsMui {
   return {
     palette: {
       mode,
-      primary: {
-        main: deepOrange[200],
-      },
+      ...(mode === 'light'
+        ? {
+            primary: {
+              main: blue[700],
+            },
+            secondary: {
+              main: deepOrange[200],
+            },
+          }
+        : {
+            background: {
+              default: grey[900],
+              paper: grey[900],
+            },
+          }),
     },
     components: {
       MuiTypography: {

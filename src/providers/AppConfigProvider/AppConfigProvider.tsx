@@ -43,7 +43,7 @@ export const config: Config = {
   colorModeDefault: 'light', // NOTE: the color-mode is managed by `ColorModeProvider`
   themeColor: {
     light: '#fff',
-    dark: '#121212',
+    dark: '#212121',
   },
   instagram: {
     id: '@daria.klover',
