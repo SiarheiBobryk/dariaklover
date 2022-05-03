@@ -3,6 +3,7 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import Heading from '../../components/Heading';
 import Paragraph from '../../components/Paragraph';
@@ -47,9 +48,9 @@ function About() {
       <Paragraph>
         Познакомиться со мной получше вы можете через мой Инстаграм{' '}
         <Link href={instagramHref} target="_blank">
-          {instagramId}
-        </Link>{' '}
-        аккаунт. Там я время от времени выкладываю сториз и посты о себе, своих осознаниях и важных для меня событиях.
+          {instagramId} <OpenInNewIcon fontSize="small" sx={{ verticalAlign: 'middle' }} />
+        </Link>
+        . Там я время от времени выкладываю сториз и посты о себе, своих осознаниях и важных для меня событиях.
       </Paragraph>
       <Paragraph>А данный сайт - это площадка для профессионального творчества.</Paragraph>
       <Paragraph>Добро пожаловать в гости!</Paragraph>
