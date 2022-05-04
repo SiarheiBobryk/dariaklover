@@ -165,6 +165,7 @@ function TopBar(props: TopBarProps) {
             >
               {pages.map(({ to, label }) => {
                 return (
+                  // FIXME: Keyboard navigation is broken here
                   <MenuItem key={to} onClick={handleCloseNavMenu} dense>
                     <NavButton to={to} pathname={pathname} size="small">
                       {label}
