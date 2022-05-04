@@ -13,6 +13,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
 import { FourLeafClover } from '../../icons';
@@ -70,6 +71,7 @@ function TopBar(props: TopBarProps) {
   const { ColorSwitcherButtonProps } = props;
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('md'));
 
   const colorMode: ColorModeContextValue = React.useContext(ColorModeContext);
   const { pathname } = useLocation();
@@ -84,7 +86,10 @@ function TopBar(props: TopBarProps) {
 
   return (
     <AppBar position="static" color="default">
-      <Toolbar sx={{ display: 'flex', gap: 1, justifyContent: 'space-between' }}>
+      <Toolbar
+        sx={{ display: 'flex', gap: 1, justifyContent: 'space-between' }}
+        variant={matches ? 'regular' : 'dense'}
+      >
         {/* The application logo */}
         <Link component={RouterLink} to="/" sx={{ display: 'flex', alignContent: 'center', mb: 0 }}>
           <FourLeafClover fontSize="large" />
