@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { Link as RouterLink, useLocation, Location } from 'react-router-dom';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import Link from '@mui/material/Link';
-import { useTheme } from '@mui/material/styles';
+import { Theme, useTheme } from '@mui/material/styles';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -37,13 +37,14 @@ const pages = [
 interface NavButtonProps {
   pathname: string;
   to: string;
+  size?: 'small' | 'medium' | 'large';
   children: React.ReactNode;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const NavButton = React.forwardRef(function NavButton(props: NavButtonProps, ref: React.Ref<any>) {
-  const { pathname, to, children } = props;
-  const theme = useTheme();
+  const { pathname, to, children, size = 'medium', ...other } = props;
+  const theme: Theme = useTheme();
 
   return (
     <Button
@@ -52,9 +53,11 @@ const NavButton = React.forwardRef(function NavButton(props: NavButtonProps, ref
       }}
       to={to}
       component={RouterLink}
+      size={size}
       variant="text"
       color="inherit"
       ref={ref}
+      {...other}
     >
       {children}
     </Button>
@@ -70,29 +73,47 @@ interface TopBarProps {
 function TopBar(props: TopBarProps) {
   const { ColorSwitcherButtonProps } = props;
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('md'));
+  const theme: Theme = useTheme();
+  const isMedium: boolean = useMediaQuery(theme.breakpoints.up('md'));
 
   const colorMode: ColorModeContextValue = React.useContext(ColorModeContext);
-  const { pathname } = useLocation();
+  const { pathname }: Location = useLocation();
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenNavMenu = React.useCallback(function handleOpenNavMenu(event: React.MouseEvent<HTMLElement>): void {
     setAnchorElNav(event.currentTarget);
-  };
+  }, []);
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = React.useCallback(function handleCloseNavMenu(): void {
     setAnchorElNav(null);
-  };
+  }, []);
+
+  const toolbarVariant = React.useMemo(
+    function memoizeVariant(): 'regular' | 'dense' {
+      return isMedium ? 'regular' : 'dense';
+    },
+    [isMedium],
+  );
+
+  const navButtonSize = React.useMemo(
+    function memoizeSize(): 'medium' | 'small' {
+      return isMedium ? 'medium' : 'small';
+    },
+    [isMedium],
+  );
+
+  const logoFontSize = React.useMemo(
+    function memoizeFontSize(): 'large' | 'medium' {
+      return isMedium ? 'large' : 'medium';
+    },
+    [isMedium],
+  );
 
   return (
     <AppBar position="static" color="default">
-      <Toolbar
-        sx={{ display: 'flex', gap: 1, justifyContent: 'space-between' }}
-        variant={matches ? 'regular' : 'dense'}
-      >
+      <Toolbar sx={{ display: 'flex', gap: 1, justifyContent: 'space-between' }} variant={toolbarVariant}>
         {/* The application logo */}
         <Link component={RouterLink} to="/" sx={{ display: 'flex', alignContent: 'center', mb: 0 }}>
-          <FourLeafClover fontSize="large" />
+          <FourLeafClover fontSize={logoFontSize} />
         </Link>
 
         {/* App menu items */}
@@ -104,7 +125,7 @@ function TopBar(props: TopBarProps) {
           {/* Pages menu for small screens */}
           <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
             <IconButton
-              size="large"
+              size="small"
               aria-label="Application Menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
@@ -125,8 +146,8 @@ function TopBar(props: TopBarProps) {
             >
               {pages.map(({ to, label }) => {
                 return (
-                  <MenuItem key={to} onClick={handleCloseNavMenu}>
-                    <NavButton to={to} pathname={pathname}>
+                  <MenuItem key={to} onClick={handleCloseNavMenu} dense>
+                    <NavButton to={to} pathname={pathname} size="small">
                       {label}
                     </NavButton>
                   </MenuItem>
@@ -139,7 +160,7 @@ function TopBar(props: TopBarProps) {
           <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 1 }}>
             {pages.map(({ to, label }) => {
               return (
-                <NavButton key={to} to={to} pathname={pathname}>
+                <NavButton key={to} to={to} pathname={pathname} size={navButtonSize}>
                   {label}
                 </NavButton>
               );
