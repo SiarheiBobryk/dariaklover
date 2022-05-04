@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link as RouterLink, useLocation, Location } from 'react-router-dom';
+import { NavLink as RouterNavLink, useLocation, Location } from 'react-router-dom';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -34,7 +34,38 @@ const pages = [
   // },
 ];
 
-interface NavButtonProps {
+export interface RouterNavLinkProps {
+  children: React.ReactElement;
+  to: string;
+}
+
+export interface StyleCallbackParams {
+  isActive: boolean;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const RouterNavLinkMod = React.forwardRef(function RouterNavLinkMod(props: RouterNavLinkProps, ref: React.Ref<any>) {
+  const { children, to, ...other } = props;
+  const theme: Theme = useTheme();
+
+  const styleCallback = React.useCallback(
+    function styleCallback({ isActive }: StyleCallbackParams): React.CSSProperties {
+      const activeStyle: React.CSSProperties = {
+        backgroundColor: theme.palette.action.selected,
+      };
+      return isActive ? activeStyle : {};
+    },
+    [theme],
+  );
+
+  return (
+    <RouterNavLink ref={ref} to={to} style={styleCallback} {...other}>
+      {children}
+    </RouterNavLink>
+  );
+});
+
+export interface NavButtonProps {
   pathname: string;
   to: string;
   size?: 'small' | 'medium' | 'large';
@@ -44,27 +75,15 @@ interface NavButtonProps {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const NavButton = React.forwardRef(function NavButton(props: NavButtonProps, ref: React.Ref<any>) {
   const { pathname, to, children, size = 'medium', ...other } = props;
-  const theme: Theme = useTheme();
 
   return (
-    <Button
-      sx={{
-        ...(pathname === to && { backgroundColor: theme.palette.action.selected }),
-      }}
-      to={to}
-      component={RouterLink}
-      size={size}
-      variant="text"
-      color="inherit"
-      ref={ref}
-      {...other}
-    >
+    <Button to={to} component={RouterNavLinkMod} size={size} variant="text" color="inherit" ref={ref} {...other}>
       {children}
     </Button>
   );
 });
 
-interface TopBarProps {
+export interface TopBarProps {
   ColorSwitcherButtonProps?: {
     'data-testid'?: string;
   };
@@ -112,7 +131,7 @@ function TopBar(props: TopBarProps) {
     <AppBar position="static" color="default">
       <Toolbar sx={{ display: 'flex', gap: 1, justifyContent: 'space-between' }} variant={toolbarVariant}>
         {/* The application logo */}
-        <Link component={RouterLink} to="/" sx={{ display: 'flex', alignContent: 'center', mb: 0 }}>
+        <Link component={RouterNavLink} to="/" sx={{ display: 'flex', alignContent: 'center', mb: 0 }}>
           <FourLeafClover fontSize={logoFontSize} />
         </Link>
 
