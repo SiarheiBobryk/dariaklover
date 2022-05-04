@@ -70,14 +70,24 @@ export interface NavButtonProps {
   to: string;
   size?: 'small' | 'medium' | 'large';
   children: React.ReactNode;
+  label: string;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const NavButton = React.forwardRef(function NavButton(props: NavButtonProps, ref: React.Ref<any>) {
-  const { pathname, to, children, size = 'medium', ...other } = props;
+  const { pathname, to, children, size = 'medium', label, ...other } = props;
 
   return (
-    <Button to={to} component={RouterNavLinkMod} size={size} variant="text" color="inherit" ref={ref} {...other}>
+    <Button
+      to={to}
+      component={RouterNavLinkMod}
+      size={size}
+      variant="text"
+      color="inherit"
+      ref={ref}
+      aria-label={label}
+      {...other}
+    >
       {children}
     </Button>
   );
@@ -89,7 +99,8 @@ export interface TopBarProps {
   };
 }
 
-function TopBar(props: TopBarProps) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.Ref<any>) {
   const { ColorSwitcherButtonProps } = props;
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const theme: Theme = useTheme();
@@ -128,17 +139,27 @@ function TopBar(props: TopBarProps) {
   );
 
   return (
-    <AppBar position="static" color="default">
+    <AppBar position="static" color="default" ref={ref}>
       <Toolbar sx={{ display: 'flex', gap: 1, justifyContent: 'space-between' }} variant={toolbarVariant}>
         {/* The application logo */}
-        <Link component={RouterNavLink} to="/" sx={{ display: 'flex', alignContent: 'center', mb: 0 }}>
+        <Link
+          component={RouterNavLink}
+          to="/"
+          sx={{ display: 'flex', alignContent: 'center', mb: 0 }}
+          aria-label="Вернуться на главную"
+        >
           <FourLeafClover fontSize={logoFontSize} />
         </Link>
 
         {/* App menu items */}
         <Box sx={{ display: 'flex', alignContent: 'center', gap: 1 }}>
           {/* The color mode switcher */}
-          <IconButton onClick={colorMode?.toggleColorCallback} color="inherit" {...ColorSwitcherButtonProps}>
+          <IconButton
+            onClick={colorMode?.toggleColorCallback}
+            color="inherit"
+            aria-label="Переключить цветовую тему"
+            {...ColorSwitcherButtonProps}
+          >
             {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
           </IconButton>
           {/* Pages menu for small screens */}
@@ -167,7 +188,7 @@ function TopBar(props: TopBarProps) {
                 return (
                   // FIXME: Keyboard navigation is broken here
                   <MenuItem key={to} onClick={handleCloseNavMenu} dense>
-                    <NavButton to={to} pathname={pathname} size="small">
+                    <NavButton to={to} pathname={pathname} size="small" label={label}>
                       {label}
                     </NavButton>
                   </MenuItem>
@@ -180,7 +201,7 @@ function TopBar(props: TopBarProps) {
           <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 1 }}>
             {pages.map(({ to, label }) => {
               return (
-                <NavButton key={to} to={to} pathname={pathname} size={navButtonSize}>
+                <NavButton key={to} to={to} pathname={pathname} size={navButtonSize} label={label}>
                   {label}
                 </NavButton>
               );
@@ -190,6 +211,6 @@ function TopBar(props: TopBarProps) {
       </Toolbar>
     </AppBar>
   );
-}
+});
 
 export default TopBar;
