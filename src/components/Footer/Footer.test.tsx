@@ -63,7 +63,7 @@ describe('<Footer />', () => {
     it('should render the application version', () => {
       render(<Footer />);
 
-      const a: HTMLAnchorElement = screen.getByText(packageJson.version);
+      const a: HTMLAnchorElement = screen.getByText(`v${packageJson.version}`);
       expect(a).toBeInTheDocument();
     });
   });
@@ -86,7 +86,7 @@ describe('<Footer />', () => {
     it('should match the tag on the GigHub side', () => {
       render(<Footer />);
 
-      const a: HTMLAnchorElement = screen.getByText(packageJson.version);
+      const a: HTMLAnchorElement = screen.getByText(`v${packageJson.version}`);
       const [, githubTag]: string[] = a.href.split(`${config.github}/releases/tag/`);
       expect(a.innerHTML).toBe(githubTag);
     });
