@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { NavLink as RouterNavLink, useLocation, Location } from 'react-router-dom';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -8,11 +8,12 @@ import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import Link from '@mui/material/Link';
-import { useTheme } from '@mui/material/styles';
+import { Theme, useTheme } from '@mui/material/styles';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
 import { FourLeafClover } from '../../icons';
@@ -33,73 +34,138 @@ const pages = [
   // },
 ];
 
-interface NavButtonProps {
+export interface RouterNavLinkProps {
+  children: React.ReactElement;
+  to: string;
+}
+
+export interface StyleCallbackParams {
+  isActive: boolean;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const RouterNavLinkMod = React.forwardRef(function RouterNavLinkMod(props: RouterNavLinkProps, ref: React.Ref<any>) {
+  const { children, to, ...other } = props;
+  const theme: Theme = useTheme();
+
+  const styleCallback = React.useCallback(
+    function styleCallback({ isActive }: StyleCallbackParams): React.CSSProperties {
+      const activeStyle: React.CSSProperties = {
+        backgroundColor: theme.palette.action.selected,
+      };
+      return isActive ? activeStyle : {};
+    },
+    [theme],
+  );
+
+  return (
+    <RouterNavLink ref={ref} to={to} style={styleCallback} {...other}>
+      {children}
+    </RouterNavLink>
+  );
+});
+
+export interface NavButtonProps {
   pathname: string;
   to: string;
+  size?: 'small' | 'medium' | 'large';
   children: React.ReactNode;
+  label: string;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const NavButton = React.forwardRef(function NavButton(props: NavButtonProps, ref: React.Ref<any>) {
-  const { pathname, to, children } = props;
-  const theme = useTheme();
+  const { pathname, to, children, size = 'medium', label, ...other } = props;
 
   return (
     <Button
-      sx={{
-        ...(pathname === to && { backgroundColor: theme.palette.action.selected }),
-      }}
       to={to}
-      component={RouterLink}
+      component={RouterNavLinkMod}
+      size={size}
       variant="text"
       color="inherit"
       ref={ref}
+      aria-label={label}
+      {...other}
     >
       {children}
     </Button>
   );
 });
 
-interface TopBarProps {
+export interface TopBarProps {
   ColorSwitcherButtonProps?: {
     'data-testid'?: string;
   };
 }
 
-function TopBar(props: TopBarProps) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.Ref<any>) {
   const { ColorSwitcherButtonProps } = props;
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const theme = useTheme();
+  const theme: Theme = useTheme();
+  const isMedium: boolean = useMediaQuery(theme.breakpoints.up('md'));
 
   const colorMode: ColorModeContextValue = React.useContext(ColorModeContext);
-  const { pathname } = useLocation();
+  const { pathname }: Location = useLocation();
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenNavMenu = React.useCallback(function handleOpenNavMenu(event: React.MouseEvent<HTMLElement>): void {
     setAnchorElNav(event.currentTarget);
-  };
+  }, []);
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = React.useCallback(function handleCloseNavMenu(): void {
     setAnchorElNav(null);
-  };
+  }, []);
+
+  const toolbarVariant = React.useMemo(
+    function memoizeVariant(): 'regular' | 'dense' {
+      return isMedium ? 'regular' : 'dense';
+    },
+    [isMedium],
+  );
+
+  const navButtonSize = React.useMemo(
+    function memoizeSize(): 'medium' | 'small' {
+      return isMedium ? 'medium' : 'small';
+    },
+    [isMedium],
+  );
+
+  const logoFontSize = React.useMemo(
+    function memoizeFontSize(): 'large' | 'medium' {
+      return isMedium ? 'large' : 'medium';
+    },
+    [isMedium],
+  );
 
   return (
-    <AppBar position="static" color="transparent">
-      <Toolbar sx={{ display: 'flex', gap: 1, justifyContent: 'space-between' }}>
+    <AppBar position="static" color="default" ref={ref}>
+      <Toolbar sx={{ display: 'flex', gap: 1, justifyContent: 'space-between' }} variant={toolbarVariant}>
         {/* The application logo */}
-        <Link component={RouterLink} to="/" sx={{ display: 'flex', alignContent: 'center' }}>
-          <FourLeafClover fontSize="large" />
+        <Link
+          component={RouterNavLink}
+          to="/"
+          sx={{ display: 'flex', alignContent: 'center', mb: 0 }}
+          aria-label="Вернуться на главную"
+        >
+          <FourLeafClover fontSize={logoFontSize} />
         </Link>
 
         {/* App menu items */}
         <Box sx={{ display: 'flex', alignContent: 'center', gap: 1 }}>
           {/* The color mode switcher */}
-          <IconButton onClick={colorMode?.toggleColorCallback} color="inherit" {...ColorSwitcherButtonProps}>
+          <IconButton
+            onClick={colorMode?.toggleColorCallback}
+            color="inherit"
+            aria-label="Переключить цветовую тему"
+            {...ColorSwitcherButtonProps}
+          >
             {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
           </IconButton>
           {/* Pages menu for small screens */}
           <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
             <IconButton
-              size="large"
+              size="small"
               aria-label="Application Menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
@@ -120,8 +186,9 @@ function TopBar(props: TopBarProps) {
             >
               {pages.map(({ to, label }) => {
                 return (
-                  <MenuItem key={to} onClick={handleCloseNavMenu}>
-                    <NavButton to={to} pathname={pathname}>
+                  // FIXME: Keyboard navigation is broken here
+                  <MenuItem key={to} onClick={handleCloseNavMenu} dense>
+                    <NavButton to={to} pathname={pathname} size="small" label={label}>
                       {label}
                     </NavButton>
                   </MenuItem>
@@ -134,7 +201,7 @@ function TopBar(props: TopBarProps) {
           <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 1 }}>
             {pages.map(({ to, label }) => {
               return (
-                <NavButton key={to} to={to} pathname={pathname}>
+                <NavButton key={to} to={to} pathname={pathname} size={navButtonSize} label={label}>
                   {label}
                 </NavButton>
               );
@@ -144,6 +211,6 @@ function TopBar(props: TopBarProps) {
       </Toolbar>
     </AppBar>
   );
-}
+});
 
 export default TopBar;
