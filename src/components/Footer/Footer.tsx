@@ -41,8 +41,8 @@ function Footer(props: FooterProps) {
       <Typography variant="body2" color="text.secondary">
         {fullName} {new Date().getFullYear()}
       </Typography>
-      <Link variant="body2" color="text.secondary" href={`${github}/releases/tag/${packageJson.version}`}>
-        {packageJson.version}
+      <Link variant="body2" color="text.secondary" href={`${github}/releases/tag/v${packageJson.version}`}>
+        {`v${packageJson.version}`}
       </Link>
     </Box>
   );
