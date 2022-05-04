@@ -86,7 +86,7 @@ function TopBar(props: TopBarProps) {
     <AppBar position="static" color="transparent">
       <Toolbar sx={{ display: 'flex', gap: 1, justifyContent: 'space-between' }}>
         {/* The application logo */}
-        <Link component={RouterLink} to="/" sx={{ display: 'flex', alignContent: 'center' }}>
+        <Link component={RouterLink} to="/" sx={{ display: 'flex', alignContent: 'center', mb: 0 }}>
           <FourLeafClover fontSize="large" />
         </Link>
 
