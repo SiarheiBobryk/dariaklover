@@ -1,18 +1,17 @@
 import * as React from 'react';
 
-import { styled } from '@mui/material/styles';
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/lazy';
+// import 'swiper/css/lazy';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-cards';
 
 // import required modules
-import { Lazy, Keyboard, Pagination, Navigation } from 'swiper';
+import { Lazy, Keyboard, Pagination, Navigation, EffectCards } from 'swiper';
 
 const PUBLIC_PATH = 'responsive_images/reference_';
 
@@ -261,39 +260,33 @@ const referenceData: ReferenceData[] = [
   },
 ];
 
-const SwiperRoot = styled(Swiper)(({ theme }) => {
-  return {
-    // maxHeight: 600,
-    // maxWidth: 400,
-  };
-});
-
 function References() {
   return (
-    <SwiperRoot
-      slidesPerView="auto"
-      spaceBetween={30}
+    <Swiper
       keyboard={{
         enabled: true,
+        onlyInViewport: true,
       }}
       pagination={{
         clickable: true,
         dynamicBullets: true,
       }}
       navigation
-      lazy
-      modules={[Lazy, Keyboard, Pagination, Navigation]}
+      // lazy
+      style={{ width: '277px', height: '600px' }}
+      effect="cards"
+      modules={[EffectCards, Pagination, Navigation, Keyboard]}
       className="mySwiper"
     >
       {referenceData.map((item) => {
         return (
           <SwiperSlide key={item.src}>
-            <img data-srcset={item.srcSet} data-src={item.src} alt={item.alt} className="swiper-lazy" />
-            <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
+            <img height="600px" srcSet={item.srcSet} src={item.src} alt={item.alt} />
+            {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-white" /> */}
           </SwiperSlide>
         );
       })}
-    </SwiperRoot>
+    </Swiper>
   );
 }
 
