@@ -1,15 +1,18 @@
 import * as React from 'react';
 
+import { styled } from '@mui/material/styles';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/lazy';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // import required modules
-import { Keyboard, Pagination, Navigation } from 'swiper';
+import { Lazy, Keyboard, Pagination, Navigation } from 'swiper';
 
 const PUBLIC_PATH = 'responsive_images/reference_';
 
@@ -23,7 +26,7 @@ interface ReferenceData {
 // TODO: Double-check the possibility to reveal a blurred photo ❗️
 const referenceData: ReferenceData[] = [
   {
-    src: `${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_1125.png`,
+    src: `${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_612.png`,
     srcSet: `
       ${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_200.png 200w,
       ${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_300.png 300w,
@@ -49,7 +52,7 @@ const referenceData: ReferenceData[] = [
     title: 'Помогаю найти мотивацию',
   },
   {
-    src: `${PUBLIC_PATH}002/reference_002_acntl2_c_scale,w_1125.png`,
+    src: `${PUBLIC_PATH}002/reference_002_acntl2_c_scale,w_599.png`,
     srcSet: `
       ${PUBLIC_PATH}002/reference_002_acntl2_c_scale,w_200.png 200w,
       ${PUBLIC_PATH}002/reference_002_acntl2_c_scale,w_294.png 294w,
@@ -75,7 +78,7 @@ const referenceData: ReferenceData[] = [
     title: 'Помогаю включить желаемое состояние',
   },
   {
-    src: `${PUBLIC_PATH}003/reference_003_smkyjr_c_scale,w_1125.png`,
+    src: `${PUBLIC_PATH}003/reference_003_smkyjr_c_scale,w_615.png`,
     srcSet: `
       ${PUBLIC_PATH}003/reference_003_smkyjr_c_scale,w_200.png 200w,
       ${PUBLIC_PATH}003/reference_003_smkyjr_c_scale,w_298.png 298w,
@@ -101,7 +104,7 @@ const referenceData: ReferenceData[] = [
     title: 'Помогаю наладить пищевое поведение',
   },
   {
-    src: `${PUBLIC_PATH}004/reference_004_l7vi5b_c_scale,w_1125.png`,
+    src: `${PUBLIC_PATH}004/reference_004_l7vi5b_c_scale,w_633.png`,
     srcSet: `
       ${PUBLIC_PATH}004/reference_004_l7vi5b_c_scale,w_200.png 200w,
       ${PUBLIC_PATH}004/reference_004_l7vi5b_c_scale,w_301.png 301w,
@@ -127,7 +130,7 @@ const referenceData: ReferenceData[] = [
     title: 'Помогаю в освоении полезных привычек',
   },
   {
-    src: `${PUBLIC_PATH}005/reference_005_rtxopi_c_scale,w_1125.png`,
+    src: `${PUBLIC_PATH}005/reference_005_rtxopi_c_scale,w_603.png`,
     srcSet: `
       ${PUBLIC_PATH}005/reference_005_rtxopi_c_scale,w_200.png 200w,
       ${PUBLIC_PATH}005/reference_005_rtxopi_c_scale,w_294.png 294w,
@@ -153,7 +156,7 @@ const referenceData: ReferenceData[] = [
     title: 'Помогаю определить истинные цели',
   },
   {
-    src: `${PUBLIC_PATH}006/reference_006_yvgszc_c_scale,w_1125.png`,
+    src: `${PUBLIC_PATH}006/reference_006_yvgszc_c_scale,w_624.png`,
     srcSet: `
       ${PUBLIC_PATH}006/reference_006_yvgszc_c_scale,w_200.png 200w,
       ${PUBLIC_PATH}006/reference_006_yvgszc_c_scale,w_302.png 302w,
@@ -179,7 +182,7 @@ const referenceData: ReferenceData[] = [
     title: 'Помогаю расставить приоритеты',
   },
   {
-    src: `${PUBLIC_PATH}007/reference_007_wu3eqj_c_scale,w_1125.png`,
+    src: `${PUBLIC_PATH}007/reference_007_wu3eqj_c_scale,w_639.png`,
     srcSet: `
       ${PUBLIC_PATH}007/reference_007_wu3eqj_c_scale,w_200.png 200w,
       ${PUBLIC_PATH}007/reference_007_wu3eqj_c_scale,w_306.png 306w,
@@ -205,7 +208,7 @@ const referenceData: ReferenceData[] = [
     title: 'Помогаю обрести душевный покой',
   },
   {
-    src: `${PUBLIC_PATH}008/reference_008_g9udvj_c_scale,w_1125.png`,
+    src: `${PUBLIC_PATH}008/reference_008_g9udvj_c_scale,w_626.png`,
     srcSet: `
       ${PUBLIC_PATH}008/reference_008_g9udvj_c_scale,w_200.png 200w,
       ${PUBLIC_PATH}008/reference_008_g9udvj_c_scale,w_305.png 305w,
@@ -231,7 +234,7 @@ const referenceData: ReferenceData[] = [
     title: 'Помогаю понять себя и свое тело',
   },
   {
-    src: `${PUBLIC_PATH}009/reference_009_vzitye_c_scale,w_1125.png`,
+    src: `${PUBLIC_PATH}009/reference_009_vzitye_c_scale,w_647.png`,
     srcSet: `
       ${PUBLIC_PATH}009/reference_009_vzitye_c_scale,w_200.png 200w,
       ${PUBLIC_PATH}009/reference_009_vzitye_c_scale,w_310.png 310w,
@@ -258,10 +261,17 @@ const referenceData: ReferenceData[] = [
   },
 ];
 
+const SwiperRoot = styled(Swiper)(({ theme }) => {
+  return {
+    // maxHeight: 600,
+    // maxWidth: 400,
+  };
+});
+
 function References() {
   return (
-    <Swiper
-      slidesPerView={1}
+    <SwiperRoot
+      slidesPerView="auto"
       spaceBetween={30}
       keyboard={{
         enabled: true,
@@ -271,17 +281,19 @@ function References() {
         dynamicBullets: true,
       }}
       navigation
-      modules={[Keyboard, Pagination, Navigation]}
+      lazy
+      modules={[Lazy, Keyboard, Pagination, Navigation]}
       className="mySwiper"
     >
       {referenceData.map((item) => {
         return (
-          <SwiperSlide>
-            <img key={item.src} srcSet={item.srcSet} src={item.src} alt={item.alt} />
+          <SwiperSlide key={item.src}>
+            <img data-srcset={item.srcSet} data-src={item.src} alt={item.alt} className="swiper-lazy" />
+            <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
           </SwiperSlide>
         );
       })}
-    </Swiper>
+    </SwiperRoot>
   );
 }
 
