@@ -1,17 +1,16 @@
 import * as React from 'react';
 
+import { styled } from '@mui/material/styles';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
+import { Lazy, Pagination, Navigation, A11y } from 'swiper';
+
 import 'swiper/css';
-// import 'swiper/css/lazy';
+import 'swiper/css/lazy';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import 'swiper/css/effect-cards';
-
-// import required modules
-import { Lazy, Keyboard, Pagination, Navigation, EffectCards } from 'swiper';
 
 const PUBLIC_PATH = 'responsive_images/reference_';
 
@@ -22,8 +21,7 @@ interface ReferenceData {
   title: string;
 }
 
-// TODO: Double-check the possibility to reveal a blurred photo ❗️
-const referenceData: ReferenceData[] = [
+const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_612.png`,
     srcSet: `
@@ -260,29 +258,52 @@ const referenceData: ReferenceData[] = [
   },
 ];
 
+const Img = styled('img')(({ theme }) => {
+  return {
+    borderRadius: theme.spacing(1),
+  };
+});
+
 function References() {
   return (
     <Swiper
-      keyboard={{
+      a11y={{
         enabled: true,
-        onlyInViewport: true,
+        nextSlideMessage: 'Следующий отзыв',
+        prevSlideMessage: 'Предыдущий отзыв',
+        paginationBulletMessage: 'Перейти на слайд {{index}}',
       }}
-      pagination={{
-        clickable: true,
-        dynamicBullets: true,
+      grabCursor
+      lazy={{
+        enabled: true,
+        loadOnTransitionStart: true,
       }}
+      modules={[Lazy, Pagination, Navigation, A11y]}
       navigation
-      // lazy
+      pagination={{ clickable: true }}
       style={{ width: '277px', height: '600px' }}
-      effect="cards"
-      modules={[EffectCards, Pagination, Navigation, Keyboard]}
-      className="mySwiper"
     >
-      {referenceData.map((item) => {
+      <SwiperSlide>
+        <Img
+          srcSet={firstReference.srcSet}
+          src={firstReference.src}
+          alt={firstReference.alt}
+          height="600"
+          width="277"
+        />
+      </SwiperSlide>
+      {lazyLoadingReferences.map(function mapReferences(item: ReferenceData) {
         return (
           <SwiperSlide key={item.src}>
-            <img height="600px" srcSet={item.srcSet} src={item.src} alt={item.alt} />
-            {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-white" /> */}
+            <Img
+              data-srcset={item.srcSet}
+              data-src={item.src}
+              alt={item.alt}
+              className="swiper-lazy"
+              height="600"
+              width="277"
+            />
+            <div className="swiper-lazy-preloader" />
           </SwiperSlide>
         );
       })}
