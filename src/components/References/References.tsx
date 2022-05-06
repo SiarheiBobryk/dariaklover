@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { styled } from '@mui/material/styles';
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Lazy, Pagination, Navigation, A11y } from 'swiper';
@@ -25,7 +24,7 @@ const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_612.png`,
     srcSet: `
-      ${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_200.png 200w,
+      ${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_250.png 250w,
       ${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_300.png 300w,
       ${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_380.png 380w,
       ${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_442.png 442w,
@@ -51,7 +50,7 @@ const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}002/reference_002_acntl2_c_scale,w_599.png`,
     srcSet: `
-      ${PUBLIC_PATH}002/reference_002_acntl2_c_scale,w_200.png 200w,
+      ${PUBLIC_PATH}002/reference_002_acntl2_c_scale,w_250.png 250w,
       ${PUBLIC_PATH}002/reference_002_acntl2_c_scale,w_294.png 294w,
       ${PUBLIC_PATH}002/reference_002_acntl2_c_scale,w_370.png 370w,
       ${PUBLIC_PATH}002/reference_002_acntl2_c_scale,w_436.png 436w,
@@ -77,7 +76,7 @@ const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}003/reference_003_smkyjr_c_scale,w_615.png`,
     srcSet: `
-      ${PUBLIC_PATH}003/reference_003_smkyjr_c_scale,w_200.png 200w,
+      ${PUBLIC_PATH}003/reference_003_smkyjr_c_scale,w_250.png 250w,
       ${PUBLIC_PATH}003/reference_003_smkyjr_c_scale,w_298.png 298w,
       ${PUBLIC_PATH}003/reference_003_smkyjr_c_scale,w_376.png 376w,
       ${PUBLIC_PATH}003/reference_003_smkyjr_c_scale,w_445.png 445w,
@@ -103,7 +102,7 @@ const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}004/reference_004_l7vi5b_c_scale,w_633.png`,
     srcSet: `
-      ${PUBLIC_PATH}004/reference_004_l7vi5b_c_scale,w_200.png 200w,
+      ${PUBLIC_PATH}004/reference_004_l7vi5b_c_scale,w_250.png 250w,
       ${PUBLIC_PATH}004/reference_004_l7vi5b_c_scale,w_301.png 301w,
       ${PUBLIC_PATH}004/reference_004_l7vi5b_c_scale,w_385.png 385w,
       ${PUBLIC_PATH}004/reference_004_l7vi5b_c_scale,w_458.png 458w,
@@ -129,7 +128,7 @@ const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}005/reference_005_rtxopi_c_scale,w_603.png`,
     srcSet: `
-      ${PUBLIC_PATH}005/reference_005_rtxopi_c_scale,w_200.png 200w,
+      ${PUBLIC_PATH}005/reference_005_rtxopi_c_scale,w_250.png 250w,
       ${PUBLIC_PATH}005/reference_005_rtxopi_c_scale,w_294.png 294w,
       ${PUBLIC_PATH}005/reference_005_rtxopi_c_scale,w_371.png 371w,
       ${PUBLIC_PATH}005/reference_005_rtxopi_c_scale,w_439.png 439w,
@@ -155,7 +154,7 @@ const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}006/reference_006_yvgszc_c_scale,w_624.png`,
     srcSet: `
-      ${PUBLIC_PATH}006/reference_006_yvgszc_c_scale,w_200.png 200w,
+      ${PUBLIC_PATH}006/reference_006_yvgszc_c_scale,w_250.png 250w,
       ${PUBLIC_PATH}006/reference_006_yvgszc_c_scale,w_302.png 302w,
       ${PUBLIC_PATH}006/reference_006_yvgszc_c_scale,w_385.png 385w,
       ${PUBLIC_PATH}006/reference_006_yvgszc_c_scale,w_460.png 460w,
@@ -181,7 +180,7 @@ const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}007/reference_007_wu3eqj_c_scale,w_639.png`,
     srcSet: `
-      ${PUBLIC_PATH}007/reference_007_wu3eqj_c_scale,w_200.png 200w,
+      ${PUBLIC_PATH}007/reference_007_wu3eqj_c_scale,w_250.png 250w,
       ${PUBLIC_PATH}007/reference_007_wu3eqj_c_scale,w_306.png 306w,
       ${PUBLIC_PATH}007/reference_007_wu3eqj_c_scale,w_388.png 388w,
       ${PUBLIC_PATH}007/reference_007_wu3eqj_c_scale,w_463.png 463w,
@@ -207,7 +206,7 @@ const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}008/reference_008_g9udvj_c_scale,w_626.png`,
     srcSet: `
-      ${PUBLIC_PATH}008/reference_008_g9udvj_c_scale,w_200.png 200w,
+      ${PUBLIC_PATH}008/reference_008_g9udvj_c_scale,w_250.png 250w,
       ${PUBLIC_PATH}008/reference_008_g9udvj_c_scale,w_305.png 305w,
       ${PUBLIC_PATH}008/reference_008_g9udvj_c_scale,w_387.png 387w,
       ${PUBLIC_PATH}008/reference_008_g9udvj_c_scale,w_465.png 465w,
@@ -233,7 +232,7 @@ const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}009/reference_009_vzitye_c_scale,w_647.png`,
     srcSet: `
-      ${PUBLIC_PATH}009/reference_009_vzitye_c_scale,w_200.png 200w,
+      ${PUBLIC_PATH}009/reference_009_vzitye_c_scale,w_250.png 250w,
       ${PUBLIC_PATH}009/reference_009_vzitye_c_scale,w_310.png 310w,
       ${PUBLIC_PATH}009/reference_009_vzitye_c_scale,w_394.png 394w,
       ${PUBLIC_PATH}009/reference_009_vzitye_c_scale,w_469.png 469w,
@@ -280,28 +279,28 @@ function References() {
       }}
       modules={[Lazy, Pagination, Navigation, A11y]}
       navigation
-      pagination={{ clickable: true }}
-      style={{ width: '277px', height: '600px' }}
+      pagination={{ clickable: true, dynamicBullets: true }}
+      style={{ height: '541px' }}
     >
-      <SwiperSlide>
+      <SwiperSlide style={{ display: 'flex', justifyContent: 'center' }}>
         <Img
           srcSet={firstReference.srcSet}
           src={firstReference.src}
           alt={firstReference.alt}
-          height="600"
-          width="277"
+          height="541"
+          width="250"
         />
       </SwiperSlide>
       {lazyLoadingReferences.map(function mapReferences(item: ReferenceData) {
         return (
-          <SwiperSlide key={item.src}>
+          <SwiperSlide key={item.src} style={{ display: 'flex', justifyContent: 'center' }}>
             <Img
               data-srcset={item.srcSet}
               data-src={item.src}
               alt={item.alt}
               className="swiper-lazy"
-              height="600"
-              width="277"
+              height="541"
+              width="250"
             />
             <div className="swiper-lazy-preloader" />
           </SwiperSlide>
