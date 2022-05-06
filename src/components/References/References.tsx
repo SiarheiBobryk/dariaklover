@@ -1,9 +1,15 @@
 import * as React from 'react';
 
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import Box from '@mui/material/Box';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Keyboard, Pagination, Navigation } from 'swiper';
 
 const PUBLIC_PATH = 'responsive_images/reference_';
 
@@ -254,23 +260,28 @@ const referenceData: ReferenceData[] = [
 
 function References() {
   return (
-    <ImageList
-      sx={{
-        height: 660,
+    <Swiper
+      slidesPerView={1}
+      spaceBetween={30}
+      keyboard={{
+        enabled: true,
       }}
-      cols={1}
+      pagination={{
+        clickable: true,
+        dynamicBullets: true,
+      }}
+      navigation
+      modules={[Keyboard, Pagination, Navigation]}
+      className="mySwiper"
     >
-      <Box sx={{ display: 'flex', gap: 1 }}>
-        {referenceData.map((item) => {
-          return (
-            <ImageListItem key={item.src} sx={{ flexGrow: 0, flexShrink: 0, flexBasis: 300 }}>
-              <img srcSet={item.srcSet} src={item.src} alt={item.alt} />
-              <ImageListItemBar subtitle={item.title} />
-            </ImageListItem>
-          );
-        })}
-      </Box>
-    </ImageList>
+      {referenceData.map((item) => {
+        return (
+          <SwiperSlide>
+            <img key={item.src} srcSet={item.srcSet} src={item.src} alt={item.alt} />
+          </SwiperSlide>
+        );
+      })}
+    </Swiper>
   );
 }
 
