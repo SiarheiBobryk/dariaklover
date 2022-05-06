@@ -17,7 +17,6 @@ function Main() {
 
       {/* References block */}
       <Heading>Отзывы клиентов</Heading>
-      {/* TODO: Double-check the pictures from security perspective */}
       <References />
     </>
   );
