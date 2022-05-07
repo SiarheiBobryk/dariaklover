@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { styled } from '@mui/material/styles';
+import SkeletonMui from '@mui/material/Skeleton';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Lazy, Pagination, Navigation, A11y } from 'swiper';
@@ -84,10 +85,16 @@ export const Img = styled('img')(({ theme }) => {
   };
 });
 
+export const Skeleton = styled(SkeletonMui)(({ theme }) => {
+  return {
+    position: 'absolute',
+    borderRadius: theme.spacing(1),
+  };
+});
+
 function References() {
   const height = '650';
   const width = '300';
-  const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = references;
   return (
     <Swiper
       a11y={{
@@ -109,14 +116,7 @@ function References() {
       }}
       style={{ height: `${height}px` }}
     >
-      <SwiperSlide style={{ display: 'flex', justifyContent: 'center' }}>
-        <picture>
-          <source type="image/webp" srcSet={firstReference.srcSet} />
-          <source type="image/jpeg" srcSet={firstReference.src} />
-          <Img src={firstReference.src} alt={firstReference.title} loading="lazy" height={height} width={width} />
-        </picture>
-      </SwiperSlide>
-      {lazyLoadingReferences.map(function mapReferences(item: ReferenceData) {
+      {references.map(function mapReferences(item: ReferenceData) {
         return (
           <SwiperSlide key={item.src} style={{ display: 'flex', justifyContent: 'center' }}>
             <picture>
@@ -124,8 +124,7 @@ function References() {
               <source type="image/jpeg" data-srcset={item.src} />
               <Img data-src={item.src} alt={item.title} height={height} width={width} className="swiper-lazy" />
             </picture>
-            {/* TODO: Polish the fallback image */}
-            <div className="swiper-lazy-preloader" />
+            <Skeleton variant="rectangular" height={`${height}px`} width={`${width}px`} />
           </SwiperSlide>
         );
       })}
