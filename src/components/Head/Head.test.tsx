@@ -6,7 +6,6 @@ import { toHaveNoViolations } from 'jest-axe';
 
 import Head from './Head';
 import AppConfigProvider, { Config, config, MetaTags } from '../../providers/AppConfigProvider';
-import packageJson from '../../../package.json';
 
 expect.extend(toHaveNoViolations);
 
@@ -44,20 +43,6 @@ describe('<App />', () => {
         expect(metaTagsMapped[tag]).toBe(config[tag as keyof Config]);
       });
       // TODO: Implement color-mode tests
-    });
-
-    it('should have the right application version in the URL', () => {
-      render(
-        <AppConfigProvider>
-          <Head />
-        </AppConfigProvider>,
-      );
-
-      const { linkTags }: HelmetPropsToState = Helmet.peek();
-      linkTags.forEach(function checkApplicationVersion(link: HTMLLinkElement) {
-        const { href } = link;
-        expect(href).toContain(`?v=${packageJson.version}`);
-      });
     });
   });
 });
