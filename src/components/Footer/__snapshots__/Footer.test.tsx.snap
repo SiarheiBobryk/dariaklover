@@ -81,11 +81,11 @@ exports[`<Footer /> snapshotting should render correctly 1`] = `
   </p>
   <a
     className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineAlways css-1x1e5md-MuiTypography-root-MuiLink-root"
-    href="https://github.com/SiarheiBobryk/DariaKlover-website/releases/tag/v0.0.7"
+    href="https://github.com/SiarheiBobryk/DariaKlover-website/releases/tag/v0.0.8"
     onBlur={[Function]}
     onFocus={[Function]}
   >
-    v0.0.7
+    v0.0.8
   </a>
 </div>
 `;
