@@ -29,7 +29,7 @@ function Footer(props: FooterProps) {
   }: Config = React.useContext(AppConfigContext);
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1 }} {...props}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, marginBottom: 1 }} {...props}>
       <Box>
         <IconButton aria-label={instagramLabel} href={instagramHref} color="inherit" {...iconButtonA11yProps}>
           <InstagramIcon />
