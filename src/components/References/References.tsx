@@ -3,7 +3,6 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import { Lazy, Pagination, Navigation, A11y } from 'swiper';
 
 import 'swiper/css';
@@ -264,6 +263,8 @@ const Img = styled('img')(({ theme }) => {
 });
 
 function References() {
+  const height = '541';
+  const width = '250';
   return (
     <Swiper
       a11y={{
@@ -280,15 +281,15 @@ function References() {
       modules={[Lazy, Pagination, Navigation, A11y]}
       navigation
       pagination={{ clickable: true, dynamicBullets: true }}
-      style={{ height: '541px' }}
+      style={{ height: `${height}px` }}
     >
       <SwiperSlide style={{ display: 'flex', justifyContent: 'center' }}>
         <Img
           srcSet={firstReference.srcSet}
           src={firstReference.src}
           alt={firstReference.alt}
-          height="541"
-          width="250"
+          height={height}
+          width={width}
         />
       </SwiperSlide>
       {lazyLoadingReferences.map(function mapReferences(item: ReferenceData) {
@@ -299,8 +300,8 @@ function References() {
               data-src={item.src}
               alt={item.alt}
               className="swiper-lazy"
-              height="541"
-              width="250"
+              height={height}
+              width={width}
             />
             <div className="swiper-lazy-preloader" />
           </SwiperSlide>
