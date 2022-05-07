@@ -2,7 +2,7 @@
 
 exports[`<Footer /> snapshotting should render correctly 1`] = `
 <div
-  className="MuiBox-root css-15gku5u"
+  className="MuiBox-root css-s73z7h"
 >
   <div
     className="MuiBox-root css-0"
