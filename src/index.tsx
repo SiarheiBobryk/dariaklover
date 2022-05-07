@@ -9,6 +9,7 @@ import ThemeProvider from './providers/ThemeProvider';
 import App from './App';
 
 import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
