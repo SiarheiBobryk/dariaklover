@@ -285,25 +285,21 @@ function References() {
       style={{ height: `${height}px` }}
     >
       <SwiperSlide style={{ display: 'flex', justifyContent: 'center' }}>
-        <Img
-          srcSet={firstReference.srcSet}
-          src={firstReference.src}
-          alt={firstReference.alt}
-          height={height}
-          width={width}
-        />
+        <picture>
+          <source type="image/webp" srcSet={firstReference.srcSet} />
+          <source type="image/jpeg" srcSet={firstReference.src} />
+          <Img src={firstReference.src} alt={firstReference.title} loading="lazy" height={height} width={width} />
+        </picture>
       </SwiperSlide>
       {lazyLoadingReferences.map(function mapReferences(item: ReferenceData) {
         return (
           <SwiperSlide key={item.src} style={{ display: 'flex', justifyContent: 'center' }}>
-            <Img
-              data-srcset={item.srcSet}
-              data-src={item.src}
-              alt={item.alt}
-              className="swiper-lazy"
-              height={height}
-              width={width}
-            />
+            <picture>
+              <source type="image/webp" data-srcset={item.srcSet} />
+              <source type="image/jpeg" data-srcset={item.src} />
+              <Img data-src={item.src} alt={item.title} height={height} width={width} className="swiper-lazy" />
+            </picture>
+            {/* TODO: Polish the fallback image */}
             <div className="swiper-lazy-preloader" />
           </SwiperSlide>
         );
