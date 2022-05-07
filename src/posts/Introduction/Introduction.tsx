@@ -2,9 +2,16 @@ import * as React from 'react';
 
 import Link from '@mui/material/Link';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { styled } from '@mui/material/styles';
 
 import Heading from '../../components/Heading';
 import Paragraph from '../../components/Paragraph';
+
+export const Strong = styled('strong')(() => {
+  return {
+    textDecoration: 'underline',
+  };
+});
 
 function Introduction() {
   return (
@@ -33,7 +40,7 @@ function Introduction() {
 
       {/* TODO: The better (React) alternative for `strong` here? */}
       <Paragraph>
-        Одна из моих главных задач - осознание клиентом того, <strong>что, как и почему нужно делать</strong>, чтобы
+        Одна из моих главных задач - осознание клиентом того, <Strong>что, как и почему нужно делать</Strong>, чтобы
         достичь желаемого результата.
       </Paragraph>
     </>
