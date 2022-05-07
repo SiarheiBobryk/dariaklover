@@ -19,7 +19,7 @@ export interface ReferenceData {
   title: string;
 }
 
-export const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
+export const references: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_612.png`,
     srcSet: `
@@ -265,6 +265,7 @@ export const Img = styled('img')(({ theme }) => {
 function References() {
   const height = '541';
   const width = '250';
+  const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = references;
   return (
     <Swiper
       a11y={{
