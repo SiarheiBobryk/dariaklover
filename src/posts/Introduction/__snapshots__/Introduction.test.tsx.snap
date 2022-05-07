@@ -60,7 +60,9 @@ Array [
     className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
   >
     Одна из моих главных задач - осознание клиентом того, 
-    <strong>
+    <strong
+      className="css-1081t4c"
+    >
       что, как и почему нужно делать
     </strong>
     , чтобы достичь желаемого результата.
