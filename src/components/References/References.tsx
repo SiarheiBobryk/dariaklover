@@ -10,16 +10,16 @@ import 'swiper/css/lazy';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-const PUBLIC_PATH = 'responsive_images/reference_';
+export const PUBLIC_PATH = 'responsive_images/reference_';
 
-interface ReferenceData {
+export interface ReferenceData {
   src: string;
   srcSet: string;
   alt: string;
   title: string;
 }
 
-const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
+export const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_612.png`,
     srcSet: `
@@ -256,7 +256,7 @@ const [firstReference, ...lazyLoadingReferences]: ReferenceData[] = [
   },
 ];
 
-const Img = styled('img')(({ theme }) => {
+export const Img = styled('img')(({ theme }) => {
   return {
     borderRadius: theme.spacing(1),
   };
