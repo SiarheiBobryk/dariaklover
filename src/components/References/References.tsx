@@ -11,7 +11,6 @@ import 'swiper/css/lazy';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/a11y';
-import './styles.css';
 
 export const PUBLIC_PATH = 'responsive_images/reference_';
 
@@ -93,8 +92,8 @@ export const Skeleton = styled(SkeletonMui)(({ theme }) => {
 });
 
 function References() {
-  const height = '650';
-  const width = '300';
+  const height = '541';
+  const width = '250';
   return (
     <Swiper
       a11y={{
@@ -111,7 +110,6 @@ function References() {
       modules={[Lazy, Pagination, Navigation, A11y]}
       navigation
       pagination={{
-        clickable: true,
         dynamicBullets: true,
       }}
       style={{ height: `${height}px` }}
