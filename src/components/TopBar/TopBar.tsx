@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavLink as RouterNavLink, useLocation, Location } from 'react-router-dom';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -66,7 +66,6 @@ const RouterNavLinkMod = React.forwardRef(function RouterNavLinkMod(props: Route
 });
 
 export interface NavButtonProps {
-  pathname: string;
   to: string;
   size?: 'small' | 'medium' | 'large';
   children: React.ReactNode;
@@ -75,7 +74,7 @@ export interface NavButtonProps {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const NavButton = React.forwardRef(function NavButton(props: NavButtonProps, ref: React.Ref<any>) {
-  const { pathname, to, children, size = 'medium', label, ...other } = props;
+  const { to, children, size = 'medium', label, ...other } = props;
 
   return (
     <Button
@@ -107,7 +106,6 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
   const isMedium: boolean = useMediaQuery(theme.breakpoints.up('md'));
 
   const colorMode: ColorModeContextValue = React.useContext(ColorModeContext);
-  const { pathname }: Location = useLocation();
 
   const handleOpenNavMenu = React.useCallback(function handleOpenNavMenu(event: React.MouseEvent<HTMLElement>): void {
     setAnchorElNav(event.currentTarget);
@@ -179,6 +177,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
               anchorEl={anchorElNav}
               keepMounted
               open={Boolean(anchorElNav)}
+              onClick={handleCloseNavMenu}
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', sm: 'none' },
@@ -186,11 +185,8 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
             >
               {pages.map(({ to, label }) => {
                 return (
-                  // FIXME: Keyboard navigation is broken here
-                  <MenuItem key={to} onClick={handleCloseNavMenu} dense>
-                    <NavButton to={to} pathname={pathname} size="small" label={label}>
-                      {label}
-                    </NavButton>
+                  <MenuItem to={to} component={RouterNavLink} key={to} aria-label={label} dense>
+                    {label}
                   </MenuItem>
                 );
               })}
@@ -201,7 +197,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
           <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 1 }}>
             {pages.map(({ to, label }) => {
               return (
-                <NavButton key={to} to={to} pathname={pathname} size={navButtonSize} label={label}>
+                <NavButton key={to} to={to} size={navButtonSize} label={label}>
                   {label}
                 </NavButton>
               );
