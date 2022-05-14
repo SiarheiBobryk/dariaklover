@@ -27,6 +27,10 @@ const pages = [
     to: '/about',
     label: 'Обо мне',
   },
+  {
+    to: '/references',
+    label: 'Отзывы',
+  },
   // TODO: Uncomment it when we'll have something to archive
   // {
   //   to: '/archive',

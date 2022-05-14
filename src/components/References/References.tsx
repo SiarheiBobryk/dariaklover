@@ -6,6 +6,8 @@ import SkeletonMui from '@mui/material/Skeleton';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Lazy, Pagination, Navigation, A11y } from 'swiper';
 
+import Heading from '../Heading';
+
 import 'swiper/css';
 import 'swiper/css/lazy';
 import 'swiper/css/pagination';
@@ -95,38 +97,41 @@ function References() {
   const height = '541';
   const width = '250';
   return (
-    <Swiper
-      a11y={{
-        enabled: true,
-        nextSlideMessage: 'Следующий отзыв',
-        prevSlideMessage: 'Предыдущий отзыв',
-        paginationBulletMessage: 'Перейти на слайд {{index}}',
-      }}
-      grabCursor
-      lazy={{
-        enabled: true,
-        loadOnTransitionStart: true,
-      }}
-      modules={[Lazy, Pagination, Navigation, A11y]}
-      navigation
-      pagination={{
-        dynamicBullets: true,
-      }}
-      style={{ height: `${height}px` }}
-    >
-      {references.map(function mapReferences(item: ReferenceData) {
-        return (
-          <SwiperSlide key={item.src} style={{ display: 'flex', justifyContent: 'center' }}>
-            <picture>
-              <source type="image/webp" data-srcset={item.srcSet} />
-              <source type="image/jpeg" data-srcset={item.src} />
-              <Img data-src={item.src} alt={item.title} height={height} width={width} className="swiper-lazy" />
-            </picture>
-            <Skeleton variant="rectangular" height={`${height}px`} width={`${width}px`} />
-          </SwiperSlide>
-        );
-      })}
-    </Swiper>
+    <>
+      <Heading>Отзывы клиентов</Heading>
+      <Swiper
+        a11y={{
+          enabled: true,
+          nextSlideMessage: 'Следующий отзыв',
+          prevSlideMessage: 'Предыдущий отзыв',
+          paginationBulletMessage: 'Перейти на слайд {{index}}',
+        }}
+        grabCursor
+        lazy={{
+          enabled: true,
+          loadOnTransitionStart: true,
+        }}
+        modules={[Lazy, Pagination, Navigation, A11y]}
+        navigation
+        pagination={{
+          dynamicBullets: true,
+        }}
+        style={{ height: `${height}px` }}
+      >
+        {references.map(function mapReferences(item: ReferenceData) {
+          return (
+            <SwiperSlide key={item.src} style={{ display: 'flex', justifyContent: 'center' }}>
+              <picture>
+                <source type="image/webp" data-srcset={item.srcSet} />
+                <source type="image/jpeg" data-srcset={item.src} />
+                <Img data-src={item.src} alt={item.title} height={height} width={width} className="swiper-lazy" />
+              </picture>
+              <Skeleton variant="rectangular" height={`${height}px`} width={`${width}px`} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </>
   );
 }
 

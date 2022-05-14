@@ -1,16 +1,15 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Introduction from '../../posts/Introduction/Introduction';
+import References from '../../components/References';
 
 function Main() {
   return (
     <>
       <Helmet>
-        <title>Главная страница</title>
+        <title>Отзывы клинтов</title>
       </Helmet>
-
-      <Introduction />
+      <References />
     </>
   );
 }
