@@ -13,6 +13,10 @@ const Archive = React.lazy(function lazyLoadArchive() {
   return import('./pages/Archive');
 });
 
+const References = React.lazy(function lazyLoadReferences() {
+  return import('./pages/References');
+});
+
 const Main = React.lazy(function lazyLoadMain() {
   return import('./pages/Main');
 });
@@ -47,6 +51,7 @@ function App() {
           <Routes>
             <Route path="/about" element={<About />} />
             <Route path="/archive" element={<Archive />} />
+            <Route path="/references" element={<References />} />
             <Route path="/" element={<Main />} />
           </Routes>
         </Suspense>
