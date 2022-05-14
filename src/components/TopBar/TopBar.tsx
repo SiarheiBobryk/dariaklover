@@ -13,23 +13,30 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
+import ListItemIcon from '@mui/material/ListItemIcon';
 import useMediaQuery from '@mui/material/useMediaQuery';
+
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
 import { FourLeafClover } from '../../icons';
 
 const pages = [
-  {
-    to: '/',
-    label: 'Главная',
-  },
+  // {
+  //   to: '/',
+  //   label: 'Главная',
+  // },
   {
     to: '/about',
     label: 'Обо мне',
+    endIcon: <PersonOutlineIcon />,
   },
   {
     to: '/references',
     label: 'Отзывы',
+    endIcon: <MenuBookIcon />,
   },
   // TODO: Uncomment it when we'll have something to archive
   // {
@@ -74,6 +81,7 @@ export interface NavButtonProps {
   size?: 'small' | 'medium' | 'large';
   children: React.ReactNode;
   label: string;
+  endIcon: React.ReactNode;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -126,7 +134,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
     [isMedium],
   );
 
-  const navButtonSize = React.useMemo(
+  const buttonSize = React.useMemo(
     function memoizeSize(): 'medium' | 'small' {
       return isMedium ? 'medium' : 'small';
     },
@@ -160,10 +168,20 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
             onClick={colorMode?.toggleColorCallback}
             color="inherit"
             aria-label="Переключить цветовую тему"
+            size={buttonSize}
             {...ColorSwitcherButtonProps}
           >
             {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
           </IconButton>
+          <Button
+            href="https://calendly.com/dariaklover"
+            variant="contained"
+            endIcon={<CalendarMonthIcon />}
+            size={buttonSize}
+            aria-label="Записаться на консультацию"
+          >
+            Записаться
+          </Button>
           {/* Pages menu for small screens */}
           <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
             <IconButton
@@ -187,9 +205,10 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
                 display: { xs: 'block', sm: 'none' },
               }}
             >
-              {pages.map(({ to, label }) => {
+              {pages.map(({ to, label, endIcon }) => {
                 return (
                   <MenuItem to={to} component={RouterNavLink} key={to} aria-label={label} dense>
+                    <ListItemIcon>{endIcon}</ListItemIcon>
                     {label}
                   </MenuItem>
                 );
@@ -199,9 +218,9 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
 
           {/* Pages list for medium screens */}
           <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 1 }}>
-            {pages.map(({ to, label }) => {
+            {pages.map(({ to, label, endIcon }) => {
               return (
-                <NavButton key={to} to={to} size={navButtonSize} label={label}>
+                <NavButton key={to} to={to} size={buttonSize} label={label} endIcon={endIcon}>
                   {label}
                 </NavButton>
               );
