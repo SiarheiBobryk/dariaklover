@@ -174,6 +174,15 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
           >
             {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
           </IconButton>
+          <Button
+            href="https://calendly.com/dariaklover"
+            variant="contained"
+            endIcon={<CalendarMonthIcon />}
+            size={buttonSize}
+            aria-label="Записаться на консультацию"
+          >
+            Записаться
+          </Button>
           {/* Pages menu for small screens */}
           <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
             <IconButton
