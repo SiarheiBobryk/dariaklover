@@ -21,28 +21,26 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
-import { FourLeafClover } from '../../icons';
+import FourLeafCloverIcon from '../../icons/FourLeafClover';
+
+import aboutMetaData from '../../pages/About/aboutMetaData';
+import referencesMetaData from '../../pages/References/referencesMetaData';
 
 const pages = [
   // {
-  //   to: '/',
+  //   to: mainMetaData.path,
   //   label: 'Главная',
   // },
   {
-    to: '/about',
+    to: aboutMetaData.path,
     label: 'Обо мне',
     endIcon: <PersonOutlineIcon />,
   },
   {
-    to: '/references',
+    to: referencesMetaData.path,
     label: 'Отзывы',
     endIcon: <MenuBookIcon />,
   },
-  // TODO: Uncomment it when we'll have something to archive
-  // {
-  //   to: '/archive',
-  //   label: 'Архив',
-  // },
 ];
 
 export interface RouterNavLinkProps {
@@ -158,7 +156,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
           sx={{ display: 'flex', alignContent: 'center', mb: 0 }}
           aria-label="Вернуться на главную"
         >
-          <FourLeafClover fontSize={logoFontSize} />
+          <FourLeafCloverIcon fontSize={logoFontSize} />
         </Link>
 
         {/* App menu items */}

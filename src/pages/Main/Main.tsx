@@ -2,15 +2,15 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Introduction from '../../posts/Introduction/Introduction';
+import mainMetaData from './mainMetaData';
 
 function Main() {
   return (
     <>
       <Helmet>
-        <title>Главная страница</title>
+        <title>{mainMetaData.title}</title>
       </Helmet>
-
-      <Introduction />
+      <Introduction heading={mainMetaData.heading} />
     </>
   );
 }

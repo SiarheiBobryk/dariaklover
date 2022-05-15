@@ -9,11 +9,15 @@ import Heading from '../../components/Heading';
 import Paragraph from '../../components/Paragraph';
 
 export const aboutConstants = {
-  title: 'Обо мне',
   spell: `ˈkləʊvər`,
 };
 
-function About() {
+export interface AboutProps {
+  heading?: string;
+}
+
+function About(props: AboutProps) {
+  const { heading } = props;
   const {
     instagram: { href: instagramHref, id: instagramId },
     fullName,
@@ -21,7 +25,7 @@ function About() {
 
   return (
     <>
-      <Heading>{aboutConstants.title}</Heading>
+      <Heading>{heading}</Heading>
       <Paragraph>Привет! Я - {fullName}.</Paragraph>
       <Paragraph>
         Кловер - мой псевдоним. От английского <Typography component="i">{aboutConstants.spell}</Typography> - клевер 🍀

@@ -11,11 +11,10 @@ import { config } from '../../providers/AppConfigProvider';
 
 expect.extend(toHaveNoViolations);
 
-// TODO: Test `title` metatag here
 describe('<About />', () => {
   describe('a11y', () => {
     it('should match a11y standards', async () => {
-      const { container }: RenderResult = render(<About />);
+      const { container }: RenderResult = render(<About heading="Lorem Ipsulum" />);
 
       // TODO: Find out the right type here 🤔
       const results = await axe(container);
@@ -24,8 +23,16 @@ describe('<About />', () => {
   });
 
   describe('snapshotting', () => {
-    it('should render correctly', () => {
+    it('should render correctly without props', () => {
       const about: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer.create(<About />).toJSON();
+
+      expect(about).toMatchSnapshot();
+    });
+
+    it('should render correctly with props', () => {
+      const about: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer
+        .create(<About heading="Lorem Ipsulum" />)
+        .toJSON();
 
       expect(about).toMatchSnapshot();
     });
@@ -47,10 +54,10 @@ describe('<About />', () => {
     });
 
     it('should have the right constants', () => {
-      render(<About />);
+      render(<About heading="Lorem Ipsulum" />);
 
       const h2: HTMLHeadingElement | null = document.querySelector('h2');
-      expect(h2).toHaveTextContent(aboutConstants.title);
+      expect(h2).toHaveTextContent('Lorem Ipsulum');
 
       const i: HTMLElement | null = document.querySelector('i');
       expect(i).toHaveTextContent(aboutConstants.spell);

@@ -13,10 +13,15 @@ export const Strong = styled('strong')(() => {
   };
 });
 
-function Introduction() {
+export interface IntroductionProps {
+  heading?: string;
+}
+
+function Introduction(props: IntroductionProps) {
+  const { heading } = props;
   return (
     <>
-      <Heading>Кто я и что я делаю</Heading>
+      <Heading>{heading}</Heading>
       <Paragraph>Всем привет, я - Дарья Кловер!</Paragraph>
       <Paragraph>
         Я прохожу обучение в{' '}

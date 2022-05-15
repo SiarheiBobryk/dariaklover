@@ -13,7 +13,7 @@ expect.extend(toHaveNoViolations);
 describe('<Introduction />', () => {
   describe('a11y', () => {
     it('should match a11y standards', async () => {
-      const { container }: RenderResult = render(<Introduction />);
+      const { container }: RenderResult = render(<Introduction heading="Lorem Ipsulum" />);
 
       const results = await axe(container);
       expect(results).toHaveNoViolations();
@@ -21,9 +21,16 @@ describe('<Introduction />', () => {
   });
 
   describe('snapshotting', () => {
-    it('should render correctly', () => {
+    it('should render correctly without props', () => {
       const introduction: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer
         .create(<Introduction />)
+        .toJSON();
+      expect(introduction).toMatchSnapshot();
+    });
+
+    it('should render correctly with props', () => {
+      const introduction: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer
+        .create(<Introduction heading="Lorem Ipsulum" />)
         .toJSON();
       expect(introduction).toMatchSnapshot();
     });

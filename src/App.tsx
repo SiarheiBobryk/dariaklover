@@ -4,13 +4,12 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Fallback from './components/Fallback';
 import Head from './components/Head';
+import mainMetaData from './pages/Main/mainMetaData';
+import aboutMetaData from './pages/About/aboutMetaData';
+import referencesMetaData from './pages/References/referencesMetaData';
 
 const About = React.lazy(function lazyLoadAbout() {
   return import('./pages/About');
-});
-
-const Archive = React.lazy(function lazyLoadArchive() {
-  return import('./pages/Archive');
 });
 
 const References = React.lazy(function lazyLoadReferences() {
@@ -49,10 +48,9 @@ function App() {
       <Layout>
         <Suspense>
           <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/archive" element={<Archive />} />
-            <Route path="/references" element={<References />} />
-            <Route path="/" element={<Main />} />
+            <Route path={aboutMetaData.path} element={<About />} />
+            <Route path={referencesMetaData.path} element={<References />} />
+            <Route path={mainMetaData.path} element={<Main />} />
           </Routes>
         </Suspense>
       </Layout>
