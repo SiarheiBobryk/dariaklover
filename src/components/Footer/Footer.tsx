@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import packageJson from '../../../package.json';
@@ -24,6 +25,7 @@ function Footer(props: FooterProps) {
   const {
     instagram: { href: instagramHref, label: instagramLabel },
     telegram: { href: telegramHref, label: telegramLabel },
+    calendly: { href: calendlyHref, label: calendlyLabel },
     fullName,
     github,
   }: Config = React.useContext(AppConfigContext);
@@ -31,6 +33,9 @@ function Footer(props: FooterProps) {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, marginBottom: 1 }} {...props}>
       <Box>
+        <IconButton aria-label={calendlyLabel} href={calendlyHref} color="inherit" {...iconButtonA11yProps}>
+          <CalendarMonthIcon />
+        </IconButton>
         <IconButton aria-label={instagramLabel} href={instagramHref} color="inherit" {...iconButtonA11yProps}>
           <InstagramIcon />
         </IconButton>
