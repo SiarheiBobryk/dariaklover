@@ -3,18 +3,24 @@ import { Helmet } from 'react-helmet';
 
 import AboutPost from '../../posts/About';
 
+export interface AboutMetaData {
+  title: string;
+  heading: string;
+}
+
+export const aboutMetaData: AboutMetaData = {
+  title: 'Обо мне',
+  heading: 'Обо мне',
+};
+
 // TODO: It would be great to add a pic here
 function About() {
-  const title = 'Обо мне';
-
   return (
     <>
-      {/* TODO: Move it to a separate component */}
       <Helmet>
-        <title>{title}</title>
+        <title>{aboutMetaData.title}</title>
       </Helmet>
-
-      <AboutPost />
+      <AboutPost heading={aboutMetaData.heading} />
     </>
   );
 }
