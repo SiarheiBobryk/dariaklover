@@ -12,9 +12,9 @@ const About = React.lazy(function lazyLoadAbout() {
   return import('./pages/About');
 });
 
-const Archive = React.lazy(function lazyLoadArchive() {
-  return import('./pages/Archive');
-});
+// const Archive = React.lazy(function lazyLoadArchive() {
+//   return import('./pages/Archive');
+// });
 
 const References = React.lazy(function lazyLoadReferences() {
   return import('./pages/References');
@@ -53,7 +53,7 @@ function App() {
         <Suspense>
           <Routes>
             <Route path={aboutMetaData.path} element={<About />} />
-            <Route path="/archive" element={<Archive />} />
+            {/* <Route path="/archive" element={<Archive />} /> */}
             <Route path={referencesMetaData.path} element={<References />} />
             <Route path={mainMetaData.path} element={<Main />} />
           </Routes>
