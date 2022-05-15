@@ -24,6 +24,13 @@ function Booking(props: BookingProps) {
   }: Config = React.useContext(AppConfigContext);
   const [openInfo, setOpenInfo] = React.useState(true);
 
+  const onCloseButtonClick = React.useCallback(
+    function handleOnClick() {
+      setOpenInfo(false);
+    },
+    [setOpenInfo],
+  );
+
   return (
     <>
       <Heading>{heading}</Heading>
@@ -38,13 +45,7 @@ function Booking(props: BookingProps) {
         <Alert
           severity="info"
           action={
-            <IconButton
-              aria-label="Закрыть"
-              color="inherit"
-              onClick={() => {
-                setOpenInfo(false);
-              }}
-            >
+            <IconButton aria-label="Закрыть" color="inherit" onClick={onCloseButtonClick}>
               <CloseIcon fontSize="inherit" />
             </IconButton>
           }
