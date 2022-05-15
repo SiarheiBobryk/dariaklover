@@ -5,7 +5,8 @@ import { render, RenderResult } from '@testing-library/react';
 import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 import { axe, toHaveNoViolations } from 'jest-axe';
 
-import About, { aboutMetaData } from './About';
+import About from './About';
+import aboutMetaData from './aboutMetaData';
 
 expect.extend(toHaveNoViolations);
 

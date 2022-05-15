@@ -2,18 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import AboutPost from '../../posts/About';
-
-export interface AboutMetaData {
-  title: string;
-  heading: string;
-  path: string;
-}
-
-export const aboutMetaData: AboutMetaData = {
-  title: 'Обо мне',
-  heading: 'Обо мне',
-  path: '/about',
-};
+import aboutMetaData from './aboutMetaData';
 
 // TODO: It would be great to add a pic here
 function About() {
