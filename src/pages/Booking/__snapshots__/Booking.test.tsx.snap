@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Booking /> snapshotting should render correctly 1`] = `
+Array [
+  <h2
+    className="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+  >
+    Запись на консультацию
+  </h2>,
+  "WIP",
+]
+`;
