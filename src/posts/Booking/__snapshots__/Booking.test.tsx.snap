@@ -10,16 +10,15 @@ Array [
   <p
     className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
   >
-    Используйте
-     
+    Используйте 
     <a
-      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1yirhap-MuiTypography-root-MuiLink-root"
+      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
       href="https://calendly.com/dariaklover"
       onBlur={[Function]}
       onFocus={[Function]}
       target="_blank"
     >
-      Календарь Дарьи
+      календарь Дарьи
        
       <svg
         aria-hidden={true}
@@ -33,8 +32,7 @@ Array [
         />
       </svg>
     </a>
-     
-    для ознакомления с расписанием и для записи на консультацию.
+     для ознакомления с расписанием и для записи на консультацию.
   </p>,
   <div
     className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardWarning MuiAlert-standard css-5ubuof-MuiPaper-root-MuiAlert-root"
@@ -107,16 +105,15 @@ Array [
   <p
     className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
   >
-    Используйте
-     
+    Используйте 
     <a
-      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1yirhap-MuiTypography-root-MuiLink-root"
+      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
       href="https://calendly.com/dariaklover"
       onBlur={[Function]}
       onFocus={[Function]}
       target="_blank"
     >
-      Календарь Дарьи
+      календарь Дарьи
        
       <svg
         aria-hidden={true}
@@ -130,8 +127,7 @@ Array [
         />
       </svg>
     </a>
-     
-    для ознакомления с расписанием и для записи на консультацию.
+     для ознакомления с расписанием и для записи на консультацию.
   </p>,
   <div
     className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardWarning MuiAlert-standard css-5ubuof-MuiPaper-root-MuiAlert-root"
