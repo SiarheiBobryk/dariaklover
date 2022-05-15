@@ -48,7 +48,7 @@ export const pages: Page[] = [
   },
   {
     to: questionsMetaData.path,
-    label: 'Задать вопрос',
+    label: 'Вопросы',
     icon: <QuestionAnswerIcon />,
   },
   {
