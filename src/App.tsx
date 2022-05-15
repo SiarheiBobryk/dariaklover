@@ -5,7 +5,7 @@ import Layout from './components/Layout';
 import Fallback from './components/Fallback';
 import Head from './components/Head';
 import mainMetaData from './pages/Main/mainMetaData';
-import { aboutMetaData } from './pages/About';
+import aboutMetaData from './pages/About/aboutMetaData';
 import referencesMetaData from './pages/References/referencesMetaData';
 
 const About = React.lazy(function lazyLoadAbout() {
