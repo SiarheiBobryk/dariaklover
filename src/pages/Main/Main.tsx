@@ -6,11 +6,13 @@ import Introduction from '../../posts/Introduction/Introduction';
 export interface MainMetaData {
   title: string;
   heading: string;
+  path: string;
 }
 
 export const mainMetaData: MainMetaData = {
   title: 'Главная страница',
   heading: 'Кто я и что я делаю',
+  path: '/',
 };
 
 function Main() {
