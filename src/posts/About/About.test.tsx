@@ -7,7 +7,6 @@ import { axe, toHaveNoViolations } from 'jest-axe';
 import { typographyClasses } from '@mui/material/Typography';
 
 import About, { aboutConstants } from './About';
-import { config } from '../../providers/AppConfigProvider';
 
 expect.extend(toHaveNoViolations);
 
@@ -62,16 +61,6 @@ describe('<About />', () => {
       const i: HTMLElement | null = document.querySelector('i');
       expect(i).toHaveTextContent(aboutConstants.spell);
     });
-
-    it('should have the right `a` element with the right attributes', () => {
-      render(<About />);
-
-      const a: HTMLAnchorElement | null = document.querySelector('a');
-      expect(a).toHaveTextContent(config.instagram.id);
-      expect(a).toHaveAttribute('href', config.instagram.href);
-      expect(a).toHaveAttribute('target', '_blank');
-    });
-
     // TODO: find out how to check the space char between the link here and for other component 🤔
   });
 });
