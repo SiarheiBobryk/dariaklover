@@ -93,12 +93,17 @@ export const Skeleton = styled(SkeletonMui)(({ theme }) => {
   };
 });
 
-function References() {
+export interface ReferencesProps {
+  heading?: string;
+}
+
+function References(props: ReferencesProps) {
+  const { heading } = props;
   const height = '541';
   const width = '250';
   return (
     <>
-      <Heading>Отзывы клиентов</Heading>
+      <Heading>{heading}</Heading>
       <Swiper
         a11y={{
           enabled: true,

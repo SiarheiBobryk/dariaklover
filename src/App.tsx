@@ -6,6 +6,7 @@ import Fallback from './components/Fallback';
 import Head from './components/Head';
 import { mainMetaData } from './pages/Main';
 import { aboutMetaData } from './pages/About';
+import { referencesMetaData } from './pages/References';
 
 const About = React.lazy(function lazyLoadAbout() {
   return import('./pages/About');
@@ -53,7 +54,7 @@ function App() {
           <Routes>
             <Route path={aboutMetaData.path} element={<About />} />
             <Route path="/archive" element={<Archive />} />
-            <Route path="/references" element={<References />} />
+            <Route path={referencesMetaData.path} element={<References />} />
             <Route path={mainMetaData.path} element={<Main />} />
           </Routes>
         </Suspense>

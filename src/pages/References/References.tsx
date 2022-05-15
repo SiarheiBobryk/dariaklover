@@ -1,17 +1,29 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import References from '../../components/References';
+import ReferencesPost from '../../components/References';
 
-function Main() {
+export interface ReferencesMetaData {
+  title: string;
+  heading: string;
+  path: string;
+}
+
+export const referencesMetaData: ReferencesMetaData = {
+  title: 'Отзывы клинтов',
+  heading: 'Отзывы клинтов',
+  path: '/references',
+};
+
+function References() {
   return (
     <>
       <Helmet>
-        <title>Отзывы клинтов</title>
+        <title>{referencesMetaData.title}</title>
       </Helmet>
-      <References />
+      <ReferencesPost heading={referencesMetaData.heading} />
     </>
   );
 }
 
-export default Main;
+export default References;
