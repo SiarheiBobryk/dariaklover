@@ -18,14 +18,16 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
 import FourLeafCloverIcon from '../../icons/FourLeafClover';
 
-import aboutMetaData from '../../pages/About/aboutMetaData';
-import referencesMetaData from '../../pages/References/referencesMetaData';
 import bookingMetaData from '../../pages/Booking/bookingMetaData';
+import aboutMetaData from '../../pages/About/aboutMetaData';
+import questionsMetaData from '../../pages/Questions/questionsMetaData';
+import referencesMetaData from '../../pages/References/referencesMetaData';
 
 export interface Page {
   to: string;
@@ -43,6 +45,11 @@ export const pages: Page[] = [
     to: aboutMetaData.path,
     label: 'Обо мне',
     icon: <PersonOutlineIcon />,
+  },
+  {
+    to: questionsMetaData.path,
+    label: 'Задать вопрос',
+    icon: <QuestionAnswerIcon />,
   },
   {
     to: referencesMetaData.path,

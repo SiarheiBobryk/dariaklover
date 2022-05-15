@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Questions /> snapshotting should render correctly 1`] = `
+Array [
+  <h2
+    className="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+  >
+    Вопросы к Дарье
+  </h2>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+  >
+    Здесь можно будет задать вопрос Дарье
+  </p>,
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardInfo MuiAlert-standard css-efxmhs-MuiPaper-root-MuiAlert-root"
+    role="alert"
+  >
+    <div
+      className="MuiAlert-icon css-1ytlwq5-MuiAlert-icon"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+        data-testid="InfoOutlinedIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20, 12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10, 10 0 0,0 12,2M11,17H13V11H11V17Z"
+        />
+      </svg>
+    </div>
+    <div
+      className="MuiAlert-message css-acap47-MuiAlert-message"
+    >
+      <div
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiAlertTitle-root css-yslrua-MuiTypography-root-MuiAlertTitle-root"
+      >
+        Как задать вопрос
+      </div>
+      Форма, где можно будет задать вопрос, а также посмотреть часто задаваемые вопросы, скоро будет опубликована на этой странице. Спасибо за ваше терпение 😇
+    </div>
+  </div>,
+]
+`;
