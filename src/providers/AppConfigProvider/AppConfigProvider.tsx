@@ -28,6 +28,11 @@ export interface Config extends MetaTags {
     href: string;
     label: string;
   };
+  calendly: {
+    id: string;
+    href: string;
+    label: string;
+  };
   github: string;
 }
 
@@ -54,6 +59,11 @@ export const config: Config = {
     id: 'dariaklower',
     href: 'https://t.me/dariaklover',
     label: 'Телеграм Дарьи',
+  },
+  calendly: {
+    id: 'dariaklover',
+    href: 'https://calendly.com/dariaklover',
+    label: 'Календарь Дарьи',
   },
   'msapplication-TileColor': '#ffc40d',
   github: 'https://github.com/SiarheiBobryk/DariaKlover-website',

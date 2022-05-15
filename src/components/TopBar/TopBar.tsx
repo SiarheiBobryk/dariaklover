@@ -25,21 +25,29 @@ import FourLeafCloverIcon from '../../icons/FourLeafClover';
 
 import aboutMetaData from '../../pages/About/aboutMetaData';
 import referencesMetaData from '../../pages/References/referencesMetaData';
+import bookingMetaData from '../../pages/Booking/bookingMetaData';
 
-const pages = [
-  // {
-  //   to: mainMetaData.path,
-  //   label: 'Главная',
-  // },
+export interface Page {
+  to: string;
+  label: string;
+  icon: React.ReactNode;
+}
+
+export const pages: Page[] = [
+  {
+    to: bookingMetaData.path,
+    label: 'Записаться',
+    icon: <CalendarMonthIcon />,
+  },
   {
     to: aboutMetaData.path,
     label: 'Обо мне',
-    endIcon: <PersonOutlineIcon />,
+    icon: <PersonOutlineIcon />,
   },
   {
     to: referencesMetaData.path,
     label: 'Отзывы',
-    endIcon: <MenuBookIcon />,
+    icon: <MenuBookIcon />,
   },
 ];
 
@@ -80,19 +88,21 @@ export interface NavButtonProps {
   children: React.ReactNode;
   label: string;
   endIcon: React.ReactNode;
+  variant?: 'text' | 'outlined' | 'contained';
+  color?: 'inherit' | 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning';
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const NavButton = React.forwardRef(function NavButton(props: NavButtonProps, ref: React.Ref<any>) {
-  const { to, children, size = 'medium', label, ...other } = props;
+  const { to, children, size = 'medium', label, variant = 'text', color = 'inherit', ...other } = props;
 
   return (
     <Button
       to={to}
       component={RouterNavLinkMod}
       size={size}
-      variant="text"
-      color="inherit"
+      variant={variant}
+      color={color}
       ref={ref}
       aria-label={label}
       {...other}
@@ -146,6 +156,8 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
     [isMedium],
   );
 
+  const [bookingPage, ...otherPages] = pages;
+
   return (
     <AppBar position="static" color="default" ref={ref}>
       <Toolbar sx={{ display: 'flex', gap: 1, justifyContent: 'space-between' }} variant={toolbarVariant}>
@@ -171,15 +183,16 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
           >
             {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
           </IconButton>
-          <Button
-            href="https://calendly.com/dariaklover"
-            variant="contained"
-            endIcon={<CalendarMonthIcon />}
+          <NavButton
+            to={bookingPage.to}
+            variant="outlined"
+            color="primary"
+            endIcon={bookingPage.icon}
             size={buttonSize}
-            aria-label="Записаться на консультацию"
+            label={bookingPage.label}
           >
             Записаться
-          </Button>
+          </NavButton>
           {/* Pages menu for small screens */}
           <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
             <IconButton
@@ -203,10 +216,10 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
                 display: { xs: 'block', sm: 'none' },
               }}
             >
-              {pages.map(({ to, label, endIcon }) => {
+              {otherPages.map(({ to, label, icon }) => {
                 return (
                   <MenuItem to={to} component={RouterNavLink} key={to} aria-label={label} dense>
-                    <ListItemIcon>{endIcon}</ListItemIcon>
+                    <ListItemIcon>{icon}</ListItemIcon>
                     {label}
                   </MenuItem>
                 );
@@ -216,9 +229,9 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
 
           {/* Pages list for medium screens */}
           <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 1 }}>
-            {pages.map(({ to, label, endIcon }) => {
+            {otherPages.map(({ to, label, icon }) => {
               return (
-                <NavButton key={to} to={to} size={buttonSize} label={label} endIcon={endIcon}>
+                <NavButton key={to} to={to} size={buttonSize} label={label} endIcon={icon}>
                   {label}
                 </NavButton>
               );

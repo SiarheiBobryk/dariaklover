@@ -6,3 +6,6 @@ export { default as About } from './About';
 
 export * from './References';
 export { default as References } from './References';
+
+export * from './Booking';
+export { default as Booking } from './Booking';
