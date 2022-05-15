@@ -1,11 +1,10 @@
 import * as React from 'react';
 
-import Link from '@mui/material/Link';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { styled } from '@mui/material/styles';
 
 import Heading from '../../components/Heading';
 import Paragraph from '../../components/Paragraph';
+import LinkBlank from '../../components/LinkBlank';
 
 export const Strong = styled('strong')(() => {
   return {
@@ -25,12 +24,11 @@ function Introduction(props: IntroductionProps) {
       <Paragraph>Всем привет, я - Дарья Кловер!</Paragraph>
       <Paragraph>
         Я прохожу обучение в{' '}
-        <Link href="https://uom.education/university" rel="noopener" target="_blank">
-          Университете образовательной медицины (УОМ){' '}
-          <OpenInNewIcon fontSize="small" sx={{ verticalAlign: 'middle' }} />
-        </Link>{' '}
-        {/* TODO: The better (React) alternative for `i` here? */}и <i>PreventAge LifeStyle School</i> на интегративного
-        health-коуча - специалиста по модификации образа жизни и немедикаментозному оздоровлению.
+        <LinkBlank href="https://uom.education/university" rel="noopener">
+          Университете образовательной медицины (УОМ)
+        </LinkBlank>{' '}
+        и <i>PreventAge LifeStyle School</i> на интегративного health-коуча - специалиста по модификации образа жизни и
+        немедикаментозному оздоровлению.
       </Paragraph>
       <Paragraph>
         Я помогаю своим клиентам вести здоровый образ жизни и предотвратить появление хронических заболеваний, а также

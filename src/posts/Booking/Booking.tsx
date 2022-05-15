@@ -1,13 +1,12 @@
 import * as React from 'react';
 
-import Link from '@mui/material/Link';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import Heading from '../../components/Heading';
 import Paragraph from '../../components/Paragraph';
+import LinkBlank from '../../components/LinkBlank';
 
 export interface BookingProps {
   heading?: string;
@@ -24,9 +23,9 @@ function Booking(props: BookingProps) {
       <Heading>{heading}</Heading>
       <Paragraph>
         Используйте{' '}
-        <Link sx={{ textTransform: 'lowercase' }} href={calendlyHref} target="_blank">
-          {calendlyLabel} <OpenInNewIcon fontSize="small" sx={{ verticalAlign: 'middle' }} />
-        </Link>{' '}
+        <LinkBlank sx={{ textTransform: 'lowercase' }} href={calendlyHref}>
+          {calendlyLabel}
+        </LinkBlank>{' '}
         для ознакомления с расписанием и для записи на консультацию.
       </Paragraph>
       <Alert sx={{ my: 1 }} severity="warning">
