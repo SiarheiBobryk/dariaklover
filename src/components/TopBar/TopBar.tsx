@@ -23,18 +23,21 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
 import { FourLeafClover } from '../../icons';
 
+import { aboutMetaData } from '../../pages/About';
+import { referencesMetaData } from '../../pages/References';
+
 const pages = [
   // {
-  //   to: '/',
+  //   to: mainMetaData.path,
   //   label: 'Главная',
   // },
   {
-    to: '/about',
+    to: aboutMetaData.path,
     label: 'Обо мне',
     endIcon: <PersonOutlineIcon />,
   },
   {
-    to: '/references',
+    to: referencesMetaData.path,
     label: 'Отзывы',
     endIcon: <MenuBookIcon />,
   },
