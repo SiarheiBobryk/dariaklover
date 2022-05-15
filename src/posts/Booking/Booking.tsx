@@ -15,18 +15,15 @@ export interface BookingProps {
 function Booking(props: BookingProps) {
   const { heading } = props;
   const {
-    calendly: { label: calendlyLabel, href: calendlyHref },
+    calendly: { href: calendlyHref },
   }: Config = React.useContext(AppConfigContext);
 
   return (
     <>
       <Heading>{heading}</Heading>
       <Paragraph>
-        Используйте{' '}
-        <LinkBlank sx={{ textTransform: 'lowercase' }} href={calendlyHref}>
-          {calendlyLabel}
-        </LinkBlank>{' '}
-        для ознакомления с расписанием и для записи на консультацию.
+        Используйте <LinkBlank href={calendlyHref}>календарь Дарьи</LinkBlank> для ознакомления с расписанием и для
+        записи на консультацию.
       </Paragraph>
       <Alert sx={{ my: 1 }} severity="warning">
         <AlertTitle>Система тестируется</AlertTitle>
