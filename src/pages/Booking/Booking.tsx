@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
+import { useSearchParams } from 'react-router-dom';
 
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
@@ -12,10 +13,26 @@ import Paragraph from '../../components/Paragraph';
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import bookingMetaData from './bookingMetaData';
 
+const calendlyResponceKeys = [
+  'assigned_to',
+  'event_type_uuid',
+  'event_type_name',
+  'event_start_time',
+  'event_end_time',
+  'invitee_uuid',
+  'invitee_full_name',
+  'invitee_email',
+  'text_reminder_number',
+];
+
 function References() {
   const {
     calendly: { href: calendlyHref },
   }: Config = React.useContext(AppConfigContext);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  console.info(searchParams.get('assigned_to'));
 
   return (
     <>
