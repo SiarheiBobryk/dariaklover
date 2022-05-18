@@ -4,8 +4,10 @@ import { Helmet } from 'react-helmet';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import Link from '@mui/material/Link';
 import Heading from '../../components/Heading';
-import LinkBlank from '../../components/LinkBlank';
 import Paragraph from '../../components/Paragraph';
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import bookingMetaData from './bookingMetaData';
@@ -21,10 +23,15 @@ function References() {
         <title>{bookingMetaData.title}</title>
       </Helmet>
       <Heading>{bookingMetaData.heading}</Heading>
-      <Paragraph>
-        Используйте <LinkBlank href={calendlyHref}>календарь Дарьи</LinkBlank> для ознакомления с расписанием и для
-        записи на консультацию.
-      </Paragraph>
+      <Paragraph>На данный момент доступны следующие виды консультаций:</Paragraph>
+      <List>
+        <ListItem>
+          <Link href={`${calendlyHref}/trial`}>Ознакомительная встреча</Link>
+        </ListItem>
+        <ListItem>
+          <Link href={`${calendlyHref}/regular`}>Heath-коучинг сессия</Link>
+        </ListItem>
+      </List>
       <Alert sx={{ my: 1 }} severity="warning">
         <AlertTitle>Система тестируется</AlertTitle>
         Обращаем ваше внимание, что система записи на консультацию находится в режиме тестирования и может быть
