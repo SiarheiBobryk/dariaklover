@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import ReferencesPost from '../../components/References';
+import ReferencesComponent from '../../components/References';
 import referencesMetaData from './referencesMetaData';
 
 function References() {
@@ -10,7 +10,7 @@ function References() {
       <Helmet>
         <title>{referencesMetaData.title}</title>
       </Helmet>
-      <ReferencesPost heading={referencesMetaData.heading} />
+      <ReferencesComponent heading={referencesMetaData.heading} />
     </>
   );
 }

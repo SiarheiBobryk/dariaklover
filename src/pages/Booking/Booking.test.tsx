@@ -27,10 +27,20 @@ describe('<Booking />', () => {
     });
   });
 
-  it('should have the right title HTML element', () => {
-    render(<Booking />);
+  describe('Elements inspection', () => {
+    it('should have the right title HTML element', () => {
+      render(<Booking />);
 
-    const { title }: HelmetPropsToState = Helmet.peek();
-    expect(title).toBe(bookingMetaData.title);
+      const { title }: HelmetPropsToState = Helmet.peek();
+      expect(title).toBe(bookingMetaData.title);
+    });
+
+    it('should have the `h2` HTML element as heading', () => {
+      render(<Booking />);
+
+      const h2: HTMLHeadingElement | null = document.querySelector('h2');
+      expect(h2).toBeInTheDocument();
+      expect(h2).toHaveTextContent(bookingMetaData.heading);
+    });
   });
 });

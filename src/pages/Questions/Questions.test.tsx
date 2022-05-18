@@ -27,10 +27,20 @@ describe('<Questions />', () => {
     });
   });
 
-  it('should have the right title HTML element', () => {
-    render(<Questions />);
+  describe('Elements inspection', () => {
+    it('should have the right title HTML element', () => {
+      render(<Questions />);
 
-    const { title }: HelmetPropsToState = Helmet.peek();
-    expect(title).toBe(questionsMetaData.title);
+      const { title }: HelmetPropsToState = Helmet.peek();
+      expect(title).toBe(questionsMetaData.title);
+    });
+
+    it('should have the `h2` HTML element as heading', () => {
+      render(<Questions />);
+
+      const h2: HTMLHeadingElement | null = document.querySelector('h2');
+      expect(h2).toBeInTheDocument();
+      expect(h2).toHaveTextContent(questionsMetaData.heading);
+    });
   });
 });
