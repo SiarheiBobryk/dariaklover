@@ -28,7 +28,7 @@ const Heading = React.forwardRef(function Heading(props: HeadingProps, ref: Reac
   const { children, component = 'h2', variant = 'h5', ...other } = props;
 
   return (
-    <Typography ref={ref} component={component} variant={variant} {...other}>
+    <Typography ref={ref} component={component} variant={variant} gutterBottom {...other}>
       {children}
     </Typography>
   );

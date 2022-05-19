@@ -67,5 +67,14 @@ describe('<Paragraph />', () => {
       const p: HTMLParagraphElement = screen.getByText('Дарья Кловер');
       expect(p).toHaveClass(typographyClasses.caption);
     });
+
+    it('should have gutter', () => {
+      render(<Paragraph>Дарья Кловер</Paragraph>);
+
+      const p: HTMLParagraphElement = screen.getByText('Дарья Кловер');
+      expect(p).toHaveStyle({
+        marginBottom: '0.35em',
+      });
+    });
   });
 });

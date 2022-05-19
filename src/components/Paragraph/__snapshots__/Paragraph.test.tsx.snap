@@ -2,7 +2,7 @@
 
 exports[`<Paragraph /> snapshotting should render correctly with a content 1`] = `
 <p
-  className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+  className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
 >
   Lorem Ipsulum
 </p>
@@ -10,6 +10,6 @@ exports[`<Paragraph /> snapshotting should render correctly with a content 1`] =
 
 exports[`<Paragraph /> snapshotting should render correctly without a content 1`] = `
 <p
-  className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+  className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
 />
 `;

@@ -22,13 +22,7 @@ function createThemeOptions(mode: PaletteMode): ThemeOptionsMui {
             },
           }),
     },
-    components: {
-      MuiTypography: {
-        defaultProps: {
-          gutterBottom: true,
-        },
-      },
-    },
+    components: {},
     // ...typography
   };
 }

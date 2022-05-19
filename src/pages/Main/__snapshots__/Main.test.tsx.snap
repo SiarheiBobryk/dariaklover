@@ -3,17 +3,17 @@
 exports[`<Main /> snapshotting should render correctly 1`] = `
 Array [
   <h2
-    className="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+    className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
   >
     Кто я и что я делаю
   </h2>,
   <p
-    className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
   >
     Всем привет, я - Дарья Кловер!
   </p>,
   <p
-    className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
   >
     Я прохожу обучение в
      
@@ -47,17 +47,17 @@ Array [
      на интегративного health-коуча - специалиста по модификации образа жизни и немедикаментозному оздоровлению.
   </p>,
   <p
-    className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
   >
     Я помогаю своим клиентам вести здоровый образ жизни и предотвратить появление хронических заболеваний, а также повысить качество жизни, улучшить самочувствие, делюсь рекомендациями для восстановления и поддержания здоровья.
   </p>,
   <p
-    className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
   >
     Я разбираю запрос клиента с разных сторон, что помогает увидеть полную картину конкретной ситуации и ее причины. Я использую различные подходы и инструменты, чтобы помочь проработать эти причины и придти к решению запроса клиента.
   </p>,
   <p
-    className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
   >
     Одна из моих главных задач - осознание клиентом того, 
     <strong

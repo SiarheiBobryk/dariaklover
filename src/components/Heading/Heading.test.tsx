@@ -67,5 +67,14 @@ describe('<Heading />', () => {
       const heading: HTMLHeadingElement = screen.getByText('Дарья Кловер');
       expect(heading).toHaveClass(typographyClasses.h3);
     });
+
+    it('should have gutter', () => {
+      render(<Heading variant="h3">Дарья Кловер</Heading>);
+
+      const heading: HTMLHeadingElement = screen.getByText('Дарья Кловер');
+      expect(heading).toHaveStyle({
+        marginBottom: '0.35em',
+      });
+    });
   });
 });
