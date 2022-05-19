@@ -129,6 +129,51 @@ exports[`<Footer /> snapshotting should render correctly 1`] = `
         </svg>
       </a>
     </span>
+    <span
+      aria-label="Viber"
+      aria-labelledby={null}
+      className=""
+      data-mui-internal-clone-element={true}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+    >
+      <a
+        aria-disabled={true}
+        aria-label="TODO: add aria-label"
+        className="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-zylse7-MuiButtonBase-root-MuiIconButton-root"
+        href="TODO: add href here"
+        onBlur={[Function]}
+        onContextMenu={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        rel="noopener"
+        tabIndex={-1}
+        target="_blank"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <svg>
+            viber.svg
+          </svg>
+        </svg>
+      </a>
+    </span>
     <a
       aria-label="Электронный адрес Дарьи"
       aria-labelledby={null}
