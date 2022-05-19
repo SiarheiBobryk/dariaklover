@@ -4,11 +4,13 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
+import Tooltip from '@mui/material/Tooltip';
+
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EmailIcon from '@mui/icons-material/Email';
-import Tooltip from '@mui/material/Tooltip';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import packageJson from '../../../package.json';
@@ -36,15 +38,29 @@ function Footer(props: FooterProps) {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, marginBottom: 1 }} {...props}>
       <Box>
-        <Tooltip title="Инстаграм">
+        <Tooltip title="Instagram">
           <IconButton aria-label={instagramLabel} href={instagramHref} color="inherit" {...iconButtonA11yProps}>
             <InstagramIcon />
           </IconButton>
         </Tooltip>
-        <Tooltip title="Телеграм">
+        <Tooltip title="Telegram">
           <IconButton aria-label={telegramLabel} href={telegramHref} color="inherit" {...iconButtonA11yProps}>
             <TelegramIcon />
           </IconButton>
+        </Tooltip>
+        <Tooltip title="WhatsApp">
+          {/* TODO: Add ids and links here */}
+          <span>
+            <IconButton
+              aria-label="TODO: add aria-label"
+              href="TODO: add href here"
+              color="inherit"
+              disabled
+              {...iconButtonA11yProps}
+            >
+              <WhatsAppIcon />
+            </IconButton>
+          </span>
         </Tooltip>
         <Tooltip title="Электронная почта">
           <IconButton
