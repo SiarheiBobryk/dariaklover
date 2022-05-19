@@ -45,10 +45,6 @@ function References() {
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
-  const handleClickOpen = React.useCallback(function handleClickOpen() {
-    setOpen(true);
-  }, []);
-
   const handleClose = React.useCallback(function handleClose() {
     setOpen(false);
   }, []);
