@@ -33,6 +33,7 @@ export interface Config extends MetaTags {
     href: string;
     label: string;
   };
+  email: string;
   github: string;
 }
 
@@ -56,7 +57,7 @@ export const config: Config = {
     label: 'Инстаграм Дарьи',
   },
   telegram: {
-    id: 'dariaklower',
+    id: 'dariaklover',
     href: 'https://t.me/dariaklover',
     label: 'Телеграм Дарьи',
   },
@@ -66,6 +67,7 @@ export const config: Config = {
     label: 'Календарь Дарьи',
   },
   'msapplication-TileColor': '#ffc40d',
+  email: 'dariaklover@gmail.com',
   github: 'https://github.com/SiarheiBobryk/DariaKlover-website',
 };
 
