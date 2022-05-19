@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import EmailIcon from '@mui/icons-material/Email';
 
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import packageJson from '../../../package.json';
@@ -28,19 +29,28 @@ function Footer(props: FooterProps) {
     calendly: { href: calendlyHref, label: calendlyLabel },
     fullName,
     github,
+    email,
   }: Config = React.useContext(AppConfigContext);
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, marginBottom: 1 }} {...props}>
       <Box>
-        <IconButton aria-label={calendlyLabel} href={calendlyHref} color="inherit" {...iconButtonA11yProps}>
-          <CalendarMonthIcon />
-        </IconButton>
         <IconButton aria-label={instagramLabel} href={instagramHref} color="inherit" {...iconButtonA11yProps}>
           <InstagramIcon />
         </IconButton>
         <IconButton aria-label={telegramLabel} href={telegramHref} color="inherit" {...iconButtonA11yProps}>
           <TelegramIcon />
+        </IconButton>
+        <IconButton
+          aria-label="Электронный адрес Дарьи"
+          href={`mailto:  ${email}`}
+          color="inherit"
+          {...iconButtonA11yProps}
+        >
+          <EmailIcon />
+        </IconButton>
+        <IconButton aria-label={calendlyLabel} href={calendlyHref} color="inherit" {...iconButtonA11yProps}>
+          <CalendarMonthIcon />
         </IconButton>
       </Box>
       <Typography variant="body2" color="text.secondary">
