@@ -13,6 +13,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -169,27 +170,31 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
     <AppBar position="static" color="default" ref={ref}>
       <Toolbar sx={{ display: 'flex', gap: 1, justifyContent: 'space-between' }} variant={toolbarVariant}>
         {/* The application logo */}
-        <Link
-          component={RouterNavLink}
-          to="/"
-          sx={{ display: 'flex', alignContent: 'center', mb: 0 }}
-          aria-label="Вернуться на главную"
-        >
-          <FourLeafCloverIcon fontSize={logoFontSize} />
-        </Link>
+        <Tooltip title="Главная страница">
+          <Link
+            component={RouterNavLink}
+            to="/"
+            sx={{ display: 'flex', alignContent: 'center', mb: 0 }}
+            aria-label="Вернуться на главную"
+          >
+            <FourLeafCloverIcon fontSize={logoFontSize} />
+          </Link>
+        </Tooltip>
 
         {/* App menu items */}
         <Box sx={{ display: 'flex', alignContent: 'center', gap: 1 }}>
           {/* The color mode switcher */}
-          <IconButton
-            onClick={colorMode?.toggleColorCallback}
-            color="inherit"
-            aria-label="Переключить цветовую тему"
-            size={buttonSize}
-            {...ColorSwitcherButtonProps}
-          >
-            {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
-          </IconButton>
+          <Tooltip title="Переключить цветовую тему">
+            <IconButton
+              onClick={colorMode?.toggleColorCallback}
+              color="inherit"
+              aria-label="Переключить цветовую тему"
+              size={buttonSize}
+              {...ColorSwitcherButtonProps}
+            >
+              {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
+            </IconButton>
+          </Tooltip>
           <NavButton
             to={bookingPage.to}
             variant="outlined"
