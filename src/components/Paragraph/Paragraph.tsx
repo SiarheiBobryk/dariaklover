@@ -28,7 +28,7 @@ const Paragraph = React.forwardRef(function Paragraph(props: ParagraphProps, ref
   const { children, component = 'p', variant = 'body1', ...other } = props;
 
   return (
-    <Typography ref={ref} component={component} variant={variant} {...other}>
+    <Typography ref={ref} component={component} variant={variant} gutterBottom {...other}>
       {children}
     </Typography>
   );

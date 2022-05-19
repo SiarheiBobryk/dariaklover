@@ -3,12 +3,12 @@
 exports[`<Questions /> snapshotting should render correctly 1`] = `
 Array [
   <h2
-    className="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+    className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
   >
     Вопросы к Дарье
   </h2>,
   <p
-    className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
   >
     Здесь можно будет задать вопрос Дарье
   </p>,
