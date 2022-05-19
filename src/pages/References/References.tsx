@@ -10,6 +10,7 @@ function References() {
       <Helmet>
         <title>{referencesMetaData.title}</title>
       </Helmet>
+      {/* TODO: Add a description text here */}
       <ReferencesComponent heading={referencesMetaData.heading} />
     </>
   );
