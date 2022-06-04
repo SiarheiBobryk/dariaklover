@@ -59,7 +59,6 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.30.0",
     "eslint-plugin-react-hooks": "4.5.0",
-    "husky": "8.0.1",
     "jest-axe": "6.0.0",
     "postcss": "8.4.14",
     "prettier": "2.6.2",
@@ -159,10 +158,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
