@@ -5,8 +5,8 @@ export interface ReferencesMetaData {
 }
 
 const referencesMetaData: ReferencesMetaData = {
-  title: 'Отзывы клинтов',
-  heading: 'Отзывы клинтов',
+  title: 'Отзывы клиентов',
+  heading: 'Отзывы клиентов',
   path: '/references',
 };
 
