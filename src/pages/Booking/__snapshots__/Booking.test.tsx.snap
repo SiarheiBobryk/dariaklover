@@ -28,19 +28,6 @@ Array [
         Ознакомительная встреча
       </a>
     </li>
-    <li
-      className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
-      disabled={false}
-    >
-      <a
-        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
-        href="https://calendly.com/dariaklover/regular"
-        onBlur={[Function]}
-        onFocus={[Function]}
-      >
-        Heath-коучинг сессия
-      </a>
-    </li>
   </ul>,
   <div
     className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardWarning MuiAlert-standard css-5ubuof-MuiPaper-root-MuiAlert-root"
