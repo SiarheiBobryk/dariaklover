@@ -94,9 +94,10 @@ function References() {
         <ListItem>
           <Link href={`${calendlyHref}/trial`}>Ознакомительная встреча</Link>
         </ListItem>
-        <ListItem>
+        {/* NOTE: Blocked until we get a paid account on Calendly */}
+        {/* <ListItem>
           <Link href={`${calendlyHref}/regular`}>Heath-коучинг сессия</Link>
-        </ListItem>
+        </ListItem> */}
       </List>
       <Dialog
         fullScreen={fullScreen}
