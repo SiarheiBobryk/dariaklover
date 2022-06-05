@@ -139,6 +139,23 @@
       "arrow-body-style": [
         "error",
         "always"
+      ],
+      "func-names": [
+        "error",
+        "always"
+      ],
+      "prefer-arrow-callback": [
+        "error",
+        {
+          "allowNamedFunctions": true
+        }
+      ],
+      "func-style": [
+        "error",
+        "declaration",
+        {
+          "allowArrowFunctions": false
+        }
       ]
     }
   },
