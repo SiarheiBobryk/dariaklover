@@ -89,7 +89,7 @@ function References() {
         <title>{bookingMetaData.title}</title>
       </Helmet>
       <Heading>{bookingMetaData.heading}</Heading>
-      <Paragraph>На данный момент доступны следующие виды консультаций:</Paragraph>
+      <Paragraph>На данный момент доступны следующие виды консультаций: </Paragraph>
       <List>
         {appointments.map(function renderAppointments({ id, active, newTab, label }: CalendlyAppointment) {
           const target: React.HTMLAttributeAnchorTarget | undefined = newTab ? '_blank' : undefined;
