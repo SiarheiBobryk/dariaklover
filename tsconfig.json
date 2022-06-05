@@ -15,5 +15,5 @@
     "strict": true,
     "target": "es5"
   },
-  "include": ["src", "babel.config.js"]
+  "include": ["src", "babel.config.js", "prettier.config.js"]
 }
