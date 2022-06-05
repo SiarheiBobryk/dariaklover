@@ -10,7 +10,7 @@ Array [
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
   >
-    На данный момент доступны следующие виды консультаций:
+    На данный момент доступны следующие виды консультаций: 
   </p>,
   <ul
     className="MuiList-root MuiList-padding css-h4y409-MuiList-root"
