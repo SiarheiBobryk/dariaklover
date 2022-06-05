@@ -1,11 +1,13 @@
 import * as React from 'react';
 
-import { styled } from '@mui/material/styles';
+import { styled, Theme } from '@mui/material/styles';
 import SkeletonMui from '@mui/material/Skeleton';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiperSlide } from 'swiper/react';
 import { Lazy, Pagination, Navigation, A11y } from 'swiper';
 
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 import Heading from '../Heading';
 
 import 'swiper/css';
@@ -21,6 +23,8 @@ export interface ReferenceData {
   srcSet: string;
   alt: string;
   title: string;
+  // TODO: Make it required
+  description?: string;
 }
 
 export const references: ReferenceData[] = [
@@ -29,6 +33,8 @@ export const references: ReferenceData[] = [
     srcSet: `${PUBLIC_PATH}001/reference_001_z4hzxz_c_scale,w_612.webp 612w`,
     alt: 'Отзыв 1',
     title: 'Помогаю найти мотивацию',
+    // eslint-disable-next-line max-len
+    description: `Слушай, я хотела ещё раз сказать спасибо! У меня сейчас такое хорошее настроение, я не знаю, как тебе объяснить даже. Какое-то ощущение реальности. То есть того, что все реально. Это очень интересная практика. Я очень надеюсь, что не нагрузила тебя своими вопросами. Ещё раз спасибо. Я бы очень хотела работать дальше.`,
   },
   {
     src: `${PUBLIC_PATH}002/reference_002_acntl2_c_scale,w_599.jpg`,
@@ -98,6 +104,7 @@ export interface ReferencesProps {
 }
 
 function References(props: ReferencesProps) {
+  const [currentSlideDescription, setCurrentSlideDescription] = React.useState(references[0].description);
   const { heading } = props;
   const height = '541';
   const width = '250';
@@ -121,7 +128,7 @@ function References(props: ReferencesProps) {
         pagination={{
           dynamicBullets: true,
         }}
-        style={{ height: `${height}px` }}
+        style={{ height: `${height}px`, marginTop: '8px', marginBottom: '8px' }}
       >
         {references.map(function mapReferences(item: ReferenceData) {
           return (
@@ -136,6 +143,22 @@ function References(props: ReferencesProps) {
           );
         })}
       </Swiper>
+      <Paper
+        variant="outlined"
+        sx={{
+          p: 1,
+          backgroundColor: (theme: Theme) => {
+            return theme?.palette?.action?.hover;
+          },
+        }}
+      >
+        <Typography
+          component="blockquote"
+          sx={{ fontStyle: 'italic', '&::before': { content: '"«"' }, '&::after': { content: '"»"' } }}
+        >
+          {currentSlideDescription}
+        </Typography>
+      </Paper>
     </>
   );
 }
