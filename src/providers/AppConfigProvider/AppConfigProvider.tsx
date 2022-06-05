@@ -35,6 +35,11 @@ export interface Config extends MetaTags {
     href: string;
     label: string;
   };
+  whatsapp: {
+    id: string;
+    href: string;
+    label: string;
+  };
   calendly: {
     id: string;
     href: string;
@@ -63,12 +68,18 @@ export const config: Config = {
   instagram: {
     id: '@daria.klover',
     href: 'https://www.instagram.com/daria.klover',
-    label: 'Инстаграм Дарьи',
+    label: 'Instagram Дарьи',
   },
   telegram: {
     id: 'dariaklover',
     href: 'https://t.me/dariaklover',
-    label: 'Телеграм Дарьи',
+    label: 'Telegram Дарьи',
+  },
+  whatsapp: {
+    // TODO: Setup the branded account id (payed feature) later
+    id: '+375447841051',
+    href: 'https://wa.me/+375447841051',
+    label: 'WhatsApp Дарьи',
   },
   calendly: {
     id: 'dariaklover',

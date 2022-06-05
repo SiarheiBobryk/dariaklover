@@ -13,7 +13,6 @@ import EmailIcon from '@mui/icons-material/Email';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
-import ViberIcon from '../../icons/Viber';
 import packageJson from '../../../package.json';
 
 export const iconButtonA11yProps = {
@@ -30,6 +29,7 @@ function Footer(props: FooterProps) {
   const {
     instagram: { href: instagramHref, label: instagramLabel },
     telegram: { href: telegramHref, label: telegramLabel },
+    whatsapp: { href: whatsappHref, label: whatsappLabel },
     calendly: { href: calendlyHref, label: calendlyLabel },
     fullName,
     github,
@@ -50,32 +50,9 @@ function Footer(props: FooterProps) {
           </IconButton>
         </Tooltip>
         <Tooltip title="WhatsApp">
-          {/* TODO: Add ids and links here */}
-          <span>
-            <IconButton
-              aria-label="TODO: add aria-label"
-              href="TODO: add href here"
-              color="inherit"
-              disabled
-              {...iconButtonA11yProps}
-            >
-              <WhatsAppIcon />
-            </IconButton>
-          </span>
-        </Tooltip>
-        <Tooltip title="Viber">
-          {/* TODO: Add ids and links here */}
-          <span>
-            <IconButton
-              aria-label="TODO: add aria-label"
-              href="TODO: add href here"
-              color="inherit"
-              disabled
-              {...iconButtonA11yProps}
-            >
-              <ViberIcon />
-            </IconButton>
-          </span>
+          <IconButton aria-label={whatsappLabel} href={whatsappHref} color="inherit" {...iconButtonA11yProps}>
+            <WhatsAppIcon />
+          </IconButton>
         </Tooltip>
         <Tooltip title="Электронная почта">
           <IconButton
