@@ -198,7 +198,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
           <NavButton
             to={bookingPage.to}
             variant="outlined"
-            color="primary"
+            color="inherit"
             endIcon={bookingPage.icon}
             size={buttonSize}
             label={bookingPage.label}
