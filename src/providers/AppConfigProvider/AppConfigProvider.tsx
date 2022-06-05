@@ -40,6 +40,7 @@ export interface Config extends MetaTags {
     href: string;
     label: string;
     appointments: Array<CalendlyAppointment>;
+    conformation: boolean;
   };
   email: string;
   github: string;
@@ -78,6 +79,7 @@ export const config: Config = {
       { id: 'trial', active: true, newTab: true, label: 'Ознакомительная встреча' },
       { id: 'regular', active: false, newTab: true, label: 'Heath-коучинг сессия' },
     ],
+    conformation: false,
   },
   'msapplication-TileColor': '#ffc40d',
   email: 'dariaklover@gmail.com',
