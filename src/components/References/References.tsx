@@ -80,13 +80,13 @@ export const references: ReferenceData[] = [
   },
 ];
 
-export const Img = styled('img')(({ theme }) => {
+export const Img = styled('img')(function styleImg({ theme }) {
   return {
     borderRadius: theme.spacing(1),
   };
 });
 
-export const Skeleton = styled(SkeletonMui)(({ theme }) => {
+export const Skeleton = styled(SkeletonMui)(function styleSkeleton({ theme }) {
   return {
     position: 'absolute',
     borderRadius: theme.spacing(1),
