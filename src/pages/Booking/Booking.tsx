@@ -17,7 +17,7 @@ import { useTheme } from '@mui/material/styles';
 
 import Heading from '../../components/Heading';
 import Paragraph from '../../components/Paragraph';
-import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
+import { AppConfigContext, Config, CalendlyAppointment } from '../../providers/AppConfigProvider';
 import bookingMetaData from './bookingMetaData';
 
 /**
@@ -39,7 +39,7 @@ export interface CalendlyResponse {
 
 function References() {
   const {
-    calendly: { href: calendlyHref },
+    calendly: { href: calendlyHref, appointments },
   }: Config = React.useContext(AppConfigContext);
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
@@ -91,13 +91,17 @@ function References() {
       <Heading>{bookingMetaData.heading}</Heading>
       <Paragraph>На данный момент доступны следующие виды консультаций:</Paragraph>
       <List>
-        <ListItem>
-          <Link href={`${calendlyHref}/trial`}>Ознакомительная встреча</Link>
-        </ListItem>
-        {/* NOTE: Blocked until we get a paid account on Calendly */}
-        {/* <ListItem>
-          <Link href={`${calendlyHref}/regular`}>Heath-коучинг сессия</Link>
-        </ListItem> */}
+        {appointments.map(function renderAppointments({ id, active, label }: CalendlyAppointment) {
+          return (
+            active && (
+              <ListItem>
+                <Link key={id} href={`${calendlyHref}/${id}`}>
+                  {label}
+                </Link>
+              </ListItem>
+            )
+          );
+        })}
       </List>
       <Dialog
         fullScreen={fullScreen}
