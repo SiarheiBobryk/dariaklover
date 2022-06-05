@@ -91,11 +91,12 @@ function References() {
       <Heading>{bookingMetaData.heading}</Heading>
       <Paragraph>На данный момент доступны следующие виды консультаций:</Paragraph>
       <List>
-        {appointments.map(function renderAppointments({ id, active, label }: CalendlyAppointment) {
+        {appointments.map(function renderAppointments({ id, active, newTab, label }: CalendlyAppointment) {
+          const target: React.HTMLAttributeAnchorTarget | undefined = newTab ? '_blank' : undefined;
           return (
             active && (
               <ListItem>
-                <Link key={id} href={`${calendlyHref}/${id}`}>
+                <Link key={id} href={`${calendlyHref}/${id}`} target={target}>
                   {label}
                 </Link>
               </ListItem>

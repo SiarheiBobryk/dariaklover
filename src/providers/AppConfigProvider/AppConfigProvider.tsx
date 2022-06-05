@@ -11,6 +11,7 @@ export interface MetaTags {
 export interface CalendlyAppointment {
   id: string;
   active: boolean;
+  newTab: boolean;
   label: string;
 }
 
@@ -74,8 +75,8 @@ export const config: Config = {
     label: 'Календарь Дарьи',
     appointments: [
       // NOTE: Due to limitations of a free account on Calendly, only one appointment type should be active
-      { id: 'trial', active: true, label: 'Ознакомительная встреча' },
-      { id: 'regular', active: false, label: 'Heath-коучинг сессия' },
+      { id: 'trial', active: true, newTab: true, label: 'Ознакомительная встреча' },
+      { id: 'regular', active: false, newTab: true, label: 'Heath-коучинг сессия' },
     ],
   },
   'msapplication-TileColor': '#ffc40d',
