@@ -22,7 +22,13 @@ function createThemeOptions(mode: PaletteMode): ThemeOptionsMui {
             },
           }),
     },
-    components: {},
+    components: {
+      MuiAlert: {
+        defaultProps: {
+          sx: { my: 1 },
+        },
+      },
+    },
     // ...typography
   };
 }
