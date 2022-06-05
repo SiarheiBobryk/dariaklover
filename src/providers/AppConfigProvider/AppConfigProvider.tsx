@@ -68,12 +68,12 @@ export const config: Config = {
   instagram: {
     id: '@daria.klover',
     href: 'https://www.instagram.com/daria.klover',
-    label: 'Инстаграм Дарьи',
+    label: 'Instagram Дарьи',
   },
   telegram: {
     id: 'dariaklover',
     href: 'https://t.me/dariaklover',
-    label: 'Телеграм Дарьи',
+    label: 'Telegram Дарьи',
   },
   whatsapp: {
     // TODO: Setup the branded account id (payed feature) later
