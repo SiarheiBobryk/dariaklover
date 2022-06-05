@@ -10,7 +10,7 @@ import Paragraph from '../../components/Paragraph';
 import LinkBlank from '../../components/LinkBlank';
 import mainMetaData from './mainMetaData';
 
-export const Strong = styled('strong')(() => {
+export const Strong = styled('strong')(function styleStrong() {
   return {
     textDecoration: 'underline',
   };

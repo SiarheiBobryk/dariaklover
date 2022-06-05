@@ -228,7 +228,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
                 display: { xs: 'block', sm: 'none' },
               }}
             >
-              {otherPages.map(({ to, label, icon }) => {
+              {otherPages.map(function mapOtherPagesSmScreens({ to, label, icon }) {
                 return (
                   <MenuItem to={to} component={RouterNavLink} key={to} aria-label={label} dense>
                     <ListItemIcon>{icon}</ListItemIcon>
@@ -241,7 +241,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
 
           {/* Pages list for medium screens */}
           <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 1 }}>
-            {otherPages.map(({ to, label, icon }) => {
+            {otherPages.map(function mapOtherPagesMdScreens({ to, label, icon }) {
               return (
                 <NavButton key={to} to={to} size={buttonSize} label={label} endIcon={icon}>
                   {label}
