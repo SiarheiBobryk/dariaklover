@@ -8,6 +8,13 @@ export interface MetaTags {
   'msapplication-TileColor': string;
 }
 
+export interface CalendlyAppointment {
+  id: string;
+  active: boolean;
+  newTab: boolean;
+  label: string;
+}
+
 export interface Config extends MetaTags {
   fullName: string;
   title: string;
@@ -32,6 +39,7 @@ export interface Config extends MetaTags {
     id: string;
     href: string;
     label: string;
+    appointments: Array<CalendlyAppointment>;
   };
   email: string;
   github: string;
@@ -65,6 +73,11 @@ export const config: Config = {
     id: 'dariaklover',
     href: 'https://calendly.com/dariaklover',
     label: 'Календарь Дарьи',
+    appointments: [
+      // NOTE: Due to limitations of a free account on Calendly, only one appointment type should be active
+      { id: 'trial', active: true, newTab: true, label: 'Ознакомительная встреча' },
+      { id: 'regular', active: false, newTab: true, label: 'Heath-коучинг сессия' },
+    ],
   },
   'msapplication-TileColor': '#ffc40d',
   email: 'dariaklover@gmail.com',

@@ -24,6 +24,7 @@ Array [
         href="https://calendly.com/dariaklover/trial"
         onBlur={[Function]}
         onFocus={[Function]}
+        target="_blank"
       >
         Ознакомительная встреча
       </a>
