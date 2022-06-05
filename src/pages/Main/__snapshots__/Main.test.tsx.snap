@@ -68,7 +68,7 @@ Array [
     , чтобы достичь желаемого результата.
   </p>,
   <div
-    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardInfo MuiAlert-standard css-efxmhs-MuiPaper-root-MuiAlert-root"
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardInfo MuiAlert-standard css-12mvehg-MuiPaper-root-MuiAlert-root"
     role="alert"
   >
     <div
@@ -94,7 +94,7 @@ Array [
       >
         Ведутся работы
       </div>
-      В связи с тем, что на сайте ведутся активные работы, что-то может отсутствовать или не работать. Спасибо за понимание 😇
+      В связи с тем, что на сайте ведутся активные работы, что-то может отсутствовать, работать не стабильно или вовсе не работать (мало верояно, но все-таки возможно). Спасибо за понимание 😇
     </div>
   </div>,
 ]
