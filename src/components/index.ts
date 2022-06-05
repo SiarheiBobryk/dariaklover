@@ -7,3 +7,4 @@ export { default as Heading } from './Heading';
 export { default as Paragraph } from './Paragraph';
 export { default as Head } from './Head';
 export { default as LinkBlank } from './LinkBlank';
+export { default as AlertClosable } from './AlertClosable';
