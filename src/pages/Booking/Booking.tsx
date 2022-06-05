@@ -95,8 +95,8 @@ function References() {
           const target: React.HTMLAttributeAnchorTarget | undefined = newTab ? '_blank' : undefined;
           return (
             active && (
-              <ListItem>
-                <Link key={id} href={`${calendlyHref}/${id}`} target={target}>
+              <ListItem key={id}>
+                <Link href={`${calendlyHref}/${id}`} target={target}>
                   {label}
                 </Link>
               </ListItem>
