@@ -30,6 +30,7 @@ function Footer(props: FooterProps) {
   const {
     instagram: { href: instagramHref, label: instagramLabel },
     telegram: { href: telegramHref, label: telegramLabel },
+    whatsapp: { href: whatsappHref, label: whatsappLabel },
     calendly: { href: calendlyHref, label: calendlyLabel },
     fullName,
     github,
@@ -50,18 +51,9 @@ function Footer(props: FooterProps) {
           </IconButton>
         </Tooltip>
         <Tooltip title="WhatsApp">
-          {/* TODO: Add ids and links here */}
-          <span>
-            <IconButton
-              aria-label="TODO: add aria-label"
-              href="TODO: add href here"
-              color="inherit"
-              disabled
-              {...iconButtonA11yProps}
-            >
-              <WhatsAppIcon />
-            </IconButton>
-          </span>
+          <IconButton aria-label={whatsappLabel} href={whatsappHref} color="inherit" {...iconButtonA11yProps}>
+            <WhatsAppIcon />
+          </IconButton>
         </Tooltip>
         <Tooltip title="Viber">
           {/* TODO: Add ids and links here */}

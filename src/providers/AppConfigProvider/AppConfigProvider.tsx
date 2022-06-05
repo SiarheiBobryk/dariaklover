@@ -35,6 +35,11 @@ export interface Config extends MetaTags {
     href: string;
     label: string;
   };
+  whatsapp: {
+    id: string;
+    href: string;
+    label: string;
+  };
   calendly: {
     id: string;
     href: string;
@@ -69,6 +74,12 @@ export const config: Config = {
     id: 'dariaklover',
     href: 'https://t.me/dariaklover',
     label: 'Телеграм Дарьи',
+  },
+  whatsapp: {
+    // TODO: Setup the branded account id (payed feature) later
+    id: '+46738540708',
+    href: 'https://wa.me/+46738540708',
+    label: 'WhatsApp Дарьи',
   },
   calendly: {
     id: 'dariaklover',
