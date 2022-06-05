@@ -39,7 +39,7 @@ export interface CalendlyResponse {
 
 function References() {
   const {
-    calendly: { href: calendlyHref, appointments },
+    calendly: { href: calendlyHref, appointments, conformation },
   }: Config = React.useContext(AppConfigContext);
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
@@ -104,40 +104,42 @@ function References() {
           );
         })}
       </List>
-      <Dialog
-        fullScreen={fullScreen}
-        open={open}
-        onClose={handleBackdropClick}
-        aria-labelledby="booking-conformation-title"
-        disableEscapeKeyDown
-      >
-        <DialogTitle id="booking-conformation-title">Запись прошла успешно</DialogTitle>
-        <DialogContent dividers>
-          <Paragraph>
-            {calendlyResponse.inviteeFullName}, вы только что успешно записались на &quot;
-            {calendlyResponse.eventTypeName}&quot; на {calendlyResponse.eventStartTime.toLocaleDateString()} c{' '}
-            {calendlyResponse.eventStartTime.toLocaleTimeString()} до{' '}
-            {calendlyResponse.eventEndTime.toLocaleTimeString()}.
-          </Paragraph>
-          <Paragraph>
-            Пожалуйста, проверьте свой email.{' '}
-            <strong>Мы прислали вам подтверждение записи со всей необходимой информацией.</strong> Консультация будет
-            проходить в Google Meet. Ссылку на консультацию вы также можете найти в том же email. Мы также пришлем вам
-            оповещение по email и СМС с напоминанием незадолго до консультации.
-          </Paragraph>
-          <Paragraph>До скорого 🍀</Paragraph>
-          <Alert severity="warning">
-            Убедительная просьба, будьте вовремя и сообщите мне за 24 часа, если по каким-то непредвиденным
-            обстоятельствам вам нужно консультацию перенести или отменить. Кнопки с моими контактами можно найти в самом
-            низу сайта.
-          </Alert>
-        </DialogContent>
-        <DialogActions>
-          <Button variant="contained" autoFocus onClick={handleClose}>
-            Продолжить
-          </Button>
-        </DialogActions>
-      </Dialog>
+      {conformation && (
+        <Dialog
+          fullScreen={fullScreen}
+          open={open}
+          onClose={handleBackdropClick}
+          aria-labelledby="booking-conformation-title"
+          disableEscapeKeyDown
+        >
+          <DialogTitle id="booking-conformation-title">Запись прошла успешно</DialogTitle>
+          <DialogContent dividers>
+            <Paragraph>
+              {calendlyResponse.inviteeFullName}, вы только что успешно записались на &quot;
+              {calendlyResponse.eventTypeName}&quot; на {calendlyResponse.eventStartTime.toLocaleDateString()} c{' '}
+              {calendlyResponse.eventStartTime.toLocaleTimeString()} до{' '}
+              {calendlyResponse.eventEndTime.toLocaleTimeString()}.
+            </Paragraph>
+            <Paragraph>
+              Пожалуйста, проверьте свой email.{' '}
+              <strong>Мы прислали вам подтверждение записи со всей необходимой информацией.</strong> Консультация будет
+              проходить в Google Meet. Ссылку на консультацию вы также можете найти в том же email. Мы также пришлем вам
+              оповещение по email и СМС с напоминанием незадолго до консультации.
+            </Paragraph>
+            <Paragraph>До скорого 🍀</Paragraph>
+            <Alert severity="warning">
+              Убедительная просьба, будьте вовремя и сообщите мне за 24 часа, если по каким-то непредвиденным
+              обстоятельствам вам нужно консультацию перенести или отменить. Кнопки с моими контактами можно найти в
+              самом низу сайта.
+            </Alert>
+          </DialogContent>
+          <DialogActions>
+            <Button variant="contained" autoFocus onClick={handleClose}>
+              Продолжить
+            </Button>
+          </DialogActions>
+        </Dialog>
+      )}
       <Alert sx={{ my: 1 }} severity="warning">
         <AlertTitle>Система тестируется</AlertTitle>
         Обращаем ваше внимание, что система записи на консультацию находится в режиме тестирования и может быть
