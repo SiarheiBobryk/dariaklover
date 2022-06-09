@@ -122,7 +122,7 @@ export interface SwiperClass {
 }
 
 function References(props: ReferencesProps) {
-  const [currentSlideDescription, setCurrentSlideDescription] = React.useState(0);
+  const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
   const { heading } = props;
   const height = '541';
   const width = '250';
@@ -130,9 +130,9 @@ function References(props: ReferencesProps) {
   const handleOnSlideChange = React.useCallback(
     function handleOnSlideChange(swiper: SwiperClass) {
       const { activeIndex } = swiper;
-      setCurrentSlideDescription(Number(activeIndex));
+      setCurrentSlideIndex(Number(activeIndex));
     },
-    [setCurrentSlideDescription],
+    [setCurrentSlideIndex],
   );
 
   return (
@@ -184,7 +184,7 @@ function References(props: ReferencesProps) {
           component="blockquote"
           sx={{ fontStyle: 'italic', '&::before': { content: '"«"' }, '&::after': { content: '"»"' } }}
         >
-          {references[currentSlideDescription].description}
+          {references[currentSlideIndex].description}
         </Typography>
       </Paper>
     </>
