@@ -176,7 +176,7 @@ function References(props: ReferencesProps) {
         sx={{
           p: 1,
           backgroundColor: (theme: Theme) => {
-            return theme?.palette?.action?.hover;
+            return theme.palette.action.hover;
           },
         }}
       >
