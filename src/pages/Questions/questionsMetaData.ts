@@ -6,7 +6,7 @@ export interface QuestionMetaData {
 
 const questionsMetaData: QuestionMetaData = {
   title: 'Задать вопрос',
-  heading: 'Вопросы к Дарье',
+  heading: 'Вопросы к Дарье (Бета)',
   path: '/question',
 };
 
