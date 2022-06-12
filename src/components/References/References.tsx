@@ -164,7 +164,14 @@ function References(props: ReferencesProps) {
               <picture>
                 <source type="image/webp" data-srcset={item.srcSet} />
                 <source type="image/jpeg" data-srcset={item.src} />
-                <Img data-src={item.src} alt={item.title} height={height} width={width} className="swiper-lazy" />
+                <Img
+                  aria-describedby={item.src}
+                  data-src={item.src}
+                  alt={item.title}
+                  height={height}
+                  width={width}
+                  className="swiper-lazy"
+                />
               </picture>
               <Skeleton variant="rectangular" height={`${height}px`} width={`${width}px`} />
             </SwiperSlide>
@@ -181,6 +188,7 @@ function References(props: ReferencesProps) {
         }}
       >
         <Typography
+          id={references[currentSlideIndex].src}
           component="blockquote"
           sx={{ fontStyle: 'italic', '&::before': { content: '"«"' }, '&::after': { content: '"»"' } }}
         >
