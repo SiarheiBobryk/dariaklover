@@ -10,10 +10,35 @@ Array [
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
   >
-    Здесь можно будет задать вопрос Дарье
+    Пожалуйста, перейдите по ссылке ниже. Там будет форма, чтобы задать вопрос Дарье.
+  </p>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    <a
+      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSedaIyUajfTsT7ymkNJd8umXnUV-Tc2q6OTmw3Xk8NGB9Hs0A/viewform?usp=sf_link"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      target="_blank"
+    >
+      Вопрос Дарье Кловер
+       
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1xzgpfl-MuiSvgIcon-root"
+        data-testid="OpenInNewIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+        />
+      </svg>
+    </a>
   </p>,
   <div
-    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardInfo MuiAlert-standard css-efxmhs-MuiPaper-root-MuiAlert-root"
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardWarning MuiAlert-standard css-rob5aa-MuiPaper-root-MuiAlert-root"
     role="alert"
   >
     <div
@@ -22,12 +47,12 @@ Array [
       <svg
         aria-hidden={true}
         className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-        data-testid="InfoOutlinedIcon"
+        data-testid="ReportProblemOutlinedIcon"
         focusable="false"
         viewBox="0 0 24 24"
       >
         <path
-          d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20, 12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10, 10 0 0,0 12,2M11,17H13V11H11V17Z"
+          d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z"
         />
       </svg>
     </div>
@@ -37,9 +62,9 @@ Array [
       <div
         className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiAlertTitle-root css-yslrua-MuiTypography-root-MuiAlertTitle-root"
       >
-        Как задать вопрос
+        Система тестируется
       </div>
-      Форма, где можно будет задать вопрос, а также посмотреть часто задаваемые вопросы, скоро будет опубликована на этой странице. Спасибо за ваше терпение 😇
+      Обращаем ваше внимание, что страничка, где можно задать вопрос, находится в режиме тестирования и может быть нестабильна.
     </div>
   </div>,
 ]
