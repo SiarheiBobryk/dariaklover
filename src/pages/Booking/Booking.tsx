@@ -8,7 +8,6 @@ import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import Link from '@mui/material/Link';
 // import Button from '@mui/material/Button';
 // import Dialog from '@mui/material/Dialog';
 // import DialogActions from '@mui/material/DialogActions';
@@ -18,6 +17,7 @@ import Link from '@mui/material/Link';
 // import { useTheme } from '@mui/material/styles';
 
 import Heading from '../../components/Heading';
+import LinkBlank from '../../components/LinkBlank';
 import Paragraph from '../../components/Paragraph';
 import { AppConfigContext, Config, CalendlyAppointment } from '../../providers/AppConfigProvider';
 import bookingMetaData from './bookingMetaData';
@@ -99,9 +99,9 @@ function References() {
           return (
             active && (
               <ListItem key={id}>
-                <Link href={`${calendlyHref}/${id}`} target={target}>
+                <LinkBlank href={`${calendlyHref}/${id}`} target={target}>
                   {label}
-                </Link>
+                </LinkBlank>
               </ListItem>
             )
           );
