@@ -6,6 +6,7 @@ import Alert from '@mui/material/Alert';
 
 import Heading from '../../components/Heading';
 import Paragraph from '../../components/Paragraph';
+import LinkBlank from '../../components/LinkBlank';
 import questionsMetaData from './questionsMetaData';
 
 function Questions() {
@@ -15,11 +16,17 @@ function Questions() {
         <title>{questionsMetaData.title}</title>
       </Helmet>
       <Heading>{questionsMetaData.heading}</Heading>
-      <Paragraph>Здесь можно будет задать вопрос Дарье</Paragraph>
-      <Alert sx={{ my: 1 }} severity="info">
-        <AlertTitle>Как задать вопрос</AlertTitle>
-        Форма, где можно будет задать вопрос, а также посмотреть часто задаваемые вопросы, скоро будет опубликована на
-        этой странице. Спасибо за ваше терпение 😇
+      <Paragraph>Пожалуйста, перейдите по ссылке ниже. Там будет форма, чтобы задать вопрос Дарье.</Paragraph>
+      <Paragraph>
+        {/* eslint-disable-next-line max-len */}
+        <LinkBlank href="https://docs.google.com/forms/d/e/1FAIpQLSedaIyUajfTsT7ymkNJd8umXnUV-Tc2q6OTmw3Xk8NGB9Hs0A/viewform?usp=sf_link">
+          Вопрос Дарье Кловер
+        </LinkBlank>
+      </Paragraph>
+      <Alert severity="warning">
+        <AlertTitle>Система тестируется</AlertTitle>
+        Обращаем ваше внимание, что страничка, где можно задать вопрос, находится в режиме тестирования и может быть
+        нестабильна.
       </Alert>
     </>
   );
