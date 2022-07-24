@@ -21,12 +21,12 @@ Array [
     >
       <a
         className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
-        href="https://calendly.com/dariaklover/trial"
+        href="https://calendly.com/dariaklover/regular"
         onBlur={[Function]}
         onFocus={[Function]}
         target="_blank"
       >
-        Ознакомительная встреча
+        Heath-коучинг сессия
          
         <svg
           aria-hidden={true}
