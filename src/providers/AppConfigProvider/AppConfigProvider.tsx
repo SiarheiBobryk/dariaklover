@@ -87,8 +87,8 @@ export const config: Config = {
     label: 'Календарь Дарьи',
     appointments: [
       // NOTE: Due to limitations of a free account on Calendly, only one appointment type should be active
-      { id: 'trial', active: true, newTab: true, label: 'Ознакомительная встреча' },
-      { id: 'regular', active: false, newTab: true, label: 'Heath-коучинг сессия' },
+      { id: 'trial', active: false, newTab: true, label: 'Ознакомительная встреча' },
+      { id: 'regular', active: true, newTab: true, label: 'Heath-коучинг сессия' },
     ],
     conformation: false,
   },
