@@ -192,7 +192,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
               size={buttonSize}
               {...ColorSwitcherButtonProps}
             >
-              {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
+              {theme.palette.mode === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
             </IconButton>
           </Tooltip>
           <NavButton
