@@ -34,7 +34,7 @@
     "@babel/core": "7.19.3",
     "@babel/plugin-syntax-flow": "7.18.6",
     "@babel/plugin-transform-react-jsx": "7.19.0",
-    "@babel/preset-env": "7.19.1",
+    "@babel/preset-env": "7.19.3",
     "@babel/preset-react": "7.18.6",
     "@testing-library/dom": "8.18.1",
     "@testing-library/jest-dom": "5.16.5",
