@@ -15,7 +15,7 @@ export const aboutConstants = {
   spell: `ˈkləʊvər`,
 };
 
-// TODO: It would be great to add a pic here
+// TODO: Add a nice picture here
 function About() {
   const {
     instagram: { href: instagramHref, id: instagramId },
