@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 
 import Typography from '@mui/material/Typography';
 
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
 import Heading from '../../components/Heading';
 import LinkBlank from '../../components/LinkBlank';
 import Paragraph from '../../components/Paragraph';
@@ -27,6 +29,10 @@ function About() {
       </Helmet>
       <Heading>{aboutMetaData.heading}</Heading>
       <Paragraph>Привет! Я - {fullName}.</Paragraph>
+      <Alert severity="info">
+        <AlertTitle>Мое фото</AlertTitle>
+        Поверьте, это сложно подобрать подходящее фото для этой страницы, но мы работаем над этим и скоро исправимся 🙂
+      </Alert>
       <Paragraph>
         Кловер - мой псевдоним. От английского <Typography component="i">{aboutConstants.spell}</Typography> - клевер 🍀
       </Paragraph>
