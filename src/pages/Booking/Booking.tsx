@@ -6,8 +6,6 @@ import { Helmet } from 'react-helmet';
 
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 // import Button from '@mui/material/Button';
 // import Dialog from '@mui/material/Dialog';
 // import DialogActions from '@mui/material/DialogActions';
@@ -16,11 +14,13 @@ import ListItem from '@mui/material/ListItem';
 // import useMediaQuery from '@mui/material/useMediaQuery';
 // import { useTheme } from '@mui/material/styles';
 
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import Heading from '../../components/Heading';
-import LinkBlank from '../../components/LinkBlank';
 import Paragraph from '../../components/Paragraph';
-import { AppConfigContext, Config, CalendlyAppointment } from '../../providers/AppConfigProvider';
+import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import bookingMetaData from './bookingMetaData';
+import BookingCard from '../../components/BookingCard';
 
 /**
  * `invitee_email` is required on Calendly's side
@@ -93,20 +93,21 @@ function References() {
       </Helmet>
       <Heading>{bookingMetaData.heading}</Heading>
       <Paragraph>На данный момент доступны следующие виды консультаций: </Paragraph>
-      <List>
-        {appointments.map(function renderAppointments({ id, active, newTab, label }: CalendlyAppointment) {
-          const target: React.HTMLAttributeAnchorTarget | undefined = newTab ? '_blank' : undefined;
-          return (
-            active && (
-              <ListItem key={id}>
-                <LinkBlank href={`${calendlyHref}/${id}`} target={target}>
-                  {label}
-                </LinkBlank>
-              </ListItem>
-            )
-          );
-        })}
-      </List>
+      <Grid container spacing={1}>
+        <Grid item xs={12} sm={6} md={4}>
+          {/* TODO: Keep it up-to-date with the Calendly event */}
+          <BookingCard
+            title="Heath-коучинг сессия"
+            duration={60}
+            via="Google Meet"
+            href="https://calendly.com/dariaklover/regular"
+          >
+            <Typography variant="body2" color="text.secondary">
+              Работа с запросом клиента в формате коучинга
+            </Typography>
+          </BookingCard>
+        </Grid>
+      </Grid>
       {/* {conformation && (
         <Dialog
           fullScreen={fullScreen}
