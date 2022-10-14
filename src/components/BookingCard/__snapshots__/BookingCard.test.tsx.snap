@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BookingCard /> snapshotting should render correctly 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 MuiCard-root css-935hc6-MuiPaper-root-MuiCard-root"
+>
+  <div
+    className="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+  >
+    <div
+      className="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1qvr50w-MuiTypography-root"
+      />
+    </div>
+  </div>
+  <div
+    className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+  >
+    <div
+      className="css-1pqn02g-MuiStack-root"
+    >
+      <div
+        className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-1dzy0sw-MuiChip-root"
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconSmall MuiChip-iconColorDefault css-i4bv87-MuiSvgIcon-root"
+          data-testid="AccessTimeIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+          <path
+            d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+          />
+        </svg>
+        <span
+          className="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+        >
+          60 минут
+        </span>
+      </div>
+      <div
+        className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-1dzy0sw-MuiChip-root"
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconSmall MuiChip-iconColorDefault css-i4bv87-MuiSvgIcon-root"
+          data-testid="VideocamIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"
+          />
+        </svg>
+        <span
+          className="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+        >
+          Google Meet
+        </span>
+      </div>
+    </div>
+    <p
+      className="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+    >
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui incidunt dolores vel placeat, sequi tenetur earum molestiae deleniti cupiditate sapiente error natus ducimus ad eligendi illo itaque! Nemo, velit et.
+    </p>
+  </div>
+  <div
+    className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
+  >
+    <button
+      aria-label="Выбрать дату и время"
+      className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      href=""
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      rel="noopener"
+      tabIndex={0}
+      target="_blank"
+      type="button"
+    >
+      <span
+        className="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="EventIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+          />
+        </svg>
+      </span>
+      Выбрать дату и время
+    </button>
+  </div>
+</div>
+`;
