@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import Fallback from './components/Fallback';
 import Head from './components/Head';
 import bookingMetaData from './pages/Booking/bookingMetaData';
+import howToBookMetaData from './pages/HowToBook/howToBookMetaData';
 import aboutMetaData from './pages/About/aboutMetaData';
 import referencesMetaData from './pages/References/referencesMetaData';
 import questionsMetaData from './pages/Questions/questionsMetaData';
@@ -12,6 +13,10 @@ import mainMetaData from './pages/Main/mainMetaData';
 
 const Booking = React.lazy(function lazyLoadBooking() {
   return import('./pages/Booking');
+});
+
+const HowToBook = React.lazy(function lazyLoadHowToBook() {
+  return import('./pages/HowToBook');
 });
 
 const About = React.lazy(function lazyLoadAbout() {
@@ -60,6 +65,7 @@ function App() {
           <Routes>
             <Route path={aboutMetaData.path} element={<About />} />
             <Route path={bookingMetaData.path} element={<Booking />} />
+            <Route path={howToBookMetaData.path} element={<HowToBook />} />
             <Route path={referencesMetaData.path} element={<References />} />
             <Route path={questionsMetaData.path} element={<Questions />} />
             <Route path={mainMetaData.path} element={<Main />} />

@@ -1,0 +1,541 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HowToBook /> snapshotting should render correctly 1`] = `
+Array [
+  <h2
+    className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+  >
+    Как записаться на консультацию
+  </h2>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    <strong>
+      Шаг 1
+    </strong>
+    . Перейдите на страницу
+     
+    <a
+      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+      href="/booking"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+    >
+      Запись на консультацию (Бета)
+    </a>
+    .
+  </p>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    <strong>
+      Шаг 2
+    </strong>
+    . Выберите консультацию и нажмите на кнопку 
+    <i>
+      ВЫБРАТЬ ДАТУ И ВРЕМЯ
+    </i>
+    .
+  </p>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    <strong>
+      Шаг 3
+    </strong>
+    . В открывшемся окне убедитесь, что отображаемое время соответствует вашему местному времени. Если это не так, то установите ваш часовой пояс.
+  </p>,
+  <figure
+    className="css-b9qyun"
+  >
+    <picture>
+      <source
+        srcSet="responsive_images/how-to-book-1.webp"
+        type="image/webp"
+      />
+      <img
+        alt="Установка часового пояса"
+        className="css-gkqd5w"
+        loading="lazy"
+        src="responsive_images/how-to-book-1.png"
+      />
+    </picture>
+    <figcaption>
+      <p
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        Установка вашего часового пояса
+      </p>
+    </figcaption>
+  </figure>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    <strong>
+      Шаг 4
+    </strong>
+    . Выберите день.
+  </p>,
+  <figure
+    className="css-b9qyun"
+  >
+    <picture>
+      <source
+        srcSet="responsive_images/how-to-book-2.webp"
+        type="image/webp"
+      />
+      <img
+        alt="Выбор дня"
+        className="css-gkqd5w"
+        loading="lazy"
+        src="responsive_images/how-to-book-2.png"
+      />
+    </picture>
+    <figcaption>
+      <p
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        Выбор дня
+      </p>
+    </figcaption>
+  </figure>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    <strong>
+      Шаг 5
+    </strong>
+    . Выберите время и подтвердите выбранное время нажав на кнопку 
+    <i>
+      Confirm
+    </i>
+    .
+  </p>,
+  <figure
+    className="css-b9qyun"
+  >
+    <picture>
+      <source
+        srcSet="responsive_images/how-to-book-3.webp"
+        type="image/webp"
+      />
+      <img
+        alt="Выбор времени"
+        className="css-gkqd5w"
+        loading="lazy"
+        src="responsive_images/how-to-book-3.png"
+      />
+    </picture>
+    <figcaption>
+      <p
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        Выбор времени
+      </p>
+    </figcaption>
+  </figure>,
+  <figure
+    className="css-b9qyun"
+  >
+    <picture>
+      <source
+        srcSet="responsive_images/how-to-book-4.webp"
+        type="image/webp"
+      />
+      <img
+        alt="Подтверждение выбранного времени"
+        className="css-gkqd5w"
+        loading="lazy"
+        src="responsive_images/how-to-book-4.png"
+      />
+    </picture>
+    <figcaption>
+      <p
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        Подтверждение выбранного времени
+      </p>
+    </figcaption>
+  </figure>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    <strong>
+      Шаг 6
+    </strong>
+    . Введите свое имя в поле 
+    <i>
+      Name
+    </i>
+     [1], электронную почту в поле 
+    <i>
+      Email
+    </i>
+     [2] и нажмите кнопку 
+    <i>
+      Schedule Event
+    </i>
+     [3].
+  </p>,
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardWarning MuiAlert-standard css-rob5aa-MuiPaper-root-MuiAlert-root"
+    role="alert"
+  >
+    <div
+      className="MuiAlert-icon css-1ytlwq5-MuiAlert-icon"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+        data-testid="ReportProblemOutlinedIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z"
+        />
+      </svg>
+    </div>
+    <div
+      className="MuiAlert-message css-1pxa9xg-MuiAlert-message"
+    >
+      <div
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiAlertTitle-root css-yslrua-MuiTypography-root-MuiAlertTitle-root"
+      >
+        Электронная почта (
+        <i>
+          Email
+        </i>
+        )
+      </div>
+      Пожалуйста, внимательно вводите адрес вашей электронной почты (
+      <i>
+        Email
+      </i>
+      ), т.к. на этот адрес мы вам вышлем подтверждение записи на консультацию с указанием выбранного дня и времени.
+    </div>
+  </div>,
+  <figure
+    className="css-b9qyun"
+  >
+    <picture>
+      <source
+        srcSet="responsive_images/how-to-book-5.webp"
+        type="image/webp"
+      />
+      <img
+        alt="Ввод вашего имени, электронной почты и подтверждение"
+        className="css-gkqd5w"
+        loading="lazy"
+        src="responsive_images/how-to-book-5.png"
+      />
+    </picture>
+    <figcaption>
+      <p
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        Ввод вашего имени, электронной почты и подтверждение
+      </p>
+    </figcaption>
+  </figure>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    <strong>
+      Шаг 7
+    </strong>
+    . Вы увидите похожую страницу, где будет надпись 
+    <i>
+      Confirmed
+    </i>
+     и подробная информация о консультации.
+  </p>,
+  <figure
+    className="css-b9qyun"
+  >
+    <picture>
+      <source
+        srcSet="responsive_images/how-to-book-6.webp"
+        type="image/webp"
+      />
+      <img
+        alt="Подтверждение записи"
+        className="css-gkqd5w"
+        loading="lazy"
+        src="responsive_images/how-to-book-6.png"
+      />
+    </picture>
+    <figcaption>
+      <p
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        Подтверждение записи
+      </p>
+    </figcaption>
+  </figure>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    <strong>
+      Шаг 8
+    </strong>
+    . Проверьте входящие сообщения на вашей электронную почте. Вам должно прийти сообщение с подтверждением записи в течение 5-10 минут (иногда сразу).
+  </p>,
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardWarning MuiAlert-standard css-rob5aa-MuiPaper-root-MuiAlert-root"
+    role="alert"
+  >
+    <div
+      className="MuiAlert-icon css-1ytlwq5-MuiAlert-icon"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+        data-testid="ReportProblemOutlinedIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z"
+        />
+      </svg>
+    </div>
+    <div
+      className="MuiAlert-message css-1pxa9xg-MuiAlert-message"
+    >
+      <div
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiAlertTitle-root css-yslrua-MuiTypography-root-MuiAlertTitle-root"
+      >
+        Папка 
+        <i>
+          Спам
+        </i>
+      </div>
+      Если в папке 
+      <i>
+        Входящие
+      </i>
+       ничего нет, попробуйте проверить папку 
+      <i>
+        Спам
+      </i>
+      . Иногда, сообщение может быть там.
+    </div>
+  </div>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    Вам придет похожее сообщение с подтверждением записи на консультацию:
+  </p>,
+  <figure
+    className="css-b9qyun"
+  >
+    <picture>
+      <source
+        srcSet="responsive_images/how-to-book-7.webp"
+        type="image/webp"
+      />
+      <img
+        alt="Сообщение с подтверждением записи на консультацию"
+        className="css-gkqd5w"
+        loading="lazy"
+        src="responsive_images/how-to-book-7.png"
+      />
+    </picture>
+    <figcaption>
+      <p
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        Сообщение с подтверждением записи на консультацию
+      </p>
+    </figcaption>
+  </figure>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    В полученном сообщении вы сможете увидеть следующее: название консультации [1] (
+    <i>
+      Event Name
+    </i>
+    ), краткое описание консультации [2], кнопку для подключения к консультации [3] (
+    <i>
+      Join with Google Meet
+    </i>
+    ), дату и время проведения консультации [6], а также ссылку для отмены [4] (
+    <i>
+      Cancel
+    </i>
+    ) и переноса консультации на другое время [5] (
+    <i>
+      Reschedule
+    </i>
+    ).
+  </p>,
+  <figure
+    className="css-b9qyun"
+  >
+    <picture>
+      <source
+        srcSet="responsive_images/how-to-book-8.webp"
+        type="image/webp"
+      />
+      <img
+        alt="Важные элементы в сообщении с подтверждением записи на консультацию"
+        className="css-gkqd5w"
+        loading="lazy"
+        src="responsive_images/how-to-book-8.png"
+      />
+    </picture>
+    <figcaption>
+      <p
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        Важные элементы в сообщении с подтверждением записи на консультацию
+      </p>
+    </figcaption>
+  </figure>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    Поздравляем, у вас получилось 🎉
+  </p>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    Сохраните себе в календаре дату и время консультации.
+  </p>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+  >
+    До встречи!
+  </p>,
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardInfo MuiAlert-standard css-12mvehg-MuiPaper-root-MuiAlert-root"
+    role="alert"
+  >
+    <div
+      className="MuiAlert-icon css-1ytlwq5-MuiAlert-icon"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+        data-testid="InfoOutlinedIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20, 12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10, 10 0 0,0 12,2M11,17H13V11H11V17Z"
+        />
+      </svg>
+    </div>
+    <div
+      className="MuiAlert-message css-1pxa9xg-MuiAlert-message"
+    >
+      <div
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiAlertTitle-root css-yslrua-MuiTypography-root-MuiAlertTitle-root"
+      >
+        Помощь в записи
+      </div>
+      Если у вас остались вопросы или вы продолжаете испытывать сложности в записи на консультацию, то не стесняйтесь и свяжитесь с нами через
+       
+      <a
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+        href="https://www.instagram.com/daria.klover"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        rel="noopener"
+        target="_blank"
+      >
+        Instagram
+         
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1xzgpfl-MuiSvgIcon-root"
+          data-testid="OpenInNewIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+          />
+        </svg>
+      </a>
+      ,
+       
+      <a
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+        href="https://t.me/dariaklover"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        rel="noopener"
+        target="_blank"
+      >
+        Telegram
+         
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1xzgpfl-MuiSvgIcon-root"
+          data-testid="OpenInNewIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+          />
+        </svg>
+      </a>
+      ,
+       
+      <a
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+        href="https://wa.me/+375447841051"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        rel="noopener"
+        target="_blank"
+      >
+        WhatsApp
+         
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1xzgpfl-MuiSvgIcon-root"
+          data-testid="OpenInNewIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+          />
+        </svg>
+      </a>
+       
+      или по
+       
+      <a
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+        href="mailto:  dariaklover@gmail.com"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        rel="noopener"
+        target="_blank"
+      >
+        электронной почте
+         
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1xzgpfl-MuiSvgIcon-root"
+          data-testid="OpenInNewIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+          />
+        </svg>
+      </a>
+      . Мы обязательно поможем 👍
+    </div>
+  </div>,
+]
+`;
