@@ -2,7 +2,7 @@ import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
-export const PUBLIC_PATH = 'responsive_images';
+export const PUBLIC_PATH = '/responsive_images';
 
 export const Img = styled('img')(function styleImg({ theme }) {
   return {
