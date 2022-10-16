@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image /> should render correctly 1`] = `
+<figure
+  className="css-b9qyun"
+>
+  <picture>
+    <source
+      srcSet="responsive_images/how-to-book-1.webp"
+      type="image/webp"
+    />
+    <img
+      alt="Установка часового пояса"
+      className="css-gkqd5w"
+      loading="lazy"
+      src="responsive_images/how-to-book-1.png"
+    />
+  </picture>
+  <figcaption>
+    <p
+      className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+    >
+      Установка вашего часового пояса
+    </p>
+  </figcaption>
+</figure>
+`;

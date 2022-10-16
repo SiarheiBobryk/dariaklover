@@ -1,5 +1,6 @@
 export { default as AlertClosable } from './AlertClosable';
 export { default as BookingCard } from './BookingCard';
+export { default as Image } from './Image';
 export { default as Fallback } from './Fallback';
 export { default as Footer } from './Footer';
 export { default as Head } from './Head';
