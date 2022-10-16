@@ -7,12 +7,11 @@ import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Link from '@mui/material/Link';
 
-import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
+import AlertHelp from '../../components/AlertHelp';
 import bookingMetaData from '../Booking/bookingMetaData';
 import Heading from '../../components/Heading';
 import howToBookMetaData from './howToBookMetaData';
 import Image from '../../components/Image';
-import LinkBlank from '../../components/LinkBlank';
 import Paragraph from '../../components/Paragraph';
 
 export const PUBLIC_PATH = 'responsive_images';
@@ -34,12 +33,6 @@ export const Figure = styled('figure')(function styleFigure({ theme }) {
 });
 
 function HowToBook() {
-  const {
-    instagram: { href: instagramHref },
-    telegram: { href: telegramHref },
-    whatsapp: { href: whatsappHref },
-    email,
-  }: Config = React.useContext(AppConfigContext);
   return (
     <>
       <Helmet>
@@ -134,28 +127,7 @@ function HowToBook() {
       <Paragraph>Поздравляем, у вас получилось 🎉</Paragraph>
       <Paragraph>Сохраните себе в календаре дату и время консультации.</Paragraph>
       <Paragraph>До встречи!</Paragraph>
-      {/* SOMEDAY: Move it to the separate component */}
-      <Alert severity="info">
-        <AlertTitle>Помощь в записи</AlertTitle>
-        Если у вас остались вопросы или вы продолжаете испытывать сложности в записи на консультацию, то не стесняйтесь
-        и свяжитесь с нами через{' '}
-        <LinkBlank href={instagramHref} rel="noopener">
-          Instagram
-        </LinkBlank>
-        ,{' '}
-        <LinkBlank href={telegramHref} rel="noopener">
-          Telegram
-        </LinkBlank>
-        ,{' '}
-        <LinkBlank href={whatsappHref} rel="noopener">
-          WhatsApp
-        </LinkBlank>{' '}
-        или по{' '}
-        <LinkBlank href={`mailto:  ${email}`} rel="noopener">
-          электронной почте
-        </LinkBlank>
-        . Мы обязательно поможем 👍
-      </Alert>
+      <AlertHelp />
     </>
   );
 }

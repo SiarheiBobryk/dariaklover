@@ -1,4 +1,4 @@
-export { default as AlertClosable } from './AlertClosable';
+export { default as AlertHelp } from './AlertHelp';
 export { default as BookingCard } from './BookingCard';
 export { default as Image } from './Image';
 export { default as Fallback } from './Fallback';
