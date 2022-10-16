@@ -4,8 +4,8 @@ import { Helmet, HelmetPropsToState } from 'react-helmet';
 import { render } from '@testing-library/react';
 import { toHaveNoViolations } from 'jest-axe';
 
-import Head from './Head';
 import AppConfigProvider, { Config, config, MetaTags } from '../../providers/AppConfigProvider';
+import Head from './Head';
 import packageJson from '../../../package.json';
 
 expect.extend(toHaveNoViolations);

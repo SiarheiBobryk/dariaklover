@@ -1,8 +1,8 @@
 import * as React from 'react';
 
+import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult, screen } from '@testing-library/react';
 import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
-import { axe, toHaveNoViolations } from 'jest-axe';
 
 import { typographyClasses } from '@mui/material/Typography';
 

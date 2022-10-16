@@ -5,16 +5,16 @@ import { NavLink as RouterNavLink } from 'react-router-dom';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 
-import Heading from '../../components/Heading';
-import Paragraph from '../../components/Paragraph';
-import bookingMetaData from './bookingMetaData';
+import { AppConfigContext, Config } from '../../providers/AppConfigProvider/AppConfigProvider';
 import BookingCard from '../../components/BookingCard';
+import bookingMetaData from './bookingMetaData';
+import Heading from '../../components/Heading';
 import howToBookMetaData from '../HowToBook/howToBookMetaData';
 import LinkBlank from '../../components/LinkBlank';
-import { AppConfigContext, Config } from '../../providers/AppConfigProvider/AppConfigProvider';
+import Paragraph from '../../components/Paragraph';
 
 function References() {
   const {

@@ -3,17 +3,17 @@ import { Helmet } from 'react-helmet';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 
-import Heading from '../../components/Heading';
-import Paragraph from '../../components/Paragraph';
-import bookingMetaData from '../Booking/bookingMetaData';
-import howToBookMetaData from './howToBookMetaData';
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
+import bookingMetaData from '../Booking/bookingMetaData';
+import Heading from '../../components/Heading';
+import howToBookMetaData from './howToBookMetaData';
 import LinkBlank from '../../components/LinkBlank';
+import Paragraph from '../../components/Paragraph';
 
 export const PUBLIC_PATH = 'responsive_images';
 
