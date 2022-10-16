@@ -7,7 +7,7 @@ export interface HowToBookMetaData {
 const howToBookMetaData: HowToBookMetaData = {
   title: 'Как записаться на консультацию',
   heading: 'Как записаться на консультацию',
-  path: '/how-to-book',
+  path: '/help/how-to-book',
 };
 
 export default howToBookMetaData;

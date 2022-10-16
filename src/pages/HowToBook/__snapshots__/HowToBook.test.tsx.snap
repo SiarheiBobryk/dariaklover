@@ -51,14 +51,14 @@ Array [
   >
     <picture>
       <source
-        srcSet="responsive_images/how-to-book-1.webp"
+        srcSet="/responsive_images/how-to-book-1.webp"
         type="image/webp"
       />
       <img
         alt="Установка часового пояса"
         className="css-gkqd5w"
         loading="lazy"
-        src="responsive_images/how-to-book-1.png"
+        src="/responsive_images/how-to-book-1.png"
       />
     </picture>
     <figcaption>
@@ -82,14 +82,14 @@ Array [
   >
     <picture>
       <source
-        srcSet="responsive_images/how-to-book-2.webp"
+        srcSet="/responsive_images/how-to-book-2.webp"
         type="image/webp"
       />
       <img
         alt="Выбор дня"
         className="css-gkqd5w"
         loading="lazy"
-        src="responsive_images/how-to-book-2.png"
+        src="/responsive_images/how-to-book-2.png"
       />
     </picture>
     <figcaption>
@@ -117,14 +117,14 @@ Array [
   >
     <picture>
       <source
-        srcSet="responsive_images/how-to-book-3.webp"
+        srcSet="/responsive_images/how-to-book-3.webp"
         type="image/webp"
       />
       <img
         alt="Выбор времени"
         className="css-gkqd5w"
         loading="lazy"
-        src="responsive_images/how-to-book-3.png"
+        src="/responsive_images/how-to-book-3.png"
       />
     </picture>
     <figcaption>
@@ -140,14 +140,14 @@ Array [
   >
     <picture>
       <source
-        srcSet="responsive_images/how-to-book-4.webp"
+        srcSet="/responsive_images/how-to-book-4.webp"
         type="image/webp"
       />
       <img
         alt="Подтверждение выбранного времени"
         className="css-gkqd5w"
         loading="lazy"
-        src="responsive_images/how-to-book-4.png"
+        src="/responsive_images/how-to-book-4.png"
       />
     </picture>
     <figcaption>
@@ -221,14 +221,14 @@ Array [
   >
     <picture>
       <source
-        srcSet="responsive_images/how-to-book-5.webp"
+        srcSet="/responsive_images/how-to-book-5.webp"
         type="image/webp"
       />
       <img
         alt="Ввод вашего имени, электронной почты и подтверждение"
         className="css-gkqd5w"
         loading="lazy"
-        src="responsive_images/how-to-book-5.png"
+        src="/responsive_images/how-to-book-5.png"
       />
     </picture>
     <figcaption>
@@ -256,14 +256,14 @@ Array [
   >
     <picture>
       <source
-        srcSet="responsive_images/how-to-book-6.webp"
+        srcSet="/responsive_images/how-to-book-6.webp"
         type="image/webp"
       />
       <img
         alt="Подтверждение записи"
         className="css-gkqd5w"
         loading="lazy"
-        src="responsive_images/how-to-book-6.png"
+        src="/responsive_images/how-to-book-6.png"
       />
     </picture>
     <figcaption>
@@ -333,14 +333,14 @@ Array [
   >
     <picture>
       <source
-        srcSet="responsive_images/how-to-book-7.webp"
+        srcSet="/responsive_images/how-to-book-7.webp"
         type="image/webp"
       />
       <img
         alt="Сообщение с подтверждением записи на консультацию"
         className="css-gkqd5w"
         loading="lazy"
-        src="responsive_images/how-to-book-7.png"
+        src="/responsive_images/how-to-book-7.png"
       />
     </picture>
     <figcaption>
@@ -377,14 +377,14 @@ Array [
   >
     <picture>
       <source
-        srcSet="responsive_images/how-to-book-8.webp"
+        srcSet="/responsive_images/how-to-book-8.webp"
         type="image/webp"
       />
       <img
         alt="Важные элементы в сообщении с подтверждением записи на консультацию"
         className="css-gkqd5w"
         loading="lazy"
-        src="responsive_images/how-to-book-8.png"
+        src="/responsive_images/how-to-book-8.png"
       />
     </picture>
     <figcaption>

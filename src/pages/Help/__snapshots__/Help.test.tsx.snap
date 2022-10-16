@@ -22,7 +22,7 @@ Array [
         >
           <a
             className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
-            href="/how-to-book"
+            href="/help/how-to-book"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
