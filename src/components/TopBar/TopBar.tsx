@@ -20,6 +20,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import HelpIcon from '@mui/icons-material/Help';
 
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
 import FourLeafCloverIcon from '../../icons/FourLeafClover';
@@ -27,6 +28,7 @@ import FourLeafCloverIcon from '../../icons/FourLeafClover';
 import bookingMetaData from '../../pages/Booking/bookingMetaData';
 import aboutMetaData from '../../pages/About/aboutMetaData';
 import referencesMetaData from '../../pages/References/referencesMetaData';
+import helpMetaData from '../../pages/Help/helpMetaData';
 
 export interface Page {
   to: string;
@@ -49,6 +51,11 @@ export const pages: Page[] = [
     to: referencesMetaData.path,
     label: 'Отзывы',
     icon: <MenuBookIcon />,
+  },
+  {
+    to: helpMetaData.path,
+    label: 'Помощь',
+    icon: <HelpIcon />,
   },
 ];
 

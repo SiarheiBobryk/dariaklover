@@ -13,5 +13,8 @@ export { default as Booking } from './Booking';
 export * from './HowToBook';
 export { default as HowToBook } from './HowToBook';
 
+export * from './Help';
+export { default as Help } from './Help';
+
 export * from './Questions';
 export { default as Questions } from './Questions';
