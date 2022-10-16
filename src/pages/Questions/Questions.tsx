@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import AlertTitle from '@mui/material/AlertTitle';
 import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
 
 import Heading from '../../components/Heading';
-import Paragraph from '../../components/Paragraph';
 import LinkBlank from '../../components/LinkBlank';
+import Paragraph from '../../components/Paragraph';
 import questionsMetaData from './questionsMetaData';
 
 function Questions() {

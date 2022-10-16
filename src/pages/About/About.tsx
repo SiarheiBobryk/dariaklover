@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Typography from '@mui/material/Typography';
-
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
+import Typography from '@mui/material/Typography';
+
+import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
+import aboutMetaData from './aboutMetaData';
 import Heading from '../../components/Heading';
 import LinkBlank from '../../components/LinkBlank';
 import Paragraph from '../../components/Paragraph';
-import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
-import aboutMetaData from './aboutMetaData';
 
 export const aboutConstants = {
   spell: `ˈkləʊvər`,

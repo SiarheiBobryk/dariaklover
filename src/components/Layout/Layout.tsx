@@ -3,8 +3,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
-import TopBar from '../TopBar';
 import Footer from '../Footer';
+import TopBar from '../TopBar';
 
 export interface LayoutProps {
   children: React.ReactNode;

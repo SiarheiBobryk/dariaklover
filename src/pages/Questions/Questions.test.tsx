@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Helmet, HelmetPropsToState } from 'react-helmet';
 
+import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult } from '@testing-library/react';
 import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
-import { axe, toHaveNoViolations } from 'jest-axe';
 
 import Questions from './Questions';
 import questionsMetaData from './questionsMetaData';

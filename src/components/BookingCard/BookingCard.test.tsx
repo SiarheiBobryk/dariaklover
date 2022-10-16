@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
-import { render, RenderResult } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
+import { render, RenderResult } from '@testing-library/react';
+import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 import Typography from '@mui/material/Typography';
 
 import BookingCard from './BookingCard';

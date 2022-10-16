@@ -6,9 +6,9 @@ import AlertTitle from '@mui/material/AlertTitle';
 import { styled } from '@mui/material/styles';
 
 import Heading from '../../components/Heading';
-import Paragraph from '../../components/Paragraph';
 import LinkBlank from '../../components/LinkBlank';
 import mainMetaData from './mainMetaData';
+import Paragraph from '../../components/Paragraph';
 
 export const Strong = styled('strong')(function styleStrong() {
   return {

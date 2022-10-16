@@ -2,9 +2,9 @@ import * as React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Helmet, HelmetPropsToState } from 'react-helmet';
 
+import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult } from '@testing-library/react';
 import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
-import { axe, toHaveNoViolations } from 'jest-axe';
 
 import Booking from './Booking';
 import bookingMetaData from './bookingMetaData';

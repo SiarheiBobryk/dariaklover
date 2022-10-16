@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import Alert from '@mui/material/Alert';
 import Collapse from '@mui/material/Collapse';
-import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
 
 import CloseIcon from '@mui/icons-material/Close';
 

@@ -1,34 +1,33 @@
 import * as React from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
+import { Theme, useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
-import Link from '@mui/material/Link';
-import { Theme, useTheme } from '@mui/material/styles';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import Link from '@mui/material/Link';
 import ListItemIcon from '@mui/material/ListItemIcon';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Toolbar from '@mui/material/Toolbar';
+import Tooltip from '@mui/material/Tooltip';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import HelpIcon from '@mui/icons-material/Help';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import MenuIcon from '@mui/icons-material/Menu';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
-import FourLeafCloverIcon from '../../icons/FourLeafClover';
-
-import bookingMetaData from '../../pages/Booking/bookingMetaData';
 import aboutMetaData from '../../pages/About/aboutMetaData';
-import referencesMetaData from '../../pages/References/referencesMetaData';
+import bookingMetaData from '../../pages/Booking/bookingMetaData';
+import FourLeafCloverIcon from '../../icons/FourLeafClover';
 import helpMetaData from '../../pages/Help/helpMetaData';
+import referencesMetaData from '../../pages/References/referencesMetaData';
 
 export interface Page {
   to: string;

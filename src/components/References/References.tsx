@@ -1,13 +1,13 @@
 import * as React from 'react';
 
 import { styled, Theme } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
 import SkeletonMui from '@mui/material/Skeleton';
+import Typography from '@mui/material/Typography';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Lazy, Pagination, Navigation, A11y } from 'swiper';
 
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
 import Heading from '../Heading';
 
 import 'swiper/css';

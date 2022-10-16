@@ -1,16 +1,20 @@
 import * as React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Layout from './components/Layout';
+import aboutMetaData from './pages/About/aboutMetaData';
+import bookingMetaData from './pages/Booking/bookingMetaData';
 import Fallback from './components/Fallback';
 import Head from './components/Head';
-import bookingMetaData from './pages/Booking/bookingMetaData';
-import howToBookMetaData from './pages/HowToBook/howToBookMetaData';
-import aboutMetaData from './pages/About/aboutMetaData';
-import referencesMetaData from './pages/References/referencesMetaData';
-import questionsMetaData from './pages/Questions/questionsMetaData';
-import mainMetaData from './pages/Main/mainMetaData';
 import helpMetaData from './pages/Help/helpMetaData';
+import howToBookMetaData from './pages/HowToBook/howToBookMetaData';
+import Layout from './components/Layout';
+import mainMetaData from './pages/Main/mainMetaData';
+import questionsMetaData from './pages/Questions/questionsMetaData';
+import referencesMetaData from './pages/References/referencesMetaData';
+
+const About = React.lazy(function lazyLoadAbout() {
+  return import('./pages/About');
+});
 
 const Booking = React.lazy(function lazyLoadBooking() {
   return import('./pages/Booking');
@@ -24,8 +28,8 @@ const Help = React.lazy(function lazyLoadHelp() {
   return import('./pages/Help');
 });
 
-const About = React.lazy(function lazyLoadAbout() {
-  return import('./pages/About');
+const Main = React.lazy(function lazyLoadMain() {
+  return import('./pages/Main');
 });
 
 const References = React.lazy(function lazyLoadReferences() {
@@ -34,10 +38,6 @@ const References = React.lazy(function lazyLoadReferences() {
 
 const Questions = React.lazy(function lazyLoadQuestions() {
   return import('./pages/Questions');
-});
-
-const Main = React.lazy(function lazyLoadMain() {
-  return import('./pages/Main');
 });
 
 // TODO: Uncomment if for testing the Fallback component
@@ -70,10 +70,10 @@ function App() {
           <Routes>
             <Route path={aboutMetaData.path} element={<About />} />
             <Route path={bookingMetaData.path} element={<Booking />} />
-            <Route path={howToBookMetaData.path} element={<HowToBook />} />
             <Route path={helpMetaData.path} element={<Help />} />
-            <Route path={referencesMetaData.path} element={<References />} />
+            <Route path={howToBookMetaData.path} element={<HowToBook />} />
             <Route path={questionsMetaData.path} element={<Questions />} />
+            <Route path={referencesMetaData.path} element={<References />} />
             <Route path={mainMetaData.path} element={<Main />} />
           </Routes>
         </Suspense>

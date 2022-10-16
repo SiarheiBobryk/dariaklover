@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
+import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult } from '@testing-library/react';
 import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
-import { axe, toHaveNoViolations } from 'jest-axe';
 
 import HowToBook from './HowToBook';
 

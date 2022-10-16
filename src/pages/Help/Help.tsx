@@ -9,14 +9,14 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Heading from '../../components/Heading';
-import Paragraph from '../../components/Paragraph';
+
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
-import LinkBlank from '../../components/LinkBlank';
-import howToBookMetaData from '../HowToBook/howToBookMetaData';
+import Heading from '../../components/Heading';
 import helpMetaData from './helpMetaData';
+import howToBookMetaData from '../HowToBook/howToBookMetaData';
+import LinkBlank from '../../components/LinkBlank';
+import Paragraph from '../../components/Paragraph';
 
 export const PUBLIC_PATH = 'responsive_images';
 
