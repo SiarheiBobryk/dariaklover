@@ -6,14 +6,14 @@ exports[`<Image /> should render correctly 1`] = `
 >
   <picture>
     <source
-      srcSet="responsive_images/how-to-book-1.webp"
+      srcSet="/responsive_images/how-to-book-1.webp"
       type="image/webp"
     />
     <img
       alt="Установка часового пояса"
       className="css-gkqd5w"
       loading="lazy"
-      src="responsive_images/how-to-book-1.png"
+      src="/responsive_images/how-to-book-1.png"
     />
   </picture>
   <figcaption>
