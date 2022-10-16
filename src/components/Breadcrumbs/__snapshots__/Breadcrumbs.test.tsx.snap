@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumbs /> should render correctly 1`] = `
+<nav
+  aria-label="breadcrumb"
+  className="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-1obnsz6-MuiTypography-root-MuiBreadcrumbs-root"
+>
+  <ol
+    className="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
+  >
+    <li
+      className="MuiBreadcrumbs-li"
+    >
+      <a
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-r3hr3s-MuiTypography-root-MuiLink-root"
+        href="/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+      >
+        Главная
+      </a>
+    </li>
+  </ol>
+</nav>
+`;

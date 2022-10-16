@@ -3,6 +3,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
+import Breadcrumbs from '../Breadcrumbs';
 import Footer from '../Footer';
 import TopBar from '../TopBar';
 
@@ -17,9 +18,9 @@ function Layout(props: LayoutProps) {
     <Box>
       <TopBar />
       <Container maxWidth="md">
-        <Box sx={{ py: 7 }}>{children}</Box>
+        <Breadcrumbs />
+        <Box sx={{ paddingBottom: 7 }}>{children}</Box>
       </Container>
-      {/* TODO: Add the site version block here */}
       <Footer />
     </Box>
   );
