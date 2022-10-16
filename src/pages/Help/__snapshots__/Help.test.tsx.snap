@@ -14,38 +14,23 @@ Array [
       className="MuiListItem-root MuiListItem-padding css-1tnift2-MuiListItem-root"
       disabled={false}
     >
-      <a
-        className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-178cqt3-MuiButtonBase-root-MuiListItemButton-root"
-        href="/how-to-book"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onContextMenu={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={0}
+      <div
+        className="MuiListItemText-root css-tlelie-MuiListItemText-root"
       >
-        <div
-          className="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
+        <span
+          className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
         >
-          <span
-            className="MuiTypography-root MuiTypography-body2 MuiListItemText-primary css-et1ao3-MuiTypography-root"
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+            href="/how-to-book"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
           >
-            <p
-              className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
-            >
-              Как записаться на консультацию
-            </p>
-          </span>
-        </div>
-      </a>
+            Как записаться на консультацию
+          </a>
+        </span>
+      </div>
     </li>
   </ul>,
   <div

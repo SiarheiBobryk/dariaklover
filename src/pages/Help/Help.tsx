@@ -2,21 +2,19 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
-import { styled, Theme, useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import useMediaQuery from '@mui/material/useMediaQuery';
 
+import Link from '@mui/material/Link';
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import Heading from '../../components/Heading';
 import helpMetaData from './helpMetaData';
 import howToBookMetaData from '../HowToBook/howToBookMetaData';
 import LinkBlank from '../../components/LinkBlank';
-import Paragraph from '../../components/Paragraph';
 
 export const PUBLIC_PATH = 'responsive_images';
 
@@ -43,8 +41,6 @@ function Help() {
     whatsapp: { href: whatsappHref },
     email,
   }: Config = React.useContext(AppConfigContext);
-  const theme: Theme = useTheme();
-  const isMedium: boolean = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
     <>
@@ -55,9 +51,13 @@ function Help() {
 
       <List>
         <ListItem disableGutters>
-          <ListItemButton component={RouterNavLink} to={howToBookMetaData.path} dense={!isMedium}>
-            <ListItemText primary={<Paragraph>{howToBookMetaData.heading}</Paragraph>} />
-          </ListItemButton>
+          <ListItemText
+            primary={
+              <Link component={RouterNavLink} to={howToBookMetaData.path}>
+                {howToBookMetaData.heading}
+              </Link>
+            }
+          />
         </ListItem>
       </List>
       {/* TODO: Move that to the separate component */}
