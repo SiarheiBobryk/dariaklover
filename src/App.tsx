@@ -10,6 +10,7 @@ import aboutMetaData from './pages/About/aboutMetaData';
 import referencesMetaData from './pages/References/referencesMetaData';
 import questionsMetaData from './pages/Questions/questionsMetaData';
 import mainMetaData from './pages/Main/mainMetaData';
+import helpMetaData from './pages/Help/helpMetaData';
 
 const Booking = React.lazy(function lazyLoadBooking() {
   return import('./pages/Booking');
@@ -17,6 +18,10 @@ const Booking = React.lazy(function lazyLoadBooking() {
 
 const HowToBook = React.lazy(function lazyLoadHowToBook() {
   return import('./pages/HowToBook');
+});
+
+const Help = React.lazy(function lazyLoadHelp() {
+  return import('./pages/Help');
 });
 
 const About = React.lazy(function lazyLoadAbout() {
@@ -66,6 +71,7 @@ function App() {
             <Route path={aboutMetaData.path} element={<About />} />
             <Route path={bookingMetaData.path} element={<Booking />} />
             <Route path={howToBookMetaData.path} element={<HowToBook />} />
+            <Route path={helpMetaData.path} element={<Help />} />
             <Route path={referencesMetaData.path} element={<References />} />
             <Route path={questionsMetaData.path} element={<Questions />} />
             <Route path={mainMetaData.path} element={<Main />} />
