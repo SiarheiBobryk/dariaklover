@@ -29,6 +29,12 @@ function References() {
         <title>{bookingMetaData.title}</title>
       </Helmet>
       <Heading>{bookingMetaData.heading}</Heading>
+      <Alert severity="warning">
+        <AlertTitle>Запись новых клиентов приостановлена</AlertTitle>В связи с переездом в другую страну, сейчас мы
+        активно работаем над восстановлением возможности снова принимать электронные платежи. Поэтому запись новых
+        клиентов временно приостановлена. Как только платежи будут доступны, мы разместим об этом новость на главной
+        странице сайта. Спасибо за понимание.
+      </Alert>
       <Paragraph>На данный момент доступны следующие виды консультаций: </Paragraph>
       <Grid container spacing={1} sx={{ marginBottom: 1 }}>
         <Grid item xs={12} sm={6} md={4}>
