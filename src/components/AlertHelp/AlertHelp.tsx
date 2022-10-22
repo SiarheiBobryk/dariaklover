@@ -17,7 +17,6 @@ export interface AlertHelpProps {
 const AlertHelp = React.forwardRef(function AlertHelp(props: AlertHelpProps, ref: React.Ref<any>) {
   const { children, open, onClose, ...other } = props;
   const {
-    instagram: { href: instagramHref },
     telegram: { href: telegramHref },
     whatsapp: { href: whatsappHref },
     email,
@@ -28,10 +27,6 @@ const AlertHelp = React.forwardRef(function AlertHelp(props: AlertHelpProps, ref
       <AlertTitle>Связаться с нами</AlertTitle>
       Если у вас остались вопросы или вы продолжаете испытывать сложности в работе с сайтом, то не стесняйтесь и
       свяжитесь с нами через{' '}
-      <LinkBlank href={instagramHref} rel="noopener">
-        Instagram
-      </LinkBlank>
-      ,{' '}
       <LinkBlank href={telegramHref} rel="noopener">
         Telegram
       </LinkBlank>
@@ -40,8 +35,8 @@ const AlertHelp = React.forwardRef(function AlertHelp(props: AlertHelpProps, ref
         WhatsApp
       </LinkBlank>{' '}
       или по{' '}
-      <LinkBlank href={`mailto:  ${email}`} rel="noopener">
-        электронной почте
+      <LinkBlank href={`mailto: ${email}`} rel="noopener">
+        электронной почте (<i>Email</i>)
       </LinkBlank>
       . Мы обязательно поможем.
     </Alert>
