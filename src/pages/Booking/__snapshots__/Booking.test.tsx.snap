@@ -7,6 +7,36 @@ Array [
   >
     Запись на консультацию
   </h2>,
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardWarning MuiAlert-standard css-rob5aa-MuiPaper-root-MuiAlert-root"
+    role="alert"
+  >
+    <div
+      className="MuiAlert-icon css-1ytlwq5-MuiAlert-icon"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+        data-testid="ReportProblemOutlinedIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z"
+        />
+      </svg>
+    </div>
+    <div
+      className="MuiAlert-message css-1pxa9xg-MuiAlert-message"
+    >
+      <div
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiAlertTitle-root css-yslrua-MuiTypography-root-MuiAlertTitle-root"
+      >
+        Запись новых клиентов приостановлена
+      </div>
+      В связи с переездом в другую страну, сейчас мы активно работаем над восстановлением возможности снова принимать электронные платежи. Поэтому запись новых клиентов временно приостановлена. Как только платежи будут доступны, мы разместим об этом новость на главной странице сайта. Спасибо за понимание.
+    </div>
+  </div>,
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
   >
