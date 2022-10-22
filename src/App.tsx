@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import aboutMetaData from './pages/About/aboutMetaData';
 import bookingMetaData from './pages/Booking/bookingMetaData';
 import Fallback from './components/Fallback';
+import faqMetaData from './pages/Faq/faqMetaData';
 import Head from './components/Head';
 import helpMetaData from './pages/Help/helpMetaData';
 import howToBookMetaData from './pages/HowToBook/howToBookMetaData';
@@ -18,6 +19,10 @@ const About = React.lazy(function lazyLoadAbout() {
 
 const Booking = React.lazy(function lazyLoadBooking() {
   return import('./pages/Booking');
+});
+
+const Faq = React.lazy(function lazyLoadFaq() {
+  return import('./pages/Faq');
 });
 
 const HowToBook = React.lazy(function lazyLoadHowToBook() {
@@ -70,6 +75,7 @@ function App() {
           <Routes>
             <Route path={aboutMetaData.path} element={<About />} />
             <Route path={bookingMetaData.path} element={<Booking />} />
+            <Route path={faqMetaData.path} element={<Faq />} />
             <Route path={helpMetaData.path} element={<Help />} />
             <Route path={howToBookMetaData.path} element={<HowToBook />} />
             <Route path={questionsMetaData.path} element={<Questions />} />

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Faq /> snapshotting should render correctly 1`] = `
+<h2
+  className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+>
+  Часто задаваемые вопросы
+</h2>
+`;

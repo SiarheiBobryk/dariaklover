@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 
 import aboutMetaData from '../../pages/About/aboutMetaData';
 import bookingMetaData from '../../pages/Booking/bookingMetaData';
+import faqMetaData from '../../pages/Faq/faqMetaData';
 import helpMetaData from '../../pages/Help/helpMetaData';
 import howToBookMetaData from '../../pages/HowToBook/howToBookMetaData';
 import mainMetaData from '../../pages/Main/mainMetaData';
@@ -18,6 +19,7 @@ const breadcrumbNameMap: { [key: string]: string } = {
   [mainMetaData.path]: mainMetaData.heading,
   [aboutMetaData.path]: aboutMetaData.heading,
   [bookingMetaData.path]: bookingMetaData.heading,
+  [faqMetaData.path]: faqMetaData.heading,
   [helpMetaData.path]: helpMetaData.heading,
   [howToBookMetaData.path]: howToBookMetaData.heading,
   [questionsMetaData.path]: questionsMetaData.heading,
