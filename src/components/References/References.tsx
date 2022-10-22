@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { styled, Theme } from '@mui/material/styles';
+import { styled, Theme, useTheme } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import SkeletonMui from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
@@ -164,8 +164,9 @@ export interface SwiperClass {
 function References(props: ReferencesProps) {
   const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
   const { heading } = props;
-  const height = '541';
-  const width = '250';
+  const height = 541;
+  const width = 250;
+  const appTheme = useTheme();
 
   const handleOnSlideChange = React.useCallback(
     function handleOnSlideChange(swiper: SwiperClass) {
@@ -196,7 +197,11 @@ function References(props: ReferencesProps) {
         pagination={{
           dynamicBullets: true,
         }}
-        style={{ height: `${height}px`, marginTop: '8px', marginBottom: '8px' }}
+        style={{
+          height: appTheme.typography.pxToRem(height),
+          marginTop: appTheme.typography.pxToRem(8),
+          marginBottom: appTheme.typography.pxToRem(8),
+        }}
       >
         {references.map(function mapReferences(item: ReferenceData) {
           return (
@@ -213,7 +218,11 @@ function References(props: ReferencesProps) {
                   className="swiper-lazy"
                 />
               </picture>
-              <Skeleton variant="rectangular" height={`${height}px`} width={`${width}px`} />
+              <Skeleton
+                variant="rectangular"
+                height={appTheme.typography.pxToRem(height)}
+                width={appTheme.typography.pxToRem(width)}
+              />
             </SwiperSlide>
           );
         })}
