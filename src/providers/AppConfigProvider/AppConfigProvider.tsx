@@ -29,16 +29,19 @@ export interface Config extends MetaTags {
     id: string;
     href: string;
     label: string;
+    labelShort: string;
   };
   telegram: {
     id: string;
     href: string;
     label: string;
+    labelShort: string;
   };
   whatsapp: {
     id: string;
     href: string;
     label: string;
+    labelShort: string;
   };
   calendly: {
     id: string;
@@ -69,17 +72,20 @@ export const config: Config = {
     id: '@daria.klover',
     href: 'https://www.instagram.com/daria.klover',
     label: 'Instagram Дарьи',
+    labelShort: 'Instagram',
   },
   telegram: {
     id: 'dariaklover',
     href: 'https://t.me/dariaklover',
     label: 'Telegram Дарьи',
+    labelShort: 'Telegram',
   },
   whatsapp: {
     // TODO: Setup the branded account id (payed feature) later
     id: '+375447841051',
     href: 'https://wa.me/+375447841051',
     label: 'WhatsApp Дарьи',
+    labelShort: 'WhatsApp',
   },
   calendly: {
     id: 'dariaklover',

@@ -437,8 +437,7 @@ Array [
       >
         Связаться с нами
       </div>
-      Если у вас остались вопросы или вы продолжаете испытывать сложности в работе с сайтом, то не стесняйтесь и свяжитесь с нами через
-       
+      Если у вас остались вопросы или вы продолжаете испытывать сложности в работе с сайтом, то не стесняйтесь и свяжитесь с нами через 
       <a
         className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
         href="https://t.me/dariaklover"
@@ -461,8 +460,7 @@ Array [
           />
         </svg>
       </a>
-      ,
-       
+      , 
       <a
         className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
         href="https://wa.me/+375447841051"
@@ -485,8 +483,7 @@ Array [
           />
         </svg>
       </a>
-       
-      или по
+       или по
        
       <a
         className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
