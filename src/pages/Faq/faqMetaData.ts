@@ -7,7 +7,7 @@ export interface FaqMetaData {
 const howToBookMetaData: FaqMetaData = {
   title: 'Часто задаваемые вопросы',
   heading: 'Часто задаваемые вопросы',
-  path: '/faq',
+  path: '/help/faq',
 };
 
 export default howToBookMetaData;
