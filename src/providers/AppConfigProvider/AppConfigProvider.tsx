@@ -50,7 +50,11 @@ export interface Config extends MetaTags {
     appointments: Array<CalendlyAppointment>;
     conformation: boolean;
   };
-  email: string;
+  email: {
+    id: string;
+    label: string;
+    labelShort: string;
+  };
   github: string;
 }
 
@@ -99,7 +103,11 @@ export const config: Config = {
     conformation: false,
   },
   'msapplication-TileColor': '#ffc40d',
-  email: 'dariaklover@gmail.com',
+  email: {
+    id: 'dariaklover@gmail.com',
+    label: 'Электронная почта',
+    labelShort: 'Email',
+  },
   github: 'https://github.com/SiarheiBobryk/DariaKlover-website',
 };
 
