@@ -33,7 +33,7 @@ function Footer(props: FooterProps) {
     calendly: { href: calendlyHref, label: calendlyLabel },
     fullName,
     github,
-    email,
+    email: { id: emailId },
   }: Config = React.useContext(AppConfigContext);
 
   return (
@@ -57,7 +57,7 @@ function Footer(props: FooterProps) {
         <Tooltip title="Электронная почта">
           <IconButton
             aria-label="Электронный адрес Дарьи"
-            href={`mailto:  ${email}`}
+            href={`mailto:  ${emailId}`}
             color="inherit"
             {...iconButtonA11yProps}
           >

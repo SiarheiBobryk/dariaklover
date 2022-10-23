@@ -15,13 +15,13 @@ import Heading from '../../components/Heading';
 import howToBookMetaData from '../HowToBook/howToBookMetaData';
 import LinkBlank from '../../components/LinkBlank';
 import Paragraph from '../../components/Paragraph';
+import LinkEmail from '../../components/LinkEmail';
 
 function References() {
   const {
     instagram: { href: instagramHref },
     telegram: { href: telegramHref },
     whatsapp: { href: whatsappHref },
-    email,
   }: Config = React.useContext(AppConfigContext);
   return (
     <>
@@ -80,11 +80,7 @@ function References() {
         <LinkBlank href={whatsappHref} rel="noopener">
           WhatsApp
         </LinkBlank>{' '}
-        или по{' '}
-        <LinkBlank href={`mailto:  ${email}`} rel="noopener">
-          электронной почте
-        </LinkBlank>
-        . Мы обязательно поможем 👍
+        или по <LinkEmail />. Мы обязательно поможем 👍
       </Alert>
     </>
   );

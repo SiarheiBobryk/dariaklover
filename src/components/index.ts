@@ -8,6 +8,7 @@ export { default as Head } from './Head';
 export { default as Heading } from './Heading';
 export { default as Layout } from './Layout';
 export { default as LinkBlank } from './LinkBlank';
+export { default as LinkEmail } from './LinkEmail';
 export { default as LinkSocial } from './LinkSocial';
 export { default as Paragraph } from './Paragraph';
 export { default as References } from './References';

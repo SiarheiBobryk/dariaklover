@@ -106,8 +106,7 @@ Array [
           />
         </svg>
       </a>
-       или по
-       
+       или по 
       <a
         className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
         href="mailto: dariaklover@gmail.com"
@@ -116,11 +115,7 @@ Array [
         rel="noopener"
         target="_blank"
       >
-        электронной почте (
-        <i>
-          Email
-        </i>
-        )
+        Email (Электронная почта)
          
         <svg
           aria-hidden={true}
