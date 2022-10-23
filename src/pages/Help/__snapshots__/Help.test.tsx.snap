@@ -11,26 +11,32 @@ Array [
     className="MuiList-root MuiList-padding css-h4y409-MuiList-root"
   >
     <li
-      className="MuiListItem-root MuiListItem-padding css-1tnift2-MuiListItem-root"
+      className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
       disabled={false}
     >
-      <div
-        className="MuiListItemText-root css-tlelie-MuiListItemText-root"
+      <a
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+        href="/help/faq"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
       >
-        <span
-          className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
-        >
-          <a
-            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
-            href="/help/how-to-book"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-          >
-            Как записаться на консультацию
-          </a>
-        </span>
-      </div>
+        Часто задаваемые вопросы
+      </a>
+    </li>
+    <li
+      className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+      disabled={false}
+    >
+      <a
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+        href="/help/how-to-book"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+      >
+        Как записаться на консультацию
+      </a>
     </li>
   </ul>,
   <div

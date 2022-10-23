@@ -6,9 +6,9 @@ import { styled } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 
 import AlertHelp from '../../components/AlertHelp';
+import faqMetaData from '../Faq/faqMetaData';
 import Heading from '../../components/Heading';
 import helpMetaData from './helpMetaData';
 import howToBookMetaData from '../HowToBook/howToBookMetaData';
@@ -40,14 +40,15 @@ function Help() {
       <Heading>{helpMetaData.heading}</Heading>
 
       <List>
-        <ListItem disableGutters>
-          <ListItemText
-            primary={
-              <Link component={RouterNavLink} to={howToBookMetaData.path}>
-                {howToBookMetaData.heading}
-              </Link>
-            }
-          />
+        <ListItem>
+          <Link component={RouterNavLink} to={faqMetaData.path}>
+            {faqMetaData.heading}
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link component={RouterNavLink} to={howToBookMetaData.path}>
+            {howToBookMetaData.heading}
+          </Link>
         </ListItem>
       </List>
       <AlertHelp />
