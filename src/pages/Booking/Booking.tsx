@@ -8,21 +8,14 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
-import { AppConfigContext, Config } from '../../providers/AppConfigProvider/AppConfigProvider';
 import BookingCard from '../../components/BookingCard';
 import bookingMetaData from './bookingMetaData';
 import Heading from '../../components/Heading';
 import howToBookMetaData from '../HowToBook/howToBookMetaData';
-import LinkBlank from '../../components/LinkBlank';
 import Paragraph from '../../components/Paragraph';
-import LinkEmail from '../../components/LinkEmail';
+import helpMetaData from '../Help/helpMetaData';
 
 function References() {
-  const {
-    instagram: { href: instagramHref },
-    telegram: { href: telegramHref },
-    whatsapp: { href: whatsappHref },
-  }: Config = React.useContext(AppConfigContext);
   return (
     <>
       <Helmet>
@@ -67,20 +60,11 @@ function References() {
       </Alert>
       <Alert severity="info">
         <AlertTitle>Помощь в записи</AlertTitle>
-        Если у вас остались вопросы или вы продолжаете испытывать сложности в записи на консультацию, то не стесняйтесь
-        и свяжитесь с нами через{' '}
-        <LinkBlank href={instagramHref} rel="noopener">
-          Instagram
-        </LinkBlank>
-        ,{' '}
-        <LinkBlank href={telegramHref} rel="noopener">
-          Telegram
-        </LinkBlank>
-        ,{' '}
-        <LinkBlank href={whatsappHref} rel="noopener">
-          WhatsApp
-        </LinkBlank>{' '}
-        или по <LinkEmail />. Мы обязательно поможем 👍
+        {/* eslint-disable-next-line max-len */}
+        Если у вас остались вопросы или вы продолжаете испытывать сложности в записи на консультацию, посетите раздел{' '}
+        <Link component={RouterNavLink} to={helpMetaData.path}>
+          {helpMetaData.heading}
+        </Link>
       </Alert>
     </>
   );

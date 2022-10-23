@@ -241,103 +241,17 @@ Array [
       >
         Помощь в записи
       </div>
-      Если у вас остались вопросы или вы продолжаете испытывать сложности в записи на консультацию, то не стесняйтесь и свяжитесь с нами через
+      Если у вас остались вопросы или вы продолжаете испытывать сложности в записи на консультацию, посетите раздел
        
       <a
         className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
-        href="https://www.instagram.com/daria.klover"
+        href="/help"
         onBlur={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
-        rel="noopener"
-        target="_blank"
       >
-        Instagram
-         
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1xzgpfl-MuiSvgIcon-root"
-          data-testid="OpenInNewIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-          />
-        </svg>
+        Помощь
       </a>
-      ,
-       
-      <a
-        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
-        href="https://t.me/dariaklover"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        rel="noopener"
-        target="_blank"
-      >
-        Telegram
-         
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1xzgpfl-MuiSvgIcon-root"
-          data-testid="OpenInNewIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-          />
-        </svg>
-      </a>
-      ,
-       
-      <a
-        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
-        href="https://wa.me/+375447841051"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        rel="noopener"
-        target="_blank"
-      >
-        WhatsApp
-         
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1xzgpfl-MuiSvgIcon-root"
-          data-testid="OpenInNewIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-          />
-        </svg>
-      </a>
-       
-      или по 
-      <a
-        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
-        href="mailto: dariaklover@gmail.com"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        rel="noopener"
-        target="_blank"
-      >
-        Email (Электронная почта)
-         
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1xzgpfl-MuiSvgIcon-root"
-          data-testid="OpenInNewIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-          />
-        </svg>
-      </a>
-      . Мы обязательно поможем 👍
     </div>
   </div>,
 ]
