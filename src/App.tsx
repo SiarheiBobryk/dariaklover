@@ -10,7 +10,6 @@ import helpMetaData from './pages/Help/helpMetaData';
 import howToBookMetaData from './pages/HowToBook/howToBookMetaData';
 import Layout from './components/Layout';
 import mainMetaData from './pages/Main/mainMetaData';
-import questionsMetaData from './pages/Questions/questionsMetaData';
 import referencesMetaData from './pages/References/referencesMetaData';
 
 const About = React.lazy(function lazyLoadAbout() {
@@ -39,10 +38,6 @@ const Main = React.lazy(function lazyLoadMain() {
 
 const References = React.lazy(function lazyLoadReferences() {
   return import('./pages/References');
-});
-
-const Questions = React.lazy(function lazyLoadQuestions() {
-  return import('./pages/Questions');
 });
 
 // TODO: Uncomment if for testing the Fallback component
@@ -78,7 +73,6 @@ function App() {
             <Route path={faqMetaData.path} element={<Faq />} />
             <Route path={helpMetaData.path} element={<Help />} />
             <Route path={howToBookMetaData.path} element={<HowToBook />} />
-            <Route path={questionsMetaData.path} element={<Questions />} />
             <Route path={referencesMetaData.path} element={<References />} />
             <Route path={mainMetaData.path} element={<Main />} />
           </Routes>

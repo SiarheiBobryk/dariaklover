@@ -12,7 +12,6 @@ import faqMetaData from '../../pages/Faq/faqMetaData';
 import helpMetaData from '../../pages/Help/helpMetaData';
 import howToBookMetaData from '../../pages/HowToBook/howToBookMetaData';
 import mainMetaData from '../../pages/Main/mainMetaData';
-import questionsMetaData from '../../pages/Questions/questionsMetaData';
 import referencesMetaData from '../../pages/References/referencesMetaData';
 
 const breadcrumbNameMap: { [key: string]: string } = {
@@ -22,7 +21,6 @@ const breadcrumbNameMap: { [key: string]: string } = {
   [faqMetaData.path]: faqMetaData.heading,
   [helpMetaData.path]: helpMetaData.heading,
   [howToBookMetaData.path]: howToBookMetaData.heading,
-  [questionsMetaData.path]: questionsMetaData.heading,
   [referencesMetaData.path]: referencesMetaData.heading,
 };
 
