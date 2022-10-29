@@ -16,8 +16,5 @@ export { default as HowToBook } from './HowToBook';
 export * from './Main';
 export { default as Main } from './Main';
 
-export * from './Questions';
-export { default as Questions } from './Questions';
-
 export * from './References';
 export { default as References } from './References';
