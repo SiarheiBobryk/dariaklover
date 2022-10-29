@@ -23,7 +23,7 @@ function Head() {
       <link rel="icon" type="image/png" sizes="16x16" href={`/icon/favicon-16x16.png?v=${packageJson.version}`} />
       <link rel="manifest" href={`/icon/site.webmanifest?v=${packageJson.version}`} />
       <link rel="mask-icon" href={`/icon/safari-pinned-tab.svg?v=${packageJson.version}`} color="#5bbad5" />
-      <link rel="icon" href={`/icon/favicon.ico?v=${packageJson.version}`} />
+      <link rel="icon" href={`/icon/favicon.ico?v=${packageJson.version}`} type="image/x-icon" />
       <meta name="msapplication-TileColor" content={configs['msapplication-TileColor']} />
       <meta name="msapplication-config" content={`/icon/browserconfig.xml?v=${packageJson.version}`} />
     </Helmet>
