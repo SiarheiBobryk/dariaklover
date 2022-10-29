@@ -68,6 +68,7 @@ function App() {
       <Layout>
         <Suspense>
           <Routes>
+            {/* TODO: Add all new pages to sitemap.xml */}
             <Route path={aboutMetaData.path} element={<About />} />
             <Route path={bookingMetaData.path} element={<Booking />} />
             <Route path={faqMetaData.path} element={<Faq />} />
