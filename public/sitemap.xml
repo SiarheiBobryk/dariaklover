@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main -->
+  <url>
+    <loc>https://dariaklover.health/</loc>
+    <lastmod>2022-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- About -->
+  <url>
+    <loc>https://dariaklover.health/about/</loc>
+    <lastmod>2022-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- Booking -->
+  <url>
+    <loc>https://dariaklover.health/booking/</loc>
+    <lastmod>2022-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- Help -->
+  <url>
+    <loc>https://dariaklover.health/help/</loc>
+    <lastmod>2022-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- FAQ -->
+  <url>
+    <loc>https://dariaklover.health/help/faq/</loc>
+    <lastmod>2022-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- How to book -->
+  <url>
+    <loc>https://dariaklover.health/help/how-to-book/</loc>
+    <lastmod>2022-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- References -->
+  <url>
+    <loc>https://dariaklover.health/references/</loc>
+    <lastmod>2022-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
