@@ -71,7 +71,7 @@ Array [
             className="css-1pqn02g-MuiStack-root"
           >
             <div
-              className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-1dzy0sw-MuiChip-root"
+              className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-1biewj9-MuiChip-root"
               onKeyDown={[Function]}
               onKeyUp={[Function]}
             >
@@ -96,7 +96,7 @@ Array [
               </span>
             </div>
             <div
-              className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-1dzy0sw-MuiChip-root"
+              className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-1biewj9-MuiChip-root"
               onKeyDown={[Function]}
               onKeyUp={[Function]}
             >
