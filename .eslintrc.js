@@ -2,7 +2,8 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es2021: true,
+    es2022: true,
+    jest: true,
   },
   extends: [
     'plugin:import/recommended',
