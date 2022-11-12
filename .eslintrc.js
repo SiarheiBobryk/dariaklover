@@ -52,12 +52,7 @@ module.exports = {
         restrictedNamedExports: [],
       },
     ],
-    'no-restricted-imports': [
-      'error',
-      {
-        patterns: ['@mui/*/*/*', '!@mui/material/test-utils/*'],
-      },
-    ],
+    'no-restricted-imports': ['error'],
     'import/prefer-default-export': 'off',
     'arrow-body-style': ['error', 'always'],
     'func-names': ['error', 'always'],
