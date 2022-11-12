@@ -17,5 +17,5 @@
     "strict": true, // Enable all strict type checking options
     "target": "es5" // Set the JavaScript language version for emitted JavaScript and include compatible library declarations
   },
-  "include": ["src", "babel.config.js", ".eslintrc.js", "prettier.config.js"] // Specifies a list of glob patterns that match files to be included in compilation
+  "include": ["src", "babel.config.js", ".eslintrc.js", ".prettierrc.js"] // Specifies a list of glob patterns that match files to be included in compilation
 }
