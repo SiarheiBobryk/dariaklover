@@ -13,7 +13,7 @@ afterEach(() => {
 
 describe('ColorModeProvider', () => {
   describe('The `colorMode` object inspection', () => {
-    it('should trigger to the right color mode', () => {
+    it('should trigger to the right color mode', async () => {
       // TODO: Add types for the same variables
       let mode: PaletteMode | undefined;
       // TODO: Is there a way to do the same but without the arrow symbol 🤔
@@ -32,17 +32,17 @@ describe('ColorModeProvider', () => {
       );
 
       expect(mode).toEqual(config.colorModeDefault);
-      act(() => {
+      await act(() => {
         switchColor();
       });
       expect(mode).toEqual('dark');
 
-      act(() => {
+      await act(() => {
         switchColor();
       });
       expect(mode).toEqual('light');
 
-      act(() => {
+      await act(() => {
         switchColor();
         switchColor();
       });
@@ -50,7 +50,7 @@ describe('ColorModeProvider', () => {
     });
   });
 
-  it('should backup and recover `colorMode` variable in localStorage', () => {
+  it('should backup and recover `colorMode` variable in localStorage', async () => {
     let switchColor: (this: void) => void | undefined;
     let mode: PaletteMode | undefined;
 
@@ -68,7 +68,7 @@ describe('ColorModeProvider', () => {
 
     expect(mode).toBe(config.colorModeDefault);
 
-    act(() => {
+    await act(() => {
       switchColor();
     });
     expect(mode).toBe('dark');
@@ -86,7 +86,7 @@ describe('ColorModeProvider', () => {
     );
     expect(mode).toBe('dark');
 
-    act(() => {
+    await act(() => {
       switchColor();
     });
     expect(mode).toBe('light');
@@ -104,7 +104,7 @@ describe('ColorModeProvider', () => {
     );
     expect(mode).toBe('light');
 
-    act(() => {
+    await act(() => {
       switchColor();
       switchColor();
       switchColor();
