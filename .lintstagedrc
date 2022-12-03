@@ -1,0 +1,4 @@
+{
+  "*.(js|ts|tsx)": ["yarn format", "yarn lint"],
+  "*.(md|html|json|yaml|xml)": "yarn format"
+}
