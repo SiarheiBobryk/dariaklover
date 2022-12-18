@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-import { styled, Theme, useTheme } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
+import { styled, useTheme } from '@mui/material/styles';
 import SkeletonMui from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 
@@ -227,23 +226,13 @@ function References(props: ReferencesProps) {
           );
         })}
       </Swiper>
-      <Paper
-        variant="outlined"
-        sx={{
-          p: 1,
-          backgroundColor: (theme: Theme) => {
-            return theme.palette.action.hover;
-          },
-        }}
+      <Typography
+        id={references[currentSlideIndex].src}
+        component="blockquote"
+        sx={{ p: 1, fontStyle: 'italic', '&::before': { content: '"«"' }, '&::after': { content: '"»"' } }}
       >
-        <Typography
-          id={references[currentSlideIndex].src}
-          component="blockquote"
-          sx={{ fontStyle: 'italic', '&::before': { content: '"«"' }, '&::after': { content: '"»"' } }}
-        >
-          {references[currentSlideIndex].description}
-        </Typography>
-      </Paper>
+        {references[currentSlideIndex].description}
+      </Typography>
     </>
   );
 }
