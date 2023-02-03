@@ -5,12 +5,11 @@ import SkeletonMui from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Lazy, Pagination, Navigation, A11y } from 'swiper';
+import { Pagination, Navigation, A11y } from 'swiper';
 
 import Heading from '../Heading';
 
 import 'swiper/css';
-import 'swiper/css/lazy';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/a11y';
@@ -187,11 +186,7 @@ function References(props: ReferencesProps) {
           paginationBulletMessage: 'Перейти на слайд {{index}}',
         }}
         grabCursor
-        lazy={{
-          enabled: true,
-          loadOnTransitionStart: true,
-        }}
-        modules={[Lazy, Pagination, Navigation, A11y]}
+        modules={[Pagination, Navigation, A11y]}
         navigation
         pagination={{
           dynamicBullets: true,
@@ -210,11 +205,12 @@ function References(props: ReferencesProps) {
                 <source type="image/jpeg" data-srcset={item.src} />
                 <Img
                   aria-describedby={item.src}
-                  data-src={item.src}
+                  src={item.src}
                   alt={item.title}
                   height={height}
                   width={width}
                   className="swiper-lazy"
+                  loading="lazy"
                 />
               </picture>
               <Skeleton
