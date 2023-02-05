@@ -33,12 +33,6 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'import/no-extraneous-dependencies': 'off',
-    'max-len': [
-      'error',
-      {
-        code: 120,
-      },
-    ],
     'react/jsx-props-no-spreading': [
       'error',
       {

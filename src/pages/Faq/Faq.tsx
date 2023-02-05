@@ -25,7 +25,7 @@ export const faq: Array<FaqData> = [
     question: 'Хочу записаться на консультацию, но нет подходящего места. Что делать?',
     answer: (
       <>
-        {/* eslint-disable-next-line max-len */}
+        {}
         Пожалуйста, свяжитесь со мной через <LinkSocial social="telegram" />, <LinkSocial social="whatsapp" /> или по{' '}
         <LinkEmail />.
       </>
@@ -35,7 +35,6 @@ export const faq: Array<FaqData> = [
   {
     question: 'Как подготовиться к сессии?',
     answer:
-      // eslint-disable-next-line max-len
       'К сессии необходимо подготовить запрос. Тихое и комфортное место, где вас не будут отвлекать. Блокнот для записей и ручку.',
     id: 'how-to-prepare',
   },
@@ -52,7 +51,6 @@ export const faq: Array<FaqData> = [
   {
     question: 'Сколько нужно сессий, чтобы решить запрос?',
     answer:
-      // eslint-disable-next-line max-len
       'Все индивидуально. Зависит от сложности запроса, вашей вовлеченности и комфортного для вас темпа решения задачи.',
     id: 'sessions-amount-required',
   },
