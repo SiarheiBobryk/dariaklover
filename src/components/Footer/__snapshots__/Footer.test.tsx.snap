@@ -210,7 +210,7 @@ exports[`<Footer /> snapshotting should render correctly 1`] = `
     aria-labelledby={null}
     className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineAlways css-1x1e5md-MuiTypography-root-MuiLink-root"
     data-mui-internal-clone-element={true}
-    href="https://github.com/SiarheiBobryk/DariaKlover-website/releases/tag/v1.14.0"
+    href="https://github.com/SiarheiBobryk/DariaKlover-website/releases/tag/v1.15.0"
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseLeave={[Function]}
@@ -218,7 +218,7 @@ exports[`<Footer /> snapshotting should render correctly 1`] = `
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
-    v1.14.0
+    v1.15.0
   </a>
 </div>
 `;
