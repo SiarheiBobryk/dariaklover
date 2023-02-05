@@ -60,7 +60,7 @@ function References() {
       </Alert>
       <Alert severity="info">
         <AlertTitle>Помощь в записи</AlertTitle>
-        {/* eslint-disable-next-line max-len */}
+        {}
         Если у вас остались вопросы или вы продолжаете испытывать сложности в записи на консультацию, посетите раздел{' '}
         <Link component={RouterNavLink} to={helpMetaData.path}>
           {helpMetaData.heading}
