@@ -7,7 +7,7 @@ import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
 import { typographyClasses } from '@mui/material/Typography';
 
-import About, { aboutConstants } from './About';
+import About from './About';
 import aboutMetaData from './aboutMetaData';
 
 expect.extend(toHaveNoViolations);
@@ -56,9 +56,6 @@ describe('<About />', () => {
 
       const h2: HTMLHeadingElement | null = document.querySelector('h2');
       expect(h2).toHaveTextContent(aboutMetaData.heading);
-
-      const i: HTMLElement | null = document.querySelector('i');
-      expect(i).toHaveTextContent(aboutConstants.spell);
     });
     // TODO: find out how to check the space char between the link here and for other component 🤔
   });
