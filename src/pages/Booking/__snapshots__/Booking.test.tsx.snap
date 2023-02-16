@@ -7,36 +7,6 @@ Array [
   >
     Запись на консультацию
   </h2>,
-  <div
-    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardWarning MuiAlert-standard css-to2f46-MuiPaper-root-MuiAlert-root"
-    role="alert"
-  >
-    <div
-      className="MuiAlert-icon css-1ytlwq5-MuiAlert-icon"
-    >
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-        data-testid="ReportProblemOutlinedIcon"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z"
-        />
-      </svg>
-    </div>
-    <div
-      className="MuiAlert-message css-1pxa9xg-MuiAlert-message"
-    >
-      <div
-        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiAlertTitle-root css-yslrua-MuiTypography-root-MuiAlertTitle-root"
-      >
-        Запись новых клиентов приостановлена
-      </div>
-      В связи с переездом в другую страну, сейчас мы активно работаем над восстановлением возможности снова принимать электронные платежи. Поэтому запись новых клиентов временно приостановлена. Как только платежи будут доступны, мы разместим об этом новость на главной странице сайта. Спасибо за понимание.
-    </div>
-  </div>,
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
   >
@@ -60,7 +30,7 @@ Array [
             <span
               className="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1qvr50w-MuiTypography-root"
             >
-              Heath-коучинг сессия
+              Установочная встреча
             </span>
           </div>
         </div>
@@ -92,7 +62,7 @@ Array [
               <span
                 className="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
               >
-                60 минут
+                30 минут
               </span>
             </div>
             <div
@@ -121,7 +91,17 @@ Array [
           <p
             className="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
           >
-            Работа с запросом клиента в формате коучинга
+            Работа с запросом клиента в формате коучинга.
+          </p>
+          <p
+            className="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+          >
+            Знакомство, выяснение запросов, предложение по дальнейшей работе. Без оплаты.
+          </p>
+          <p
+            className="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+          >
+            После записи вам на email будет отправлена анкета, которая понадобится для первой встречи.
           </p>
         </div>
         <div
@@ -166,6 +146,36 @@ Array [
           </a>
         </div>
       </div>
+    </div>
+  </div>,
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardWarning MuiAlert-standard css-to2f46-MuiPaper-root-MuiAlert-root"
+    role="alert"
+  >
+    <div
+      className="MuiAlert-icon css-1ytlwq5-MuiAlert-icon"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+        data-testid="ReportProblemOutlinedIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z"
+        />
+      </svg>
+    </div>
+    <div
+      className="MuiAlert-message css-1pxa9xg-MuiAlert-message"
+    >
+      <div
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiAlertTitle-root css-yslrua-MuiTypography-root-MuiAlertTitle-root"
+      >
+        Пропуск запланированной встречи
+      </div>
+      Если вы не можете прийти на запланированную встречу, отмените или перенесите ее на другой день не менее чем за 24 ч. Если вы записались, но не явились на встречу, вы автоматически теряете возможность записи к Дарье в последующем.
     </div>
   </div>,
   <p
