@@ -22,28 +22,35 @@ function References() {
         <title>{bookingMetaData.title}</title>
       </Helmet>
       <Heading>{bookingMetaData.heading}</Heading>
-      <Alert severity="warning">
-        <AlertTitle>Запись новых клиентов приостановлена</AlertTitle>В связи с переездом в другую страну, сейчас мы
-        активно работаем над восстановлением возможности снова принимать электронные платежи. Поэтому запись новых
-        клиентов временно приостановлена. Как только платежи будут доступны, мы разместим об этом новость на главной
-        странице сайта. Спасибо за понимание.
-      </Alert>
       <Paragraph>На данный момент доступны следующие виды консультаций: </Paragraph>
       <Grid container spacing={1} sx={{ marginBottom: 1 }}>
         <Grid item xs={12} sm={6} md={4}>
           {/* TODO: Keep it up-to-date with the Calendly event */}
+          {/* TODO: Use the Calendly API here */}
           <BookingCard
-            title="Heath-коучинг сессия"
-            duration={60}
+            title="Установочная встреча"
+            duration={30}
             via="Google Meet"
             href="https://calendly.com/dariaklover/regular"
           >
             <Typography variant="body2" color="text.secondary">
-              Работа с запросом клиента в формате коучинга
+              Работа с запросом клиента в формате коучинга.
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Знакомство, выяснение запросов, предложение по дальнейшей работе. Без оплаты.
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              После записи вам на email будет отправлена анкета, которая понадобится для первой встречи.
             </Typography>
           </BookingCard>
         </Grid>
       </Grid>
+      <Alert severity="warning">
+        <AlertTitle>Пропуск запланированной встречи</AlertTitle>
+        Если вы не можете прийти на запланированную встречу, отмените или перенесите ее на другой день не менее чем за
+        24 ч. Если вы записались, но не явились на встречу, вы автоматически теряете возможность записи к Дарье в
+        последующем.
+      </Alert>
       <Paragraph>
         Система записи на консультацию находится на стороннем сервисе, который очень простой и понятный, однако этот
         сервис не имеет русского языка. Для тех, кто не говорит по-английски, мы очень постарались перевести на русский

@@ -6,7 +6,6 @@ import AlertTitle from '@mui/material/AlertTitle';
 import { styled } from '@mui/material/styles';
 
 import Heading from '../../components/Heading';
-import LinkBlank from '../../components/LinkBlank';
 import mainMetaData from './mainMetaData';
 import Paragraph from '../../components/Paragraph';
 
@@ -23,14 +22,11 @@ function Main() {
         <title>{mainMetaData.title}</title>
       </Helmet>
       <Heading>{mainMetaData.heading}</Heading>
-      <Paragraph>Всем привет, я - Дарья Кловер!</Paragraph>
+      <Paragraph>Всем привет!</Paragraph>
+      {/* TODO: Use a constant here */}
       <Paragraph>
-        Я прохожу обучение в{' '}
-        <LinkBlank href="https://uom.education/university" rel="noopener">
-          Университете образовательной медицины (УОМ)
-        </LinkBlank>{' '}
-        и <i>PreventAge LifeStyle School</i> на интегративного health-коуча - специалиста по модификации образа жизни и
-        немедикаментозному оздоровлению.
+        Я Дарья Кловер, дипломированный health-коуч - специалист по здоровому образу жизни и немедикаментозному
+        оздоровлению.
       </Paragraph>
       <Paragraph>
         Я помогаю своим клиентам вести здоровый образ жизни и предотвратить появление хронических заболеваний, а также

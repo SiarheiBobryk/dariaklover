@@ -10,41 +10,12 @@ Array [
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
   >
-    Всем привет, я - Дарья Кловер!
+    Всем привет!
   </p>,
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
   >
-    Я прохожу обучение в
-     
-    <a
-      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
-      href="https://uom.education/university"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      rel="noopener"
-      target="_blank"
-    >
-      Университете образовательной медицины (УОМ)
-       
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1xzgpfl-MuiSvgIcon-root"
-        data-testid="OpenInNewIcon"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-        />
-      </svg>
-    </a>
-     
-    и 
-    <i>
-      PreventAge LifeStyle School
-    </i>
-     на интегративного health-коуча - специалиста по модификации образа жизни и немедикаментозному оздоровлению.
+    Я Дарья Кловер, дипломированный health-коуч - специалист по здоровому образу жизни и немедикаментозному оздоровлению.
   </p>,
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
