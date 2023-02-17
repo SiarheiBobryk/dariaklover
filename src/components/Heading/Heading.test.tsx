@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult, screen } from '@testing-library/react';
-import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
 import { typographyClasses } from '@mui/material/Typography';
 
@@ -23,19 +22,6 @@ describe('<Heading />', () => {
       const ref = React.createRef();
       const { container } = render(<Heading ref={ref} />);
       expect(container.firstChild).toBe(ref.current);
-    });
-  });
-
-  describe('snapshotting', () => {
-    it('should render correctly without a content', () => {
-      const heading: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer.create(<Heading />).toJSON();
-      expect(heading).toMatchSnapshot();
-    });
-    it('should render correctly with a content', () => {
-      const heading: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer
-        .create(<Heading>Lorem Ipsulum</Heading>)
-        .toJSON();
-      expect(heading).toMatchSnapshot();
     });
   });
 

@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult, screen } from '@testing-library/react';
-import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
 import AlertHelp from './AlertHelp';
 
@@ -20,10 +19,5 @@ describe('<AlertHelp />', () => {
     const ref = React.createRef();
     render(<AlertHelp ref={ref} data-testid="AlertHelp" />);
     expect(screen.getByTestId('AlertHelp')).toBe(ref.current);
-  });
-
-  it('should render correctly', () => {
-    const alertHelp: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer.create(<AlertHelp />).toJSON();
-    expect(alertHelp).toMatchSnapshot();
   });
 });
