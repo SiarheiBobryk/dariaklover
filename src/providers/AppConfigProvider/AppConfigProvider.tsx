@@ -15,23 +15,6 @@ export interface CalendlyAppointment {
   label: string;
 }
 
-export interface CalendlyUser {
-  avatar_url: string;
-  created_at: string;
-  current_organization: string;
-  email: string;
-  name: string;
-  scheduling_url: string;
-  slug: string;
-  timezone: string;
-  updated_at: string;
-  uri: string;
-}
-
-export interface CalendlyUserResponse {
-  resource: CalendlyUser;
-}
-
 export interface CalendlyUserProfile {
   /**
    * Indicates if the profile belongs to a "user" (individual) or "team"
