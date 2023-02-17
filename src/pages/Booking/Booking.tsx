@@ -14,8 +14,34 @@ import Heading from '../../components/Heading';
 import howToBookMetaData from '../HowToBook/howToBookMetaData';
 import Paragraph from '../../components/Paragraph';
 import helpMetaData from '../Help/helpMetaData';
+import { CalendlyUserEventTypeResponse } from '../../providers/AppConfigProvider';
 
 function References() {
+  async function fetchCalendlyResources() {
+    const USER = 'https://api.calendly.com/users/7f7c1f65-3a7a-4cef-bb27-654c751b666e';
+    // const GET_CURRENT_USER = 'https://api.calendly.com/users/me';
+    const LIST_USERS_EVENT_TYPES = `https://api.calendly.com/event_types?user=${USER}`;
+    const response = await fetch(LIST_USERS_EVENT_TYPES, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN ?? ''}`,
+      },
+    });
+    // CalendlyUserResponse
+    const calendlyUserResponse = (await response.json()) as CalendlyUserEventTypeResponse;
+    const { collection: calendlyEvents } = calendlyUserResponse;
+    // eslint-disable-next-line no-console
+    console.info(calendlyEvents); // TODO: Remove it after testing
+  }
+
+  React.useEffect(() => {
+    fetchCalendlyResources().catch((error) => {
+      // eslint-disable-next-line no-console
+      return console.error(error);
+    });
+  }, []);
+
   return (
     <>
       <Helmet>
