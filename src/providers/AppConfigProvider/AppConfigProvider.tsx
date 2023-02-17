@@ -99,6 +99,10 @@ export interface CalendlyUserEventType {
    */
   description_html: string;
   /**
+   * The event type's description (formatted with plain text)
+   */
+  description_plain: string;
+  /**
    * The length of sessions booked with this event type
    */
   duration: number;
