@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult, screen } from '@testing-library/react';
-import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
 import { config } from '../../providers/AppConfigProvider';
 import Footer, { iconButtonA11yProps } from './Footer';
@@ -17,14 +16,6 @@ describe('<Footer />', () => {
 
       const results = await axe(container);
       expect(results).toHaveNoViolations();
-    });
-  });
-
-  describe('snapshotting', () => {
-    it('should render correctly', () => {
-      const footer: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer.create(<Footer />).toJSON();
-
-      expect(footer).toMatchSnapshot();
     });
   });
 

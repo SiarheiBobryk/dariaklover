@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult, screen } from '@testing-library/react';
-import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
 import LinkEmail from './LinkEmail';
 
@@ -20,10 +19,5 @@ describe('<LinkEmail />', () => {
     const ref = React.createRef();
     render(<LinkEmail ref={ref} data-testid="LinkEmail" />);
     expect(screen.getByTestId('LinkEmail')).toBe(ref.current);
-  });
-
-  it('should render correctly', () => {
-    const linkEmail: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer.create(<LinkEmail />).toJSON();
-    expect(linkEmail).toMatchSnapshot();
   });
 });

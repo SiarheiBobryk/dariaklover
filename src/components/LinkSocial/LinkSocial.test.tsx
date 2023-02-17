@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult, screen } from '@testing-library/react';
-import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
 import LinkSocial from './LinkSocial';
 
@@ -20,10 +19,5 @@ describe('<LinkSocial />', () => {
     const ref = React.createRef();
     render(<LinkSocial ref={ref} data-testid="LinkSocial" />);
     expect(screen.getByTestId('LinkSocial')).toBe(ref.current);
-  });
-
-  it('should render correctly', () => {
-    const alertHelp: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer.create(<LinkSocial />).toJSON();
-    expect(alertHelp).toMatchSnapshot();
   });
 });

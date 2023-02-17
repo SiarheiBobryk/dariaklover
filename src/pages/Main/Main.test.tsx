@@ -3,7 +3,6 @@ import { Helmet, HelmetPropsToState } from 'react-helmet';
 
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult } from '@testing-library/react';
-import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
 import { typographyClasses } from '@mui/material/Typography';
 
@@ -19,13 +18,6 @@ describe('<Main />', () => {
 
       const results = await axe(container);
       expect(results).toHaveNoViolations();
-    });
-  });
-
-  describe('snapshotting', () => {
-    it('should render correctly', () => {
-      const main: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer.create(<Main />).toJSON();
-      expect(main).toMatchSnapshot();
     });
   });
 

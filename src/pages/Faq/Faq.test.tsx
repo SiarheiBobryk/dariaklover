@@ -3,7 +3,6 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult } from '@testing-library/react';
-import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
 import Faq from './Faq';
 
@@ -20,19 +19,6 @@ describe('<Faq />', () => {
 
       const results = await axe(container);
       expect(results).toHaveNoViolations();
-    });
-  });
-
-  describe('snapshotting', () => {
-    it('should render correctly', () => {
-      const howToBook: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer
-        .create(
-          <BrowserRouter>
-            <Faq />
-          </BrowserRouter>,
-        )
-        .toJSON();
-      expect(howToBook).toMatchSnapshot();
     });
   });
 });

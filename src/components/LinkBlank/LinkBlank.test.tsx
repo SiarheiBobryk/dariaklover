@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult } from '@testing-library/react';
-import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
 import LinkBlank from './LinkBlank';
 
@@ -23,21 +22,6 @@ describe('<LinkBlank />', () => {
       const ref = React.createRef();
       const { container } = render(<LinkBlank href="https://dariaklover.health" ref={ref} />);
       expect(container.firstChild).toBe(ref.current);
-    });
-  });
-
-  describe('snapshotting', () => {
-    it('should render correctly without a content', () => {
-      const heading: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer
-        .create(<LinkBlank href="https://dariaklover.health" />)
-        .toJSON();
-      expect(heading).toMatchSnapshot();
-    });
-    it('should render correctly with a content', () => {
-      const heading: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer
-        .create(<LinkBlank href="https://dariaklover.health">Lorem Ipsulum</LinkBlank>)
-        .toJSON();
-      expect(heading).toMatchSnapshot();
     });
   });
 

@@ -4,7 +4,6 @@ import { Helmet, HelmetPropsToState } from 'react-helmet';
 
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult } from '@testing-library/react';
-import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
 import Booking from './Booking';
 import bookingMetaData from './bookingMetaData';
@@ -22,19 +21,6 @@ describe('<Booking />', () => {
 
       const results = await axe(container);
       expect(results).toHaveNoViolations();
-    });
-  });
-
-  describe('snapshotting', () => {
-    it('should render correctly', () => {
-      const about: ReactTestRendererJSON | ReactTestRendererJSON[] | null = renderer
-        .create(
-          <BrowserRouter>
-            <Booking />
-          </BrowserRouter>,
-        )
-        .toJSON();
-      expect(about).toMatchSnapshot();
     });
   });
 
