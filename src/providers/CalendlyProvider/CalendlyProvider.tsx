@@ -1,21 +1,5 @@
 import * as React from 'react';
-
-export interface CalendlyUser {
-  avatar_url: string;
-  created_at: string;
-  current_organization: string;
-  email: string;
-  name: string;
-  scheduling_url: string;
-  slug: string;
-  timezone: string;
-  updated_at: string;
-  uri: string;
-}
-
-export interface CalendlyUserResponse {
-  resource: CalendlyUser;
-}
+import { CalendlyUser, getCalendlyUser } from '../../services/calendlyUserService';
 
 export const CALENDLY_USER_DEFAULT: CalendlyUser = {
   avatar_url: 'https://d3v0px0pttie1i.cloudfront.net/uploads/user/avatar/18347978/cddee2c8.png',
@@ -42,18 +26,8 @@ function CalendlyProvider(props: CalendlyProviderProps) {
   const [user, setUser] = React.useState<CalendlyUser>(CALENDLY_USER_DEFAULT);
 
   async function fetchCalendlyUser() {
-    const GET_CURRENT_USER = 'https://api.calendly.com/users/me';
-    const response = await fetch(GET_CURRENT_USER, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN ?? ''}`,
-      },
-    });
-
-    const calendlyUserResponse = (await response.json()) as CalendlyUserResponse;
-    const { resource: calendlyUser } = calendlyUserResponse;
-    setUser(calendlyUser);
+    const userUpdated = await getCalendlyUser();
+    setUser(userUpdated);
   }
 
   React.useEffect(() => {

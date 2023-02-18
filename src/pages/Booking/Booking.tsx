@@ -15,7 +15,8 @@ import howToBookMetaData from '../HowToBook/howToBookMetaData';
 import Paragraph from '../../components/Paragraph';
 import helpMetaData from '../Help/helpMetaData';
 import { CalendlyUserEventType, CalendlyUserEventTypeResponse } from '../../providers/AppConfigProvider';
-import { CalendlyContext, CalendlyUser } from '../../providers';
+import { CalendlyContext } from '../../providers';
+import { CalendlyUser } from '../../services/calendlyUserService';
 
 function References() {
   const calendlyUser: CalendlyUser = React.useContext<CalendlyUser>(CalendlyContext);
