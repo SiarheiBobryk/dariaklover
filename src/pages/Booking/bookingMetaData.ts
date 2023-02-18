@@ -5,8 +5,8 @@ export interface BookingMetaData {
 }
 
 const bookingMetaData: BookingMetaData = {
-  title: 'Запись на консультацию',
-  heading: 'Запись на консультацию',
+  title: 'Записаться',
+  heading: 'Записаться',
   path: '/booking',
 };
 

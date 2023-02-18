@@ -18,7 +18,7 @@ const AlertHelp = React.forwardRef(function AlertHelp(props: AlertHelpProps, ref
   const { children, open, onClose, ...other } = props;
 
   return (
-    <Alert ref={ref} severity="info" {...other}>
+    <Alert ref={ref} severity="info" variant="outlined" {...other}>
       <AlertTitle>Связаться с нами</AlertTitle>
       Если у вас остались вопросы или вы продолжаете испытывать сложности в работе с сайтом, то не стесняйтесь и
       свяжитесь с нами через <LinkSocial social="telegram" />, <LinkSocial social="whatsapp" /> или по <LinkEmail />. Мы

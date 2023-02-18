@@ -49,7 +49,9 @@ function References() {
       <Heading>{bookingMetaData.heading}</Heading>
       {events.length > 0 ? (
         <>
-          <Paragraph>На данный момент доступны следующие виды консультаций:</Paragraph>
+          <Paragraph>
+            Решение о дальнейшей работе принимается после установочной встречи. Пожалуйста, запишитесь.
+          </Paragraph>
           {/* TODO: Align the cards */}
           <Grid container spacing={1} sx={{ marginBottom: 1 }}>
             {events.map(function generateEvents(event) {
@@ -77,7 +79,7 @@ function References() {
           или по <LinkEmail />. Мы обязательно что-нибудь придумаем.
         </Paragraph>
       )}
-      <Alert severity="warning">
+      <Alert severity="warning" variant="outlined">
         <AlertTitle>Пропуск запланированной встречи</AlertTitle>
         Если вы не можете прийти на запланированную встречу, отмените или перенесите ее на другой день не менее чем за
         24 ч. (см раздел{' '}
@@ -91,27 +93,13 @@ function References() {
         ). Если вы записались, но не явились на встречу, вы автоматически теряете возможность записи к Дарье в
         последующем.
       </Alert>
-      <Paragraph>
-        Система записи на консультацию находится на стороннем сервисе, который очень простой и понятный, однако этот
-        сервис не имеет русского языка. Для тех, кто не говорит по-английски, мы очень постарались перевести на русский
-        язык все элементы на страничках, но, к сожалению, на данный момент технически не возможно предоставить 100%
-        русскую версию.
-      </Paragraph>
-      <Alert severity="info">
+      <Alert severity="info" variant="outlined">
         <AlertTitle>{howToBookMetaData.heading}</AlertTitle>
         Если вам нужна помощь в том, как записаться на консультацию, пожалуйста, воспользуйтесь инструкцией{' '}
         <Link component={RouterNavLink} to={howToBookMetaData.path}>
           {howToBookMetaData.heading}
         </Link>
         .
-      </Alert>
-      <Alert severity="info">
-        <AlertTitle>Помощь в записи</AlertTitle>
-        {}
-        Если у вас остались вопросы или вы продолжаете испытывать сложности в записи на консультацию, посетите раздел{' '}
-        <Link component={RouterNavLink} to={helpMetaData.path}>
-          {helpMetaData.heading}
-        </Link>
       </Alert>
     </>
   );
