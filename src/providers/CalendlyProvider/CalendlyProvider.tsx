@@ -17,14 +17,6 @@ export interface CalendlyUserResponse {
   resource: CalendlyUser;
 }
 
-export interface CalendlyContextValue {
-  user: CalendlyUser;
-}
-
-export interface CalendlyProviderProps {
-  children: React.ReactNode;
-}
-
 export const CALENDLY_USER_DEFAULT: CalendlyUser = {
   avatar_url: 'https://d3v0px0pttie1i.cloudfront.net/uploads/user/avatar/18347978/cddee2c8.png',
   created_at: '2022-05-14T18:22:00.115967Z',
@@ -38,16 +30,18 @@ export const CALENDLY_USER_DEFAULT: CalendlyUser = {
   uri: 'https://api.calendly.com/users/7f7c1f65-3a7a-4cef-bb27-654c751b666e',
 };
 
-export const CalendlyContext = React.createContext<CalendlyContextValue>({
-  user: CALENDLY_USER_DEFAULT,
-});
+export const CalendlyContext = React.createContext<CalendlyUser>(CALENDLY_USER_DEFAULT);
+
+export interface CalendlyProviderProps {
+  children: React.ReactNode;
+}
 
 function CalendlyProvider(props: CalendlyProviderProps) {
   const { children } = props;
 
   const [user, setUser] = React.useState<CalendlyUser>(CALENDLY_USER_DEFAULT);
 
-  async function fetchCalendlyResources() {
+  async function fetchCalendlyUser() {
     const GET_CURRENT_USER = 'https://api.calendly.com/users/me';
     const response = await fetch(GET_CURRENT_USER, {
       method: 'GET',
@@ -63,22 +57,13 @@ function CalendlyProvider(props: CalendlyProviderProps) {
   }
 
   React.useEffect(() => {
-    fetchCalendlyResources().catch((error) => {
+    fetchCalendlyUser().catch((error) => {
       // eslint-disable-next-line no-console
       return console.error(error);
     });
   }, []);
 
-  const calendlyUser: CalendlyContextValue = React.useMemo(
-    function memoizeColorMode() {
-      return {
-        user,
-      };
-    },
-    [user],
-  );
-
-  return <CalendlyContext.Provider value={calendlyUser}>{children}</CalendlyContext.Provider>;
+  return <CalendlyContext.Provider value={user}>{children}</CalendlyContext.Provider>;
 }
 
 export default CalendlyProvider;

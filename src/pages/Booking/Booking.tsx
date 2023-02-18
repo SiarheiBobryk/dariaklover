@@ -15,14 +15,15 @@ import howToBookMetaData from '../HowToBook/howToBookMetaData';
 import Paragraph from '../../components/Paragraph';
 import helpMetaData from '../Help/helpMetaData';
 import { CalendlyUserEventType, CalendlyUserEventTypeResponse } from '../../providers/AppConfigProvider';
-import { CalendlyContext, CalendlyContextValue } from '../../providers';
+import { CalendlyContext, CalendlyUser } from '../../providers';
 
 function References() {
-  const { user: calendlyUser } = React.useContext<CalendlyContextValue>(CalendlyContext);
+  const calendlyUser: CalendlyUser = React.useContext<CalendlyUser>(CalendlyContext);
   const [events, setEvents] = React.useState<Array<CalendlyUserEventType>>([]);
 
   const fetchCalendlyResources = React.useCallback(
     async function asyncFetchCalendlyResources() {
+      // TODO: Move to constants maybe 🤔
       const LIST_USERS_EVENT_TYPES = `https://api.calendly.com/event_types?user=${calendlyUser.uri}`;
       const response = await fetch(LIST_USERS_EVENT_TYPES, {
         method: 'GET',
