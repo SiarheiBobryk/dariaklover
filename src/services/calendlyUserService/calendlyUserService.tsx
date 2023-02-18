@@ -1,3 +1,4 @@
+// https://developer.calendly.com/api-docs/005832c83aeae-get-current-user
 export interface CalendlyUser {
   avatar_url: string;
   created_at: string;
@@ -11,10 +12,12 @@ export interface CalendlyUser {
   uri: string;
 }
 
+// https://developer.calendly.com/api-docs/005832c83aeae-get-current-user
 export interface CalendlyUserResponse {
   resource: CalendlyUser;
 }
 
+// https://developer.calendly.com/api-docs/25a4ece03c1bc-list-user-s-event-types
 export interface CalendlyUserProfile {
   /**
    * Indicates if the profile belongs to a "user" (individual) or "team"
@@ -30,6 +33,7 @@ export interface CalendlyUserProfile {
   type: string;
 }
 
+// https://developer.calendly.com/api-docs/25a4ece03c1bc-list-user-s-event-types
 export interface CalendlyCustomQuestions {
   /**
    * The custom question that the host created for the event type.
@@ -61,10 +65,7 @@ export interface CalendlyCustomQuestions {
   include_other: boolean;
 }
 
-/**
- * List User's Event Types
- * https://developer.calendly.com/api-docs/25a4ece03c1bc-list-user-s-event-types
- */
+// https://developer.calendly.com/api-docs/25a4ece03c1bc-list-user-s-event-types
 export interface CalendlyUserEventType {
   /**
    * Indicates if the event is active or not.
@@ -156,6 +157,7 @@ export interface CalendlyUserEventType {
   uri: string;
 }
 
+// https://developer.calendly.com/api-docs/25a4ece03c1bc-list-user-s-event-types
 export interface CalendlyUserEventTypePagination {
   count: number;
   next_page: string;
@@ -164,6 +166,7 @@ export interface CalendlyUserEventTypePagination {
   previous_page_token: string;
 }
 
+// https://developer.calendly.com/api-docs/25a4ece03c1bc-list-user-s-event-types
 export interface CalendlyUserEventTypeResponse {
   collection: Array<CalendlyUserEventType>;
   pagination: CalendlyUserEventTypePagination;
