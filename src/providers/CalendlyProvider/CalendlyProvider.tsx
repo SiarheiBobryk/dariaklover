@@ -30,10 +30,10 @@ function CalendlyProvider(props: CalendlyProviderProps) {
     setUser(userUpdated);
   }
 
-  React.useEffect(() => {
-    fetchCalendlyUser().catch((error) => {
+  React.useEffect(function updateCalendlyUser() {
+    fetchCalendlyUser().catch(function catchError(error) {
       // eslint-disable-next-line no-console
-      return console.error(error);
+      console.error(error);
     });
   }, []);
 

@@ -31,12 +31,15 @@ function References() {
     [calendlyUser.uri],
   );
 
-  React.useEffect(() => {
-    fetchCalendlyEvents().catch((error) => {
-      // eslint-disable-next-line no-console
-      return console.error(error);
-    });
-  }, [fetchCalendlyEvents]);
+  React.useEffect(
+    function updateCalendlyEvents() {
+      fetchCalendlyEvents().catch(function catchError(error) {
+        // eslint-disable-next-line no-console
+        console.error(error);
+      });
+    },
+    [fetchCalendlyEvents],
+  );
 
   return (
     <>
