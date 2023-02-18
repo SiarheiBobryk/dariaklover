@@ -179,16 +179,15 @@ export const CALENDLY_API = {
   LIST_USERS_EVENT_TYPES: `${CALENDLY_URL}/event_types?user=`,
 } as const;
 
-const headers = {
+const HEADERS = {
   'Content-Type': 'application/json',
   authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN ?? ''}`,
 } as const;
 
 export async function getCalendlyUser(): Promise<CalendlyUser> {
   const response: Response = await fetch(CALENDLY_API.GET_CURRENT_USER, {
-    headers,
+    headers: HEADERS,
   });
-
   const calendlyUserResponse = (await response.json()) as CalendlyUserResponse;
   const { resource: calendlyUser } = calendlyUserResponse;
   return calendlyUser;
@@ -197,7 +196,7 @@ export async function getCalendlyUser(): Promise<CalendlyUser> {
 export async function getCalendlyEvents(calendlyUserUri: string): Promise<Array<CalendlyUserEventType>> {
   const LIST_USERS_EVENT_TYPES = `${CALENDLY_API.LIST_USERS_EVENT_TYPES}${calendlyUserUri}`;
   const response = await fetch(LIST_USERS_EVENT_TYPES, {
-    headers,
+    headers: HEADERS,
   });
   const calendlyUserResponse = (await response.json()) as CalendlyUserEventTypeResponse;
   const { collection: calendlyEvents } = calendlyUserResponse;
