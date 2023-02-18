@@ -14,42 +14,27 @@ import Heading from '../../components/Heading';
 import howToBookMetaData from '../HowToBook/howToBookMetaData';
 import Paragraph from '../../components/Paragraph';
 import helpMetaData from '../Help/helpMetaData';
-import { CalendlyUserEventType, CalendlyUserEventTypeResponse } from '../../providers/AppConfigProvider';
 import { CalendlyContext } from '../../providers';
-import { CalendlyUser } from '../../services/calendlyUserService';
+import { CalendlyUser, CalendlyUserEventType, getCalendlyEvents } from '../../services/calendlyUserService';
 
 function References() {
   const calendlyUser: CalendlyUser = React.useContext<CalendlyUser>(CalendlyContext);
   const [events, setEvents] = React.useState<Array<CalendlyUserEventType>>([]);
 
-  const fetchCalendlyResources = React.useCallback(
-    async function asyncFetchCalendlyResources() {
-      // TODO: Move to constants maybe 🤔
-      const LIST_USERS_EVENT_TYPES = `https://api.calendly.com/event_types?user=${calendlyUser.uri}`;
-      const response = await fetch(LIST_USERS_EVENT_TYPES, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN ?? ''}`,
-        },
-      });
-      const calendlyUserResponse = (await response.json()) as CalendlyUserEventTypeResponse;
-      const { collection: calendlyEvents } = calendlyUserResponse;
-      const calendlyEventsActive = calendlyEvents.filter(function isActive(event) {
-        const { active } = event;
-        return active;
-      });
-      setEvents(calendlyEventsActive);
+  const fetchCalendlyEvents = React.useCallback(
+    async function asyncFetchCalendlyEvents() {
+      const calendlyEvents: Array<CalendlyUserEventType> = await getCalendlyEvents(calendlyUser.uri);
+      setEvents(calendlyEvents);
     },
     [calendlyUser.uri],
   );
 
   React.useEffect(() => {
-    fetchCalendlyResources().catch((error) => {
+    fetchCalendlyEvents().catch((error) => {
       // eslint-disable-next-line no-console
       return console.error(error);
     });
-  }, [fetchCalendlyResources]);
+  }, [fetchCalendlyEvents]);
 
   return (
     <>
