@@ -84,9 +84,9 @@ export const config: Config = {
     labelShort: 'Telegram',
   },
   whatsapp: {
-    // TODO: Setup the branded account id (payed feature) later
-    id: '+375447841051',
-    href: 'https://wa.me/+375447841051',
+    // SOMEDAY: Setup the branded account id (payed feature) later
+    id: '+46738540708',
+    href: 'https://wa.me/+46738540708',
     label: 'WhatsApp Дарьи',
     labelShort: 'WhatsApp',
   },
