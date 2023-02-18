@@ -202,7 +202,11 @@ export async function getCalendlyEvents(calendlyUserUri: string): Promise<Array<
   });
   const calendlyUserResponse = (await response.json()) as CalendlyUserEventTypeResponse;
   const { collection: calendlyEvents } = calendlyUserResponse;
-  // TODO: Find out how to handle it
+  return calendlyEvents;
+}
+
+export async function getCalendlyEventsActive(calendlyUserUri: string): Promise<Array<CalendlyUserEventType>> {
+  const calendlyEvents = await getCalendlyEvents(calendlyUserUri);
   const calendlyEventsActive = calendlyEvents.filter(function isActive(event) {
     const { active } = event;
     return active;
