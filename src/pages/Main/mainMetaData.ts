@@ -6,7 +6,7 @@ export interface MainMetaData {
 
 const mainMetaData: MainMetaData = {
   title: 'Главная страница',
-  heading: 'Кто я и что я делаю',
+  heading: 'Кто я и что делаю',
   path: '/',
 };
 

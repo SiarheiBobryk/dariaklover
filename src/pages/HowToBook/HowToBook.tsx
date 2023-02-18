@@ -39,6 +39,13 @@ function HowToBook() {
         <title>{howToBookMetaData.title}</title>
       </Helmet>
       <Heading>{howToBookMetaData.heading}</Heading>
+      <Alert severity="info" variant="outlined">
+        <AlertTitle>Русский язык</AlertTitle>
+        Система записи на консультацию находится на стороннем сервисе, который очень простой и понятный, однако этот
+        сервис не имеет русского языка. Для тех, кто не говорит по-английски, мы очень постарались перевести на русский
+        язык все элементы на страничках, но, к сожалению, на данный момент технически не возможно предоставить 100%
+        русскую версию.
+      </Alert>
       <Paragraph>
         <strong>Шаг 1</strong>. Перейдите на страницу{' '}
         <Link component={RouterNavLink} to={bookingMetaData.path}>
@@ -76,7 +83,7 @@ function HowToBook() {
         <strong>Шаг 6</strong>. Введите свое имя в поле <i>Name</i> [1], электронную почту в поле <i>Email</i> [2] и
         нажмите кнопку <i>Schedule Event</i> [3].
       </Paragraph>
-      <Alert severity="warning">
+      <Alert severity="warning" variant="outlined">
         <AlertTitle>
           Электронная почта (<i>Email</i>)
         </AlertTitle>
@@ -99,7 +106,7 @@ function HowToBook() {
         <strong>Шаг 8</strong>. Проверьте входящие сообщения на вашей электронную почте. Вам должно прийти сообщение с
         подтверждением записи в течение 5-10 минут (иногда сразу).
       </Paragraph>
-      <Alert severity="warning">
+      <Alert severity="warning" variant="outlined">
         <AlertTitle>
           Папка <i>Спам</i>
         </AlertTitle>
