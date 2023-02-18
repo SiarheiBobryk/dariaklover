@@ -9,7 +9,7 @@ import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
 import { CalendlyContext } from '../../providers';
-import { CalendlyUser, CalendlyUserEventType, getCalendlyEvents } from '../../services/calendlyUserService';
+import { CalendlyUser, CalendlyUserEventType, getCalendlyEventsActive } from '../../services/calendlyUserService';
 import BookingCard from '../../components/BookingCard';
 import bookingMetaData from './bookingMetaData';
 import Heading from '../../components/Heading';
@@ -25,7 +25,7 @@ function References() {
 
   const fetchCalendlyEvents = React.useCallback(
     async function asyncFetchCalendlyEvents() {
-      const calendlyEvents: Array<CalendlyUserEventType> = await getCalendlyEvents(calendlyUser.uri);
+      const calendlyEvents: Array<CalendlyUserEventType> = await getCalendlyEventsActive(calendlyUser.uri);
       setEvents(calendlyEvents);
     },
     [calendlyUser.uri],
@@ -53,7 +53,7 @@ function References() {
               return (
                 <Grid key={event.uri} item xs={12} sm={6}>
                   {/* TODO: Remove the Google Meet prop */}
-                  <BookingCard title={event.name} duration={event.duration} href={event.scheduling_url}>
+                  <BookingCard title={event.name} duration={event.duration} href={event.scheduling_url} uri={event.uri}>
                     <Typography
                       variant="body2"
                       color="text.secondary"
