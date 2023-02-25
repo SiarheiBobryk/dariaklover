@@ -22,6 +22,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
         env:
-          REACT_APP_ACCESS_TOKEN: ${{ secrets.REACT_APP_ACCESS_TOKEN }}
+          NX_CALENDLY_ACCESS_TOKEN: ${{ secrets.NX_CALENDLY_ACCESS_TOKEN }}
       - run: yarn install
       - run: yarn build
