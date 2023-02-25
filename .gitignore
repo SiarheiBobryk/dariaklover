@@ -13,15 +13,35 @@
 
 # IDEs and editors
 /.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 /.vscode
 
 # misc
-.DS_Store
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
+# npm and yarn
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# compiled output
+dist
+tmp
+/out-tsc
+
+# System Files
+.DS_Store
+Thumbs.db
