@@ -4,10 +4,10 @@ export interface HelpMetaData {
   path: string;
 }
 
-const howToBookMetaData: HelpMetaData = {
+const helpMetaData: HelpMetaData = {
   title: 'Помощь',
   heading: 'Помощь',
   path: '/help',
 };
 
-export default howToBookMetaData;
+export default helpMetaData;

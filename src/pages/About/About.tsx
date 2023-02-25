@@ -2,15 +2,12 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Typography from '@mui/material/Typography';
+
 import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import aboutMetaData from './aboutMetaData';
 import Heading from '../../components/Heading';
 import LinkBlank from '../../components/LinkBlank';
 import Paragraph from '../../components/Paragraph';
-
-export const aboutConstants = {
-  spell: `'kləʊvər`,
-};
 
 // TODO: Add a nice picture here
 function About() {
@@ -27,10 +24,9 @@ function About() {
       <Heading>{aboutMetaData.heading}</Heading>
       <Paragraph>Привет! Я {fullName}.</Paragraph>
       <Paragraph>
-        Кловер - имя моего бренда. Почему так? От английского{' '}
-        <Typography component="i">{aboutConstants.spell}</Typography> - клевер, а логотип моего бренда - четырехлистный
-        клевер. Для меня это олицетворение здоровья, баланса и целостности. Значение этого символа хорошо отражает меня
-        и мою работу, во что я верю и что делаю.
+        Кловер - имя моего бренда. Почему так? От английского <Typography component="i">&apos;kləʊvər</Typography> -
+        клевер, а логотип моего бренда - четырехлистный клевер. Для меня это олицетворение здоровья, баланса и
+        целостности. Значение этого символа хорошо отражает меня и мою работу, во что я верю и что делаю.
       </Paragraph>
       <Paragraph>
         В прошлом я врач-терапевт, врач общей практики, массажист и косметик. Я знаю не понаслышке, что для сохранения

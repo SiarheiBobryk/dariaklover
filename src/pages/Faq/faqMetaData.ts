@@ -4,10 +4,10 @@ export interface FaqMetaData {
   path: string;
 }
 
-const howToBookMetaData: FaqMetaData = {
+const faqMetaData: FaqMetaData = {
   title: 'Часто задаваемые вопросы',
   heading: 'Часто задаваемые вопросы',
   path: '/help/faq',
 };
 
-export default howToBookMetaData;
+export default faqMetaData;
