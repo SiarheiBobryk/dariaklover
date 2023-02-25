@@ -48,6 +48,5 @@ describe('<About />', () => {
       const h2: HTMLHeadingElement | null = document.querySelector('h2');
       expect(h2).toHaveTextContent(aboutMetaData.heading);
     });
-    // TODO: find out how to check the space char between the link here and for other component 🤔
   });
 });

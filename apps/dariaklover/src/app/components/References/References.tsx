@@ -24,7 +24,6 @@ export interface ReferenceData {
   description: React.ReactNode;
 }
 
-// TODO: Render the references in a reverse order
 export const references: ReferenceData[] = [
   {
     src: `${PUBLIC_PATH}/reference_001.jpg`,

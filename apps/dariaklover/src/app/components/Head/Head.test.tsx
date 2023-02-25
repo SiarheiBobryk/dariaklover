@@ -43,7 +43,6 @@ describe('<App />', () => {
       tags.forEach(function checkMetaTags(tag) {
         expect(metaTagsMapped[tag]).toBe(config[tag as keyof Config]);
       });
-      // TODO: Implement color-mode tests
     });
 
     it('should have the right application version in the URL', () => {

@@ -31,6 +31,4 @@ describe('<TopBar />', () => {
       expect(container.firstChild).toBe(ref.current);
     });
   });
-
-  // TODO: Find out the way to test responsiveness
 });

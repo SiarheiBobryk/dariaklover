@@ -52,12 +52,10 @@ function Booking() {
           <Paragraph>
             Решение о дальнейшей работе принимается после установочной встречи. Пожалуйста, запишитесь.
           </Paragraph>
-          {/* TODO: Align the cards */}
           <Grid container spacing={1} sx={{ marginBottom: 1 }}>
             {events.map(function generateEvents(event) {
               return (
                 <Grid key={event.uri} item xs={12} sm={6}>
-                  {/* TODO: Remove the Google Meet prop */}
                   <BookingCard title={event.name} duration={event.duration} href={event.scheduling_url} uri={event.uri}>
                     <Typography
                       variant="body2"

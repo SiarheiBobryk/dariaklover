@@ -40,7 +40,7 @@ const References = React.lazy(function lazyLoadReferences() {
   return import('./pages/References');
 });
 
-// TODO: Uncomment if for testing the Fallback component
+// Uncomment if for testing the Fallback component
 // const Main = React.lazy(() => {
 //   return import('./pages/Main').then((module) => {
 //     return new Promise((resolve) => {
@@ -68,7 +68,7 @@ function App() {
       <Layout>
         <Suspense>
           <Routes>
-            {/* TODO: Add all new pages to sitemap.xml */}
+            {/* All pages listed here must also be presented in sitemap.xml */}
             <Route path={aboutMetaData.path} element={<About />} />
             <Route path={bookingMetaData.path} element={<Booking />} />
             <Route path={faqMetaData.path} element={<Faq />} />

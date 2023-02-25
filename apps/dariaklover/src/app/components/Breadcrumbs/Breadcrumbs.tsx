@@ -29,7 +29,6 @@ interface LinkRouterProps extends LinkProps {
   replace?: boolean;
 }
 
-// TODO: Make a separate component from it
 function LinkRouter(props: LinkRouterProps) {
   return (
     <Link
