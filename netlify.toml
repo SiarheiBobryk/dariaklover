@@ -1,3 +1,7 @@
+[build]
+  base = "apps/dariaklover"
+  publish = "apps/dariaklover/"
+  command = "yarn build"
 [[redirects]]
   from = "/*"
   to = "/"
