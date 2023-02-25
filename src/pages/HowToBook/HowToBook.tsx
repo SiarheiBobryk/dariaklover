@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
-import { styled } from '@mui/material/styles';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Link from '@mui/material/Link';
@@ -13,24 +12,6 @@ import Heading from '../../components/Heading';
 import howToBookMetaData from './howToBookMetaData';
 import Image from '../../components/Image';
 import Paragraph from '../../components/Paragraph';
-
-export const PUBLIC_PATH = 'responsive_images';
-
-export const Img = styled('img')(function styleImg({ theme }) {
-  return {
-    maxWidth: '100%',
-    borderRadius: theme.typography.pxToRem(8),
-  };
-});
-
-export const Figure = styled('figure')(function styleFigure({ theme }) {
-  return {
-    marginTop: 0,
-    marginRight: 0,
-    marginBottom: theme.typography.pxToRem(8),
-    marginLeft: 0,
-  };
-});
 
 function HowToBook() {
   return (

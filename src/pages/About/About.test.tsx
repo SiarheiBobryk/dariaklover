@@ -3,7 +3,6 @@ import { Helmet, HelmetPropsToState } from 'react-helmet';
 
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult } from '@testing-library/react';
-
 import { typographyClasses } from '@mui/material/Typography';
 
 import About from './About';

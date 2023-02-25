@@ -19,7 +19,7 @@ import LinkEmail from '../../components/LinkEmail';
 import LinkSocial from '../../components/LinkSocial';
 import Paragraph from '../../components/Paragraph';
 
-function References() {
+function Booking() {
   const calendlyUser: CalendlyUser = React.useContext<CalendlyUser>(CalendlyContext);
   const [events, setEvents] = React.useState<Array<CalendlyUserEventType>>([]);
 
@@ -105,4 +105,4 @@ function References() {
   );
 }
 
-export default References;
+export default Booking;
