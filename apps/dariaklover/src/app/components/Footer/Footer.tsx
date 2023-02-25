@@ -20,10 +20,8 @@ export const iconButtonA11yProps = {
   target: '_blank',
 };
 
-interface FooterProps {
-  // TODO: Add `data-testid` for all components
-  'data-testid'?: string;
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface FooterProps {}
 
 function Footer(props: FooterProps) {
   const {

@@ -30,5 +30,3 @@ const ui = (
 const app = process.env.NODE_ENV === 'development' ? <React.StrictMode>{ui}</React.StrictMode> : ui;
 
 root.render(app);
-
-// TODO: Add web vitals

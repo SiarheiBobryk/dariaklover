@@ -9,7 +9,6 @@ import Heading from '../../components/Heading';
 import LinkBlank from '../../components/LinkBlank';
 import Paragraph from '../../components/Paragraph';
 
-// TODO: Add a nice picture here
 function About() {
   const {
     instagram: { href: instagramHref, id: instagramId },

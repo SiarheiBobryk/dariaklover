@@ -47,7 +47,5 @@ describe('<Booking />', () => {
       expect(h2).toBeInTheDocument();
       expect(h2).toHaveTextContent(bookingMetaData.heading);
     });
-
-    // TODO: Add more tests
   });
 });

@@ -56,7 +56,6 @@ function indexToNumber(index: number): number {
   return index + 1;
 }
 
-// TODO: Setup the proper scroll behavior here
 function Faq() {
   return (
     <>
@@ -64,7 +63,7 @@ function Faq() {
         <title>{faqMetaData.title}</title>
       </Helmet>
       <Heading>{faqMetaData.heading}</Heading>
-      {/* TODO: Uncomment it when we get a huge list of question */}
+      {/* Uncomment it when we get a huge list of question */}
       {/* <List>
         {faq.map(function mapFaq(faqData: FaqData, index: number) {
           const { question, id } = faqData;

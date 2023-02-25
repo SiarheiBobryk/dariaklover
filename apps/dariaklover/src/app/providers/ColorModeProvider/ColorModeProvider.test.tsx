@@ -14,9 +14,7 @@ afterEach(() => {
 describe('ColorModeProvider', () => {
   describe('The `colorMode` object inspection', () => {
     it('should trigger to the right color mode', () => {
-      // TODO: Add types for the same variables
       let mode: PaletteMode | undefined;
-      // TODO: Is there a way to do the same but without the arrow symbol 🤔
       let switchColor: (this: void) => void | undefined;
 
       render(
