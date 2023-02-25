@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, A11y } from 'swiper';
 
+import Box from '@mui/material/Box';
+
 import Heading from '../Heading';
 
 import 'swiper/css';
@@ -382,7 +384,12 @@ function References(props: ReferencesProps) {
         {references.map(function mapReferences(item: ReferenceData) {
           return (
             <SwiperSlide key={item.src} style={{ display: 'flex', justifyContent: 'center' }}>
-              <picture>
+              <Skeleton
+                variant="rectangular"
+                height={appTheme.typography.pxToRem(height)}
+                width={appTheme.typography.pxToRem(width)}
+              />
+              <Box sx={{ zIndex: 2 }}>
                 <source type="image/webp" data-srcset={item.srcSet} />
                 <source type="image/jpeg" data-srcset={item.src} />
                 <Img
@@ -394,13 +401,7 @@ function References(props: ReferencesProps) {
                   className="swiper-lazy"
                   loading="lazy"
                 />
-              </picture>
-              {/* FIXME: The picture blinking issue */}
-              <Skeleton
-                variant="rectangular"
-                height={appTheme.typography.pxToRem(height)}
-                width={appTheme.typography.pxToRem(width)}
-              />
+              </Box>
             </SwiperSlide>
           );
         })}
