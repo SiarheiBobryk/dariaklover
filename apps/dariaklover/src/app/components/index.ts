@@ -13,3 +13,6 @@ export { default as LinkSocial } from './LinkSocial';
 export { default as Paragraph } from './Paragraph';
 export { default as References } from './References';
 export { default as TopBar } from './TopBar';
+
+export { default as Markdown } from './Markdown';
+export * from './Markdown';
