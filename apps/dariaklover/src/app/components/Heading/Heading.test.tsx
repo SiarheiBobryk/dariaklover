@@ -26,18 +26,18 @@ describe('<Heading />', () => {
   });
 
   describe('Elements inspection', () => {
-    it('should be the `h2` HTML element by default', () => {
+    it('should be the `h1` HTML element by default', () => {
       render(<Heading>Дарья Кловер</Heading>);
-
-      const h2: HTMLHeadingElement | null = document.querySelector('h2');
-      expect(h2).toBeInTheDocument();
-    });
-
-    it('should be the `h1` HTML element', () => {
-      render(<Heading component="h1">Дарья Кловер</Heading>);
 
       const h1: HTMLHeadingElement | null = document.querySelector('h1');
       expect(h1).toBeInTheDocument();
+    });
+
+    it('should be the `h1` HTML element', () => {
+      render(<Heading component="h2">Дарья Кловер</Heading>);
+
+      const h2: HTMLHeadingElement | null = document.querySelector('h2');
+      expect(h2).toBeInTheDocument();
     });
 
     it('should have the CSS classes from `h5` Typography variant by default', () => {

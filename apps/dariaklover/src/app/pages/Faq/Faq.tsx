@@ -82,7 +82,7 @@ function Faq() {
         const { question, answer, id } = faqData;
         return (
           <Box id={id} component="section" key={id} sx={{ marginY: 2 }}>
-            <Typography component="h3" sx={{ fontStyle: 'italic' }}>
+            <Typography component="h2" sx={{ fontStyle: 'italic' }}>
               {indexToNumber(index)}. {question}
             </Typography>
             <Paragraph>{answer}</Paragraph>
