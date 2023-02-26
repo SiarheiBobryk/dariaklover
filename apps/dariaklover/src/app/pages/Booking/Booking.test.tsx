@@ -36,16 +36,16 @@ describe('<Booking />', () => {
       expect(title).toBe(bookingMetaData.title);
     });
 
-    it('should have the `h2` HTML element as heading', () => {
+    it('should have the `h1` HTML element as heading', () => {
       render(
         <BrowserRouter>
           <Booking />
         </BrowserRouter>,
       );
 
-      const h2: HTMLHeadingElement | null = document.querySelector('h2');
-      expect(h2).toBeInTheDocument();
-      expect(h2).toHaveTextContent(bookingMetaData.heading);
+      const h1: HTMLHeadingElement | null = document.querySelector('h1');
+      expect(h1).toBeInTheDocument();
+      expect(h1).toHaveTextContent(bookingMetaData.heading);
     });
   });
 });

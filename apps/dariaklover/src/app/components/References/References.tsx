@@ -358,7 +358,7 @@ function References(props: ReferencesProps) {
   return (
     <>
       <Heading>{heading}</Heading>
-      <Heading component="h3" variant="h6">
+      <Heading component="h2" variant="h6">
         {references[currentSlideIndex].title}
       </Heading>
       <Swiper

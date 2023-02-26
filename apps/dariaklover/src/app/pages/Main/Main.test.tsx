@@ -29,18 +29,18 @@ describe('<Main />', () => {
       expect(title).toBe(mainMetaData.title);
     });
 
-    it('should have the `h2` HTML element as heading', () => {
+    it('should have the `h1` HTML element as heading', () => {
       render(<Main />);
 
-      const h2: HTMLHeadingElement | null = document.querySelector('h2');
-      expect(h2).toBeInTheDocument();
+      const h1: HTMLHeadingElement | null = document.querySelector('h1');
+      expect(h1).toBeInTheDocument();
     });
 
     it('should have the CSS classes from `h5` Typography variant by default', () => {
       render(<Main />);
 
-      const h2: HTMLHeadingElement | null = document.querySelector('h2');
-      expect(h2).toHaveClass(typographyClasses.h5);
+      const h1: HTMLHeadingElement | null = document.querySelector('h1');
+      expect(h1).toHaveClass(typographyClasses.h5);
     });
 
     it('should have the right `strong` element', () => {
