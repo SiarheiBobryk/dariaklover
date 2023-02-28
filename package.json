@@ -50,7 +50,7 @@
     "@nrwl/js": "15.8.1",
     "@nrwl/linter": "15.7.2",
     "@nrwl/react": "15.8.1",
-    "@nrwl/webpack": "15.7.2",
+    "@nrwl/webpack": "15.8.1",
     "@nrwl/workspace": "15.8.1",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
     "@svgr/webpack": "6.5.1",
