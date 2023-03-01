@@ -341,7 +341,7 @@ export interface SwiperClass {
 }
 
 function References(props: ReferencesProps) {
-  const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
+  const [currentSlideIndex, setCurrentSlideIndex] = React.useState<number>(0);
   const { heading } = props;
   const height = 541;
   const width = 250;
