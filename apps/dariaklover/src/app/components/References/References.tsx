@@ -355,11 +355,12 @@ function References(props: ReferencesProps) {
     [setCurrentSlideIndex],
   );
 
+  const referencesReversed = [...references].reverse();
   return (
     <>
       <Heading>{heading}</Heading>
       <Heading component="h2" variant="h6">
-        {references[currentSlideIndex].title}
+        {referencesReversed[currentSlideIndex].title}
       </Heading>
       <Swiper
         onSlideChange={handleOnSlideChange}
@@ -381,7 +382,7 @@ function References(props: ReferencesProps) {
           marginBottom: appTheme.typography.pxToRem(8),
         }}
       >
-        {references.map(function mapReferences(item: ReferenceData) {
+        {referencesReversed.map(function mapReferences(item: ReferenceData) {
           return (
             <SwiperSlide key={item.src} style={{ display: 'flex', justifyContent: 'center' }}>
               <Skeleton
@@ -406,8 +407,12 @@ function References(props: ReferencesProps) {
           );
         })}
       </Swiper>
-      <Typography id={references[currentSlideIndex].src} component="blockquote" sx={{ p: 1, fontStyle: 'italic' }}>
-        {references[currentSlideIndex].description}
+      <Typography
+        id={referencesReversed[currentSlideIndex].src}
+        component="blockquote"
+        sx={{ p: 1, fontStyle: 'italic' }}
+      >
+        {referencesReversed[currentSlideIndex].description}
       </Typography>
     </>
   );
