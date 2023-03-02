@@ -51,7 +51,7 @@
     "@nrwl/linter": "15.8.1",
     "@nrwl/react": "15.8.1",
     "@nrwl/webpack": "15.8.1",
-    "@nrwl/workspace": "15.8.1",
+    "@nrwl/workspace": "15.8.2",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
     "@svgr/webpack": "6.5.1",
     "@testing-library/dom": "9.0.0",
