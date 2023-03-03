@@ -47,7 +47,7 @@
     "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.4",
     "@nrwl/cypress": "15.8.2",
-    "@nrwl/eslint-plugin-nx": "15.8.2",
+    "@nrwl/eslint-plugin-nx": "15.8.3",
     "@nrwl/jest": "15.8.2",
     "@nrwl/js": "15.8.2",
     "@nrwl/linter": "15.8.2",
