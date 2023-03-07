@@ -85,7 +85,7 @@
     "husky": "8.0.3",
     "jest": "28.1.1",
     "jest-axe": "7.0.0",
-    "jest-environment-jsdom": "29.4.3",
+    "jest-environment-jsdom": "29.5.0",
     "lint-staged": "13.1.2",
     "nx": "15.8.5",
     "postcss": "8.4.21",
