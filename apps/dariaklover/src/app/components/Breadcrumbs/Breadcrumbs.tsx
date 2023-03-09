@@ -13,6 +13,7 @@ import helpMetaData from '../../pages/Help/helpMetaData';
 import howToBookMetaData from '../../pages/HowToBook/howToBookMetaData';
 import mainMetaData from '../../pages/Main/mainMetaData';
 import referencesMetaData from '../../pages/References/referencesMetaData';
+import pricingMetaData from '../../pages/Pricing/pricingMetaData';
 
 const breadcrumbNameMap: { [key: string]: string } = {
   [mainMetaData.path]: mainMetaData.heading,
@@ -21,6 +22,7 @@ const breadcrumbNameMap: { [key: string]: string } = {
   [faqMetaData.path]: faqMetaData.heading,
   [helpMetaData.path]: helpMetaData.heading,
   [howToBookMetaData.path]: howToBookMetaData.heading,
+  [pricingMetaData.path]: pricingMetaData.heading,
   [referencesMetaData.path]: referencesMetaData.heading,
 };
 

@@ -1,7 +1,10 @@
 import * as React from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
+import { useTheme } from '@mui/material';
+import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -18,15 +21,23 @@ export interface MarkdownProps {
 
 function Markdown(props: MarkdownProps) {
   const { children = '' } = props;
+  const theme = useTheme();
   return (
     <ReactMarkdown
       /* eslint-disable react/no-unstable-nested-components */
+      // TODO: Refactor the mapping here
       components={{
         h1: function H1({ node, ...h1Props }) {
           return <Heading {...h1Props} />;
         },
+        h2: function H2({ node, ...h2Props }) {
+          return <Typography component="h2" variant="h6" sx={{ fontWeight: 400 }} {...h2Props} />;
+        },
         p: function P({ node, ...pProps }) {
           return <Paragraph {...pProps} />;
+        },
+        ul: function Ul({ node, ...ulProps }) {
+          return <Box component="ul" sx={{ paddingLeft: theme.spacing(2), marginTop: 0 }} {...ulProps} />;
         },
         a: function A({ node, ...aProps }) {
           const { children: aChildren, href, ...other } = aProps;
