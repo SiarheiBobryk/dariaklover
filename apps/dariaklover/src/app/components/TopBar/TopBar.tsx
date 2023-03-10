@@ -21,6 +21,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import MenuIcon from '@mui/icons-material/Menu';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
 import aboutMetaData from '../../pages/About/aboutMetaData';
@@ -28,6 +29,7 @@ import bookingMetaData from '../../pages/Booking/bookingMetaData';
 import FourLeafCloverIcon from '../../icons/FourLeafClover';
 import helpMetaData from '../../pages/Help/helpMetaData';
 import referencesMetaData from '../../pages/References/referencesMetaData';
+import pricingMetaData from '../../pages/Pricing/pricingMetaData';
 
 export interface Page {
   to: string;
@@ -40,6 +42,11 @@ export const pages: Page[] = [
     to: bookingMetaData.path,
     label: 'Записаться',
     icon: <CalendarMonthIcon />,
+  },
+  {
+    to: pricingMetaData.path,
+    label: 'Стоимость',
+    icon: <ShoppingBagIcon />,
   },
   {
     to: aboutMetaData.path,
