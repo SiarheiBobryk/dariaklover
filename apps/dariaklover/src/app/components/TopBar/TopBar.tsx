@@ -45,7 +45,7 @@ export const pages: Page[] = [
   },
   {
     to: pricingMetaData.path,
-    label: 'Стоимость',
+    label: 'Услуги',
     icon: <ShoppingBagIcon />,
   },
   {

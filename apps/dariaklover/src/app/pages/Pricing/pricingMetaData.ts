@@ -5,8 +5,8 @@ export interface PricingMetaData {
 }
 
 const pricingMetaData: PricingMetaData = {
-  title: 'Стоимость услуг',
-  heading: 'Стоимость услуг',
+  title: 'Мои услуги и стоимость',
+  heading: 'Мои услуги и стоимость',
   path: '/pricing',
 };
 
