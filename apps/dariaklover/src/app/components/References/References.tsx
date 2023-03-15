@@ -391,7 +391,7 @@ function References(props: ReferencesProps) {
                 height={appTheme.typography.pxToRem(height)}
                 width={appTheme.typography.pxToRem(width)}
               />
-              <Box sx={{ zIndex: 2 }}>
+              <Box component="picture" sx={{ zIndex: 2 }}>
                 <source type="image/webp" data-srcset={item.srcSet} />
                 <source type="image/jpeg" data-srcset={item.src} />
                 <Img
