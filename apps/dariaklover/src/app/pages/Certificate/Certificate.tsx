@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 import certificateMetaData from './certificateMetaData';
-import { certificatesMapping } from '../../components/Certificates';
+import { certificatesMap } from '../../components/Certificates';
 
 // TODO: Move in to ".env"
 export const PUBLIC_PATH = 'assets/responsive_images';
@@ -23,8 +23,8 @@ function Certificate() {
   const { certificateId = '' } = useParams();
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const { title: heading, subtitle } = certificatesMapping[certificateId];
+
+  const { title: heading, subtitle } = certificatesMap[certificateId];
   return (
     <>
       <Helmet>

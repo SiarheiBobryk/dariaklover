@@ -9,8 +9,17 @@ import { Theme, useMediaQuery, useTheme } from '@mui/material';
 
 export const PUBLIC_PATH = 'assets/responsive_images';
 
+export interface Certificate {
+  id: string;
+  url: string;
+  img: string;
+  title: string;
+  subtitle: string;
+}
+
 // TODO: Review the image storage and remove unused images
-export const certificates = [
+export const certificates: Array<Certificate> = [
+  // TODO: Add the extended title and subtitle props
   {
     id: 'certificate-health-coach',
     url: '/certificates/certificate-health-coach',
@@ -34,12 +43,18 @@ export const certificates = [
   },
 ];
 
-export const certificatesMapping = certificates.reduce((acc, cur) => {
-  const { id, ...rest } = cur;
+export type CertificateData = Omit<Certificate, 'id'>;
+
+export interface CertificatesMap {
+  [key: string]: CertificateData;
+}
+
+export const certificatesMap: CertificatesMap = certificates.reduce(function reduceCertificates(mapping, cur) {
+  const { id, ...properties } = cur;
   return {
-    ...acc,
+    ...mapping,
     [id]: {
-      ...rest,
+      ...properties,
     },
   };
 }, {});
