@@ -7,6 +7,9 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { Theme, useMediaQuery, useTheme } from '@mui/material';
 
+import IconButton from '@mui/material/IconButton';
+import InfoIcon from '@mui/icons-material/Info';
+
 export const PUBLIC_PATH = 'assets/responsive_images';
 
 export interface Certificate {
@@ -22,16 +25,6 @@ export interface Certificate {
 // TODO: Review the image storage and remove unused images
 export const certificates: Array<Certificate> = [
   {
-    id: 'certificate-health-coach',
-    url: '/certificates/certificate-health-coach',
-    img: `${PUBLIC_PATH}/certificate-health-coach.jpg`,
-    title: 'Tools for health and wellness coaching',
-    titleFull:
-      'Bobryk Darya Nikolayevna Successfully participated in the professional integrative training program "Tools for health and wellness coaching"',
-    subtitle: 'European Coaching Association',
-    subtitleFull: 'Университет образовательной медицины / European Coaching Association',
-  },
-  {
     id: 'diploma-health-coach',
     url: '/certificates/diploma-health-coach',
     img: `${PUBLIC_PATH}/diploma-health-coach.jpg`,
@@ -40,6 +33,16 @@ export const certificates: Array<Certificate> = [
       'Бобрик Дарья Николаевна прошла профессиональную переподготовку по программе "Модификация образа жизни и немедикаментозное оздоровление" (HEALTH COACHING). Диплом предоставляет право на ведение профессиональной деятельности в сфере Консультирование в области здорового образа жизни и немедикаментозного оздоровления и подтверждает присвоение квалификации "Специалист по модификации образа жизни и немедикаментозному оздоровлению" (HEALTH COACH)',
     subtitle: 'Университет образовательной медицины',
     subtitleFull: 'Университет образовательной медицины / Preventage Lifestyle School',
+  },
+  {
+    id: 'certificate-health-coach',
+    url: '/certificates/certificate-health-coach',
+    img: `${PUBLIC_PATH}/certificate-health-coach.jpg`,
+    title: 'Tools for health coaching',
+    titleFull:
+      'Bobryk Darya Nikolayevna Successfully participated in the professional integrative training program "Tools for health and wellness coaching"',
+    subtitle: 'European Coaching Association',
+    subtitleFull: 'Университет образовательной медицины / European Coaching Association',
   },
   {
     id: 'diploma-doctor-1',
@@ -109,22 +112,25 @@ const Certificates = React.forwardRef(function Certificates(_: CertificatesProps
           // TODO: Remove default props
           // TODO: Make cols responsive
           // TODO: Make it accessible by Tab
-          <ImageListItem
-            key={certificate.img}
-            cols={1}
-            rows={1}
-            onClick={() => {
-              return navigateToCertificate(certificate.id);
-            }}
-          >
+          <ImageListItem key={certificate.img} cols={1} rows={1}>
             {/* TODO: Add a skeleton maybe 🤔 */}
-            {/* TODO: Review the "alt" attr */}
             <img src={certificate.img} alt={certificate.title} loading="lazy" />
             <ImageListItemBar
               title={certificate.title}
               subtitle={certificate.subtitle}
-              position="below"
-              // actionPosition="right"
+              position="bottom"
+              actionPosition="right"
+              actionIcon={
+                <IconButton
+                  sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                  aria-label={`Подробная информация о ${certificate.title}`}
+                  onClick={() => {
+                    return navigateToCertificate(certificate.id);
+                  }}
+                >
+                  <InfoIcon />
+                </IconButton>
+              }
             />
           </ImageListItem>
         );

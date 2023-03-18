@@ -33,10 +33,10 @@ function Certificate() {
       {certificateId && (
         <Box component="figure" sx={{ margin: 0 }}>
           <Img src={`${PUBLIC_PATH}/${certificateId}.jpg`} alt={heading} loading="lazy" />
-          <Typography component="figcaption">
+          <Typography component="figcaption" variant="caption">
             {titleFull}
             <br />
-            <small>{subtitleFull}</small>
+            {subtitleFull}
           </Typography>
         </Box>
       )}
