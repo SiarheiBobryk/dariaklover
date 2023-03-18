@@ -21,10 +21,7 @@ export const Img = styled('img')(function styleImg({ theme }) {
 
 function Certificate() {
   const { certificateId = '' } = useParams();
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-
-  const { title: heading, subtitle } = certificatesMap[certificateId];
+  const { title: heading, titleFull, subtitleFull } = certificatesMap[certificateId];
   return (
     <>
       <Helmet>
@@ -35,12 +32,12 @@ function Certificate() {
       </Typography>
       {certificateId && (
         <Box component="figure" sx={{ margin: 0 }}>
-          <Img src={`${PUBLIC_PATH}/${certificateId}.jpg`} alt="TODO: Add a title here" loading="lazy" />
-          <figcaption>
-            {heading}
+          <Img src={`${PUBLIC_PATH}/${certificateId}.jpg`} alt={heading} loading="lazy" />
+          <Typography component="figcaption">
+            {titleFull}
             <br />
-            <small>{subtitle}</small>
-          </figcaption>
+            <small>{subtitleFull}</small>
+          </Typography>
         </Box>
       )}
     </>
