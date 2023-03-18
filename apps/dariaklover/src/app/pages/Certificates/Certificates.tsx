@@ -1,7 +1,12 @@
-import { styled } from '@mui/material';
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
 
+import { styled } from '@mui/material';
+import { Helmet } from 'react-helmet';
+import { useParams } from 'react-router-dom';
+
+import CertificatesComponent from '../../components/Certificates';
+import Heading from '../../components/Heading';
+import Certificate from '../Certificate';
 import certificatesMetaData from './certificatesMetaData';
 
 // TODO: Move in to ".env"
@@ -15,17 +20,15 @@ export const Img = styled('img')(function styleImg({ theme }) {
 });
 
 function Certificates() {
+  const { certificateId } = useParams();
+
   return (
     <>
       <Helmet>
         <title>{certificatesMetaData.title}</title>
       </Helmet>
-
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum beatae at voluptates sint, minima asperiores
-        quam ab, et magni inventore iure exercitationem dignissimos aliquam distinctio laboriosam dicta ullam ipsum
-        culpa?
-      </div>
+      <Heading>Мои дипломы и сертификаты</Heading>
+      {certificateId ? <Certificate /> : <CertificatesComponent />}
     </>
   );
 }
