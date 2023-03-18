@@ -48,7 +48,7 @@ export const certificates: Array<Certificate> = [
     url: '/certificates/diploma-doctor-1',
     img: `${PUBLIC_PATH}/diploma-doctor-1.jpg`,
     title: 'Врач ("Лечебное дело")',
-    titleFull: 'Oкончила полный курс по специальности "Лечебное дело". Присвоена квалификация "Врач".',
+    titleFull: 'Окончила полный курс университета по специальности "Лечебное дело". Присвоена квалификация "Врач".',
     subtitle: 'Медицинский университет',
     subtitleFull: 'Гомельский государственный медицинский университет',
   },
