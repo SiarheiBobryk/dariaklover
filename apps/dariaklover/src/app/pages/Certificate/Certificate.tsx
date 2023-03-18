@@ -21,24 +21,26 @@ export const Img = styled('img')(function styleImg({ theme }) {
 
 function Certificate() {
   const { certificateId = '' } = useParams();
-  const { title: heading, titleFull, subtitleFull } = certificatesMap[certificateId];
+  const { title: heading, titleFull, subtitleFull } = certificatesMap[certificateId] ?? {};
   return (
     <>
       <Helmet>
         <title>{certificateMetaData.title}</title>
       </Helmet>
-      <Typography component="h2" variant="h6" gutterBottom>
-        {heading}
-      </Typography>
       {certificateId && (
-        <Box component="figure" sx={{ margin: 0 }}>
-          <Img src={`${PUBLIC_PATH}/${certificateId}.jpg`} alt={heading} loading="lazy" />
-          <Typography component="figcaption" variant="body2">
-            {titleFull}
-            <br />
-            <small>{subtitleFull}</small>
+        <>
+          <Typography component="h2" variant="h6" gutterBottom>
+            {heading}
           </Typography>
-        </Box>
+          <Box component="figure" sx={{ margin: 0 }}>
+            <Img src={`${PUBLIC_PATH}/${certificateId}.jpg`} alt={heading} loading="lazy" />
+            <Typography component="figcaption" variant="body2">
+              {titleFull}
+              <br />
+              <small>{subtitleFull}</small>
+            </Typography>
+          </Box>
+        </>
       )}
     </>
   );

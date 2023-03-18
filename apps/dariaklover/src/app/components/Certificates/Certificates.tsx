@@ -76,7 +76,7 @@ export const certificatesMap: CertificatesMap = certificates.reduce(function red
 export interface CertificatesProps {}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Certificates = React.forwardRef(function Certificates(_: CertificatesProps, ref: React.Ref<any>) {
+const Certificates = React.forwardRef(function Certificates(props: CertificatesProps, ref: React.Ref<any>) {
   const navigate = useNavigate();
   const navigateToCertificate = React.useCallback(
     function memoizeNavigateToCertificate(certificateId: string) {
@@ -106,7 +106,7 @@ const Certificates = React.forwardRef(function Certificates(_: CertificatesProps
   );
 
   return (
-    <ImageList ref={ref} variant="standard" cols={columns} gap={8}>
+    <ImageList ref={ref} variant="standard" cols={columns} gap={8} {...props}>
       {certificates.map((certificate) => {
         return (
           // TODO: Remove default props

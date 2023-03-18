@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { BrowserRouter } from 'react-router-dom';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult, screen } from '@testing-library/react';
 
@@ -10,11 +11,9 @@ expect.extend(toHaveNoViolations);
 describe('<Certificates />', () => {
   it('should match a11y standards without props', async () => {
     const { container }: RenderResult = render(
-      <Certificates
-        fileName="how-to-book-1"
-        alt="Установка часового пояса"
-        caption="Установка вашего часового пояса"
-      />,
+      <BrowserRouter>
+        <Certificates />
+      </BrowserRouter>,
     );
 
     const results = await axe(container);
@@ -24,13 +23,9 @@ describe('<Certificates />', () => {
   it('should forward ref', () => {
     const ref = React.createRef();
     render(
-      <Certificates
-        ref={ref}
-        data-testid="Certificates"
-        fileName="how-to-book-1"
-        alt="Установка часового пояса"
-        caption="Установка вашего часового пояса"
-      />,
+      <BrowserRouter>
+        <Certificates ref={ref} data-testid="Certificates" />
+      </BrowserRouter>,
     );
     expect(screen.getByTestId('Certificates')).toBe(ref.current);
   });
