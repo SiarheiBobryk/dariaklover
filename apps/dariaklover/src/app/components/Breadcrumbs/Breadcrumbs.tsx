@@ -64,15 +64,14 @@ const Breadcrumbs = React.forwardRef(function Breadcrumbs(props: BreadcrumbsProp
     [location],
   );
 
-  const certificatesBreadcrumbNameMap: { [key: string]: string } = Object.keys(certificatesMap).reduce(
-    function reduceCertificatesData(acc, key) {
+  const certificatesBreadcrumbNameMap: { [key: string]: string } = React.useMemo(function memoizeCertificatesBread() {
+    return Object.keys(certificatesMap).reduce(function reduceCertificatesMap(certificatesBreadcrumbNameMapRaw, key) {
       return {
-        ...acc,
+        ...certificatesBreadcrumbNameMapRaw,
         [certificatesMap[key].url]: certificatesMap[key].title,
       };
-    },
-    {},
-  );
+    }, {});
+  }, []);
   const breadcrumbNameMap: { [key: string]: string } = {
     ...breadcrumbNameMapStatic,
     ...certificatesBreadcrumbNameMap,
