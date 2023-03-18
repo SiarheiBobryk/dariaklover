@@ -1,4 +1,7 @@
 import * as React from 'react';
+
+import { useNavigate } from 'react-router-dom';
+
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -7,21 +10,28 @@ import { Theme, useMediaQuery, useTheme } from '@mui/material';
 export const PUBLIC_PATH = 'assets/responsive_images';
 
 // TODO: Review the image storage and remove unused images
-const itemData = [
+export const certificates = [
   {
+    id: 'certificate-health-coach',
+    url: '/certificates/certificate-health-coach',
     img: `${PUBLIC_PATH}/certificate-health-coach.jpg`,
-    title: 'TODO: Add a title here',
-    subtitle: 'TODO: Add a subtitle (if applicable)',
+    title: 'Tools for health and wellness coaching',
+    subtitle: 'Европейская ассоциация коучинга',
   },
   {
+    // TODO: Fix the typo here
+    id: 'diploma-health-coath',
+    url: '/certificates/diploma-health-coath',
     img: `${PUBLIC_PATH}/diploma-health-coath.jpg`,
-    title: 'TODO: Add a title here',
-    subtitle: 'TODO: Add a subtitle (if applicable)',
+    title: 'Health coach ("Health coaching")',
+    subtitle: 'Университет образовательной медицины',
   },
   {
+    id: 'diploma-doctor-1',
+    url: '/certificates/diploma-doctor-1',
     img: `${PUBLIC_PATH}/diploma-doctor-1.jpg`,
-    title: 'TODO: Add a title here',
-    subtitle: 'TODO: Add a subtitle (if applicable)',
+    title: 'Врач ("Лечебное дело")',
+    subtitle: 'Медицинский университет',
   },
 ];
 
@@ -30,6 +40,14 @@ export interface CertificatesProps {}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Certificates = React.forwardRef(function Certificates(_: CertificatesProps, ref: React.Ref<any>) {
+  const navigate = useNavigate();
+  const navigateToCertificate = React.useCallback(
+    function memoizeNavigateToCertificate(certificateId: string) {
+      navigate(`/certificates/${certificateId}`);
+    },
+    [navigate],
+  );
+
   const theme: Theme = useTheme();
   const isMedium = useMediaQuery(theme.breakpoints.up('md'));
   const isSmall = useMediaQuery(theme.breakpoints.up('sm'));
@@ -52,17 +70,24 @@ const Certificates = React.forwardRef(function Certificates(_: CertificatesProps
 
   return (
     <ImageList ref={ref} variant="standard" cols={columns} gap={8}>
-      {itemData.map((item) => {
+      {certificates.map((certificate) => {
         return (
           // TODO: Remove default props
           // TODO: Make cols responsive
-          <ImageListItem key={item.img} cols={1} rows={1}>
+          <ImageListItem
+            key={certificate.img}
+            cols={1}
+            rows={1}
+            onClick={() => {
+              return navigateToCertificate(certificate.id);
+            }}
+          >
             {/* TODO: Add a skeleton maybe 🤔 */}
             {/* TODO: Review the "alt" attr */}
-            <img src={item.img} alt={item.title} loading="lazy" />
+            <img src={certificate.img} alt={certificate.title} loading="lazy" />
             <ImageListItemBar
-              title={item.title}
-              subtitle={item.subtitle}
+              title={certificate.title}
+              subtitle={certificate.subtitle}
               position="below"
               // actionPosition="right"
             />

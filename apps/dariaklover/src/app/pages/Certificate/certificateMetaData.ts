@@ -1,17 +1,29 @@
+import { certificates } from '../../components/Certificates/Certificates';
+
 export interface CertificateMetaData {
   title: string;
   heading: string;
   path: string;
-  pathCertificateHealthCoach: string;
-  certificateHealthCoach: string;
+  certificateHealthCoachUrl: string;
+  certificateHealthCoachTitle: string;
+  diplomaHealthCoachUrl: string;
+  diplomaHealthCoachTitle: string;
+  diplomaDoctorUrl: string;
+  diplomaDoctorTitle: string;
 }
+
+const [certificateHealthCoach, diplomaHealthCoach, diplomaDoctor] = certificates;
 
 const certificateMetaData: CertificateMetaData = {
   title: 'Сертификат',
   heading: 'Сертификат',
   path: ':certificateId',
-  pathCertificateHealthCoach: '/certificates/certificate-health-coach',
-  certificateHealthCoach: 'Сертификат Европейской ассоциации коучинга (European Coaching Association)',
+  certificateHealthCoachUrl: certificateHealthCoach.url,
+  certificateHealthCoachTitle: certificateHealthCoach.title,
+  diplomaHealthCoachUrl: diplomaHealthCoach.url,
+  diplomaHealthCoachTitle: diplomaHealthCoach.title,
+  diplomaDoctorUrl: diplomaDoctor.url,
+  diplomaDoctorTitle: diplomaDoctor.title,
 };
 
 export default certificateMetaData;
