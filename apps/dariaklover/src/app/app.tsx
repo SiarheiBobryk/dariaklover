@@ -26,6 +26,10 @@ const Certificate = React.lazy(function lazyLoadCertificate() {
   return import('./pages/Certificate');
 });
 
+const Certificates = React.lazy(function lazyLoadCertificates() {
+  return import('./pages/Certificates');
+});
+
 const Faq = React.lazy(function lazyLoadFaq() {
   return import('./pages/Faq');
 });
@@ -81,7 +85,7 @@ function App() {
             {/* All pages listed here must also be presented in sitemap.xml */}
             <Route path={aboutMetaData.path} element={<About />} />
             <Route path={bookingMetaData.path} element={<Booking />} />
-            <Route path={certificateMetaData.path}>
+            <Route path={certificateMetaData.path} element={<Certificates />}>
               <Route path={certificateMetaData.pathId} element={<Certificate />} />
             </Route>
             <Route path={faqMetaData.path} element={<Faq />} />
