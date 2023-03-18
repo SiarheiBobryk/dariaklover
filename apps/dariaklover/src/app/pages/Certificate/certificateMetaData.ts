@@ -1,4 +1,4 @@
-import { certificates } from '../../components/Certificates/Certificates';
+import { certificates } from '../../components/Certificates';
 
 export interface CertificateMetaData {
   title: string;
