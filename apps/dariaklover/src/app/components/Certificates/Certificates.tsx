@@ -34,6 +34,16 @@ export const certificates = [
   },
 ];
 
+export const certificatesMapping = certificates.reduce((acc, cur) => {
+  const { id, ...rest } = cur;
+  return {
+    ...acc,
+    [id]: {
+      ...rest,
+    },
+  };
+}, {});
+
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CertificatesProps {}
 
@@ -73,6 +83,7 @@ const Certificates = React.forwardRef(function Certificates(_: CertificatesProps
         return (
           // TODO: Remove default props
           // TODO: Make cols responsive
+          // TODO: Make it accessible by Tab
           <ImageListItem
             key={certificate.img}
             cols={1}

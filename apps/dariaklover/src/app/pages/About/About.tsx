@@ -17,8 +17,8 @@ function About() {
         <title>{aboutMetaData.title}</title>
       </Helmet>
       <Markdown>{aboutContent}</Markdown>
-      <Typography component="h2" variant="h6">
-        TODO: Add a heading here
+      <Typography component="h2" variant="h6" gutterBottom>
+        Мои дипломы и сертификаты
       </Typography>
       <Certificates />
     </>

@@ -5,8 +5,8 @@ export interface CertificatesMetaData {
 }
 
 const certificatesMetaData: CertificatesMetaData = {
-  title: 'Сертификаты',
-  heading: 'Сертификаты',
+  title: 'Мои дипломы и сертификаты',
+  heading: 'Мои дипломы и сертификаты',
   path: '/certificates',
 };
 
