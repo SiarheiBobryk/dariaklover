@@ -19,10 +19,9 @@ export const certificates = [
     subtitle: 'Европейская ассоциация коучинга',
   },
   {
-    // TODO: Fix the typo here
-    id: 'diploma-health-coath',
-    url: '/certificates/diploma-health-coath',
-    img: `${PUBLIC_PATH}/diploma-health-coath.jpg`,
+    id: 'diploma-health-coach',
+    url: '/certificates/diploma-health-coach',
+    img: `${PUBLIC_PATH}/diploma-health-coach.jpg`,
     title: 'Health coach ("Health coaching")',
     subtitle: 'Университет образовательной медицины',
   },
