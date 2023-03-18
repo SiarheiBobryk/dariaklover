@@ -16,17 +16,17 @@ export const PUBLIC_PATH = 'assets/responsive_images';
 // TODO: Review the image storage and remove unused images
 const itemData = [
   {
-    img: `${PUBLIC_PATH}/certificate-health-coach-h.jpg`,
+    img: `${PUBLIC_PATH}/certificate-health-coach.jpg`,
     title: 'TODO: Add a title here',
     subtitle: 'TODO: Add a subtitle (if applicable)',
   },
   {
-    img: `${PUBLIC_PATH}/diploma-health-coath-h.jpg`,
+    img: `${PUBLIC_PATH}/diploma-health-coath.jpg`,
     title: 'TODO: Add a title here',
     subtitle: 'TODO: Add a subtitle (if applicable)',
   },
   {
-    img: `${PUBLIC_PATH}/diploma-doctor-1-h.jpg`,
+    img: `${PUBLIC_PATH}/diploma-doctor-1.jpg`,
     title: 'TODO: Add a title here',
     subtitle: 'TODO: Add a subtitle (if applicable)',
   },

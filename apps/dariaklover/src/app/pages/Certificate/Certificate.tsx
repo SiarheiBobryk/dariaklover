@@ -8,7 +8,7 @@ import certificateMetaData from './certificateMetaData';
 export const PUBLIC_PATH = 'assets/responsive_images';
 
 const item = {
-  img: `${PUBLIC_PATH}/certificate-health-coach-h.jpg`,
+  img: `${PUBLIC_PATH}/certificate-health-coach.jpg`,
   title: 'TODO: Add a title here',
   subtitle: 'TODO: Add a subtitle (if applicable)',
 };
