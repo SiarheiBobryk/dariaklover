@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography';
 
 import aboutMetaData from '../../pages/About/aboutMetaData';
 import bookingMetaData from '../../pages/Booking/bookingMetaData';
-import certificateMetaData from '../../pages/Certificate/certificateMetaData';
 import certificatesMetaData from '../../pages/Certificates/certificatesMetaData';
 import faqMetaData from '../../pages/Faq/faqMetaData';
 import helpMetaData from '../../pages/Help/helpMetaData';
@@ -16,15 +15,13 @@ import howToBookMetaData from '../../pages/HowToBook/howToBookMetaData';
 import mainMetaData from '../../pages/Main/mainMetaData';
 import referencesMetaData from '../../pages/References/referencesMetaData';
 import pricingMetaData from '../../pages/Pricing/pricingMetaData';
+import { certificatesMap } from '../Certificates';
 
-const breadcrumbNameMap: { [key: string]: string } = {
+const breadcrumbNameMapStatic: { [key: string]: string } = {
   [mainMetaData.path]: mainMetaData.heading,
   [aboutMetaData.path]: aboutMetaData.heading,
   [bookingMetaData.path]: bookingMetaData.heading,
   [certificatesMetaData.path]: certificatesMetaData.heading,
-  [certificateMetaData.certificateHealthCoachUrl]: certificateMetaData.certificateHealthCoachTitle,
-  [certificateMetaData.diplomaHealthCoachUrl]: certificateMetaData.diplomaHealthCoachTitle,
-  [certificateMetaData.diplomaDoctorUrl]: certificateMetaData.diplomaDoctorTitle,
   [faqMetaData.path]: faqMetaData.heading,
   [helpMetaData.path]: helpMetaData.heading,
   [howToBookMetaData.path]: howToBookMetaData.heading,
@@ -66,6 +63,21 @@ const Breadcrumbs = React.forwardRef(function Breadcrumbs(props: BreadcrumbsProp
     },
     [location],
   );
+
+  const certificatesBreadcrumbNameMap: { [key: string]: string } = Object.keys(certificatesMap).reduce(
+    function reduceCertificatesData(acc, key) {
+      return {
+        ...acc,
+        [certificatesMap[key].url]: certificatesMap[key].title,
+      };
+    },
+    {},
+  );
+  const breadcrumbNameMap: { [key: string]: string } = {
+    ...breadcrumbNameMapStatic,
+    ...certificatesBreadcrumbNameMap,
+  };
+
   return (
     <BreadcrumbsMui ref={ref} aria-label="breadcrumb" sx={{ marginY: 3 }} {...props}>
       <LinkRouter color="inherit" to={mainMetaData.path}>
