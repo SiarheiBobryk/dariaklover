@@ -21,6 +21,7 @@ const breadcrumbNameMap: { [key: string]: string } = {
   [aboutMetaData.path]: aboutMetaData.heading,
   [bookingMetaData.path]: bookingMetaData.heading,
   [certificateMetaData.path]: certificateMetaData.heading,
+  [certificateMetaData.pathCertificateHealthCoach]: certificateMetaData.certificateHealthCoach,
   [faqMetaData.path]: faqMetaData.heading,
   [helpMetaData.path]: helpMetaData.heading,
   [howToBookMetaData.path]: howToBookMetaData.heading,

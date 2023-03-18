@@ -1,17 +1,12 @@
 import { styled } from '@mui/material';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
+import { useParams } from 'react-router-dom';
 
 import certificateMetaData from './certificateMetaData';
 
 // TODO: Move in to ".env"
 export const PUBLIC_PATH = 'assets/responsive_images';
-
-const item = {
-  img: `${PUBLIC_PATH}/certificate-health-coach.jpg`,
-  title: 'TODO: Add a title here',
-  subtitle: 'TODO: Add a subtitle (if applicable)',
-};
 
 export const Img = styled('img')(function styleImg({ theme }) {
   return {
@@ -21,12 +16,13 @@ export const Img = styled('img')(function styleImg({ theme }) {
 });
 
 function Certificate() {
+  const { certificateId } = useParams();
   return (
     <>
       <Helmet>
         <title>{certificateMetaData.title}</title>
       </Helmet>
-      <Img src={item.img} alt={item.title} loading="lazy" />
+      {certificateId && <Img src={`${PUBLIC_PATH}/${certificateId}.jpg`} alt="TODO: Add a title here" loading="lazy" />}
     </>
   );
 }

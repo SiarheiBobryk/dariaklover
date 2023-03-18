@@ -81,7 +81,9 @@ function App() {
             {/* All pages listed here must also be presented in sitemap.xml */}
             <Route path={aboutMetaData.path} element={<About />} />
             <Route path={bookingMetaData.path} element={<Booking />} />
-            <Route path={certificateMetaData.path} element={<Certificate />} />
+            <Route path={certificateMetaData.path}>
+              <Route path={certificateMetaData.pathId} element={<Certificate />} />
+            </Route>
             <Route path={faqMetaData.path} element={<Faq />} />
             <Route path={helpMetaData.path} element={<Help />} />
             <Route path={howToBookMetaData.path} element={<HowToBook />} />
