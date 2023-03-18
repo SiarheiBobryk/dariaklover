@@ -69,6 +69,7 @@ function About() {
             // TODO: Remove default props
             // TODO: Make cols responsive
             <ImageListItem key={item.img} cols={1} rows={1}>
+              {/* TODO: Add a skeleton maybe 🤔 */}
               <img src={item.img} alt={item.title} loading="lazy" />
               <ImageListItemBar
                 title={item.title}
