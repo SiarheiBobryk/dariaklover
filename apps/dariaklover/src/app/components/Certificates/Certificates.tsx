@@ -30,7 +30,7 @@ export const certificates: Array<Certificate> = [
     img: `${PUBLIC_PATH}/diploma-health-coach.jpg`,
     title: 'Health coach ("Health coaching")',
     titleFull:
-      'Бобрик Дарья Николаевна прошла профессиональную переподготовку по программе "Модификация образа жизни и немедикаментозное оздоровление" (HEALTH COACHING). Диплом предоставляет право на ведение профессиональной деятельности в сфере Консультирование в области здорового образа жизни и немедикаментозного оздоровления и подтверждает присвоение квалификации "Специалист по модификации образа жизни и немедикаментозному оздоровлению" (HEALTH COACH)',
+      'Прошла профессиональную переподготовку по программе "Модификация образа жизни и немедикаментозное оздоровление" (HEALTH COACHING). Диплом предоставляет право на ведение профессиональной деятельности в сфере Консультирование в области здорового образа жизни и немедикаментозного оздоровления и подтверждает присвоение квалификации "Специалист по модификации образа жизни и немедикаментозному оздоровлению" (HEALTH COACH)',
     subtitle: 'Университет образовательной медицины',
     subtitleFull: 'Университет образовательной медицины / Preventage Lifestyle School',
   },
@@ -39,8 +39,7 @@ export const certificates: Array<Certificate> = [
     url: '/certificates/certificate-health-coach',
     img: `${PUBLIC_PATH}/certificate-health-coach.jpg`,
     title: 'Tools for health coaching',
-    titleFull:
-      'Bobryk Darya Nikolayevna Successfully participated in the professional integrative training program "Tools for health and wellness coaching"',
+    titleFull: 'Participated in the professional integrative training program "Tools for health and wellness coaching"',
     subtitle: 'European Coaching Association',
     subtitleFull: 'Университет образовательной медицины / European Coaching Association',
   },
@@ -49,8 +48,7 @@ export const certificates: Array<Certificate> = [
     url: '/certificates/diploma-doctor-1',
     img: `${PUBLIC_PATH}/diploma-doctor-1.jpg`,
     title: 'Врач ("Лечебное дело")',
-    titleFull:
-      'Яцук Дарья Николаевна окончила полный курс по специальности "Лечебное дело". Присвоена квалификация "Врач".',
+    titleFull: 'Oкончила полный курс по специальности "Лечебное дело". Присвоена квалификация "Врач".',
     subtitle: 'Медицинский университет',
     subtitleFull: 'Гомельский государственный медицинский университет',
   },
