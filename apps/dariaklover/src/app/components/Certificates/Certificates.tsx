@@ -38,7 +38,7 @@ export const certificates: Array<Certificate> = [
     id: 'certificate-health-coach',
     url: '/certificates/certificate-health-coach',
     img: `${PUBLIC_PATH}/certificate-health-coach.jpg`,
-    title: 'Tools for health coaching',
+    title: 'Tools for health and wellness coaching',
     titleFull: 'Participated in the professional integrative training program "Tools for health and wellness coaching"',
     subtitle: 'European Coaching Association',
     subtitleFull: 'Университет образовательной медицины / European Coaching Association',
