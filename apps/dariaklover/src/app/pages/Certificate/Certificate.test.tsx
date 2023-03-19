@@ -1,19 +1,19 @@
 import * as React from 'react';
-
 import { BrowserRouter } from 'react-router-dom';
+
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult } from '@testing-library/react';
 
-import About from './About';
+import Certificate from './Certificate';
 
 expect.extend(toHaveNoViolations);
 
-describe('<About />', () => {
+describe('<Certificate />', () => {
   describe('a11y', () => {
     it('should match a11y standards', async () => {
       const { container }: RenderResult = render(
         <BrowserRouter>
-          <About />
+          <Certificate />
         </BrowserRouter>,
       );
 

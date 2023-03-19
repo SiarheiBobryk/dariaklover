@@ -1,6 +1,8 @@
 export { default as AlertHelp } from './AlertHelp';
 export { default as BookingCard } from './BookingCard';
 export { default as Breadcrumbs } from './Breadcrumbs';
+export { default as Certificate } from './Certificate';
+export { default as Certificates } from './Certificates';
 export { default as Image } from './Image';
 export { default as Fallback } from './Fallback';
 export { default as Footer } from './Footer';

@@ -4,6 +4,12 @@ export * from './About';
 export { default as Booking } from './Booking';
 export * from './Booking';
 
+export { default as Certificate } from './Certificate';
+export * from './Certificate';
+
+export { default as Certificates } from './Certificates';
+export * from './Certificates';
+
 export { default as Faq } from './Faq';
 export * from './Faq';
 
