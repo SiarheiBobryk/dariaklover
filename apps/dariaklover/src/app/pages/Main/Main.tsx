@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Avatar from '@mui/material/Avatar';
+import AvatarMui from '@mui/material/Avatar';
 import { styled } from '@mui/material/styles';
 
 import Heading from '../../components/Heading';
@@ -17,7 +17,7 @@ export const AvatarContainer = styled('div')(function styleAvatarContainer() {
   };
 });
 
-export const AvatarStyled = styled(Avatar)(function styleAvatar({ theme }) {
+export const Avatar = styled(AvatarMui)(function styleAvatar({ theme }) {
   return {
     width: theme.spacing(35),
     height: theme.spacing(35),
@@ -33,7 +33,7 @@ function Main() {
       </Helmet>
       <Heading>{mainMetaData.heading}</Heading>
       <AvatarContainer>
-        <AvatarStyled alt="Дарья Кловер" src={`${PUBLIC_PATH}/photo-s.jpg`} />
+        <Avatar alt="Дарья Кловер" src={`${PUBLIC_PATH}/photo-s.jpg`} />
       </AvatarContainer>
       <Paragraph>Всем привет!</Paragraph>
       <Paragraph>
