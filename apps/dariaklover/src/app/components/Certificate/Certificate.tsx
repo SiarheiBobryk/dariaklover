@@ -26,7 +26,11 @@ const Certificate = React.forwardRef(function Certificate(props: CertificateProp
 
   return (
     <Box ref={ref} component="figure" sx={{ margin: 0 }} {...other}>
-      <Img src={`${PUBLIC_PATH}/${certificateId}.jpg`} alt={title} loading="lazy" />
+      <Box component="picture">
+        <source type="image/webp" srcSet={`${PUBLIC_PATH}/${certificateId}.webp`} />
+        <source type="image/jpeg" srcSet={`${PUBLIC_PATH}/${certificateId}.jpg`} />
+        <Img src={`${PUBLIC_PATH}/${certificateId}.jpg`} alt={title} loading="lazy" />
+      </Box>
       <Typography component="figcaption" variant="body2">
         {title}
         <br />
