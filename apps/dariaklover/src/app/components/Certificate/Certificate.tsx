@@ -7,6 +7,12 @@ import Box from '@mui/material/Box';
 // TODO: Move in to ".env"
 export const PUBLIC_PATH = 'assets/responsive_images';
 
+export const Figure = styled('figure')(function styleImg() {
+  return {
+    margin: 0,
+  };
+});
+
 export const Img = styled('img')(function styleImg({ theme }) {
   return {
     borderRadius: theme.typography.pxToRem(8),
@@ -25,7 +31,7 @@ const Certificate = React.forwardRef(function Certificate(props: CertificateProp
   const { certificateId, title, subtitle, ...other } = props;
 
   return (
-    <Box ref={ref} component="figure" sx={{ margin: 0 }} {...other}>
+    <Figure ref={ref} {...other}>
       <Box component="picture">
         <source type="image/webp" srcSet={`${PUBLIC_PATH}/${certificateId}.webp`} />
         <source type="image/jpeg" srcSet={`${PUBLIC_PATH}/${certificateId}.jpg`} />
@@ -36,7 +42,7 @@ const Certificate = React.forwardRef(function Certificate(props: CertificateProp
         <br />
         <small>{subtitle}</small>
       </Typography>
-    </Box>
+    </Figure>
   );
 });
 
