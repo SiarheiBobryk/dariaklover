@@ -31,7 +31,7 @@ function Markdown(props: MarkdownProps) {
           return <Heading {...h1Props} />;
         },
         h2: function H2({ node, ...h2Props }) {
-          return <Typography component="h2" variant="h6" sx={{ fontWeight: 400 }} gutterBottom {...h2Props} />;
+          return <Typography component="h2" variant="h6" sx={{ fontWeight: 400 }} {...h2Props} />;
         },
         p: function P({ node, ...pProps }) {
           return <Paragraph {...pProps} />;
