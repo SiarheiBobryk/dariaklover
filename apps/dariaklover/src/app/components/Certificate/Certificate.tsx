@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 // TODO: Move in to ".env"
 export const PUBLIC_PATH = 'assets/responsive_images';
 
-export const Figure = styled('figure')(function styleImg() {
+export const Figure = styled('figure')(function styleFigure() {
   return {
     margin: 0,
   };
