@@ -107,9 +107,6 @@ const Certificates = React.forwardRef(function Certificates(props: CertificatesP
     <ImageList ref={ref} variant="standard" cols={columns} gap={8} {...props}>
       {certificates.map((certificate) => {
         return (
-          // TODO: Remove default props
-          // TODO: Make cols responsive
-          // TODO: Make it accessible by Tab
           <ImageListItem key={certificate.img} cols={1} rows={1}>
             {/* TODO: Add a skeleton maybe 🤔 */}
             <img src={certificate.img} alt={certificate.title} loading="lazy" />
