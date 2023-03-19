@@ -48,26 +48,21 @@ function Booking() {
       </Helmet>
       <Heading>{bookingMetaData.heading}</Heading>
       {events.length > 0 ? (
-        <>
-          <Paragraph>
-            Решение о дальнейшей работе принимается после установочной встречи. Пожалуйста, запишитесь.
-          </Paragraph>
-          <Grid container spacing={1} sx={{ marginBottom: 1 }}>
-            {events.map(function generateEvents(event) {
-              return (
-                <Grid key={event.uri} item xs={12} sm={6}>
-                  <BookingCard title={event.name} duration={event.duration} href={event.scheduling_url} uri={event.uri}>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      dangerouslySetInnerHTML={{ __html: event.description_html }}
-                    />
-                  </BookingCard>
-                </Grid>
-              );
-            })}
-          </Grid>
-        </>
+        <Grid container spacing={1} sx={{ marginBottom: 1 }}>
+          {events.map(function generateEvents(event) {
+            return (
+              <Grid key={event.uri} item xs={12} sm={6}>
+                <BookingCard title={event.name} duration={event.duration} href={event.scheduling_url} uri={event.uri}>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    dangerouslySetInnerHTML={{ __html: event.description_html }}
+                  />
+                </BookingCard>
+              </Grid>
+            );
+          })}
+        </Grid>
       ) : (
         <Paragraph>
           К сожалению, на данный момент нет доступных консультаций. Скорее всего это происходит по техническим причинам.
