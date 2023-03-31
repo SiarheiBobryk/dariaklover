@@ -86,6 +86,11 @@ const Breadcrumbs = React.forwardRef(function Breadcrumbs(props: BreadcrumbsProp
         const last: boolean = index === pathnames.length - 1;
         const to = `/${pathnames.slice(0, index + 1).join('/')}`;
 
+        if (!breadcrumbNameMap[to]) {
+          // Special case: an unsupported URL is used, so we don't render the data for it
+          return null;
+        }
+
         return last ? (
           <Typography color="text.primary" key={to}>
             {breadcrumbNameMap[to]}

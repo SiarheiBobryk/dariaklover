@@ -19,6 +19,9 @@ export * from './Help';
 export { default as HowToBook } from './HowToBook';
 export * from './HowToBook';
 
+export { default as NotFound } from './NotFound';
+export * from './NotFound';
+
 export { default as Main } from './Main';
 export * from './Main';
 
