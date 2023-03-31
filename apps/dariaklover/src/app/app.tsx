@@ -14,6 +14,7 @@ import referencesMetaData from './pages/References/referencesMetaData';
 import pricingMetaData from './pages/Pricing/pricingMetaData';
 import certificateMetaData from './pages/Certificate/certificateMetaData';
 import certificatesMetaData from './pages/Certificates/certificatesMetaData';
+import notFoundMetaData from './pages/NotFound/notFoundMetaData';
 
 const About = React.lazy(function lazyLoadAbout() {
   return import('./pages/About');
@@ -41,6 +42,10 @@ const HowToBook = React.lazy(function lazyLoadHowToBook() {
 
 const Help = React.lazy(function lazyLoadHelp() {
   return import('./pages/Help');
+});
+
+const NotFound = React.lazy(function lazyLoadNotFound() {
+  return import('./pages/NotFound');
 });
 
 const Main = React.lazy(function lazyLoadMain() {
@@ -95,6 +100,7 @@ function App() {
             <Route path={referencesMetaData.path} element={<References />} />
             <Route path={pricingMetaData.path} element={<Pricing />} />
             <Route path={mainMetaData.path} element={<Main />} />
+            <Route path={notFoundMetaData.path} element={<NotFound />} />
           </Routes>
         </Suspense>
       </Layout>
