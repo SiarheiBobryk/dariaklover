@@ -49,7 +49,7 @@
     "@nrwl/cypress": "15.9.1",
     "@nrwl/eslint-plugin-nx": "15.9.1",
     "@nrwl/jest": "15.9.1",
-    "@nrwl/js": "15.9.1",
+    "@nrwl/js": "15.9.2",
     "@nrwl/linter": "15.9.1",
     "@nrwl/react": "15.9.1",
     "@nrwl/webpack": "15.9.1",
