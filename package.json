@@ -51,7 +51,7 @@
     "@nrwl/jest": "15.9.1",
     "@nrwl/js": "15.9.1",
     "@nrwl/linter": "15.9.1",
-    "@nrwl/react": "15.9.1",
+    "@nrwl/react": "15.9.2",
     "@nrwl/webpack": "15.9.1",
     "@nrwl/workspace": "15.9.1",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
