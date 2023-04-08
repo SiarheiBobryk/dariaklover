@@ -6,7 +6,8 @@ import { styled } from '@mui/material/styles';
 
 import Heading from '../../components/Heading';
 import mainMetaData from './mainMetaData';
-import Paragraph from '../../components/Paragraph';
+import mainContent from './mainContent.md';
+import Markdown from '../../components/Markdown';
 
 export const PUBLIC_PATH = 'assets/responsive_images';
 
@@ -35,23 +36,7 @@ function Main() {
       <AvatarContainer>
         <Avatar alt="Дарья Кловер" src={`${PUBLIC_PATH}/photo-s.jpg`} />
       </AvatarContainer>
-      <Paragraph>Всем привет!</Paragraph>
-      <Paragraph>
-        Я Дарья Кловер - дипломированный health-коуч, специалист по здоровому образу жизни и немедикаментозному
-        оздоровлению.
-      </Paragraph>
-      <Paragraph>
-        Помогаю своим клиентам вести здоровый образ жизни и предотвратить появление хронических заболеваний, а также
-        повысить качество жизни, улучшить самочувствие, делюсь рекомендациями для восстановления и поддержания здоровья.
-      </Paragraph>
-      <Paragraph>
-        Разбираю запрос клиента с разных сторон, что помогает увидеть полную картину конкретной ситуации и ее причины.
-        Использую различные подходы и инструменты, чтобы помочь проработать эти причины и прийти к оптимальному решению.
-      </Paragraph>
-      <Paragraph>
-        Одна из моих главных задач - осознание клиентом того, <strong>что, как и почему нужно делать</strong>, чтобы
-        достичь желаемого результата.
-      </Paragraph>
+      <Markdown>{mainContent}</Markdown>
     </>
   );
 }
