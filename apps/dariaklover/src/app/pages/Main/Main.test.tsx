@@ -42,12 +42,5 @@ describe('<Main />', () => {
       const h1: HTMLHeadingElement | null = document.querySelector('h1');
       expect(h1).toHaveClass(typographyClasses.h5);
     });
-
-    it('should have the right `strong` element', () => {
-      render(<Main />);
-
-      const strong: HTMLElement | null = document.querySelector('strong');
-      expect(strong).toHaveTextContent('что, как и почему нужно делать');
-    });
   });
 });

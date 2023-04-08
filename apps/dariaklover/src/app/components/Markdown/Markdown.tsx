@@ -37,7 +37,8 @@ function Markdown(props: MarkdownProps) {
           return <Paragraph {...pProps} />;
         },
         ul: function Ul({ node, ...ulProps }) {
-          return <Box component="ul" sx={{ paddingLeft: theme.spacing(2), marginTop: 0 }} {...ulProps} />;
+          const { ordered, ...other } = ulProps;
+          return <Box component="ul" sx={{ paddingLeft: theme.spacing(2), marginTop: 0 }} {...other} />;
         },
         a: function A({ node, ...aProps }) {
           const { children: aChildren, href, ...other } = aProps;
