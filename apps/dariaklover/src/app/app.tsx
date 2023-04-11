@@ -15,6 +15,12 @@ import pricingMetaData from './pages/Pricing/pricingMetaData';
 import certificateMetaData from './pages/Certificate/certificateMetaData';
 import certificatesMetaData from './pages/Certificates/certificatesMetaData';
 import notFoundMetaData from './pages/NotFound/notFoundMetaData';
+import articlesMetaData from './pages/Articles/articlesMetaData';
+import focusingOnHealthMetaData from './pages/FocusingOnHealth/focusingOnHealthMetaData';
+
+const Articles = React.lazy(function lazyLoadArticles() {
+  return import('./pages/Articles');
+});
 
 const About = React.lazy(function lazyLoadAbout() {
   return import('./pages/About');
@@ -34,6 +40,10 @@ const Certificates = React.lazy(function lazyLoadCertificates() {
 
 const Faq = React.lazy(function lazyLoadFaq() {
   return import('./pages/Faq');
+});
+
+const FocusingOnHealth = React.lazy(function lazyLoadFocusingOnHealth() {
+  return import('./pages/FocusingOnHealth');
 });
 
 const HowToBook = React.lazy(function lazyLoadHowToBook() {
@@ -90,6 +100,8 @@ function App() {
           <Routes>
             {/* All pages listed here must also be presented in sitemap.xml */}
             <Route path={aboutMetaData.path} element={<About />} />
+            <Route path={articlesMetaData.path} element={<Articles />} />
+            <Route path={focusingOnHealthMetaData.path} element={<FocusingOnHealth />} />
             <Route path={bookingMetaData.path} element={<Booking />} />
             <Route path={certificatesMetaData.path} element={<Certificates />}>
               <Route path={certificateMetaData.path} element={<Certificate />} />
