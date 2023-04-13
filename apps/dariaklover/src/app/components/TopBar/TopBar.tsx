@@ -14,12 +14,14 @@ import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+import ArticleIcon from '@mui/icons-material/Article';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import HelpIcon from '@mui/icons-material/Help';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import MenuIcon from '@mui/icons-material/Menu';
+// TODO: Remove outline here
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
@@ -30,6 +32,7 @@ import FourLeafCloverIcon from '../../icons/FourLeafClover';
 import helpMetaData from '../../pages/Help/helpMetaData';
 import referencesMetaData from '../../pages/References/referencesMetaData';
 import pricingMetaData from '../../pages/Pricing/pricingMetaData';
+import articlesMetaData from '../../pages/Articles/articlesMetaData';
 
 export interface Page {
   to: string;
@@ -47,6 +50,11 @@ export const pages: Page[] = [
     to: pricingMetaData.path,
     label: 'Услуги',
     icon: <ShoppingBagIcon />,
+  },
+  {
+    to: articlesMetaData.path,
+    label: 'Публикации',
+    icon: <ArticleIcon />,
   },
   {
     to: aboutMetaData.path,

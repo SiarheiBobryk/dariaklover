@@ -14,6 +14,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <!-- Articles -->
+  <url>
+    <loc>https://dariaklover.health/articles/</loc>
+    <lastmod>2023-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- Focusing on Health -->
+  <url>
+    <loc>https://dariaklover.health/articles/focusingonhealth/</loc>
+    <lastmod>2023-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
   <!-- Booking -->
   <url>
     <loc>https://dariaklover.health/booking/</loc>

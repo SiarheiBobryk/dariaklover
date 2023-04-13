@@ -1,3 +1,6 @@
+export { default as Articles } from './Articles';
+export * from './Articles';
+
 export { default as About } from './About';
 export * from './About';
 
@@ -12,6 +15,9 @@ export * from './Certificates';
 
 export { default as Faq } from './Faq';
 export * from './Faq';
+
+export { default as FocusingOnHealth } from './FocusingOnHealth';
+export * from './FocusingOnHealth';
 
 export { default as Help } from './Help';
 export * from './Help';

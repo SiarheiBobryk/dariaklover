@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
-import { useTheme } from '@mui/material';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
@@ -21,7 +20,6 @@ export interface MarkdownProps {
 
 function Markdown(props: MarkdownProps) {
   const { children = '' } = props;
-  const theme = useTheme();
   return (
     <ReactMarkdown
       /* eslint-disable react/no-unstable-nested-components */
@@ -38,7 +36,11 @@ function Markdown(props: MarkdownProps) {
         },
         ul: function Ul({ node, ...ulProps }) {
           const { ordered, ...other } = ulProps;
-          return <Box component="ul" sx={{ paddingLeft: theme.spacing(2), marginTop: 0 }} {...other} />;
+          return <Box component="ul" {...other} />;
+        },
+        ol: function Ul({ node, ...olProps }) {
+          const { ordered, ...other } = olProps;
+          return <Box component="ol" {...other} />;
         },
         a: function A({ node, ...aProps }) {
           const { children: aChildren, href, ...other } = aProps;

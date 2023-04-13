@@ -10,19 +10,24 @@ import aboutMetaData from '../../pages/About/aboutMetaData';
 import bookingMetaData from '../../pages/Booking/bookingMetaData';
 import certificatesMetaData from '../../pages/Certificates/certificatesMetaData';
 import faqMetaData from '../../pages/Faq/faqMetaData';
+import focusingOnHealthMetaData from '../../pages/FocusingOnHealth/focusingOnHealthMetaData';
 import helpMetaData from '../../pages/Help/helpMetaData';
 import howToBookMetaData from '../../pages/HowToBook/howToBookMetaData';
 import mainMetaData from '../../pages/Main/mainMetaData';
 import referencesMetaData from '../../pages/References/referencesMetaData';
 import pricingMetaData from '../../pages/Pricing/pricingMetaData';
 import { certificatesMap } from '../Certificates';
+import articlesMetaData from '../../pages/Articles/articlesMetaData';
 
+// SOMEDAY: Refactor breadcrumb names
 const breadcrumbNameMapStatic: { [key: string]: string } = {
   [mainMetaData.path]: mainMetaData.heading,
   [aboutMetaData.path]: aboutMetaData.heading,
+  [articlesMetaData.path]: articlesMetaData.heading,
   [bookingMetaData.path]: bookingMetaData.heading,
   [certificatesMetaData.path]: certificatesMetaData.heading,
   [faqMetaData.path]: faqMetaData.heading,
+  [focusingOnHealthMetaData.path]: focusingOnHealthMetaData.heading,
   [helpMetaData.path]: helpMetaData.heading,
   [howToBookMetaData.path]: howToBookMetaData.heading,
   [pricingMetaData.path]: pricingMetaData.heading,
