@@ -35,7 +35,7 @@
     "react-router-dom": "6.10.0",
     "remark-gfm": "3.0.1",
     "remark-unwrap-images": "3.0.1",
-    "swiper": "9.2.0",
+    "swiper": "9.2.2",
     "tslib": "2.5.0"
   },
   "devDependencies": {
