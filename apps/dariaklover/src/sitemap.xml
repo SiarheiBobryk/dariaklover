@@ -35,6 +35,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <!-- Certificates -->
+  <url>
+    <loc>https://dariaklover.health/certificates/</loc>
+    <lastmod>2022-19-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- Certificates: Diploma Health Coath -->
+  <url>
+    <loc>https://dariaklover.health/certificates/diploma-health-coach/</loc>
+    <lastmod>2022-19-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- Certificates: Health Coach -->
+  <url>
+    <loc>https://dariaklover.health/certificates/certificate-health-coach/</loc>
+    <lastmod>2022-19-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- Certificates: Diploma Doctor -->
+  <url>
+    <loc>https://dariaklover.health/certificates/diploma-doctor-1/</loc>
+    <lastmod>2022-19-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
   <!-- Help -->
   <url>
     <loc>https://dariaklover.health/help/</loc>
@@ -61,6 +89,13 @@
     <loc>https://dariaklover.health/references/</loc>
     <lastmod>2022-10-01</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+    <!-- Pricing -->
+  <url>
+    <loc>https://dariaklover.health/pricing/</loc>
+    <lastmod>2022-10-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 </urlset>
