@@ -4,8 +4,7 @@ import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-// TODO: Move in to ".env"
-export const PUBLIC_PATH = 'assets/responsive_images';
+const { NX_IMAGES_PATH = '' } = process.env;
 
 export const Figure = styled('figure')(function styleFigure() {
   return {
@@ -33,9 +32,9 @@ const Certificate = React.forwardRef(function Certificate(props: CertificateProp
   return (
     <Figure ref={ref} {...other}>
       <Box component="picture">
-        <source type="image/webp" srcSet={`${PUBLIC_PATH}/${certificateId}.webp`} />
-        <source type="image/jpeg" srcSet={`${PUBLIC_PATH}/${certificateId}.jpg`} />
-        <Img src={`${PUBLIC_PATH}/${certificateId}.jpg`} alt={title} loading="lazy" />
+        <source type="image/webp" srcSet={`${NX_IMAGES_PATH}/${certificateId}.webp`} />
+        <source type="image/jpeg" srcSet={`${NX_IMAGES_PATH}/${certificateId}.jpg`} />
+        <Img src={`${NX_IMAGES_PATH}/${certificateId}.jpg`} alt={title} loading="lazy" />
       </Box>
       <Typography component="figcaption" variant="body2">
         {title}

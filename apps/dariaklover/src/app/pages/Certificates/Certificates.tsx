@@ -9,9 +9,6 @@ import Heading from '../../components/Heading';
 import Certificate from '../Certificate';
 import certificatesMetaData from './certificatesMetaData';
 
-// TODO: Move in to ".env"
-export const PUBLIC_PATH = 'assets/responsive_images';
-
 export const Img = styled('img')(function styleImg({ theme }) {
   return {
     borderRadius: theme.typography.pxToRem(8),

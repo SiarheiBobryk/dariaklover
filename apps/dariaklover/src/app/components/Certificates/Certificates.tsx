@@ -10,7 +10,7 @@ import { Theme, useMediaQuery, useTheme } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 
-export const PUBLIC_PATH = 'assets/responsive_images';
+const { NX_IMAGES_PATH = '' } = process.env;
 
 export interface Certificate {
   id: string;
@@ -27,7 +27,7 @@ export const certificates: Array<Certificate> = [
   {
     id: 'diploma-health-coach',
     url: '/certificates/diploma-health-coach',
-    img: `${PUBLIC_PATH}/diploma-health-coach.jpg`,
+    img: `${NX_IMAGES_PATH}/diploma-health-coach.jpg`,
     title: 'Health coach ("Health coaching")',
     titleFull:
       'Прошла профессиональную переподготовку по программе "Модификация образа жизни и немедикаментозное оздоровление" (HEALTH COACHING). Диплом предоставляет право на ведение профессиональной деятельности в сфере Консультирование в области здорового образа жизни и немедикаментозного оздоровления и подтверждает присвоение квалификации "Специалист по модификации образа жизни и немедикаментозному оздоровлению" (HEALTH COACH)',
@@ -37,7 +37,7 @@ export const certificates: Array<Certificate> = [
   {
     id: 'certificate-health-coach',
     url: '/certificates/certificate-health-coach',
-    img: `${PUBLIC_PATH}/certificate-health-coach.jpg`,
+    img: `${NX_IMAGES_PATH}/certificate-health-coach.jpg`,
     title: 'Tools for health and wellness coaching',
     titleFull: 'Participated in the professional integrative training program "Tools for health and wellness coaching"',
     subtitle: 'European Coaching Association',
@@ -46,7 +46,7 @@ export const certificates: Array<Certificate> = [
   {
     id: 'diploma-doctor-1',
     url: '/certificates/diploma-doctor-1',
-    img: `${PUBLIC_PATH}/diploma-doctor-1.jpg`,
+    img: `${NX_IMAGES_PATH}/diploma-doctor-1.jpg`,
     title: 'Врач ("Лечебное дело")',
     titleFull: 'Окончила полный курс университета по специальности "Лечебное дело". Присвоена квалификация "Врач".',
     subtitle: 'Гомельский государственный медицинский университет',

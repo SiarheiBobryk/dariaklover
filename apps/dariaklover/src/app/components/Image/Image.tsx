@@ -2,7 +2,7 @@ import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
-export const PUBLIC_PATH = 'assets/responsive_images';
+const { NX_IMAGES_PATH = '' } = process.env;
 
 export const Img = styled('img')(function styleImg({ theme }) {
   return {
@@ -33,8 +33,8 @@ const Image = React.forwardRef(function Image(props: ImageProps, ref: React.Ref<
   return (
     <Figure ref={ref} {...other}>
       <picture>
-        <source type="image/webp" srcSet={`${PUBLIC_PATH}/${fileName}.webp`} />
-        <Img loading="lazy" src={`${PUBLIC_PATH}/${fileName}.png`} alt={alt} />
+        <source type="image/webp" srcSet={`${NX_IMAGES_PATH}/${fileName}.webp`} />
+        <Img loading="lazy" src={`${NX_IMAGES_PATH}/${fileName}.png`} alt={alt} />
       </picture>
       <figcaption>
         <Typography component="p" variant="caption" sx={{ textAlign: 'center' }}>
