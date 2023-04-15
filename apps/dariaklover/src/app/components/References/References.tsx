@@ -357,11 +357,14 @@ function References(props: ReferencesProps) {
   );
 
   const referencesReversed = [...references].reverse();
+  const { title = '' } = referencesReversed[currentSlideIndex] ?? {};
+  const { description, src: descriptionId } = referencesReversed[currentSlideIndex] ?? {};
+
   return (
     <>
       <Heading>{heading}</Heading>
       <Heading component="h2" variant="h6">
-        {referencesReversed[currentSlideIndex].title}
+        {title}
       </Heading>
       <Swiper
         onSlideChange={handleOnSlideChange}
@@ -408,12 +411,8 @@ function References(props: ReferencesProps) {
           );
         })}
       </Swiper>
-      <Typography
-        id={referencesReversed[currentSlideIndex].src}
-        component="blockquote"
-        sx={{ p: 1, fontStyle: 'italic' }}
-      >
-        {referencesReversed[currentSlideIndex].description}
+      <Typography id={descriptionId} component="blockquote" sx={{ p: 1, fontStyle: 'italic' }}>
+        {description}
       </Typography>
     </>
   );

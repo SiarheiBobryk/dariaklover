@@ -71,9 +71,10 @@ const Breadcrumbs = React.forwardRef(function Breadcrumbs(props: BreadcrumbsProp
 
   const certificatesBreadcrumbNameMap: { [key: string]: string } = React.useMemo(function memoizeCertificatesBread() {
     return Object.keys(certificatesMap).reduce(function reduceCertificatesMap(certificatesBreadcrumbNameMapRaw, key) {
+      const { title, url: titleKey = '' } = certificatesMap[key] ?? {};
       return {
         ...certificatesBreadcrumbNameMapRaw,
-        [certificatesMap[key].url]: certificatesMap[key].title,
+        [titleKey]: title,
       };
     }, {});
   }, []);
