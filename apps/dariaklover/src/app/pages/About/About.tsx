@@ -10,7 +10,7 @@ import Markdown from '../../components/Markdown';
 import Certificates from '../../components/Certificates';
 import Heading from '../../components/Heading';
 
-export const PUBLIC_PATH = 'assets/responsive_images';
+const { NX_IMAGES_PATH = '' } = process.env;
 
 export const Picture = styled('picture')(function stylePicture() {
   return {
@@ -47,9 +47,9 @@ function About() {
       </Helmet>
       <Heading>Обо мне</Heading>
       <Picture>
-        <source type="image/webp" srcSet={`${PUBLIC_PATH}/photo-v.webp`} />
-        <source type="image/jpeg" srcSet={`${PUBLIC_PATH}/photo-v.jpeg`} />
-        <Img src={`${PUBLIC_PATH}/photo-v.jpeg`} alt="Дарья Кловер" loading="lazy" />
+        <source type="image/webp" srcSet={`${NX_IMAGES_PATH}/photo-v.webp`} />
+        <source type="image/jpeg" srcSet={`${NX_IMAGES_PATH}/photo-v.jpeg`} />
+        <Img src={`${NX_IMAGES_PATH}/photo-v.jpeg`} alt="Дарья Кловер" loading="lazy" />
         <Markdown>{aboutContent}</Markdown>
       </Picture>
       <Typography component="h2" variant="h6" gutterBottom>

@@ -9,7 +9,7 @@ import mainMetaData from './mainMetaData';
 import mainContent from './mainContent.md';
 import Markdown from '../../components/Markdown';
 
-export const PUBLIC_PATH = 'assets/responsive_images';
+const { NX_IMAGES_PATH = '' } = process.env;
 
 export const AvatarContainer = styled('div')(function styleAvatarContainer() {
   return {
@@ -34,7 +34,7 @@ function Main() {
       </Helmet>
       <Heading>{mainMetaData.heading}</Heading>
       <AvatarContainer>
-        <Avatar alt="Дарья Кловер" src={`${PUBLIC_PATH}/photo-s.jpg`} />
+        <Avatar alt="Дарья Кловер" src={`${NX_IMAGES_PATH}/photo-s.jpg`} />
       </AvatarContainer>
       <Markdown>{mainContent}</Markdown>
     </>

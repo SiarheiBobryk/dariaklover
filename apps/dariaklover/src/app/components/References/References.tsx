@@ -16,7 +16,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/a11y';
 
-export const PUBLIC_PATH = 'assets/responsive_images';
+const { NX_IMAGES_PATH = '' } = process.env;
 
 export interface ReferenceData {
   src: string;
@@ -28,8 +28,8 @@ export interface ReferenceData {
 
 export const references: ReferenceData[] = [
   {
-    src: `${PUBLIC_PATH}/reference_001.jpg`,
-    srcSet: `${PUBLIC_PATH}/reference_001.webp`,
+    src: `${NX_IMAGES_PATH}/reference_001.jpg`,
+    srcSet: `${NX_IMAGES_PATH}/reference_001.webp`,
     alt: 'Отзыв 1',
     title: 'Помогаю увидеть возможности',
     description: (
@@ -42,8 +42,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_002.jpg`,
-    srcSet: `${PUBLIC_PATH}/reference_002.webp`,
+    src: `${NX_IMAGES_PATH}/reference_002.jpg`,
+    srcSet: `${NX_IMAGES_PATH}/reference_002.webp`,
     alt: 'Отзыв 2',
     title: 'Помогаю организовать время',
     description: (
@@ -60,8 +60,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_003.jpg`,
-    srcSet: `${PUBLIC_PATH}/reference_003.webp`,
+    src: `${NX_IMAGES_PATH}/reference_003.jpg`,
+    srcSet: `${NX_IMAGES_PATH}/reference_003.webp`,
     alt: 'Отзыв 3',
     title: 'Помогаю найти баланс',
     description: (
@@ -78,8 +78,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_004.jpg`,
-    srcSet: `${PUBLIC_PATH}/reference_004.webp`,
+    src: `${NX_IMAGES_PATH}/reference_004.jpg`,
+    srcSet: `${NX_IMAGES_PATH}/reference_004.webp`,
     alt: 'Отзыв 4',
     title: 'Помогаю справиться с проблемой',
     description: (
@@ -92,8 +92,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_005.jpg`,
-    srcSet: `${PUBLIC_PATH}/reference_005.webp`,
+    src: `${NX_IMAGES_PATH}/reference_005.jpg`,
+    srcSet: `${NX_IMAGES_PATH}/reference_005.webp`,
     alt: 'Отзыв 5',
     title: 'Помогаю найти свои цели',
     description: (
@@ -107,8 +107,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_006.jpg`,
-    srcSet: `${PUBLIC_PATH}/reference_006.webp`,
+    src: `${NX_IMAGES_PATH}/reference_006.jpg`,
+    srcSet: `${NX_IMAGES_PATH}/reference_006.webp`,
     alt: 'Отзыв 6',
     title: 'Помогаю сфокусироваться на важном',
     description: (
@@ -121,8 +121,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_007.jpg`,
-    srcSet: `${PUBLIC_PATH}/reference_007.webp`,
+    src: `${NX_IMAGES_PATH}/reference_007.jpg`,
+    srcSet: `${NX_IMAGES_PATH}/reference_007.webp`,
     alt: 'Отзыв 7',
     title: 'Помогаю восстановиться',
     description: (
@@ -133,8 +133,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_008.jpg`,
-    srcSet: `${PUBLIC_PATH}/reference_008.webp`,
+    src: `${NX_IMAGES_PATH}/reference_008.jpg`,
+    srcSet: `${NX_IMAGES_PATH}/reference_008.webp`,
     alt: 'Отзыв 8',
     title: 'Сопровождаю в процессе изменений',
     description: (
@@ -147,15 +147,15 @@ export const references: ReferenceData[] = [
   },
   // NOTE: Commented as not descriptive
   // {
-  //   src: `${PUBLIC_PATH}/reference_009.jpg`,
-  //   srcSet: `${PUBLIC_PATH}/reference_009.webp`,
+  //   src: `${NX_IMAGES_PATH}/reference_009.jpg`,
+  //   srcSet: `${NX_IMAGES_PATH}/reference_009.webp`,
   //   alt: 'Отзыв 9',
   //   title: 'Помогаю найти в себе силы',
   //   description: `благодарю! очень много благодарю что ви справились со мною лучше чем в етом ролике`,
   // },
   {
-    src: `${PUBLIC_PATH}/reference_010.png`,
-    srcSet: `${PUBLIC_PATH}/reference_010.webp`,
+    src: `${NX_IMAGES_PATH}/reference_010.png`,
+    srcSet: `${NX_IMAGES_PATH}/reference_010.webp`,
     alt: 'Отзыв 10',
     title: 'Помогаю найти опоры',
     description: (
@@ -178,8 +178,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_011.png`,
-    srcSet: `${PUBLIC_PATH}/reference_011.webp`,
+    src: `${NX_IMAGES_PATH}/reference_011.png`,
+    srcSet: `${NX_IMAGES_PATH}/reference_011.webp`,
     alt: 'Отзыв 11',
     title: 'Помогаю стать увереннее',
     description: (
@@ -196,8 +196,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_012.png`,
-    srcSet: `${PUBLIC_PATH}/reference_012.webp`,
+    src: `${NX_IMAGES_PATH}/reference_012.png`,
+    srcSet: `${NX_IMAGES_PATH}/reference_012.webp`,
     alt: 'Отзыв 12',
     title: 'Помогаю вновь найти силы',
     description: (
@@ -209,8 +209,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_013.png`,
-    srcSet: `${PUBLIC_PATH}/reference_013.webp`,
+    src: `${NX_IMAGES_PATH}/reference_013.png`,
+    srcSet: `${NX_IMAGES_PATH}/reference_013.webp`,
     alt: 'Отзыв 13',
     title: 'Помогаю поменять подход',
     description: (
@@ -224,8 +224,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_014.png`,
-    srcSet: `${PUBLIC_PATH}/reference_014.webp`,
+    src: `${NX_IMAGES_PATH}/reference_014.png`,
+    srcSet: `${NX_IMAGES_PATH}/reference_014.webp`,
     alt: 'Отзыв 14',
     title: 'Помогаю найти решение',
     description: (
@@ -244,8 +244,8 @@ export const references: ReferenceData[] = [
   },
   // Reference 16 must come first; after it, reference 15
   {
-    src: `${PUBLIC_PATH}/reference_016.png`,
-    srcSet: `${PUBLIC_PATH}/reference_016.webp`,
+    src: `${NX_IMAGES_PATH}/reference_016.png`,
+    srcSet: `${NX_IMAGES_PATH}/reference_016.webp`,
     alt: 'Отзыв 16',
     title: 'Помогаю организовать здоровый образ жизни',
     description: (
@@ -282,8 +282,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_015.png`,
-    srcSet: `${PUBLIC_PATH}/reference_015.webp`,
+    src: `${NX_IMAGES_PATH}/reference_015.png`,
+    srcSet: `${NX_IMAGES_PATH}/reference_015.webp`,
     alt: 'Отзыв 15',
     title: 'Помогаю найти мотивацию',
     description: (
@@ -304,8 +304,8 @@ export const references: ReferenceData[] = [
     ),
   },
   {
-    src: `${PUBLIC_PATH}/reference_017.png`,
-    srcSet: `${PUBLIC_PATH}/reference_017.webp`,
+    src: `${NX_IMAGES_PATH}/reference_017.png`,
+    srcSet: `${NX_IMAGES_PATH}/reference_017.webp`,
     alt: 'Отзыв 17',
     title: 'Помогаю сложное сделать простым',
     description: (
