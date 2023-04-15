@@ -21,8 +21,7 @@ import HelpIcon from '@mui/icons-material/Help';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import MenuIcon from '@mui/icons-material/Menu';
-// TODO: Remove outline here
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import PersonIcon from '@mui/icons-material/Person';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
@@ -59,7 +58,7 @@ export const pages: Page[] = [
   {
     to: aboutMetaData.path,
     label: 'Обо мне',
-    icon: <PersonOutlineIcon />,
+    icon: <PersonIcon />,
   },
   {
     to: referencesMetaData.path,
