@@ -10,7 +10,7 @@ import CertificateComponent from '../../components/Certificate';
 
 function Certificate() {
   const { certificateId = '' } = useParams();
-  const { title: heading, titleFull, subtitleFull } = certificatesMap[certificateId] ?? {};
+  const { title: heading = '', titleFull = '', subtitleFull = '' } = certificatesMap[certificateId] ?? {};
   return (
     <>
       <Helmet>

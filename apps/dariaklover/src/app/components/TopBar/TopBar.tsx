@@ -209,12 +209,12 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
             </IconButton>
           </Tooltip>
           <NavButton
-            to={bookingPage.to}
+            to={bookingPage?.to ?? ''}
             variant="outlined"
             color="inherit"
-            endIcon={bookingPage.icon}
+            endIcon={bookingPage?.icon}
             size={buttonSize}
-            label={bookingPage.label}
+            label={bookingPage?.label ?? ''}
           >
             Записаться
           </NavButton>
