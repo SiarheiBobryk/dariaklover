@@ -62,6 +62,15 @@ export const certificates: Array<Certificate> = [
     subtitleFull: 'Гомельский государственный медицинский университет',
   },
   {
+    id: 'certificate-hypnosis',
+    url: '/certificates/certificate-hypnosis',
+    img: `${NX_IMAGES_PATH}/certificate-hypnosis.jpg`,
+    title: 'Основы эриксоновского гипноза',
+    titleFull: 'Основы эриксоновского гипноза',
+    subtitle: 'Университет образовательной медицины',
+    subtitleFull: 'Университет образовательной медицины / Preventage Lifestyle School',
+  },
+  {
     id: 'certificate-high-stress',
     url: '/certificates/certificate-high-stress',
     img: `${NX_IMAGES_PATH}/certificate-high-stress.jpg`,
@@ -78,15 +87,6 @@ export const certificates: Array<Certificate> = [
     titleFull: 'Свидетельство о перемене имени',
     subtitle: 'ЗАГС города Гомеля',
     subtitleFull: 'Отдел ЗАГС администрации Центрального района г.Гомеля',
-  },
-  {
-    id: 'certificate-hypnosis',
-    url: '/certificates/certificate-hypnosis',
-    img: `${NX_IMAGES_PATH}/certificate-hypnosis.jpg`,
-    title: 'Oсновы эриксоновского гипноза',
-    titleFull: 'Oсновы эриксоновского гипноза',
-    subtitle: 'Университет образовательной медицины',
-    subtitleFull: 'Университет образовательной медицины / Preventage Lifestyle School',
   },
 ];
 
