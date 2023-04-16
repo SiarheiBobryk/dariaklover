@@ -70,6 +70,15 @@ export const certificates: Array<Certificate> = [
     subtitle: 'ЗАГС города Гомеля',
     subtitleFull: 'Отдел ЗАГС администрации Центрального района г.Гомеля',
   },
+  {
+    id: 'certificate-hypnosis',
+    url: '/certificates/certificate-hypnosis',
+    img: `${NX_IMAGES_PATH}/certificate-hypnosis.jpg`,
+    title: 'Oсновы эриксоновского гипноза',
+    titleFull: 'Oсновы эриксоновского гипноза',
+    subtitle: 'Университет образовательной медицины',
+    subtitleFull: 'Университет образовательной медицины / Preventage Lifestyle School',
+  },
 ];
 
 export type CertificateData = Omit<Certificate, 'id'>;
