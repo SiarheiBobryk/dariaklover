@@ -3,7 +3,9 @@ import { NavLink as RouterNavLink } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
+import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/material/styles';
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -20,6 +22,7 @@ export interface MarkdownProps {
 
 function Markdown(props: MarkdownProps) {
   const { children = '' } = props;
+  const theme = useTheme();
   return (
     <ReactMarkdown
       /* eslint-disable react/no-unstable-nested-components */
@@ -60,6 +63,25 @@ function Markdown(props: MarkdownProps) {
         ul: function Ul({ node, ...ulProps }) {
           const { ordered, ...other } = ulProps;
           return <Box component="ul" {...other} />;
+        },
+        blockquote: function Blockquote({ node, ...blockquoteProps }) {
+          return (
+            <Paper
+              component="blockquote"
+              elevation={0}
+              variant="outlined"
+              sx={{
+                margin: `${theme.spacing(2)} 0`,
+                padding: theme.spacing(2),
+                // Reset "margin-bottom" for the inner p element
+                '& > p': {
+                  marginBottom: 0,
+                },
+              }}
+            >
+              {blockquoteProps.children}
+            </Paper>
+          );
         },
       }}
       /* eslint-enable react/no-unstable-nested-components */
