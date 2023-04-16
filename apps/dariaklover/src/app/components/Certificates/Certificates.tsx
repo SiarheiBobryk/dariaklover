@@ -35,6 +35,15 @@ export const certificates: Array<Certificate> = [
     subtitleFull: 'Университет образовательной медицины / Preventage Lifestyle School',
   },
   {
+    id: 'diploma-attachment-health-coach',
+    url: '/certificates/diploma-attachment-health-coach',
+    img: `${NX_IMAGES_PATH}/diploma-attachment-health-coach.jpg`,
+    title: 'Приложение к диплому',
+    titleFull: 'Приложение к диплому N 772413895581',
+    subtitle: 'Университет образовательной медицины',
+    subtitleFull: 'Университет образовательной медицины / Preventage Lifestyle School',
+  },
+  {
     id: 'certificate-health-coach',
     url: '/certificates/certificate-health-coach',
     img: `${NX_IMAGES_PATH}/certificate-health-coach.jpg`,

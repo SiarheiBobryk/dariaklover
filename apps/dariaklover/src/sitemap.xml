@@ -70,6 +70,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <!-- Certificates: Diploma Attachment Health Coach -->
+  <url>
+    <loc>https://dariaklover.health/certificates/diploma-attachment-health-coach/</loc>
+    <lastmod>2022-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
   <!-- Help -->
   <url>
     <loc>https://dariaklover.health/help/</loc>
