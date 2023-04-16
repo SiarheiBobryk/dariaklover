@@ -62,6 +62,15 @@ export const certificates: Array<Certificate> = [
     subtitleFull: 'Гомельский государственный медицинский университет',
   },
   {
+    id: 'certificate-high-stress',
+    url: '/certificates/certificate-high-stress',
+    img: `${NX_IMAGES_PATH}/certificate-high-stress.jpg`,
+    title: 'Hавыки самоподдержки при сильном стрессе',
+    titleFull: 'Нутрициологический и коучинговый практикум по навыкам самоподдержки при сильном стрессе',
+    subtitle: 'Университет образовательной медицины',
+    subtitleFull: 'Университет образовательной медицины',
+  },
+  {
     id: 'certificate-name-changing',
     url: '/certificates/certificate-name-changing',
     img: `${NX_IMAGES_PATH}/certificate-name-changing.jpg`,
