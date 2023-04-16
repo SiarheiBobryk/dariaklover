@@ -25,23 +25,6 @@ function Markdown(props: MarkdownProps) {
       /* eslint-disable react/no-unstable-nested-components */
       // TODO: Refactor the mapping here
       components={{
-        h1: function H1({ node, ...h1Props }) {
-          return <Heading {...h1Props} />;
-        },
-        h2: function H2({ node, ...h2Props }) {
-          return <Typography component="h2" variant="h6" sx={{ fontWeight: 400 }} {...h2Props} gutterBottom />;
-        },
-        p: function P({ node, ...pProps }) {
-          return <Paragraph {...pProps} />;
-        },
-        ul: function Ul({ node, ...ulProps }) {
-          const { ordered, ...other } = ulProps;
-          return <Box component="ul" {...other} />;
-        },
-        ol: function Ul({ node, ...olProps }) {
-          const { ordered, ...other } = olProps;
-          return <Box component="ol" {...other} />;
-        },
         a: function A({ node, ...aProps }) {
           const { children: aChildren, href, ...other } = aProps;
           const slashChar = '/';
@@ -57,9 +40,26 @@ function Markdown(props: MarkdownProps) {
             </LinkBlank>
           );
         },
+        h1: function H1({ node, ...h1Props }) {
+          return <Heading {...h1Props} />;
+        },
+        h2: function H2({ node, ...h2Props }) {
+          return <Typography component="h2" variant="h6" sx={{ fontWeight: 400 }} {...h2Props} gutterBottom />;
+        },
         img: function Img({ node, ...imgProps }) {
           const { alt = '', title: caption = '', src = '', ...other } = imgProps;
           return <Image fileName={src} alt={alt} caption={caption} {...other} />;
+        },
+        ol: function Ul({ node, ...olProps }) {
+          const { ordered, ...other } = olProps;
+          return <Box component="ol" {...other} />;
+        },
+        p: function P({ node, ...pProps }) {
+          return <Paragraph {...pProps} />;
+        },
+        ul: function Ul({ node, ...ulProps }) {
+          const { ordered, ...other } = ulProps;
+          return <Box component="ul" {...other} />;
         },
       }}
       /* eslint-enable react/no-unstable-nested-components */
