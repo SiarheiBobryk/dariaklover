@@ -63,6 +63,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <!-- Certificates: Changing Name -->
+  <url>
+    <loc>https://dariaklover.health/certificates/certificate-name-changing/</loc>
+    <lastmod>2022-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
   <!-- Help -->
   <url>
     <loc>https://dariaklover.health/help/</loc>
