@@ -216,7 +216,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
             size={buttonSize}
             label={bookingPage?.label ?? ''}
           >
-            Записаться
+            Запись
           </NavButton>
           {/* Pages menu for small screens */}
           <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
