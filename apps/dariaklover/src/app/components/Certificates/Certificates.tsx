@@ -52,6 +52,15 @@ export const certificates: Array<Certificate> = [
     subtitle: 'Гомельский государственный медицинский университет',
     subtitleFull: 'Гомельский государственный медицинский университет',
   },
+  {
+    id: 'certificate-name-changing',
+    url: '/certificates/certificate-name-changing',
+    img: `${NX_IMAGES_PATH}/certificate-name-changing.jpg`,
+    title: 'Смена имени',
+    titleFull: 'Свидетельство о перемене имени',
+    subtitle: 'ЗАГС города Гомеля',
+    subtitleFull: 'Отдел ЗАГС администрации Центрального района г.Гомеля',
+  },
 ];
 
 export type CertificateData = Omit<Certificate, 'id'>;
