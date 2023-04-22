@@ -11,6 +11,8 @@
   },
   "scripts": {
     "build": "nx build",
+    "e2e:ci": "nx e2e dariaklover-e2e --configuration=ci",
+    "e2e": "nx e2e dariaklover-e2e --configuration=production",
     "format:fix": "prettier . --write",
     "format": "prettier . --check",
     "lint:fix": "nx run-many --target=lint --fix",
@@ -52,6 +54,7 @@
     "@nrwl/js": "16.0.1",
     "@nrwl/linter": "16.0.1",
     "@nrwl/react": "16.0.1",
+    "@nrwl/web": "16.0.1",
     "@nrwl/webpack": "16.0.1",
     "@nrwl/workspace": "16.0.1",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
