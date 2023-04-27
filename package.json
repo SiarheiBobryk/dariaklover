@@ -13,13 +13,13 @@
     "build": "nx build",
     "format:fix": "prettier . --write",
     "format": "prettier . --check",
-    "lint:fix": "nx run-many --target=lint:fix",
+    "lint:fix": "nx run-many --target=lint --fix",
     "lint": "nx run-many --target=lint",
     "lint:md:fix": "remark . --quiet --frail --output",
     "lint:md": "remark . --quiet --frail",
     "prepare": "husky install",
     "start": "nx serve",
-    "test:ci": "nx run-many --target=test:ci",
+    "test:ci": "nx run-many --target=test --ci",
     "test": "nx run-many --target=test --watch"
   },
   "dependencies": {
