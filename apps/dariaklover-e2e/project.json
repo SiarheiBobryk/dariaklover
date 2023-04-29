@@ -13,7 +13,12 @@
       },
       "configurations": {
         "production": {
-          "devServerTarget": "dariaklover:serve:production"
+          "devServerTarget": "dariaklover:serve:production",
+          "browser": "chrome",
+          "watch": true
+        },
+        "ci": {
+          "devServerTarget": "dariaklover:serve-static"
         }
       }
     },
