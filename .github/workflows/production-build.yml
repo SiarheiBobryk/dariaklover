@@ -1,4 +1,4 @@
-name: Production Build CI
+name: Production Build
 
 on:
   push:
