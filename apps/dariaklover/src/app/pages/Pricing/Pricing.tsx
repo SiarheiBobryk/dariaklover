@@ -283,7 +283,7 @@ function Pricing() {
                   </AccordionDetails>
                 </Accordion>
               </Box>
-              <Price>2000 €*</Price>
+              <Price>2500 €*</Price>
             </CardContent>
           </Card>
         </Grid>
@@ -301,9 +301,6 @@ function Pricing() {
           {bookingMetaData.heading}
         </Link>
         .
-      </Alert>
-      <Alert severity="warning" variant="outlined">
-        Планируется повышение цен в апреле 2023 года.
       </Alert>
     </>
   );
