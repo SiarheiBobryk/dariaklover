@@ -1,15 +1,17 @@
-import { getGreeting } from '../support/app.po';
-
-describe('dariaklover', () => {
+describe('the site pages availability', () => {
   beforeEach(() => {
     return cy.visit('/');
   });
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    // cy.login('my-email@something.com', 'myPassword');
+  it('should display home page', () => {
+    cy.get('h1').contains('Кто я и что делаю');
+    cy.get('img[alt="Дарья Кловер"]').should('have.class', 'MuiAvatar-img');
+    cy.get('.MuiBreadcrumbs-li').should('have.length', 1);
+  });
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Кто я и что делаю');
+  it('should display the references page', () => {
+    cy.get('a[aria-label="Отзывы"]:not([role="menuitem"])').click();
+    cy.get('h1').contains('Отзывы клиентов');
+    cy.get('.MuiBreadcrumbs-li').should('have.length', 2);
   });
 });
