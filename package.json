@@ -53,7 +53,7 @@
     "@nrwl/jest": "16.0.3",
     "@nrwl/js": "16.0.3",
     "@nrwl/linter": "16.0.3",
-    "@nrwl/react": "16.0.3",
+    "@nrwl/react": "16.1.0",
     "@nrwl/web": "16.0.3",
     "@nrwl/webpack": "16.0.3",
     "@nrwl/workspace": "16.0.3",
