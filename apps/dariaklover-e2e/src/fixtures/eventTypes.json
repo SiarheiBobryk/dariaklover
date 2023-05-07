@@ -1,0 +1,65 @@
+{
+  "collection": [
+    {
+      "active": false,
+      "admin_managed": false,
+      "booking_method": "instant",
+      "color": "#ccf000",
+      "created_at": "2022-05-14T20:30:05.635085Z",
+      "custom_questions": [],
+      "deleted_at": null,
+      "description_html": "<p><br></p>",
+      "description_plain": "",
+      "duration": 60,
+      "internal_note": null,
+      "kind": "solo",
+      "name": "Ознакомительная сессия",
+      "pooling_type": null,
+      "profile": {
+        "name": "Дарья Кловер",
+        "owner": "https://api.calendly.com/users/7f7c1f65-3a7a-4cef-bb27-654c751b666e",
+        "type": "User"
+      },
+      "scheduling_url": "https://calendly.com/dariaklover/trial",
+      "secret": false,
+      "slug": "trial",
+      "type": "StandardEventType",
+      "updated_at": "2022-07-24T07:33:28.559184Z",
+      "uri": "https://api.calendly.com/event_types/7b4281a9-1570-461a-a849-a6518747d53e"
+    },
+    {
+      "active": true,
+      "admin_managed": false,
+      "booking_method": "instant",
+      "color": "#0099ff",
+      "created_at": "2022-05-14T19:32:47.343612Z",
+      "custom_questions": [],
+      "deleted_at": null,
+      "description_html": "<p>Знакомство, выяснение запросов, предложение по дальнейшей работе.</p><p>После записи на email вам будет отправлена анкета, которая понадобится для первой встречи.</p>",
+      "description_plain": "Знакомство, выяснение запросов, предложение по дальнейшей работе.\n\nПосле записи на email вам будет отправлена анкета, которая понадобится для первой встречи.",
+      "duration": 20,
+      "internal_note": null,
+      "kind": "solo",
+      "name": "Установочная встреча",
+      "pooling_type": null,
+      "profile": {
+        "name": "Дарья Кловер",
+        "owner": "https://api.calendly.com/users/7f7c1f65-3a7a-4cef-bb27-654c751b666e",
+        "type": "User"
+      },
+      "scheduling_url": "https://calendly.com/dariaklover/regular",
+      "secret": false,
+      "slug": "regular",
+      "type": "StandardEventType",
+      "updated_at": "2023-04-20T15:17:12.838342Z",
+      "uri": "https://api.calendly.com/event_types/2f876851-1bd0-49d8-a89d-f017c56c1f17"
+    }
+  ],
+  "pagination": {
+    "count": 2,
+    "next_page": null,
+    "next_page_token": null,
+    "previous_page": null,
+    "previous_page_token": null
+  }
+}

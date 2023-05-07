@@ -21,4 +21,13 @@ describe('the site pages availability', () => {
     cy.get('h1').contains('Отзывы клиентов');
     cy.get('.MuiBreadcrumbs-li').should('have.length', 2);
   });
+
+  it('should display the booking page', () => {
+    cy.intercept('GET', '/event_types?user=*', {
+      fixture: 'eventTypes.json',
+    }).as('getEventTypes');
+    cy.visit('http://localhost:4200/booking');
+    cy.get('h1').contains('Записаться');
+    cy.get('.MuiBreadcrumbs-li').should('have.length', 2);
+  });
 });
