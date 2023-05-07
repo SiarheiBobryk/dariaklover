@@ -26,6 +26,7 @@ import Typography from '@mui/material/Typography';
 
 import bookingMetaData from '../Booking/bookingMetaData';
 import pricingMetaData from './pricingMetaData';
+import Heading from '../../components/Heading';
 
 const CardContent = styled(CardContentMui)(function styleCardContent({ theme }) {
   return {
@@ -92,6 +93,7 @@ function Pricing() {
       <Helmet>
         <title>{pricingMetaData.title}</title>
       </Helmet>
+      <Heading>{pricingMetaData.heading}</Heading>
       <Grid container spacing={{ xs: 1, md: 2 }} sx={{ marginBottom: theme.spacing(2) }}>
         <Grid item xs={12} sm={4}>
           <Card elevation={2}>
