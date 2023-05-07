@@ -28,7 +28,7 @@ function Booking() {
       const calendlyEvents: Array<CalendlyUserEventType> = await getCalendlyEventsActive(calendlyUser.uri);
       setEvents(calendlyEvents);
     },
-    [calendlyUser.uri],
+    [calendlyUser?.uri],
   );
 
   React.useEffect(
