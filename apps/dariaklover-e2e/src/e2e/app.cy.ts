@@ -1,5 +1,6 @@
 describe('the site pages availability', () => {
   beforeEach(() => {
+    cy.intercept('GET', '/users/me', { fixture: 'me.json' });
     return cy.visit('/');
   });
 
