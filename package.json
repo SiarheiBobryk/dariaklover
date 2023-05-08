@@ -19,7 +19,7 @@
     "lint:md:fix": "remark . --quiet --frail --output",
     "lint:md": "remark . --quiet --frail",
     "lint": "nx run-many --target=lint",
-    "nx:upgrade": "yarn up '@nrwl/*' -E",
+    "nx:upgrade": "yarn up '@nrwl/*' nx -E",
     "prepare": "husky install",
     "start": "nx serve",
     "test:ci": "nx run-many --target=test --ci",
