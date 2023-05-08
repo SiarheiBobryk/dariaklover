@@ -1,3 +1,5 @@
-export function types(): string {
-  return 'types';
+export interface PageMetaData {
+  title: string;
+  heading: string;
+  path: string;
 }
