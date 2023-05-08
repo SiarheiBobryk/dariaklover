@@ -1,7 +1,3 @@
-# types
+# Types
 
-This library was generated with [Nx](https://nx.dev).
-
-## Building
-
-Run `nx build types` to build the library.
+This library contains types for the [main application](https://github.com/SiarheiBobryk/DariaKlover-website/tree/develop/apps/dariaklover)
