@@ -1,10 +1,6 @@
-export interface HelpMetaData {
-  title: string;
-  heading: string;
-  path: string;
-}
+import { PageMetaData } from '@dariaklover/types';
 
-const helpMetaData: HelpMetaData = {
+const helpMetaData: PageMetaData = {
   title: 'Помощь',
   heading: 'Помощь',
   path: '/help',

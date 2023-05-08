@@ -1,10 +1,6 @@
-export interface ArticlesMetaData {
-  title: string;
-  heading: string;
-  path: string;
-}
+import { PageMetaData } from '@dariaklover/types';
 
-const articlesMetaData: ArticlesMetaData = {
+const articlesMetaData: PageMetaData = {
   title: 'Мои публикации',
   heading: 'Мои публикации',
   path: '/articles',

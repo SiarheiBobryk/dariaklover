@@ -1,10 +1,6 @@
-export interface AboutMetaData {
-  title: string;
-  heading: string;
-  path: string;
-}
+import { PageMetaData } from '@dariaklover/types';
 
-const aboutMetaData: AboutMetaData = {
+const aboutMetaData: PageMetaData = {
   title: 'Обо мне',
   heading: 'Обо мне',
   path: '/about',

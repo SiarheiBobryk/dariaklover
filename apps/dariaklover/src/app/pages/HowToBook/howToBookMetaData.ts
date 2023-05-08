@@ -1,10 +1,6 @@
-export interface HowToBookMetaData {
-  title: string;
-  heading: string;
-  path: string;
-}
+import { PageMetaData } from '@dariaklover/types';
 
-const howToBookMetaData: HowToBookMetaData = {
+const howToBookMetaData: PageMetaData = {
   title: 'Как записаться на консультацию',
   heading: 'Как записаться на консультацию',
   path: '/help/how-to-book',

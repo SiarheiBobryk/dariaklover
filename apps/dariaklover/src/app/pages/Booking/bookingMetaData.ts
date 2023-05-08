@@ -1,10 +1,6 @@
-export interface BookingMetaData {
-  title: string;
-  heading: string;
-  path: string;
-}
+import { PageMetaData } from '@dariaklover/types';
 
-const bookingMetaData: BookingMetaData = {
+const bookingMetaData: PageMetaData = {
   title: 'Записаться',
   heading: 'Записаться',
   path: '/booking',

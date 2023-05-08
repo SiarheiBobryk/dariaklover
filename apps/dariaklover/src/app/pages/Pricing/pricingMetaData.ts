@@ -1,10 +1,6 @@
-export interface PricingMetaData {
-  title: string;
-  heading: string;
-  path: string;
-}
+import { PageMetaData } from '@dariaklover/types';
 
-const pricingMetaData: PricingMetaData = {
+const pricingMetaData: PageMetaData = {
   title: 'Мои услуги и стоимость',
   heading: 'Мои услуги и стоимость',
   path: '/pricing',

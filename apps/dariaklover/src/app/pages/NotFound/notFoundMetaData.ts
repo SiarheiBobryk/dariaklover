@@ -1,10 +1,6 @@
-export interface NotFoundMetaData {
-  title: string;
-  heading: string;
-  path: string;
-}
+import { PageMetaData } from '@dariaklover/types';
 
-const notFoundMetaData: NotFoundMetaData = {
+const notFoundMetaData: PageMetaData = {
   title: 'Страница не найдена',
   heading: 'Страница не найдена',
   path: '*',
