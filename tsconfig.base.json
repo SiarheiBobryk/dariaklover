@@ -17,7 +17,9 @@
     "noEmit": true,
     "noImplicitAny": true,
     "noUncheckedIndexedAccess": true,
-    "paths": {},
+    "paths": {
+      "@package-based/types": ["libs/types/src/index.ts"]
+    },
     "resolveJsonModule": true,
     "rootDir": ".",
     "skipDefaultLibCheck": true,
