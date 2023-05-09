@@ -21,17 +21,17 @@ import articlesMetaData from '../../pages/Articles/articlesMetaData';
 
 // SOMEDAY: Refactor breadcrumb names
 const breadcrumbNameMapStatic: { [key: string]: string } = {
-  [mainMetaData.path]: mainMetaData.heading,
-  [aboutMetaData.path]: aboutMetaData.heading,
-  [articlesMetaData.path]: articlesMetaData.heading,
-  [bookingMetaData.path]: bookingMetaData.heading,
-  [certificatesMetaData.path]: certificatesMetaData.heading,
-  [faqMetaData.path]: faqMetaData.heading,
-  [focusingOnHealthMetaData.path]: focusingOnHealthMetaData.heading,
-  [helpMetaData.path]: helpMetaData.heading,
-  [howToBookMetaData.path]: howToBookMetaData.heading,
-  [pricingMetaData.path]: pricingMetaData.heading,
-  [referencesMetaData.path]: referencesMetaData.heading,
+  [mainMetaData.path]: mainMetaData.breadcrumb,
+  [aboutMetaData.path]: aboutMetaData.breadcrumb,
+  [articlesMetaData.path]: articlesMetaData.breadcrumb,
+  [bookingMetaData.path]: bookingMetaData.breadcrumb,
+  [certificatesMetaData.path]: certificatesMetaData.breadcrumb,
+  [faqMetaData.path]: faqMetaData.breadcrumb,
+  [focusingOnHealthMetaData.path]: focusingOnHealthMetaData.breadcrumb,
+  [helpMetaData.path]: helpMetaData.breadcrumb,
+  [howToBookMetaData.path]: howToBookMetaData.breadcrumb,
+  [pricingMetaData.path]: pricingMetaData.breadcrumb,
+  [referencesMetaData.path]: referencesMetaData.breadcrumb,
 };
 
 interface LinkRouterProps extends LinkProps {
