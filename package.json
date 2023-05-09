@@ -60,7 +60,7 @@
     "@nrwl/workspace": "16.1.2",
     "@nx/js": "16.1.2",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
-    "@svgr/webpack": "7.0.0",
+    "@svgr/webpack": "8.0.0",
     "@testing-library/dom": "9.2.0",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
