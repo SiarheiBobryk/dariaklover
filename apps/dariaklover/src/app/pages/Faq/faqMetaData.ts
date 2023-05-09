@@ -1,10 +1,6 @@
-export interface FaqMetaData {
-  title: string;
-  heading: string;
-  path: string;
-}
+import { PageMetaData } from '@dariaklover/types';
 
-const faqMetaData: FaqMetaData = {
+const faqMetaData: PageMetaData = {
   title: 'Часто задаваемые вопросы',
   heading: 'Часто задаваемые вопросы',
   path: '/help/faq',

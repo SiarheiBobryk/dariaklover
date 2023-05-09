@@ -1,10 +1,6 @@
-export interface ReferencesMetaData {
-  title: string;
-  heading: string;
-  path: string;
-}
+import { PageMetaData } from '@dariaklover/types';
 
-const referencesMetaData: ReferencesMetaData = {
+const referencesMetaData: PageMetaData = {
   title: 'Отзывы клиентов',
   heading: 'Отзывы клиентов',
   path: '/references',

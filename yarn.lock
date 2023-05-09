@@ -5495,6 +5495,7 @@ __metadata:
     "@nrwl/web": 16.1.2
     "@nrwl/webpack": 16.1.2
     "@nrwl/workspace": 16.1.2
+    "@nx/js": 16.1.2
     "@pmmmwh/react-refresh-webpack-plugin": 0.5.10
     "@svgr/webpack": 7.0.0
     "@testing-library/dom": 9.2.0

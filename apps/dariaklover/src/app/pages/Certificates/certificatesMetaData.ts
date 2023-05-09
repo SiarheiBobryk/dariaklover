@@ -1,10 +1,6 @@
-export interface CertificatesMetaData {
-  title: string;
-  heading: string;
-  path: string;
-}
+import { PageMetaData } from '@dariaklover/types';
 
-const certificatesMetaData: CertificatesMetaData = {
+const certificatesMetaData: PageMetaData = {
   title: 'Мои дипломы и сертификаты',
   heading: 'Мои дипломы и сертификаты',
   path: '/certificates',
