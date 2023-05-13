@@ -144,7 +144,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
   const { ColorSwitcherButtonProps } = props;
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const theme: Theme = useTheme();
-  const isMedium: boolean = useMediaQuery(theme.breakpoints.up('md'));
+  const isLarge: boolean = useMediaQuery(theme.breakpoints.up('lg'));
 
   const colorMode: ColorModeContextValue = React.useContext(ColorModeContext);
 
@@ -158,23 +158,23 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
 
   const toolbarVariant = React.useMemo(
     function memoizeVariant(): 'regular' | 'dense' {
-      return isMedium ? 'regular' : 'dense';
+      return isLarge ? 'regular' : 'dense';
     },
-    [isMedium],
+    [isLarge],
   );
 
   const buttonSize = React.useMemo(
     function memoizeSize(): 'medium' | 'small' {
-      return isMedium ? 'medium' : 'small';
+      return isLarge ? 'medium' : 'small';
     },
-    [isMedium],
+    [isLarge],
   );
 
   const logoFontSize = React.useMemo(
     function memoizeFontSize(): 'large' | 'medium' {
-      return isMedium ? 'large' : 'medium';
+      return isLarge ? 'large' : 'medium';
     },
-    [isMedium],
+    [isLarge],
   );
 
   const [bookingPage, ...otherPages] = pages;
