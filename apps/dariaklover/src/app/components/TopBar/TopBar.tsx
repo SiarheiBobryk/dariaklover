@@ -219,7 +219,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
             Запись
           </NavButton>
           {/* Pages menu for small screens */}
-          <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="small"
               aria-label="Application Menu"
@@ -237,9 +237,6 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
               open={Boolean(anchorElNav)}
               onClick={handleCloseNavMenu}
               onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', sm: 'none' },
-              }}
             >
               {otherPages.map(function mapOtherPagesSmScreens({ to, label, icon }) {
                 return (
@@ -253,7 +250,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
           </Box>
 
           {/* Pages list for medium screens */}
-          <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 1 }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 1 }}>
             {otherPages.map(function mapOtherPagesMdScreens({ to, label, icon }) {
               return (
                 <NavButton key={to} to={to} size={buttonSize} label={label} endIcon={icon}>
