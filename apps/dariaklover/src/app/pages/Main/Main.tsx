@@ -5,9 +5,10 @@ import AvatarMui from '@mui/material/Avatar';
 import { styled } from '@mui/material/styles';
 
 import Heading from '../../components/Heading';
-import mainMetaData from './mainMetaData';
-import mainContent from './mainContent.md';
 import Markdown from '../../components/Markdown';
+
+import mainContent from './mainContent.md';
+import mainMetaData from './mainMetaData';
 
 const { NX_IMAGES_PATH = '' } = process.env;
 

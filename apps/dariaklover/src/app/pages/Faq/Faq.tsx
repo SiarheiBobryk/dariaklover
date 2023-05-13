@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import faqMetaData from './faqMetaData';
-import faqContent from './faqContent.md';
 import Markdown from '../../components/Markdown';
+
+import faqContent from './faqContent.md';
+import faqMetaData from './faqMetaData';
 
 function Faq() {
   return (

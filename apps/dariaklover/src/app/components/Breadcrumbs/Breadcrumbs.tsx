@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import { Link as RouterLink, useLocation, LinkProps } from 'react-router-dom';
 
 import BreadcrumbsMui from '@mui/material/Breadcrumbs';
@@ -7,6 +6,7 @@ import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
 import aboutMetaData from '../../pages/About/aboutMetaData';
+import articlesMetaData from '../../pages/Articles/articlesMetaData';
 import bookingMetaData from '../../pages/Booking/bookingMetaData';
 import certificatesMetaData from '../../pages/Certificates/certificatesMetaData';
 import faqMetaData from '../../pages/Faq/faqMetaData';
@@ -14,10 +14,9 @@ import focusingOnHealthMetaData from '../../pages/FocusingOnHealth/focusingOnHea
 import helpMetaData from '../../pages/Help/helpMetaData';
 import howToBookMetaData from '../../pages/HowToBook/howToBookMetaData';
 import mainMetaData from '../../pages/Main/mainMetaData';
-import referencesMetaData from '../../pages/References/referencesMetaData';
 import pricingMetaData from '../../pages/Pricing/pricingMetaData';
+import referencesMetaData from '../../pages/References/referencesMetaData';
 import { certificatesMap } from '../Certificates';
-import articlesMetaData from '../../pages/Articles/articlesMetaData';
 
 // SOMEDAY: Refactor breadcrumb names
 const breadcrumbNameMapStatic: { [key: string]: string } = {

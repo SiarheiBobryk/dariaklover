@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ReactMarkdown from 'react-markdown';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
@@ -6,15 +7,13 @@ import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
-
-import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkUnwrapImages from 'remark-unwrap-images';
 
 import Heading from '../Heading';
+import Image from '../Image';
 import LinkBlank from '../LinkBlank';
 import Paragraph from '../Paragraph';
-import Image from '../Image';
 
 export interface MarkdownProps {
   children: string;

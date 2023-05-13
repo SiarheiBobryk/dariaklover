@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-import { SxProps, Theme } from '@mui/material/styles';
-import Link from '@mui/material/Link';
-
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import Link from '@mui/material/Link';
+import { SxProps, Theme } from '@mui/material/styles';
 
 export interface LinkBlankProps {
   children?: React.ReactNode;

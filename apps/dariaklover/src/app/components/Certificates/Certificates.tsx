@@ -1,14 +1,12 @@
 import * as React from 'react';
-
 import { useNavigate } from 'react-router-dom';
 
+import InfoIcon from '@mui/icons-material/Info';
+import { Theme, useMediaQuery, useTheme } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { Theme, useMediaQuery, useTheme } from '@mui/material';
-
-import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
 
 const { NX_IMAGES_PATH = '' } = process.env;
 

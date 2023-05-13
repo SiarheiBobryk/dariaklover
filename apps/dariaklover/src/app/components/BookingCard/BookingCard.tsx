@@ -1,5 +1,9 @@
 import * as React from 'react';
 
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import EventIcon from '@mui/icons-material/Event';
+import MoneyOffIcon from '@mui/icons-material/MoneyOff';
+import VideocamIcon from '@mui/icons-material/Videocam';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -7,11 +11,6 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
-
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import EventIcon from '@mui/icons-material/Event';
-import MoneyOffIcon from '@mui/icons-material/MoneyOff';
-import VideocamIcon from '@mui/icons-material/Videocam';
 
 export interface BookingCardProps {
   children?: React.ReactNode;

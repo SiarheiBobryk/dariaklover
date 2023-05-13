@@ -1,32 +1,32 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
-
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
+import ScheduleIcon from '@mui/icons-material/Schedule';
 import { styled, Theme, useTheme } from '@mui/material';
 import AccordionMui from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Alert from '@mui/material/Alert';
 import Box from '@mui/material/Box';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import Card from '@mui/material/Card';
 import CardContentMui from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import List from '@mui/material/List';
 import ListItemMui from '@mui/material/ListItem';
 import ListItemIconMui from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
-import ScheduleIcon from '@mui/icons-material/Schedule';
 import Typography from '@mui/material/Typography';
 
-import bookingMetaData from '../Booking/bookingMetaData';
-import pricingMetaData from './pricingMetaData';
 import Heading from '../../components/Heading';
+import bookingMetaData from '../Booking/bookingMetaData';
+
+import pricingMetaData from './pricingMetaData';
 
 const CardContent = styled(CardContentMui)(function styleCardContent({ theme }) {
   return {

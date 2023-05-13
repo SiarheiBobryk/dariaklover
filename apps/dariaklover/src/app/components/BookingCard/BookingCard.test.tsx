@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-import { axe, toHaveNoViolations } from 'jest-axe';
-import { render, RenderResult } from '@testing-library/react';
-
 import Typography from '@mui/material/Typography';
+import { render, RenderResult } from '@testing-library/react';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import BookingCard from './BookingCard';
 

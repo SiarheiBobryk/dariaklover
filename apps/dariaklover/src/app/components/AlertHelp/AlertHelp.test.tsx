@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult, screen } from '@testing-library/react';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import AlertHelp from './AlertHelp';
 

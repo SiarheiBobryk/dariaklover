@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import ReferencesComponent from '../../components/References';
+
 import referencesMetaData from './referencesMetaData';
 
 function References() {

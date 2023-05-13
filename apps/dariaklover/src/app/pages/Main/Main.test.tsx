@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { Helmet, HelmetPropsToState } from 'react-helmet';
 
-import { axe, toHaveNoViolations } from 'jest-axe';
-import { render, RenderResult } from '@testing-library/react';
-
 import { typographyClasses } from '@mui/material/Typography';
+import { render, RenderResult } from '@testing-library/react';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import Main from './Main';
 import mainMetaData from './mainMetaData';

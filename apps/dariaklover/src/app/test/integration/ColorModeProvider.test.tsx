@@ -2,16 +2,15 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 
+import { PaletteMode } from '@mui/material';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { PaletteMode } from '@mui/material';
-
+import Head from '../../components/Head';
+import TopBar from '../../components/TopBar';
 import AppConfigProvider, { config } from '../../providers/AppConfigProvider';
 import ColorModeProvider, { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
-import Head from '../../components/Head';
 import ThemeProvider from '../../providers/ThemeProvider';
-import TopBar from '../../components/TopBar';
 
 afterEach(() => {
   localStorage.clear();

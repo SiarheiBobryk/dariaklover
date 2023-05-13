@@ -31,6 +31,30 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'import/no-extraneous-dependencies': 'off',
+    'import/order': [
+      'error',
+      {
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+        },
+        pathGroups: [
+          {
+            pattern: 'react',
+            group: 'builtin',
+          },
+          {
+            pattern: 'react-dom/**',
+            group: 'builtin',
+          },
+          {
+            pattern: 'react-**',
+            group: 'builtin',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['react'],
+      },
+    ],
     'react/jsx-props-no-spreading': [
       'error',
       {

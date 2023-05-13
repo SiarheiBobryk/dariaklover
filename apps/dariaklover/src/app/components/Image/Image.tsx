@@ -1,6 +1,7 @@
-import { styled } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
 import * as React from 'react';
+
+import Typography from '@mui/material/Typography';
+import { styled } from '@mui/material/styles';
 
 const { NX_IMAGES_PATH = '' } = process.env;
 

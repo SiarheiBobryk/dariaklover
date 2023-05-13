@@ -1,12 +1,13 @@
 import * as React from 'react';
-
-import { styled } from '@mui/material';
 import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
+
+import { styled } from '@mui/material';
 
 import CertificatesComponent from '../../components/Certificates';
 import Heading from '../../components/Heading';
 import Certificate from '../Certificate';
+
 import certificatesMetaData from './certificatesMetaData';
 
 export const Img = styled('img')(function styleImg({ theme }) {

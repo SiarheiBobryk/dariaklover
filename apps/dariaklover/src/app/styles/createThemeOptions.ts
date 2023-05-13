@@ -1,6 +1,6 @@
 import { PaletteMode } from '@mui/material';
-import { ThemeOptions as ThemeOptionsMui } from '@mui/material/styles';
 import { blue, grey, deepOrange } from '@mui/material/colors';
+import { ThemeOptions as ThemeOptionsMui } from '@mui/material/styles';
 
 function createThemeOptions(mode: PaletteMode): ThemeOptionsMui {
   return {

@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import { Helmet } from 'react-helmet';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
@@ -8,8 +7,9 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 
 import Heading from '../../components/Heading';
-import articlesMetaData from './articlesMetaData';
 import focusingOnHealthMetaData from '../FocusingOnHealth/focusingOnHealthMetaData';
+
+import articlesMetaData from './articlesMetaData';
 
 function Articles() {
   return (

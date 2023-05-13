@@ -1,11 +1,12 @@
 import * as React from 'react';
 
-import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult, screen } from '@testing-library/react';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
-import { config } from '../../providers/AppConfigProvider';
-import Footer, { iconButtonA11yProps } from './Footer';
 import packageJson from '../../../../../../package.json';
+import { config } from '../../providers/AppConfigProvider';
+
+import Footer, { iconButtonA11yProps } from './Footer';
 
 expect.extend(toHaveNoViolations);
 
