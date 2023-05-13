@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { axe, toHaveNoViolations } from 'jest-axe';
 import { render, RenderResult } from '@testing-library/react';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import LinkBlank from './LinkBlank';
 

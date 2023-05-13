@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-import { axe, toHaveNoViolations } from 'jest-axe';
-import { render, RenderResult, screen } from '@testing-library/react';
-
 import { typographyClasses } from '@mui/material/Typography';
+import { render, RenderResult, screen } from '@testing-library/react';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import Heading from './Heading';
 

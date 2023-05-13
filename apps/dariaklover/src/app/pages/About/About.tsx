@@ -4,11 +4,12 @@ import { Helmet } from 'react-helmet';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
-import aboutMetaData from './aboutMetaData';
-import aboutContent from './aboutContent.md';
-import Markdown from '../../components/Markdown';
 import Certificates from '../../components/Certificates';
 import Heading from '../../components/Heading';
+import Markdown from '../../components/Markdown';
+
+import aboutContent from './aboutContent.md';
+import aboutMetaData from './aboutMetaData';
 
 const { NX_IMAGES_PATH = '' } = process.env;
 

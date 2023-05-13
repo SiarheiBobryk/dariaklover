@@ -4,9 +4,10 @@ import { useParams } from 'react-router-dom';
 
 import Typography from '@mui/material/Typography';
 
-import certificateMetaData from './certificateMetaData';
-import { certificatesMap } from '../../components/Certificates';
 import CertificateComponent from '../../components/Certificate';
+import { certificatesMap } from '../../components/Certificates';
+
+import certificateMetaData from './certificateMetaData';
 
 function Certificate() {
   const { certificateId = '' } = useParams();

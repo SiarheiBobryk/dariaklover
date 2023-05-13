@@ -1,7 +1,15 @@
 import * as React from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
-import { Theme, useTheme } from '@mui/material/styles';
+import ArticleIcon from '@mui/icons-material/Article';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import HelpIcon from '@mui/icons-material/Help';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import PersonIcon from '@mui/icons-material/Person';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -12,26 +20,17 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
+import { Theme, useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import ArticleIcon from '@mui/icons-material/Article';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import HelpIcon from '@mui/icons-material/Help';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import MenuIcon from '@mui/icons-material/Menu';
-import PersonIcon from '@mui/icons-material/Person';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-
-import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
-import aboutMetaData from '../../pages/About/aboutMetaData';
-import bookingMetaData from '../../pages/Booking/bookingMetaData';
 import FourLeafCloverIcon from '../../icons/FourLeafClover';
-import helpMetaData from '../../pages/Help/helpMetaData';
-import referencesMetaData from '../../pages/References/referencesMetaData';
-import pricingMetaData from '../../pages/Pricing/pricingMetaData';
+import aboutMetaData from '../../pages/About/aboutMetaData';
 import articlesMetaData from '../../pages/Articles/articlesMetaData';
+import bookingMetaData from '../../pages/Booking/bookingMetaData';
+import helpMetaData from '../../pages/Help/helpMetaData';
+import pricingMetaData from '../../pages/Pricing/pricingMetaData';
+import referencesMetaData from '../../pages/References/referencesMetaData';
+import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
 
 export interface Page {
   to: string;

@@ -7,10 +7,11 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 
 import AlertHelp from '../../components/AlertHelp';
-import faqMetaData from '../Faq/faqMetaData';
 import Heading from '../../components/Heading';
-import helpMetaData from './helpMetaData';
+import faqMetaData from '../Faq/faqMetaData';
 import howToBookMetaData from '../HowToBook/howToBookMetaData';
+
+import helpMetaData from './helpMetaData';
 
 function Help() {
   return (

@@ -5,9 +5,10 @@ import { NavLink as RouterNavLink } from 'react-router-dom';
 import Link from '@mui/material/Link';
 
 import Heading from '../../components/Heading';
-import notFoundMetaData from './notFoundMetaData';
-import mainMetaData from '../Main/mainMetaData';
 import Paragraph from '../../components/Paragraph';
+import mainMetaData from '../Main/mainMetaData';
+
+import notFoundMetaData from './notFoundMetaData';
 
 function NotFound() {
   return (

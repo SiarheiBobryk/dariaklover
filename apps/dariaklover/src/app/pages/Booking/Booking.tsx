@@ -8,16 +8,17 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
-import { CalendlyContext } from '../../providers';
-import { CalendlyUser, CalendlyUserEventType, getCalendlyEventsActive } from '../../services/calendlyUserService';
 import BookingCard from '../../components/BookingCard';
-import bookingMetaData from './bookingMetaData';
 import Heading from '../../components/Heading';
-import helpMetaData from '../Help/helpMetaData';
-import howToBookMetaData from '../HowToBook/howToBookMetaData';
 import LinkEmail from '../../components/LinkEmail';
 import LinkSocial from '../../components/LinkSocial';
 import Paragraph from '../../components/Paragraph';
+import { CalendlyContext } from '../../providers';
+import { CalendlyUser, CalendlyUserEventType, getCalendlyEventsActive } from '../../services/calendlyUserService';
+import helpMetaData from '../Help/helpMetaData';
+import howToBookMetaData from '../HowToBook/howToBookMetaData';
+
+import bookingMetaData from './bookingMetaData';
 
 function Booking() {
   const calendlyUser: CalendlyUser = React.useContext<CalendlyUser>(CalendlyContext);

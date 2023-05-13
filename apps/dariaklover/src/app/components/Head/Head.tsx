@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet';
 
 import { Theme, useTheme } from '@mui/material/styles';
 
-import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import packageJson from '../../../../../../package.json';
+import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 
 function Head() {
   const theme: Theme = useTheme();

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import Typography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
+import Typography from '@mui/material/Typography';
 
 function Fallback() {
   return (

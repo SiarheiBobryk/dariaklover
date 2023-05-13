@@ -1,19 +1,18 @@
 import * as React from 'react';
 
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import EmailIcon from '@mui/icons-material/Email';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import EmailIcon from '@mui/icons-material/Email';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import TelegramIcon from '@mui/icons-material/Telegram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-
-import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 import packageJson from '../../../../../../package.json';
+import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
 
 export const iconButtonA11yProps = {
   rel: 'noopener',

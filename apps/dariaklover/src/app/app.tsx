@@ -1,22 +1,22 @@
 import * as React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import aboutMetaData from './pages/About/aboutMetaData';
-import bookingMetaData from './pages/Booking/bookingMetaData';
 import Fallback from './components/Fallback';
-import faqMetaData from './pages/Faq/faqMetaData';
 import Head from './components/Head';
-import helpMetaData from './pages/Help/helpMetaData';
-import howToBookMetaData from './pages/HowToBook/howToBookMetaData';
 import Layout from './components/Layout';
-import mainMetaData from './pages/Main/mainMetaData';
-import referencesMetaData from './pages/References/referencesMetaData';
-import pricingMetaData from './pages/Pricing/pricingMetaData';
+import aboutMetaData from './pages/About/aboutMetaData';
+import articlesMetaData from './pages/Articles/articlesMetaData';
+import bookingMetaData from './pages/Booking/bookingMetaData';
 import certificateMetaData from './pages/Certificate/certificateMetaData';
 import certificatesMetaData from './pages/Certificates/certificatesMetaData';
-import notFoundMetaData from './pages/NotFound/notFoundMetaData';
-import articlesMetaData from './pages/Articles/articlesMetaData';
+import faqMetaData from './pages/Faq/faqMetaData';
 import focusingOnHealthMetaData from './pages/FocusingOnHealth/focusingOnHealthMetaData';
+import helpMetaData from './pages/Help/helpMetaData';
+import howToBookMetaData from './pages/HowToBook/howToBookMetaData';
+import mainMetaData from './pages/Main/mainMetaData';
+import notFoundMetaData from './pages/NotFound/notFoundMetaData';
+import pricingMetaData from './pages/Pricing/pricingMetaData';
+import referencesMetaData from './pages/References/referencesMetaData';
 
 const Articles = React.lazy(function lazyLoadArticles() {
   return import('./pages/Articles');

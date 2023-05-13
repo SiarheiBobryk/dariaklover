@@ -5,9 +5,10 @@ import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 
 import AlertHelp from '../../components/AlertHelp';
-import howToBookMetaData from './howToBookMetaData';
 import Markdown from '../../components/Markdown';
+
 import howToBookContent from './howToBookContent.md';
+import howToBookMetaData from './howToBookMetaData';
 
 function HowToBook() {
   return (
