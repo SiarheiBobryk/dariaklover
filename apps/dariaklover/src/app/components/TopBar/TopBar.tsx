@@ -51,14 +51,14 @@ export const pages: Page[] = [
     icon: <ShoppingBagIcon />,
   },
   {
-    to: articlesMetaData.path,
-    label: 'Публикации',
-    icon: <ArticleIcon />,
-  },
-  {
     to: aboutMetaData.path,
     label: 'Обо мне',
     icon: <PersonIcon />,
+  },
+  {
+    to: articlesMetaData.path,
+    label: 'Публикации',
+    icon: <ArticleIcon />,
   },
   {
     to: referencesMetaData.path,
@@ -177,7 +177,8 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
     [isLarge],
   );
 
-  const [bookingPage, ...otherPages] = pages;
+  const [bookingPage, pricing, about, ...otherPages] = pages;
+  const alwaysVisiblePages = [pricing, about];
 
   return (
     <AppBar position="static" color="default" ref={ref}>
@@ -218,6 +219,14 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
           >
             Запись
           </NavButton>
+          {alwaysVisiblePages.map(function mapVisiblePages(page) {
+            const { to = '', label = '', icon } = page ?? {};
+            return (
+              <NavButton key={to} to={to} size={buttonSize} label={label} endIcon={icon}>
+                {label}
+              </NavButton>
+            );
+          })}
           {/* Pages menu for small screens */}
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
