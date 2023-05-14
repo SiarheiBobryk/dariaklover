@@ -12,6 +12,7 @@ export { default as Layout } from './Layout';
 export { default as LinkBlank } from './LinkBlank';
 export { default as LinkEmail } from './LinkEmail';
 export { default as LinkSocial } from './LinkSocial';
+export { default as News } from './News';
 export { default as Paragraph } from './Paragraph';
 export { default as References } from './References';
 export { default as TopBar } from './TopBar';
