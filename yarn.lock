@@ -5634,7 +5634,7 @@ __metadata:
     remark-preset-lint-consistent: 5.1.1
     remark-preset-lint-recommended: 6.1.2
     remark-unwrap-images: 3.0.1
-    swiper: 9.3.1
+    swiper: 9.3.2
     ts-jest: 28.0.5
     ts-node: 10.9.1
     tslib: 2.5.0
@@ -19186,12 +19186,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:9.3.1":
-  version: 9.3.1
-  resolution: "swiper@npm:9.3.1"
+"swiper@npm:9.3.2":
+  version: 9.3.2
+  resolution: "swiper@npm:9.3.2"
   dependencies:
     ssr-window: ^4.0.2
-  checksum: e418d5462fc11f7f26624897203decef131a1c7f2a46bc197b2813857631674c0b44a6943f5b784644a7051fa56f807cca4803813b7456ee2d2d6dbfb8708f16
+  checksum: 9ccb6a0ef67d71ac780d7d1f3b2c2daf6f1846d3df8810aff6dcb8501c87b7769540a869cdd83eb902e5278396e5379cb32d9ed397234f7700ef55f0209f4592
   languageName: node
   linkType: hard
 
