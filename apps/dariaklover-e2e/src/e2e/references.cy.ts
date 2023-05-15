@@ -8,6 +8,9 @@ describe('references slider', () => {
 
     cy.get('.swiper-button-next').click();
     cy.get('.swiper-button-next').click();
+    cy.get('.swiper-button-next').click();
+    cy.get('.swiper-button-next').click();
+    cy.get('.swiper-button-next').click();
     cy.get('blockquote').contains(
       'Стала увереннее в себе, больше слушать себя, свои потребности, тело. Научилась выстраивать границы',
     );
