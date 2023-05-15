@@ -31,6 +31,7 @@ import helpMetaData from '../../pages/Help/helpMetaData';
 import pricingMetaData from '../../pages/Pricing/pricingMetaData';
 import referencesMetaData from '../../pages/References/referencesMetaData';
 import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
+import News from '../News';
 
 export interface Page {
   to: string;
@@ -195,6 +196,7 @@ const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.R
 
         {/* App menu items */}
         <Box sx={{ display: 'flex', alignContent: 'center', gap: 1 }}>
+          <News />
           {/* The color mode switcher */}
           <Tooltip title="Переключить цветовую тему">
             <IconButton
