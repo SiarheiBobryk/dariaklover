@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Badge from '@mui/material/Badge';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -11,7 +12,7 @@ import IconButton from '@mui/material/IconButton';
 import { Theme, useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-export const newsPosted = '2023-05-15T16:34:01';
+export const newsPosted = '2023-05-15T19:00:00';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface NewsProps {}
@@ -46,7 +47,11 @@ const News = React.forwardRef(function News() {
     <>
       <Dialog fullScreen={fullScreen} open={open} onClose={handleClose} aria-labelledby="news-dialog-title">
         <DialogTitle id="news-dialog-title">Последние Новости</DialogTitle>
-        <DialogContent>Новости будут совсем скоро 🙂</DialogContent>
+        <DialogContent>
+          <Box sx={{ marginTop: 0, marginBottom: 0, paddingLeft: '20px' }} component="ul">
+            <li>[15 Мая, 2023] Добавлено три новых отзыва</li>
+          </Box>
+        </DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handleClose}>
             Закрыть
