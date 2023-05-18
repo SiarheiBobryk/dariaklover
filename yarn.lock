@@ -5586,7 +5586,7 @@ __metadata:
     remark-cli: 11.0.0
     remark-gfm: 3.0.1
     remark-preset-lint-consistent: 5.1.2
-    remark-preset-lint-recommended: 6.1.2
+    remark-preset-lint-recommended: 6.1.3
     remark-unwrap-images: 3.0.1
     swiper: 9.3.2
     ts-jest: 28.0.5
@@ -17641,9 +17641,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-preset-lint-recommended@npm:6.1.2":
-  version: 6.1.2
-  resolution: "remark-preset-lint-recommended@npm:6.1.2"
+"remark-preset-lint-recommended@npm:6.1.3":
+  version: 6.1.3
+  resolution: "remark-preset-lint-recommended@npm:6.1.3"
   dependencies:
     "@types/mdast": ^3.0.0
     remark-lint: ^9.0.0
@@ -17662,7 +17662,7 @@ __metadata:
     remark-lint-no-unused-definitions: ^3.0.0
     remark-lint-ordered-list-marker-style: ^3.0.0
     unified: ^10.0.0
-  checksum: 8f92dab9648ed8030b6fa9b855b849d6e95536535b24c5622185f8134bba2131d69e4e496f8ca60ff7ff38e4bc1d2e755973cf6f11bb78eb78e975fb3f91e6c6
+  checksum: fd2f299dc972396d7b22ecf0c76c24ac4bf480d9ae0e54b49e1a861e15596a309b1ab0d2ae6586155b094f7c0349f455d523e1f4868ef1ebea8c734350fe8dfa
   languageName: node
   linkType: hard
 
