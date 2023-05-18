@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Badge from '@mui/material/Badge';
@@ -12,7 +13,7 @@ import IconButton from '@mui/material/IconButton';
 import { Theme, useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-export const newsPosted = '2023-05-15T19:00:00';
+export const newsPosted = '2023-05-18T19:42:00';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface NewsProps {}
@@ -49,7 +50,28 @@ const News = React.forwardRef(function News() {
         <DialogTitle id="news-dialog-title">Последние Новости</DialogTitle>
         <DialogContent>
           <Box sx={{ marginTop: 0, marginBottom: 0, paddingLeft: '20px' }} component="ul">
-            <li>[15 Мая, 2023] Добавлено три новых отзыва</li>
+            {/* ATTENTION: Updated the "newsPosted" var before posting any news ⚠️ */}
+            <li>
+              [15 Мая, 2023] Добавлено три новых{' '}
+              <RouterNavLink to="/references" onClick={handleClose}>
+                отзывa
+              </RouterNavLink>{' '}
+              от клиентов.
+            </li>
+            <li>
+              [12 Апреля, 2023] Добавлена публикация{' '}
+              <RouterNavLink to="/articles/focusingonhealth" onClick={handleClose}>
+                &quot;ФОКУС на здоровье: как коучинг может помочь вам достичь цели&quot;
+              </RouterNavLink>
+              .
+            </li>
+            <li>
+              [19 Марта, 2023] Добавлена расширенная информация об образовании: электронные копии{' '}
+              <RouterNavLink to="/certificates" onClick={handleClose}>
+                дипломов и сертификатов
+              </RouterNavLink>{' '}
+              для ознакомления.
+            </li>
           </Box>
         </DialogContent>
         <DialogActions>
