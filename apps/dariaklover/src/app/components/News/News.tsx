@@ -53,9 +53,7 @@ const News = React.forwardRef(function News() {
           </Box>
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleClose}>
-            Закрыть
-          </Button>
+          <Button onClick={handleClose}>Закрыть</Button>
         </DialogActions>
       </Dialog>
       <IconButton aria-label="Новости" onClick={handleOpen} color="inherit">
