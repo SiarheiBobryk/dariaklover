@@ -5586,7 +5586,7 @@ __metadata:
     react-test-renderer: 18.2.0
     remark-cli: 11.0.0
     remark-gfm: 3.0.1
-    remark-preset-lint-consistent: 5.1.1
+    remark-preset-lint-consistent: 5.1.2
     remark-preset-lint-recommended: 6.1.2
     remark-unwrap-images: 3.0.1
     swiper: 9.3.2
@@ -17619,9 +17619,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-preset-lint-consistent@npm:5.1.1":
-  version: 5.1.1
-  resolution: "remark-preset-lint-consistent@npm:5.1.1"
+"remark-preset-lint-consistent@npm:5.1.2":
+  version: 5.1.2
+  resolution: "remark-preset-lint-consistent@npm:5.1.2"
   dependencies:
     "@types/mdast": ^3.0.0
     remark-lint: ^9.0.0
@@ -17638,7 +17638,7 @@ __metadata:
     remark-lint-strong-marker: ^3.0.0
     remark-lint-table-cell-padding: ^4.0.0
     unified: ^10.0.0
-  checksum: ee4b70662e7b6686a18940df6f3886bac58a94e80a048df2b9e79d4e155460556a5be16a6f211c72fd241fb8d081f17a0c04ab6628f1058166a62eb89a4ed3b4
+  checksum: d47ade41b7a5013befda51cb68f3bb41f41f9d8b1a23a8a043a74e28f3b98ea04936e1b470d4f6d363c0588e23dd0e842280e442343da065448c40abb57fbff7
   languageName: node
   linkType: hard
 
