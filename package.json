@@ -58,7 +58,7 @@
     "@nrwl/web": "16.1.4",
     "@nrwl/webpack": "16.1.4",
     "@nrwl/workspace": "16.1.4",
-    "@nx/js": "16.1.4",
+    "@nx/js": "16.2.1",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
     "@svgr/webpack": "8.0.1",
     "@testing-library/dom": "9.3.0",
