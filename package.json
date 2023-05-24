@@ -55,7 +55,7 @@
     "@nrwl/js": "16.2.1",
     "@nrwl/linter": "16.2.1",
     "@nrwl/react": "16.2.1",
-    "@nrwl/web": "16.2.1",
+    "@nrwl/web": "16.2.2",
     "@nrwl/webpack": "16.2.1",
     "@nrwl/workspace": "16.2.1",
     "@nx/js": "16.2.1",
