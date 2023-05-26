@@ -1581,6 +1581,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/plugin-transform-react-jsx@npm:^7.22.0":
+  version: 7.22.0
+  resolution: "@babel/plugin-transform-react-jsx@npm:7.22.0"
+  dependencies:
+    "@babel/helper-annotate-as-pure": ^7.18.6
+    "@babel/helper-module-imports": ^7.21.4
+    "@babel/helper-plugin-utils": ^7.21.5
+    "@babel/plugin-syntax-jsx": ^7.21.4
+    "@babel/types": ^7.22.0
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 7d4e9a7357730d1471404105f0e745ab6143ab5d3ea54eec67796ad732df131fa3177d333491cf2ba74cc27a2119b87f2c3ebb081dffd7048d9eac30fcf170e4
+  languageName: node
+  linkType: hard
+
 "@babel/plugin-transform-react-pure-annotations@npm:^7.18.6":
   version: 7.18.6
   resolution: "@babel/plugin-transform-react-pure-annotations@npm:7.18.6"
@@ -1956,7 +1971,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-react@npm:7.18.6, @babel/preset-react@npm:^7.12.5, @babel/preset-react@npm:^7.16.0, @babel/preset-react@npm:^7.18.6":
+"@babel/preset-react@npm:7.22.0":
+  version: 7.22.0
+  resolution: "@babel/preset-react@npm:7.22.0"
+  dependencies:
+    "@babel/helper-plugin-utils": ^7.21.5
+    "@babel/helper-validator-option": ^7.21.0
+    "@babel/plugin-transform-react-display-name": ^7.18.6
+    "@babel/plugin-transform-react-jsx": ^7.22.0
+    "@babel/plugin-transform-react-jsx-development": ^7.18.6
+    "@babel/plugin-transform-react-pure-annotations": ^7.18.6
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: dbedf4cb365e3d40348c7ae8eeed393cf5e4faddeb7e6e88bbb2266f0eb7c170e49aabf372c9af360dfd9bc80aa0d28d65f6c28e0306a022fa9adc6ce6f3e717
+  languageName: node
+  linkType: hard
+
+"@babel/preset-react@npm:^7.12.5, @babel/preset-react@npm:^7.16.0, @babel/preset-react@npm:^7.18.6":
   version: 7.18.6
   resolution: "@babel/preset-react@npm:7.18.6"
   dependencies:
@@ -6084,7 +6115,7 @@ __metadata:
     "@babel/plugin-syntax-flow": 7.21.4
     "@babel/plugin-transform-react-jsx": 7.21.5
     "@babel/preset-env": 7.22.2
-    "@babel/preset-react": 7.18.6
+    "@babel/preset-react": 7.22.0
     "@commitlint/cli": 17.6.3
     "@commitlint/config-conventional": 17.6.3
     "@emotion/react": 11.11.0
