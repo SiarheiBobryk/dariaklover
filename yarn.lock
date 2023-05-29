@@ -1600,7 +1600,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-react-jsx@npm:7.22.0":
+"@babel/plugin-transform-react-jsx@npm:7.22.0, @babel/plugin-transform-react-jsx@npm:^7.22.0":
   version: 7.22.0
   resolution: "@babel/plugin-transform-react-jsx@npm:7.22.0"
   dependencies:
@@ -1627,21 +1627,6 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: fe25e612d02a14ede13fa9c03a0c448ce06bc527fe9f71a82953ad4bb7f4c05c1978b2928cb1405c282dfc6d8ef85d9a658b7b970893921c1f99fd0d7e438c5f
-  languageName: node
-  linkType: hard
-
-"@babel/plugin-transform-react-jsx@npm:^7.22.0":
-  version: 7.22.0
-  resolution: "@babel/plugin-transform-react-jsx@npm:7.22.0"
-  dependencies:
-    "@babel/helper-annotate-as-pure": ^7.18.6
-    "@babel/helper-module-imports": ^7.21.4
-    "@babel/helper-plugin-utils": ^7.21.5
-    "@babel/plugin-syntax-jsx": ^7.21.4
-    "@babel/types": ^7.22.0
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-  checksum: 7d4e9a7357730d1471404105f0e745ab6143ab5d3ea54eec67796ad732df131fa3177d333491cf2ba74cc27a2119b87f2c3ebb081dffd7048d9eac30fcf170e4
   languageName: node
   linkType: hard
 
@@ -6215,7 +6200,7 @@ __metadata:
     jest-environment-jsdom: 29.5.0
     lint-staged: 13.2.2
     nx: 16.2.2
-    postcss: 8.4.23
+    postcss: 8.4.24
     prettier: 2.8.8
     raw-loader: 4.0.2
     react: 18.2.0
@@ -17079,14 +17064,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.23, postcss@npm:^8.0.9, postcss@npm:^8.3.5, postcss@npm:^8.4.14, postcss@npm:^8.4.19, postcss@npm:^8.4.4":
-  version: 8.4.23
-  resolution: "postcss@npm:8.4.23"
+"postcss@npm:8.4.24":
+  version: 8.4.24
+  resolution: "postcss@npm:8.4.24"
   dependencies:
     nanoid: ^3.3.6
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
-  checksum: 8bb9d1b2ea6e694f8987d4f18c94617971b2b8d141602725fedcc2222fdc413b776a6e1b969a25d627d7b2681ca5aabb56f59e727ef94072e1b6ac8412105a2f
+  checksum: 814e2126dacfea313588eda09cc99a9b4c26ec55c059188aa7a916d20d26d483483106dc5ff9e560731b59f45c5bb91b945dfadc670aed875cc90ddbbf4e787d
   languageName: node
   linkType: hard
 
@@ -17097,6 +17082,17 @@ __metadata:
     picocolors: ^0.2.1
     source-map: ^0.6.1
   checksum: 4ac793f506c23259189064bdc921260d869a115a82b5e713973c5af8e94fbb5721a5cc3e1e26840500d7e1f1fa42a209747c5b1a151918a9bc11f0d7ed9048e3
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.0.9, postcss@npm:^8.3.5, postcss@npm:^8.4.14, postcss@npm:^8.4.19, postcss@npm:^8.4.4":
+  version: 8.4.23
+  resolution: "postcss@npm:8.4.23"
+  dependencies:
+    nanoid: ^3.3.6
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.2
+  checksum: 8bb9d1b2ea6e694f8987d4f18c94617971b2b8d141602725fedcc2222fdc413b776a6e1b969a25d627d7b2681ca5aabb56f59e727ef94072e1b6ac8412105a2f
   languageName: node
   linkType: hard
 
