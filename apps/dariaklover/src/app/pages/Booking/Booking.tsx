@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
-import { CalendlyUserDto, CalendlyUserEventType } from '@dariaklover/types';
+import { CalendlyUserDto, CalendlyUserEventDto } from '@dariaklover/types';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Grid from '@mui/material/Grid';
@@ -23,11 +23,11 @@ import bookingMetaData from './bookingMetaData';
 
 function Booking() {
   const calendlyUser: CalendlyUserDto = React.useContext<CalendlyUserDto>(CalendlyContext);
-  const [events, setEvents] = React.useState<Array<CalendlyUserEventType>>([]);
+  const [events, setEvents] = React.useState<Array<CalendlyUserEventDto>>([]);
 
   const fetchCalendlyEvents = React.useCallback(
     async function asyncFetchCalendlyEvents() {
-      const calendlyEvents: Array<CalendlyUserEventType> = await getCalendlyEventsActive(calendlyUser.uri);
+      const calendlyEvents: Array<CalendlyUserEventDto> = await getCalendlyEventsActive(calendlyUser.uri);
       setEvents(calendlyEvents);
     },
     [calendlyUser?.uri],
@@ -54,11 +54,11 @@ function Booking() {
           {events.map(function generateEvents(event) {
             return (
               <Grid key={event.uri} item xs={12} sm={6}>
-                <BookingCard title={event.name} duration={event.duration} href={event.scheduling_url} uri={event.uri}>
+                <BookingCard title={event.name} duration={event.duration} href={event.schedulingUrl} uri={event.uri}>
                   <Typography
                     variant="body2"
                     color="text.secondary"
-                    dangerouslySetInnerHTML={{ __html: event.description_html }}
+                    dangerouslySetInnerHTML={{ __html: event.descriptionHtml }}
                   />
                 </BookingCard>
               </Grid>

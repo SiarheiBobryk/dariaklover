@@ -18,6 +18,31 @@ export interface CalendlyUserDto {
   uri: string;
 }
 
+export interface CalendlyUserEventDto {
+  active: boolean;
+  adminManaged: boolean;
+  bookingMethod: 'instant' | 'poll';
+  color: string;
+  createdAt: string;
+  customQuestions: Array<CalendlyCustomQuestions>;
+  deletedAt: string;
+  descriptionHtml: string;
+  descriptionPlain: string;
+  duration: number;
+  internalNote: string;
+  kind: 'solo' | 'group';
+  kindDescription: 'Collective' | 'Group' | 'One-on-One' | 'Round Robin';
+  name: string;
+  poolingType: 'round_robin' | 'collective';
+  profile: CalendlyUserProfile;
+  schedulingUrl: string;
+  secret: boolean;
+  slug: string;
+  type: 'StandardEventType' | 'AdhocEventType';
+  updatedAt: string;
+  uri: string;
+}
+
 // https://developer.calendly.com/api-docs/005832c83aeae-get-current-user
 export interface CalendlyUser {
   avatar_url: string;
