@@ -27,8 +27,7 @@ export interface ImageProps {
   caption: string;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Image = React.forwardRef(function Image(props: ImageProps, ref: React.Ref<any>) {
+const Image = React.forwardRef(function Image(props: ImageProps, ref: React.Ref<HTMLDivElement>) {
   const { fileName, alt, caption, ...other } = props;
 
   return (
