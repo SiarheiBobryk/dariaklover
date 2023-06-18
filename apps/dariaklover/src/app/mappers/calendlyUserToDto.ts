@@ -1,6 +1,6 @@
 import { CalendlyUser, CalendlyUserDto } from '@dariaklover/types';
 
-function calendlyUserToCalendlyUserDto(calendlyUser: CalendlyUser): CalendlyUserDto {
+function calendlyUserToDto(calendlyUser: CalendlyUser): CalendlyUserDto {
   const {
     avatar_url: avatarUrl,
     created_at: createdAt,
@@ -27,4 +27,4 @@ function calendlyUserToCalendlyUserDto(calendlyUser: CalendlyUser): CalendlyUser
   };
 }
 
-export default calendlyUserToCalendlyUserDto;
+export default calendlyUserToDto;

@@ -1,2 +1,2 @@
-export { default as calendlyUserToCalendlyUserDto } from './calendlyUserToCalendlyUserDto';
-export { default as calendlyUserEventTypeToCalendlyUserEventDto } from './calendlyUserEventTypeToCalendlyUserEventDto';
+export { default as calendlyUserToDto } from './calendlyUserToDto';
+export { default as calendlyUserEventTypeToDto } from './calendlyUserEventTypeToDto';

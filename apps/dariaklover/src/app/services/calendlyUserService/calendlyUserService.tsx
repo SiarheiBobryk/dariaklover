@@ -5,8 +5,8 @@ import {
   CalendlyUserResponse,
 } from '@dariaklover/types';
 
-import calendlyUserEventTypeToCalendlyUserEventDto from '../../mappers/calendlyUserEventTypeToCalendlyUserEventDto';
-import calendlyUserToCalendlyUserDto from '../../mappers/calendlyUserToCalendlyUserDto';
+import calendlyUserEventTypeToDto from '../../mappers/calendlyUserEventTypeToDto';
+import calendlyUserToDto from '../../mappers/calendlyUserToDto';
 
 export const CALENDLY_URL = 'https://api.calendly.com';
 
@@ -26,7 +26,7 @@ export async function getCalendlyUser(): Promise<CalendlyUserDto> {
   });
   const calendlyUserResponse = (await response.json()) as CalendlyUserResponse;
   const { resource: calendlyUser } = calendlyUserResponse;
-  return calendlyUserToCalendlyUserDto(calendlyUser);
+  return calendlyUserToDto(calendlyUser);
 }
 
 export async function getCalendlyEvents(calendlyUserUri: string): Promise<Array<CalendlyUserEventDto>> {
@@ -36,7 +36,7 @@ export async function getCalendlyEvents(calendlyUserUri: string): Promise<Array<
   });
   const calendlyUserResponse = (await response.json()) as CalendlyUserEventTypeResponse;
   const { collection: calendlyEvents } = calendlyUserResponse;
-  return calendlyEvents.map(calendlyUserEventTypeToCalendlyUserEventDto);
+  return calendlyEvents.map(calendlyUserEventTypeToDto);
 }
 
 export async function getCalendlyEventsActive(calendlyUserUri: string): Promise<Array<CalendlyUserEventDto>> {

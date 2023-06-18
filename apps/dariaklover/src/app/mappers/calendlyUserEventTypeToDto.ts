@@ -1,8 +1,6 @@
 import { CalendlyUserEventDto, CalendlyUserEventType } from '@dariaklover/types';
 
-function calendlyUserEventTypeToCalendlyUserEventDto(
-  calendlyUserEventType: CalendlyUserEventType,
-): CalendlyUserEventDto {
+function calendlyUserEventTypeToDto(calendlyUserEventType: CalendlyUserEventType): CalendlyUserEventDto {
   const {
     active,
     admin_managed: adminManaged,
@@ -53,4 +51,4 @@ function calendlyUserEventTypeToCalendlyUserEventDto(
   };
 }
 
-export default calendlyUserEventTypeToCalendlyUserEventDto;
+export default calendlyUserEventTypeToDto;
