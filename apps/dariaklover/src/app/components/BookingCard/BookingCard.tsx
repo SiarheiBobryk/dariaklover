@@ -22,8 +22,7 @@ export interface BookingCardProps {
 }
 
 const BookingCard = React.forwardRef(function BookingCard(props: BookingCardProps, ref: React.Ref<HTMLDivElement>) {
-  // ATTENTION!!!
-  // Keep "via" up to date with the Celendly Event
+  // ATTENTION: Keep "via" up to date with the Celendly Event
   const { title = '', duration = 60, via = 'Google Meet', href = '', uri, children, ...other } = props;
   const FREE_EVENT_URI = 'https://api.calendly.com/event_types/2f876851-1bd0-49d8-a89d-f017c56c1f17';
   return (
