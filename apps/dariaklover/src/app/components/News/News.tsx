@@ -18,7 +18,7 @@ export const newsPosted = '2023-05-18T19:42:00';
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface NewsProps {}
 
-const News = React.forwardRef(function News() {
+const News = React.forwardRef(function News(props: NewsProps, ref: React.Ref<HTMLDivElement>) {
   const newsPostedTime: number = new Date(newsPosted).getTime();
   const [newsCheckTime, setNewsCheckTime] = React.useState<number>(0);
 
@@ -46,7 +46,7 @@ const News = React.forwardRef(function News() {
 
   return (
     <>
-      <Dialog fullScreen={fullScreen} open={open} onClose={handleClose} aria-labelledby="news-dialog-title">
+      <Dialog ref={ref} fullScreen={fullScreen} open={open} onClose={handleClose} aria-labelledby="news-dialog-title">
         <DialogTitle id="news-dialog-title">Последние Новости</DialogTitle>
         <DialogContent>
           <Box sx={{ marginTop: 0, marginBottom: 0, paddingLeft: '20px' }} component="ul">
