@@ -57,7 +57,7 @@ export const config: Config = {
   keywords:
     'health-коуч, коуч по здоровью, health coach, осознанность, здоровье, здоровое мышление, оздоровление, комплексный подход, холистический подход, физическая активность, сон, восстановление, адаптация, здоровая миграция, коучинг, саморазвитие, постановка целей, стресс менеджмент, уверенность в себе, проявленность, красота, питание, гармония, сопровождение, антиэйдж',
   language: 'ru',
-  colorModeDefault: 'light', // NOTE: the color-mode is managed by `ColorModeProvider`
+  colorModeDefault: 'light', // The color-mode is managed by `ColorModeProvider`
   themeColor: {
     light: '#fff',
     dark: '#212121',
