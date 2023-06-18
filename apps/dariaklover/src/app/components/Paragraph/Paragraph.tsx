@@ -23,8 +23,7 @@ export interface ParagraphProps {
     | undefined;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Paragraph = React.forwardRef(function Paragraph(props: ParagraphProps, ref: React.Ref<any>) {
+const Paragraph = React.forwardRef(function Paragraph(props: ParagraphProps, ref: React.Ref<HTMLParagraphElement>) {
   const { children, component = 'p', variant = 'body1', ...other } = props;
 
   return (
