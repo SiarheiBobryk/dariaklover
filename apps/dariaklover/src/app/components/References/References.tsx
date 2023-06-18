@@ -143,7 +143,7 @@ export const references: ReferenceData[] = [
       </Typography>
     ),
   },
-  // NOTE: Commented as not descriptive
+  // Commented as not descriptive
   // {
   //   src: `${NX_IMAGES_PATH}/reference_009.jpg`,
   //   srcSet: `${NX_IMAGES_PATH}/reference_009.webp`,
