@@ -56,8 +56,7 @@ function LinkRouter(props: LinkRouterProps) {
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface BreadcrumbsProps {}
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Breadcrumbs = React.forwardRef(function Breadcrumbs(props: BreadcrumbsProps, ref: React.Ref<any>) {
+const Breadcrumbs = React.forwardRef(function Breadcrumbs(props: BreadcrumbsProps, ref: React.Ref<HTMLDivElement>) {
   const location = useLocation();
   const pathnames = React.useMemo(
     function memoizePathnames() {
