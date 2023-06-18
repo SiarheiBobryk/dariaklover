@@ -12,13 +12,12 @@ export interface LinkBlankProps {
   rel?: string | undefined;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const LinkBlank = React.forwardRef(function LinkBlank(props: LinkBlankProps, ref: React.Ref<any>) {
-  const { children, target = '_blank', ...other } = props;
+const LinkBlank = React.forwardRef(function LinkBlank(props: LinkBlankProps, ref: React.Ref<HTMLAnchorElement>) {
+  const { children, sx, target = '_blank', ...other } = props;
 
   return (
     <Link ref={ref} target={target} {...other}>
-      {children} <OpenInNewIcon fontSize="small" sx={{ verticalAlign: 'middle' }} />
+      {children} <OpenInNewIcon fontSize="small" sx={{ ...sx, verticalAlign: 'middle' }} />
     </Link>
   );
 });
