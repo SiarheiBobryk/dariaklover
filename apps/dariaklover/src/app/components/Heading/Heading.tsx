@@ -23,8 +23,7 @@ export interface HeadingProps {
     | undefined;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Heading = React.forwardRef(function Heading(props: HeadingProps, ref: React.Ref<any>) {
+const Heading = React.forwardRef(function Heading(props: HeadingProps, ref: React.Ref<HTMLParagraphElement>) {
   const { children, component = 'h1', variant = 'h5', ...other } = props;
 
   return (
