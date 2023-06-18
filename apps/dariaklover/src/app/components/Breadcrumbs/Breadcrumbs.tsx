@@ -77,6 +77,7 @@ const Breadcrumbs = React.forwardRef(function Breadcrumbs(props: BreadcrumbsProp
       };
     }, {});
   }, []);
+
   const breadcrumbNameMap: { [key: string]: string } = {
     ...breadcrumbNameMapStatic,
     ...certificatesBreadcrumbNameMap,

@@ -79,7 +79,7 @@ describe('<Footer />', () => {
       render(<Footer />);
 
       const a: HTMLAnchorElement = screen.getByText(`v${packageJson.version}`);
-      const [, githubTag]: string[] = a.href.split(`${config.github}/releases/tag/`);
+      const [, githubTag]: Array<string> = a.href.split(`${config.github}/releases/tag/`);
       expect(a.innerHTML).toBe(githubTag);
     });
   });
