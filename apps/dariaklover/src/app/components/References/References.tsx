@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { ReferenceData, SwiperClass } from '@dariaklover/types';
 import Box from '@mui/material/Box';
 import SkeletonMui from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
@@ -16,15 +17,7 @@ import 'swiper/css/a11y';
 
 const { NX_IMAGES_PATH = '' } = process.env;
 
-export interface ReferenceData {
-  src: string;
-  srcSet: string;
-  alt: string;
-  title: string;
-  description: React.ReactNode;
-}
-
-export const references: ReferenceData[] = [
+export const references: Array<ReferenceData> = [
   {
     src: `${NX_IMAGES_PATH}/reference_001.jpg`,
     srcSet: `${NX_IMAGES_PATH}/reference_001.webp`,
@@ -375,10 +368,6 @@ export const Skeleton = styled(SkeletonMui)(function styleSkeleton({ theme }) {
 
 export interface ReferencesProps {
   heading?: string;
-}
-
-export interface SwiperClass {
-  activeIndex: number;
 }
 
 function References(props: ReferencesProps) {

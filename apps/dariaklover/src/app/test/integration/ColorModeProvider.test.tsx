@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 
+import { ColorModeContextValue } from '@dariaklover/types';
 import { PaletteMode } from '@mui/material';
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -9,7 +10,7 @@ import userEvent from '@testing-library/user-event';
 import Head from '../../components/Head';
 import TopBar from '../../components/TopBar';
 import AppConfigProvider, { config } from '../../providers/AppConfigProvider';
-import ColorModeProvider, { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
+import ColorModeProvider, { ColorModeContext } from '../../providers/ColorModeProvider';
 import ThemeProvider from '../../providers/ThemeProvider';
 
 afterEach(() => {

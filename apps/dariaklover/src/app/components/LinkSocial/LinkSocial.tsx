@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
+import { Config } from '@dariaklover/types';
+
+import { AppConfigContext } from '../../providers/AppConfigProvider';
 import LinkBlank from '../LinkBlank';
 
 export interface LinkSocialProps {

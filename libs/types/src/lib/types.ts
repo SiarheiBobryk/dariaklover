@@ -1,3 +1,5 @@
+import { PaletteMode } from '@mui/material';
+
 export interface PageMetaData {
   title: string;
   heading: string;
@@ -215,4 +217,84 @@ export interface CalendlyUserEventTypePagination {
 export interface CalendlyUserEventTypeResponse {
   collection: Array<CalendlyUserEventType>;
   pagination: CalendlyUserEventTypePagination;
+}
+
+export interface MetaTags {
+  description: string;
+  keywords: string;
+  'msapplication-TileColor': string;
+}
+
+export interface Config extends MetaTags {
+  fullName: string;
+  title: string;
+  url: string;
+  language: string;
+  colorModeDefault: PaletteMode;
+  themeColor: {
+    light: string;
+    dark: string;
+  };
+  instagram: {
+    id: string;
+    href: string;
+    label: string;
+    labelShort: string;
+  };
+  telegram: {
+    id: string;
+    href: string;
+    label: string;
+    labelShort: string;
+  };
+  whatsapp: {
+    id: string;
+    href: string;
+    label: string;
+    labelShort: string;
+  };
+  calendly: {
+    id: string;
+    href: string;
+    label: string;
+  };
+  email: {
+    id: string;
+    label: string;
+    labelShort: string;
+  };
+  github: string;
+}
+
+export interface Certificate {
+  id: string;
+  url: string;
+  img: string;
+  title: string;
+  titleFull: string;
+  subtitle: string;
+  subtitleFull: string;
+}
+
+export type CertificateData = Omit<Certificate, 'id'>;
+
+export interface CertificatesMap {
+  [key: string]: CertificateData;
+}
+
+export interface ReferenceData {
+  src: string;
+  srcSet: string;
+  alt: string;
+  title: string;
+  description: React.ReactNode;
+}
+
+export interface SwiperClass {
+  activeIndex: number;
+}
+
+export interface ColorModeContextValue {
+  mode: PaletteMode;
+  toggleColorCallback(this: void): void;
 }

@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { Helmet, HelmetPropsToState } from 'react-helmet';
 
+import { Config, MetaTags } from '@dariaklover/types';
 import { render } from '@testing-library/react';
 import { toHaveNoViolations } from 'jest-axe';
 
 import packageJson from '../../../../../../package.json';
-import AppConfigProvider, { Config, config, MetaTags } from '../../providers/AppConfigProvider';
+import AppConfigProvider, { config } from '../../providers/AppConfigProvider';
 
 import Head from './Head';
 

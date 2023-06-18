@@ -1,11 +1,12 @@
 import * as React from 'react';
 
+import { ColorModeContextValue } from '@dariaklover/types';
 import { PaletteMode } from '@mui/material';
 import { act, render } from '@testing-library/react';
 
 import { config } from '../AppConfigProvider';
 
-import ColorModeProvider, { ColorModeContext, ColorModeContextValue } from './ColorModeProvider';
+import ColorModeProvider, { ColorModeContext } from './ColorModeProvider';
 
 afterEach(() => {
   localStorage.clear();

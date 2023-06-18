@@ -1,53 +1,6 @@
 import * as React from 'react';
 
-import { PaletteMode } from '@mui/material';
-
-export interface MetaTags {
-  description: string;
-  keywords: string;
-  'msapplication-TileColor': string;
-}
-
-export interface Config extends MetaTags {
-  fullName: string;
-  title: string;
-  url: string;
-  language: string;
-  colorModeDefault: PaletteMode;
-  themeColor: {
-    light: string;
-    dark: string;
-  };
-  instagram: {
-    id: string;
-    href: string;
-    label: string;
-    labelShort: string;
-  };
-  telegram: {
-    id: string;
-    href: string;
-    label: string;
-    labelShort: string;
-  };
-  whatsapp: {
-    id: string;
-    href: string;
-    label: string;
-    labelShort: string;
-  };
-  calendly: {
-    id: string;
-    href: string;
-    label: string;
-  };
-  email: {
-    id: string;
-    label: string;
-    labelShort: string;
-  };
-  github: string;
-}
+import { Config } from '@dariaklover/types';
 
 export const config: Config = {
   fullName: 'Дарья Кловер',

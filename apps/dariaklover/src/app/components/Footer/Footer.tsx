@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { Config } from '@dariaklover/types';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EmailIcon from '@mui/icons-material/Email';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -12,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
 import packageJson from '../../../../../../package.json';
-import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
+import { AppConfigContext } from '../../providers/AppConfigProvider';
 
 export const iconButtonA11yProps = {
   rel: 'noopener',

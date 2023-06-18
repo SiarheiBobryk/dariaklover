@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
+import { Config } from '@dariaklover/types';
 import { Theme, useTheme } from '@mui/material/styles';
 
 import packageJson from '../../../../../../package.json';
-import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
+import { AppConfigContext } from '../../providers/AppConfigProvider';
 
 function Head() {
   const theme: Theme = useTheme();

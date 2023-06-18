@@ -1,5 +1,8 @@
 {
   "name": "@dariaklover/types",
   "version": "0.0.1",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "@mui/material": "5.13.5"
+  }
 }
