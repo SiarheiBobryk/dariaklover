@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
@@ -25,17 +24,16 @@ export interface CertificateProps {
   subtitle: string;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Certificate = React.forwardRef(function Certificate(props: CertificateProps, ref: React.Ref<any>) {
+const Certificate = React.forwardRef(function Certificate(props: CertificateProps, ref: React.Ref<HTMLDivElement>) {
   const { certificateId, title, subtitle, ...other } = props;
 
   return (
     <Figure ref={ref} {...other}>
-      <Box component="picture">
+      <picture>
         <source type="image/webp" srcSet={`${NX_IMAGES_PATH}/${certificateId}.webp`} />
         <source type="image/jpeg" srcSet={`${NX_IMAGES_PATH}/${certificateId}.jpg`} />
         <Img src={`${NX_IMAGES_PATH}/${certificateId}.jpg`} alt={title} loading="lazy" />
-      </Box>
+      </picture>
       <Typography component="figcaption" variant="body2">
         {title}
         <br />
