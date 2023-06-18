@@ -40,7 +40,7 @@ export interface Page {
   icon: React.ReactNode;
 }
 
-export const pages: Page[] = [
+export const pages: Array<Page> = [
   {
     to: bookingMetaData.path,
     label: 'Записаться',
