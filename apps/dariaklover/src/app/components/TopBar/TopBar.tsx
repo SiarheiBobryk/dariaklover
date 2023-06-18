@@ -82,6 +82,7 @@ export interface StyleCallbackParams {
   isActive: boolean;
 }
 
+// TODO: Move it to a separate component
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const RouterNavLinkMod = React.forwardRef(function RouterNavLinkMod(props: RouterNavLinkProps, ref: React.Ref<any>) {
   const { children, to, ...other } = props;
