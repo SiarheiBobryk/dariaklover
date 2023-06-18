@@ -1,8 +1,9 @@
 import * as React from 'react';
 
+import { Config } from '@dariaklover/types';
 import { render } from '@testing-library/react';
 
-import { AppConfigContext, Config, config } from './AppConfigProvider';
+import { AppConfigContext, config } from './AppConfigProvider';
 
 describe('AppConfigProvider', () => {
   describe('The context object inspection', () => {

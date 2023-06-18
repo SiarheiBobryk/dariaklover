@@ -1,10 +1,11 @@
 import * as React from 'react';
 
+import { ColorModeContextValue } from '@dariaklover/types';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider as ThemeProviderMui, Theme } from '@mui/material/styles';
 
 import { createTheme } from '../../styles';
-import { ColorModeContext, ColorModeContextValue } from '../ColorModeProvider/ColorModeProvider';
+import { ColorModeContext } from '../ColorModeProvider/ColorModeProvider';
 
 export interface ThemeProviderProps {
   children: React.ReactNode;

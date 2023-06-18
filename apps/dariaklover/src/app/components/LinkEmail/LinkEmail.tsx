@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-import { AppConfigContext, Config } from '../../providers/AppConfigProvider';
+import { Config } from '@dariaklover/types';
+
+import { AppConfigContext } from '../../providers/AppConfigProvider';
 import LinkBlank from '../LinkBlank';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

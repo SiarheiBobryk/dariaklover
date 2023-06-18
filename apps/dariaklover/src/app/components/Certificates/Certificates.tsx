@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { Certificate, CertificatesMap } from '@dariaklover/types';
 import InfoIcon from '@mui/icons-material/Info';
 import { Theme, useMediaQuery, useTheme } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
@@ -9,16 +10,6 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 const { NX_IMAGES_PATH = '' } = process.env;
-
-export interface Certificate {
-  id: string;
-  url: string;
-  img: string;
-  title: string;
-  titleFull: string;
-  subtitle: string;
-  subtitleFull: string;
-}
 
 // TODO: Review the image storage and remove unused images
 export const certificates: Array<Certificate> = [
@@ -87,12 +78,6 @@ export const certificates: Array<Certificate> = [
     subtitleFull: 'Отдел ЗАГС администрации Центрального района г.Гомеля',
   },
 ];
-
-export type CertificateData = Omit<Certificate, 'id'>;
-
-export interface CertificatesMap {
-  [key: string]: CertificateData;
-}
 
 export const certificatesMap: CertificatesMap = certificates.reduce(function reduceCertificates(mapping, cur) {
   const { id, ...properties } = cur;

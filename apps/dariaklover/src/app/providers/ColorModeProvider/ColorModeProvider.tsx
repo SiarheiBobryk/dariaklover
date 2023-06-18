@@ -1,13 +1,9 @@
 import * as React from 'react';
 
+import { ColorModeContextValue, Config } from '@dariaklover/types';
 import { PaletteMode } from '@mui/material';
 
-import { AppConfigContext, Config } from '../AppConfigProvider';
-
-export interface ColorModeContextValue {
-  mode: PaletteMode;
-  toggleColorCallback(this: void): void;
-}
+import { AppConfigContext } from '../AppConfigProvider';
 
 export interface ColorModeProviderProps {
   children: React.ReactNode;

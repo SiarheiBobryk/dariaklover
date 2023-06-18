@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
+import { ColorModeContextValue } from '@dariaklover/types';
 import ArticleIcon from '@mui/icons-material/Article';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -30,7 +31,7 @@ import bookingMetaData from '../../pages/Booking/bookingMetaData';
 import helpMetaData from '../../pages/Help/helpMetaData';
 import pricingMetaData from '../../pages/Pricing/pricingMetaData';
 import referencesMetaData from '../../pages/References/referencesMetaData';
-import { ColorModeContext, ColorModeContextValue } from '../../providers/ColorModeProvider';
+import { ColorModeContext } from '../../providers/ColorModeProvider';
 import News from '../News';
 
 export interface Page {
