@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
+import { CalendlyUserDto, CalendlyUserEventType } from '@dariaklover/types';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Grid from '@mui/material/Grid';
@@ -14,14 +15,14 @@ import LinkEmail from '../../components/LinkEmail';
 import LinkSocial from '../../components/LinkSocial';
 import Paragraph from '../../components/Paragraph';
 import { CalendlyContext } from '../../providers';
-import { CalendlyUser, CalendlyUserEventType, getCalendlyEventsActive } from '../../services/calendlyUserService';
+import { getCalendlyEventsActive } from '../../services/calendlyUserService';
 import helpMetaData from '../Help/helpMetaData';
 import howToBookMetaData from '../HowToBook/howToBookMetaData';
 
 import bookingMetaData from './bookingMetaData';
 
 function Booking() {
-  const calendlyUser: CalendlyUser = React.useContext<CalendlyUser>(CalendlyContext);
+  const calendlyUser: CalendlyUserDto = React.useContext<CalendlyUserDto>(CalendlyContext);
   const [events, setEvents] = React.useState<Array<CalendlyUserEventType>>([]);
 
   const fetchCalendlyEvents = React.useCallback(
