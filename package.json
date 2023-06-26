@@ -53,7 +53,7 @@
     "@nrwl/eslint-plugin-nx": "16.3.2",
     "@nrwl/jest": "16.3.2",
     "@nrwl/js": "16.3.2",
-    "@nrwl/linter": "16.3.2",
+    "@nrwl/linter": "16.4.0",
     "@nrwl/react": "16.3.2",
     "@nrwl/web": "16.3.2",
     "@nrwl/webpack": "16.3.2",
