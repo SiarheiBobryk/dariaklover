@@ -30,13 +30,11 @@ export const Skeleton = styled(SkeletonMui)(function styleSkeleton({ theme }) {
   };
 });
 
-export interface ReferencesProps {
-  heading?: string;
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface ReferencesProps {}
 
-function References(props: ReferencesProps) {
+function References() {
   const [currentSlideIndex, setCurrentSlideIndex] = React.useState<number>(0);
-  const { heading } = props;
   const height = 541;
   const width = 250;
   const appTheme = useTheme();
@@ -55,7 +53,6 @@ function References(props: ReferencesProps) {
 
   return (
     <>
-      <Heading>{heading}</Heading>
       <Heading component="h2" variant="h6">
         {title}
       </Heading>
