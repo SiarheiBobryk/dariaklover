@@ -1,5 +1,5 @@
-const { withReact } = require('@nrwl/react');
-const { composePlugins, withNx } = require('@nrwl/webpack');
+const { withReact } = require('@nx/react');
+const { composePlugins, withNx } = require('@nx/webpack');
 const { merge } = require('webpack-merge');
 
 module.exports = composePlugins(withNx(), withReact(), (config) => {
