@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import SkeletonMui from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 import { styled, useTheme } from '@mui/material/styles';
-import { Pagination, Navigation, A11y } from 'swiper';
+import { Pagination, Navigation, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import Heading from '../Heading';
