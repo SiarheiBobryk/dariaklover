@@ -1,5 +1,6 @@
 {
   "*.(js|ts|tsx)": ["yarn format", "yarn lint"],
   "*.(html|json|yaml|xml)": "yarn format",
-  "*.(md)": "yarn lint:md"
+  "*.(md)": "yarn lint:md",
+  "*.(ts)": "yarn types:check"
 }

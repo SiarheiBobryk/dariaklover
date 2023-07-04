@@ -19,7 +19,7 @@ describe('<LinkBlank />', () => {
     });
 
     it('should forward ref', () => {
-      const ref = React.createRef();
+      const ref = React.createRef<HTMLAnchorElement>();
       const { container } = render(<LinkBlank href="https://dariaklover.health" ref={ref} />);
       expect(container.firstChild).toBe(ref.current);
     });

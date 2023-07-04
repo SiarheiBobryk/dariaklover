@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import { styled, useTheme } from '@mui/material/styles';
 import { Pagination, Navigation, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperOptions } from 'swiper/types/swiper-options';
 
 import Heading from '../Heading';
 
@@ -51,6 +52,21 @@ function References() {
   const { title = '' } = referencesReversed[currentSlideIndex] ?? {};
   const { description, src: descriptionId } = referencesReversed[currentSlideIndex] ?? {};
 
+  const swiperOptions: SwiperOptions = {
+    a11y: {
+      enabled: true,
+      nextSlideMessage: 'Следующий отзыв',
+      prevSlideMessage: 'Предыдущий отзыв',
+      paginationBulletMessage: 'Перейти на слайд {{index}}',
+    },
+    grabCursor: true,
+    modules: [Pagination, Navigation, A11y],
+    navigation: true,
+    pagination: {
+      dynamicBullets: true,
+    },
+  };
+
   return (
     <>
       <Heading component="h2" variant="h6">
@@ -58,23 +74,12 @@ function References() {
       </Heading>
       <Swiper
         onSlideChange={handleOnSlideChange}
-        a11y={{
-          enabled: true,
-          nextSlideMessage: 'Следующий отзыв',
-          prevSlideMessage: 'Предыдущий отзыв',
-          paginationBulletMessage: 'Перейти на слайд {{index}}',
-        }}
-        grabCursor
-        modules={[Pagination, Navigation, A11y]}
-        navigation
-        pagination={{
-          dynamicBullets: true,
-        }}
         style={{
           height: appTheme.typography.pxToRem(height),
           marginTop: appTheme.typography.pxToRem(8),
           marginBottom: appTheme.typography.pxToRem(8),
         }}
+        {...swiperOptions}
       >
         {referencesReversed.map(function mapReferences(item: ReferenceData) {
           return (

@@ -18,7 +18,7 @@ describe('<Paragraph />', () => {
     });
 
     it('should forward ref', () => {
-      const ref = React.createRef();
+      const ref = React.createRef<HTMLParagraphElement>();
       const { container } = render(<Paragraph ref={ref} />);
       expect(container.firstChild).toBe(ref.current);
     });

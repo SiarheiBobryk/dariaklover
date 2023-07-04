@@ -16,7 +16,7 @@ describe('<LinkSocial />', () => {
   });
 
   it('should forward ref', () => {
-    const ref = React.createRef();
+    const ref = React.createRef<HTMLAnchorElement>();
     render(<LinkSocial ref={ref} data-testid="LinkSocial" />);
     expect(screen.getByTestId('LinkSocial')).toBe(ref.current);
   });
