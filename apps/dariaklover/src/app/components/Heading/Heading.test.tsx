@@ -18,7 +18,7 @@ describe('<Heading />', () => {
     });
 
     it('should forward ref', () => {
-      const ref = React.createRef();
+      const ref = React.createRef<HTMLParagraphElement>();
       const { container } = render(<Heading ref={ref} />);
       expect(container.firstChild).toBe(ref.current);
     });

@@ -16,7 +16,7 @@ describe('<AlertHelp />', () => {
   });
 
   it('should forward ref', () => {
-    const ref = React.createRef();
+    const ref = React.createRef<HTMLDivElement>();
     render(<AlertHelp ref={ref} data-testid="AlertHelp" />);
     expect(screen.getByTestId('AlertHelp')).toBe(ref.current);
   });

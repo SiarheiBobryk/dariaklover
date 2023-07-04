@@ -18,7 +18,7 @@ describe('<Image />', () => {
   });
 
   it('should forward ref', () => {
-    const ref = React.createRef();
+    const ref = React.createRef<HTMLImageElement>();
     render(
       <Image
         ref={ref}

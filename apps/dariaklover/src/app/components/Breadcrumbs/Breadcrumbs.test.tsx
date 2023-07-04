@@ -21,7 +21,7 @@ describe('<Breadcrumbs />', () => {
   });
 
   it('should forward ref', () => {
-    const ref = React.createRef();
+    const ref = React.createRef<HTMLDivElement>();
     render(
       <BrowserRouter>
         <Breadcrumbs ref={ref} data-testid="Breadcrumbs" />

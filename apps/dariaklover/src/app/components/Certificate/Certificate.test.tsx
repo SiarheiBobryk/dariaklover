@@ -22,7 +22,7 @@ describe('<Certificate />', () => {
   });
 
   it('should forward ref', () => {
-    const ref = React.createRef();
+    const ref = React.createRef<HTMLDivElement>();
     render(
       <Certificate
         ref={ref}

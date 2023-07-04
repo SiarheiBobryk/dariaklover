@@ -16,7 +16,7 @@ describe('<LinkEmail />', () => {
   });
 
   it('should forward ref', () => {
-    const ref = React.createRef();
+    const ref = React.createRef<HTMLAnchorElement>();
     render(<LinkEmail ref={ref} data-testid="LinkEmail" />);
     expect(screen.getByTestId('LinkEmail')).toBe(ref.current);
   });
