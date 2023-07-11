@@ -3208,7 +3208,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/request@npm:^2.88.10":
+"@cypress/request@npm:^2.88.11":
   version: 2.88.11
   resolution: "@cypress/request@npm:2.88.11"
   dependencies:
@@ -4176,20 +4176,6 @@ __metadata:
     "@types/yargs": ^17.0.8
     chalk: ^4.0.0
   checksum: 1811f94b19cf8a9460a289c4f056796cfc373480e0492692a6125a553cd1a63824bd846d7bb78820b7b6f758f6dd3c2d4558293bb676d541b2fa59c70fdf9d39
-  languageName: node
-  linkType: hard
-
-"@jest/types@npm:^29.6.0":
-  version: 29.6.0
-  resolution: "@jest/types@npm:29.6.0"
-  dependencies:
-    "@jest/schemas": ^29.6.0
-    "@types/istanbul-lib-coverage": ^2.0.0
-    "@types/istanbul-reports": ^3.0.0
-    "@types/node": "*"
-    "@types/yargs": ^17.0.8
-    chalk: ^4.0.0
-  checksum: cb793a8c04194c29059c5f3a89416e9e1f3643236d4d545fe99fa43a230be4c521e9e1d46ca97837a731545599c9afe2c5a99ff37ee4edf197be0d8d85433b05
   languageName: node
   linkType: hard
 
@@ -6893,7 +6879,7 @@ __metadata:
     "@typescript-eslint/parser": 5.61.0
     autoprefixer: 10.4.14
     babel-jest: 29.6.1
-    cypress: 12.16.0
+    cypress: 12.17.1
     eslint-config-airbnb: 19.0.4
     eslint-config-airbnb-typescript: 17.0.0
     eslint-config-prettier: 8.8.0
@@ -9485,11 +9471,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:12.16.0":
-  version: 12.16.0
-  resolution: "cypress@npm:12.16.0"
+"cypress@npm:12.17.1":
+  version: 12.17.1
+  resolution: "cypress@npm:12.17.1"
   dependencies:
-    "@cypress/request": ^2.88.10
+    "@cypress/request": ^2.88.11
     "@cypress/xvfb": ^1.2.4
     "@types/node": ^14.14.31
     "@types/sinonjs__fake-timers": 8.1.1
@@ -9526,14 +9512,14 @@ __metadata:
     pretty-bytes: ^5.6.0
     proxy-from-env: 1.0.0
     request-progress: ^3.0.0
-    semver: ^7.3.2
+    semver: ^7.5.3
     supports-color: ^8.1.1
     tmp: ~0.2.1
     untildify: ^4.0.0
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 551e2ec372f56a39a22526575b39bf9c6a110e5648ac1bf1c76460dfaebc3ca57d5537e7c206316284fe796ec76fa18f0493f3e040c92bd39c3720c9136fd5e4
+  checksum: 1f042e3e5931498bdf826cba09060939349e677fca8654c9695760acbec5a424cb69d3445ace57cf80deb496d770ffe571ef791dff72af24e7f560ee43986ee4
   languageName: node
   linkType: hard
 
@@ -14375,20 +14361,6 @@ __metadata:
     graceful-fs: ^4.2.9
     picomatch: ^2.2.3
   checksum: fd9212950d34d2ecad8c990dda0d8ea59a8a554b0c188b53ea5d6c4a0829a64f2e1d49e6e85e812014933d17426d7136da4785f9cf76fff1799de51b88bc85d3
-  languageName: node
-  linkType: hard
-
-"jest-util@npm:^29.6.0":
-  version: 29.6.0
-  resolution: "jest-util@npm:29.6.0"
-  dependencies:
-    "@jest/types": ^29.6.0
-    "@types/node": "*"
-    chalk: ^4.0.0
-    ci-info: ^3.2.0
-    graceful-fs: ^4.2.9
-    picomatch: ^2.2.3
-  checksum: 35b95cdfddc20c0249821bcee35e4e4355981339c618049f9be79aace712c05096b385d3abd2cfb66a7995ec37b7e56acf6421ee0c42236e4add6379fcb0ebeb
   languageName: node
   linkType: hard
 
@@ -20275,6 +20247,17 @@ __metadata:
   bin:
     semver: ./bin/semver.js
   checksum: 1b26ecf6db9e8292dd90df4e781d91875c0dcc1b1909e70f5d12959a23c7eebb8f01ea581c00783bbee72ceeaad9505797c381756326073850dc36ed284b21b9
+  languageName: node
+  linkType: hard
+
+"semver@npm:^7.5.3":
+  version: 7.5.4
+  resolution: "semver@npm:7.5.4"
+  dependencies:
+    lru-cache: ^6.0.0
+  bin:
+    semver: bin/semver.js
+  checksum: 12d8ad952fa353b0995bf180cdac205a4068b759a140e5d3c608317098b3575ac2f1e09182206bf2eb26120e1c0ed8fb92c48c592f6099680de56bb071423ca3
   languageName: node
   linkType: hard
 
