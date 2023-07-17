@@ -31,7 +31,6 @@ export const Skeleton = styled(SkeletonMui)(function styleSkeleton({ theme }) {
   };
 });
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ReferencesProps {}
 
 function References() {
