@@ -52,7 +52,7 @@
     "@commitlint/config-conventional": "17.6.6",
     "@nx/cypress": "16.5.2",
     "@nx/eslint-plugin-nx": "16.0.0-beta.1",
-    "@nx/jest": "16.5.2",
+    "@nx/jest": "16.5.4",
     "@nx/js": "16.5.2",
     "@nx/linter": "16.5.2",
     "@nx/react": "16.5.2",
