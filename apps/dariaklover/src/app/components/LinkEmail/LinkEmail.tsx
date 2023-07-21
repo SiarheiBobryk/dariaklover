@@ -15,7 +15,7 @@ const LinkEmail = React.forwardRef(function LinkEmail(props: LinkEmailProps, ref
 
   return (
     <LinkBlank ref={ref} href={`mailto: ${id}`} rel="noopener" {...props}>
-      {`${labelShort}`}
+      {labelShort}
     </LinkBlank>
   );
 });
