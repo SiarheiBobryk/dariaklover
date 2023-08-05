@@ -25,22 +25,22 @@ function Booking() {
   const calendlyUser: CalendlyUserDto = React.useContext<CalendlyUserDto>(CalendlyContext);
   const [events, setEvents] = React.useState<Array<CalendlyUserEventDto>>([]);
 
-  const fetchCalendlyEvents = React.useCallback(
-    async function asyncFetchCalendlyEvents() {
-      const calendlyEvents: Array<CalendlyUserEventDto> = await getCalendlyEventsActive(calendlyUser.uri);
-      setEvents(calendlyEvents);
-    },
-    [calendlyUser?.uri],
-  );
-
   React.useEffect(
-    function updateCalendlyEvents() {
-      fetchCalendlyEvents().catch(function catchError(error) {
+    function fetchCalendlyEvents() {
+      const controller = new AbortController();
+      const { signal } = controller;
+      (async function asyncFetchCalendlyEvents() {
+        const calendlyEvents: Array<CalendlyUserEventDto> = await getCalendlyEventsActive(calendlyUser.uri, signal);
+        setEvents(calendlyEvents);
+      })().catch(function catchError(error) {
         // eslint-disable-next-line no-console
         console.error(error);
       });
+      return function cleanUpFetch() {
+        controller.abort();
+      };
     },
-    [fetchCalendlyEvents],
+    [calendlyUser.uri],
   );
 
   return (

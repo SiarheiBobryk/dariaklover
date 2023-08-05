@@ -28,16 +28,19 @@ function CalendlyProvider(props: CalendlyProviderProps) {
 
   const [user, setUser] = React.useState<CalendlyUserDto>(CALENDLY_USER_DEFAULT);
 
-  async function fetchCalendlyUser() {
-    const userUpdated = await getCalendlyUser();
-    setUser(userUpdated);
-  }
-
   React.useEffect(function updateCalendlyUser() {
-    fetchCalendlyUser().catch(function catchError(error) {
+    const controller = new AbortController();
+    const { signal } = controller;
+    (async function fetchCalendlyUser() {
+      const userUpdated = await getCalendlyUser(signal);
+      setUser(userUpdated);
+    })().catch(function catchError(error) {
       // eslint-disable-next-line no-console
       console.error(error);
     });
+    return function cleanUpFetch() {
+      controller.abort();
+    };
   }, []);
 
   return <CalendlyContext.Provider value={user}>{children}</CalendlyContext.Provider>;
