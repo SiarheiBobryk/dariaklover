@@ -35,7 +35,7 @@ export async function getCalendlyEvents(calendlyUserUri: string): Promise<Array<
     headers: HEADERS,
   });
   const calendlyUserResponse = (await response.json()) as CalendlyUserEventTypeResponse;
-  const { collection: calendlyEvents } = calendlyUserResponse;
+  const { collection: calendlyEvents = [] } = calendlyUserResponse;
   return calendlyEvents.map(calendlyUserEventTypeToDto);
 }
 
