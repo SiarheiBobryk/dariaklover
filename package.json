@@ -43,7 +43,7 @@
     "tslib": "2.6.1"
   },
   "devDependencies": {
-    "@babel/core": "7.22.9",
+    "@babel/core": "7.22.10",
     "@babel/plugin-syntax-flow": "7.22.5",
     "@babel/plugin-transform-react-jsx": "7.22.5",
     "@babel/preset-env": "7.22.10",
