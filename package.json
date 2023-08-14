@@ -90,7 +90,7 @@
     "jest": "28.1.1",
     "jest-axe": "8.0.0",
     "jest-environment-jsdom": "29.6.2",
-    "lint-staged": "13.2.3",
+    "lint-staged": "14.0.0",
     "nx": "16.6.0",
     "postcss": "8.4.27",
     "prettier": "2.8.8",
