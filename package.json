@@ -91,7 +91,7 @@
     "jest-axe": "8.0.0",
     "jest-environment-jsdom": "29.6.2",
     "lint-staged": "14.0.0",
-    "nx": "16.6.0",
+    "nx": "16.7.2",
     "postcss": "8.4.27",
     "prettier": "2.8.8",
     "raw-loader": "4.0.2",
