@@ -50,7 +50,7 @@
     "@babel/preset-react": "7.22.5",
     "@commitlint/cli": "17.7.1",
     "@commitlint/config-conventional": "17.7.0",
-    "@nx/cypress": "16.7.2",
+    "@nx/cypress": "16.7.4",
     "@nx/eslint-plugin-nx": "16.0.0-beta.1",
     "@nx/jest": "16.7.2",
     "@nx/js": "16.7.2",
