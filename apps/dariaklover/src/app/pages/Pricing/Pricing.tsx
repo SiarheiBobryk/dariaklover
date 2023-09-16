@@ -69,22 +69,22 @@ const HTMLUnorderedList = styled('ul')(function styleHtmlList({ theme }) {
   };
 });
 
-const Price = styled(Typography)(function stylePrice({ theme }) {
-  return {
-    fontSize: theme.spacing(2.75),
-    fontWeight: theme.typography.fontWeightBold,
-    textAlign: 'center',
-  };
-});
+// const Price = styled(Typography)(function stylePrice({ theme }) {
+//   return {
+//     fontSize: theme.spacing(2.75),
+//     fontWeight: theme.typography.fontWeightBold,
+//     textAlign: 'center',
+//   };
+// });
 
-const PriceOld = styled('small')(function stylePriceOld({ theme }) {
-  return {
-    textAlign: 'center',
-    textDecoration: 'line-through',
-    fontSize: theme.spacing(2),
-    fontWeight: theme.typography.fontWeightRegular,
-  };
-});
+// const PriceOld = styled('small')(function stylePriceOld({ theme }) {
+//   return {
+//     textAlign: 'center',
+//     textDecoration: 'line-through',
+//     fontSize: theme.spacing(2),
+//     fontWeight: theme.typography.fontWeightRegular,
+//   };
+// });
 
 function Pricing() {
   const theme: Theme = useTheme();
@@ -150,7 +150,7 @@ function Pricing() {
                   </AccordionDetails>
                 </Accordion>
               </Box>
-              <Price>110 €*</Price>
+              {/* <Price>110 €*</Price> */}
             </CardContent>
           </Card>
         </Grid>
@@ -211,9 +211,9 @@ function Pricing() {
                 </Accordion>
               </Box>
               {/* Prices box */}
-              <Price>
+              {/* <Price>
                 520 €*&nbsp;<PriceOld>550 €</PriceOld>
-              </Price>
+              </Price> */}
             </CardContent>
           </Card>
         </Grid>
@@ -285,18 +285,23 @@ function Pricing() {
                   </AccordionDetails>
                 </Accordion>
               </Box>
-              <Price>2500 €*</Price>
+              {/* <Price>2500 €*</Price> */}
             </CardContent>
           </Card>
         </Grid>
       </Grid>
-      <Typography variant="caption" component="small">
+      {/* <Typography variant="caption" component="small">
         * в стоимость уже включены 25% НДС
       </Typography>
       <br />
       <Typography variant="caption" component="small">
         ** программа здоровья составляется по 1 основному и 2-3 дополнительным запросам
-      </Typography>
+      </Typography> */}
+      <Alert severity="warning" variant="outlined">
+        В ближайшее время линейка услуг будет меняться. Появятся новые продукты и услуги, изменится стоимость. Уточняйте
+        актуальную информацию лично у Дарьи или следите за нашими новостями. Совсем скоро информация на сайте будет
+        обновлена.
+      </Alert>
       <Alert severity="info" variant="outlined">
         Для новых клиентов запись на платные встречи доступна только после установочной встречи. Нажмите{' '}
         <Link component={RouterNavLink} to={bookingMetaData.path}>
