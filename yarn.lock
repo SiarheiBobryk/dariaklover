@@ -7055,7 +7055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.8.4":
+"@types/node@npm:20.8.4, @types/node@npm:^20.0.0":
   version: 20.8.4
   resolution: "@types/node@npm:20.8.4"
   dependencies:
@@ -7068,15 +7068,6 @@ __metadata:
   version: 16.18.39
   resolution: "@types/node@npm:16.18.39"
   checksum: eac9b202b76013256cb517ca8d3e3f61df206edb1615ca8d8df4c80616e92879fe4d3f8570a11d60f4216a82724a3265d5888b24c6994c80b057a0423c9ff1d2
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^20.0.0":
-  version: 20.8.4
-  resolution: "@types/node@npm:20.8.4"
-  dependencies:
-    undici-types: ~5.25.1
-  checksum: 2106b9ef9750297cac68249428d7067c4d22c26908854165b70a164e34e900f4c34bb9bf3887c9391206b500d3e87171d03b1846e25788925236a0354390d278
   languageName: node
   linkType: hard
 
@@ -7154,12 +7145,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-helmet@npm:6.1.6":
-  version: 6.1.6
-  resolution: "@types/react-helmet@npm:6.1.6"
+"@types/react-helmet@npm:6.1.7":
+  version: 6.1.7
+  resolution: "@types/react-helmet@npm:6.1.7"
   dependencies:
     "@types/react": "*"
-  checksum: 81560c56bfe854b6a43aee31360862588ac875d1177b975da5ce049ac9aa2f7c98dcde65d4397bfaa04e468f40cf3ab2975a2ef966a69d64a60493422898698d
+  checksum: d5ee8343f10f8746a022249c6401493baa73241a90b5002b59e8a6ce31650b9e1ab38d398eba5564af026f68eda107c8fcdca01fc046a163a96dc422710f6a77
   languageName: node
   linkType: hard
 
@@ -7999,7 +7990,7 @@ __metadata:
     "@types/node": 20.8.4
     "@types/react": 18.2.21
     "@types/react-dom": 18.2.7
-    "@types/react-helmet": 6.1.6
+    "@types/react-helmet": 6.1.7
     "@types/react-test-renderer": 18.0.1
     "@typescript-eslint/eslint-plugin": 6.7.5
     "@typescript-eslint/parser": 6.7.5
