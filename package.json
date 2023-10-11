@@ -37,7 +37,7 @@
     "react-helmet": "6.1.0",
     "react-markdown": "8.0.7",
     "react-router-dom": "6.16.0",
-    "remark-gfm": "3.0.1",
+    "remark-gfm": "4.0.0",
     "remark-unwrap-images": "3.0.1",
     "swiper": "10.2.0",
     "tslib": "2.6.2"
