@@ -7055,7 +7055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.8.4":
+"@types/node@npm:20.8.4, @types/node@npm:^20.0.0":
   version: 20.8.4
   resolution: "@types/node@npm:20.8.4"
   dependencies:
@@ -7068,15 +7068,6 @@ __metadata:
   version: 16.18.39
   resolution: "@types/node@npm:16.18.39"
   checksum: eac9b202b76013256cb517ca8d3e3f61df206edb1615ca8d8df4c80616e92879fe4d3f8570a11d60f4216a82724a3265d5888b24c6994c80b057a0423c9ff1d2
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^20.0.0":
-  version: 20.8.4
-  resolution: "@types/node@npm:20.8.4"
-  dependencies:
-    undici-types: ~5.25.1
-  checksum: 2106b9ef9750297cac68249428d7067c4d22c26908854165b70a164e34e900f4c34bb9bf3887c9391206b500d3e87171d03b1846e25788925236a0354390d278
   languageName: node
   linkType: hard
 
@@ -7163,12 +7154,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-test-renderer@npm:18.0.1":
-  version: 18.0.1
-  resolution: "@types/react-test-renderer@npm:18.0.1"
+"@types/react-test-renderer@npm:18.0.3":
+  version: 18.0.3
+  resolution: "@types/react-test-renderer@npm:18.0.3"
   dependencies:
     "@types/react": "*"
-  checksum: ec149c2ab4d76c7286ef5d8ca9546765632e0c7a0788e5850081af38526f7fcb6413641e083520ee4b2fc57755f475990fbfabcbcdda8d954aa708708c866a96
+  checksum: 6834c7c998d9e699b7b9aca31ce0f550a29a63526a9ab15f62764eeade28fcce634030e5cfd223a8417e8c53234e01bfb961906b35fd9a72dd513aba549181f0
   languageName: node
   linkType: hard
 
@@ -8000,7 +7991,7 @@ __metadata:
     "@types/react": 18.2.21
     "@types/react-dom": 18.2.7
     "@types/react-helmet": 6.1.6
-    "@types/react-test-renderer": 18.0.1
+    "@types/react-test-renderer": 18.0.3
     "@typescript-eslint/eslint-plugin": 6.7.5
     "@typescript-eslint/parser": 6.7.5
     autoprefixer: 10.4.15
