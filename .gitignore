@@ -31,6 +31,7 @@ yarn-error.log
 testem.log
 /typings
 .env.local
+.nx/*
 
 # npm and yarn
 npm-debug.log*
