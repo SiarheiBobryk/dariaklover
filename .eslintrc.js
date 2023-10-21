@@ -26,7 +26,7 @@ module.exports = {
     requireConfigFile: false,
     project: './tsconfig.base.json',
   },
-  plugins: ['@nx/nx', 'prettier', 'react', '@typescript-eslint'],
+  plugins: ['@nx', 'prettier', 'react', '@typescript-eslint'],
   reportUnusedDisableDirectives: true,
   ignorePatterns: ['**/*'],
   rules: {
@@ -91,7 +91,7 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
       rules: {
-        '@nx/nx/enforce-module-boundaries': [
+        '@nx/enforce-module-boundaries': [
           'error',
           {
             enforceBuildableLibDependency: true,
@@ -108,12 +108,12 @@ module.exports = {
     },
     {
       files: ['*.ts', '*.tsx'],
-      extends: ['plugin:@nx/nx/typescript'],
+      extends: ['plugin:@nx/typescript'],
       rules: {},
     },
     {
       files: ['*.js', '*.jsx'],
-      extends: ['plugin:@nx/nx/javascript'],
+      extends: ['plugin:@nx/javascript'],
       rules: {},
     },
     {
