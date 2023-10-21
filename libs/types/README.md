@@ -1,3 +1,3 @@
 # Types
 
-This library contains types for the [main application](https://github.com/SiarheiBobryk/DariaKlover-website/tree/develop/apps/dariaklover)
+This library contains types for the [main application](https://github.com/SiarheiBobryk/dariaklover/tree/develop/apps/website)

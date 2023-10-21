@@ -1,7 +1,7 @@
 {
-  "name": "dariaklover",
+  "name": "website",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/dariaklover/src",
+  "sourceRoot": "apps/website/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -10,21 +10,21 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/dariaklover",
-        "index": "apps/dariaklover/src/index.html",
+        "outputPath": "dist/apps/website",
+        "index": "apps/website/src/index.html",
         "baseHref": "/",
-        "main": "apps/dariaklover/src/main.tsx",
-        "tsConfig": "apps/dariaklover/tsconfig.app.json",
+        "main": "apps/website/src/main.tsx",
+        "tsConfig": "apps/website/tsconfig.app.json",
         "assets": [
-          "apps/dariaklover/src/favicon.ico",
-          "apps/dariaklover/src/robots.txt",
-          "apps/dariaklover/src/sitemap.xml",
-          "apps/dariaklover/src/assets"
+          "apps/website/src/favicon.ico",
+          "apps/website/src/robots.txt",
+          "apps/website/src/sitemap.xml",
+          "apps/website/src/assets"
         ],
         "styles": [],
         "scripts": [],
         "isolatedConfig": true,
-        "webpackConfig": "apps/dariaklover/webpack.config.js"
+        "webpackConfig": "apps/website/webpack.config.js"
       },
       "configurations": {
         "development": {
@@ -36,8 +36,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/dariaklover/src/environments/environment.ts",
-              "with": "apps/dariaklover/src/environments/environment.prod.ts"
+              "replace": "apps/website/src/environments/environment.ts",
+              "with": "apps/website/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -53,15 +53,15 @@
       "executor": "@nx/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "dariaklover:build",
+        "buildTarget": "website:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "dariaklover:build:development"
+          "buildTarget": "website:build:development"
         },
         "production": {
-          "buildTarget": "dariaklover:build:production",
+          "buildTarget": "website:build:production",
           "hmr": false
         }
       }
@@ -69,14 +69,14 @@
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "dariaklover:build"
+        "buildTarget": "website:build"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/dariaklover/**/*.{ts,tsx,js,jsx}"],
+        "lintFilePatterns": ["apps/website/**/*.{ts,tsx,js,jsx}"],
         "reportUnusedDisableDirectives": "error",
         "maxWarnings": 0
       }
@@ -85,7 +85,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/dariaklover/jest.config.ts",
+        "jestConfig": "apps/website/jest.config.ts",
         "passWithNoTests": true
       }
     }
