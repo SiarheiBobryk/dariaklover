@@ -45,7 +45,7 @@ export const config: Config = {
     label: 'Электронная почта',
     labelShort: 'Email',
   },
-  github: 'https://github.com/SiarheiBobryk/DariaKlover-website',
+  github: 'https://github.com/SiarheiBobryk/dariaklover',
 };
 
 export const AppConfigContext = React.createContext<Config>(config);
