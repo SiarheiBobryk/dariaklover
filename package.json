@@ -49,7 +49,7 @@
     "@babel/preset-env": "7.23.2",
     "@babel/preset-react": "7.22.15",
     "@commitlint/cli": "18.0.0",
-    "@commitlint/config-conventional": "17.8.0",
+    "@commitlint/config-conventional": "18.0.0",
     "@nx/cypress": "17.0.1",
     "@nx/eslint-plugin": "17.0.1",
     "@nx/jest": "17.0.1",
