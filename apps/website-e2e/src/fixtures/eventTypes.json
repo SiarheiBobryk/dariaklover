@@ -20,7 +20,7 @@
         "owner": "https://api.calendly.com/users/7f7c1f65-3a7a-4cef-bb27-654c751b666e",
         "type": "User"
       },
-      "scheduling_url": "https://calendly.com/dariaklover/trial",
+      "scheduling_url": "https://calendly.com/website/trial",
       "secret": false,
       "slug": "trial",
       "type": "StandardEventType",
@@ -47,7 +47,7 @@
         "owner": "https://api.calendly.com/users/7f7c1f65-3a7a-4cef-bb27-654c751b666e",
         "type": "User"
       },
-      "scheduling_url": "https://calendly.com/dariaklover/regular",
+      "scheduling_url": "https://calendly.com/website/regular",
       "secret": false,
       "slug": "regular",
       "type": "StandardEventType",

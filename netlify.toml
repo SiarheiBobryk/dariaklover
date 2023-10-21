@@ -1,6 +1,6 @@
 [build]
   base = "/"
-  publish = "dist/apps/dariaklover"
+  publish = "dist/apps/website"
   command = "yarn build"
 [[redirects]]
   from = "/*"

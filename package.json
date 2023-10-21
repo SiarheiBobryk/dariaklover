@@ -11,8 +11,8 @@
   },
   "scripts": {
     "build": "nx build",
-    "e2e:ci": "nx e2e dariaklover-e2e --configuration=ci",
-    "e2e": "nx e2e dariaklover-e2e --configuration=production",
+    "e2e:ci": "nx e2e website-e2e --configuration=ci",
+    "e2e": "nx e2e website-e2e --configuration=production",
     "format:fix": "prettier . --write",
     "format": "prettier . --check",
     "lint:fix": "nx run-many --target=lint --fix",
@@ -24,8 +24,8 @@
     "start": "nx serve",
     "test:ci": "nx run-many --target=test --ci",
     "test": "nx run-many --target=test --watch",
-    "type:check": "tsc --project apps/dariaklover/tsconfig.app.json --noEmit",
-    "type:check:e2e": "tsc --project apps/dariaklover-e2e/tsconfig.json --noEmit",
+    "type:check": "tsc --project apps/website/tsconfig.app.json --noEmit",
+    "type:check:e2e": "tsc --project apps/website-e2e/tsconfig.json --noEmit",
     "type:check:types": "tsc --project libs/types/tsconfig.lib.json --noEmit"
   },
   "dependencies": {
