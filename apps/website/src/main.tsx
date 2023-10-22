@@ -6,6 +6,7 @@ import App from './app/app';
 import AppConfigProvider from './app/providers/AppConfigProvider';
 import CalendlyProvider from './app/providers/CalendlyProvider';
 import ColorModeProvider from './app/providers/ColorModeProvider';
+import MDXProvider from './app/providers/MDXProvider';
 import ThemeProvider from './app/providers/ThemeProvider';
 
 import '@fontsource/roboto/cyrillic-400.css';
@@ -19,13 +20,17 @@ const ui = (
       <ColorModeProvider>
         <ThemeProvider>
           <BrowserRouter>
-            <App />
+            <MDXProvider>
+              <App />
+            </MDXProvider>
           </BrowserRouter>
         </ThemeProvider>
       </ColorModeProvider>
     </CalendlyProvider>
   </AppConfigProvider>
 );
+
+// TODO: Refactor it
 const app = process.env.NODE_ENV === 'development' ? <React.StrictMode>{ui}</React.StrictMode> : ui;
 
 root.render(app);

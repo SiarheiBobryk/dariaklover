@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Markdown from '../../components/Markdown';
-
-import focusingOnHealthContent from './focusingOnHealthContent.md';
+import FocusingOnHealthMDX from './focusingOnHealth.mdx';
 import focusingOnHealthMetaData from './focusingOnHealthMetaData';
 
 function FocusingOnHealth() {
@@ -12,7 +10,7 @@ function FocusingOnHealth() {
       <Helmet>
         <title>{focusingOnHealthMetaData.title}</title>
       </Helmet>
-      <Markdown>{focusingOnHealthContent}</Markdown>
+      <FocusingOnHealthMDX />
     </>
   );
 }

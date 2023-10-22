@@ -2,7 +2,5 @@
 /coverage
 /dist
 LICENSE
-# "remark-lint" is responsible of formatting MD files
-**/*.md
 .nx/*
 .yarn/*

@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import { ReferenceData } from '@dariaklover/types';
 import Typography from '@mui/material/Typography';
 
