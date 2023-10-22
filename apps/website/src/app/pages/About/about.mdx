@@ -1,3 +1,13 @@
+import Img from './Img';
+
+# Обо мне
+
+<picture>
+  <source type="image/webp" srcSet={`${process.env.NX_IMAGES_PATH}/photo-v.webp`} />
+  <source type="image/jpeg" srcSet={`${process.env.NX_IMAGES_PATH}/photo-v.jpeg`} />
+  <Img src={`${process.env.NX_IMAGES_PATH}/photo-v.jpeg`} alt="Дарья Кловер" loading="lazy" />
+</picture>
+
 Привет! Я Дарья Кловер.
 
 Кловер - имя моего бренда. Почему так? От английского _'kləʊvər_ - клевер, а логотип моего бренда - четырехлистный клевер. Для меня это олицетворение здоровья, баланса и целостности. Значение этого символа хорошо отражает меня и мою работу, во что я верю и что делаю.

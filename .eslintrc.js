@@ -69,6 +69,7 @@ module.exports = {
         restrictedNamedExports: [],
       },
     ],
+    'react/react-in-jsx-scope': 'off',
     'no-restricted-imports': ['error'],
     'import/prefer-default-export': 'off',
     'arrow-body-style': ['error', 'always'],

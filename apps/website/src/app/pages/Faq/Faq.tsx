@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Markdown from '../../components/Markdown';
-
-import faqContent from './faqContent.md';
+import FaqMDX from './faq.mdx';
 import faqMetaData from './faqMetaData';
 
 function Faq() {
@@ -12,7 +10,7 @@ function Faq() {
       <Helmet>
         <title>{faqMetaData.title}</title>
       </Helmet>
-      <Markdown>{faqContent}</Markdown>
+      <FaqMDX />
     </>
   );
 }
