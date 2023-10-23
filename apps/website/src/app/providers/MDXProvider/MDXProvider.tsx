@@ -6,7 +6,6 @@ import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { MDXComponents } from 'mdx/types';
 
-import Image from '../../components/Image';
 import LinkBlank from '../../components/LinkBlank';
 
 const components: MDXComponents = {
@@ -46,10 +45,6 @@ const components: MDXComponents = {
         {children}
       </Typography>
     );
-  },
-  img: function Img(props) {
-    const { alt = '', title: caption = '', src = '' } = props;
-    return <Image fileName={src} alt={alt} caption={caption} />;
   },
   p: function P(props) {
     const { children } = props;
