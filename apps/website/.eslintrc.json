@@ -1,10 +1,56 @@
 {
-  "extends": ["plugin:@nx/react", "../../.eslintrc.js"],
+  "extends": [
+    "plugin:@nx/react",
+    "plugin:@nx/react-typescript",
+    "plugin:cypress/recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:prettier/recommended",
+    "../../.eslintrc.json"
+  ],
   "ignorePatterns": ["!**/*", "**/*.mdx"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react", "cypress"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {}
+      "rules": {
+        "import/prefer-default-export": "off",
+        "no-restricted-exports": "off",
+        "import/order": [
+          "error",
+          {
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc"
+            },
+            "pathGroups": [
+              {
+                "pattern": "react",
+                "group": "builtin"
+              },
+              {
+                "pattern": "react-dom/**",
+                "group": "builtin"
+              },
+              {
+                "pattern": "react-**",
+                "group": "builtin"
+              }
+            ],
+            "pathGroupsExcludedImportTypes": ["react"]
+          }
+        ],
+        "import/extensions": ["error", "never", { "mdx": "off", "json": "off" }],
+        "react/jsx-props-no-spreading": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/require-default-props": "off"
+      }
     },
     {
       "files": ["*.ts", "*.tsx"],
@@ -14,5 +60,9 @@
       "files": ["*.js", "*.jsx"],
       "rules": {}
     }
-  ]
+  ],
+  "env": {
+    "jest": true,
+    "browser": true
+  }
 }
