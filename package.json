@@ -48,7 +48,7 @@
     "@commitlint/cli": "18.0.0",
     "@commitlint/config-conventional": "18.0.0",
     "@mdx-js/loader": "2.3.0",
-    "@mdx-js/react": "2.3.0",
+    "@mdx-js/react": "3.0.0",
     "@nx/cypress": "17.0.1",
     "@nx/eslint-plugin": "17.0.1",
     "@nx/jest": "17.0.1",
