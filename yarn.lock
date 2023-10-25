@@ -7058,15 +7058,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-helmet@npm:6.1.8":
-  version: 6.1.8
-  resolution: "@types/react-helmet@npm:6.1.8"
-  dependencies:
-    "@types/react": "*"
-  checksum: 380d6aa2760a43dab59d46f291caf9498abfda813e343aeaea8b814fe21a69b27e9ad97962b5541ad75179eb9b7875027e4fcc7009187b2f68251ac9f0923a2c
-  languageName: node
-  linkType: hard
-
 "@types/react-test-renderer@npm:18.0.5":
   version: 18.0.5
   resolution: "@types/react-test-renderer@npm:18.0.5"
@@ -7909,7 +7900,6 @@ __metadata:
     "@types/node": 20.8.8
     "@types/react": 18.2.21
     "@types/react-dom": 18.2.14
-    "@types/react-helmet": 6.1.8
     "@types/react-test-renderer": 18.0.5
     "@typescript-eslint/eslint-plugin": 6.9.0
     "@typescript-eslint/parser": 6.9.0
