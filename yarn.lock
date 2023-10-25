@@ -7942,7 +7942,7 @@ __metadata:
     react-router-dom: 6.17.0
     react-scripts: 5.0.1
     react-test-renderer: 18.2.0
-    swiper: 11.0.1
+    swiper: 11.0.2
     ts-jest: 28.0.5
     ts-node: 10.9.1
     tslib: 2.6.2
@@ -22466,10 +22466,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:11.0.1":
-  version: 11.0.1
-  resolution: "swiper@npm:11.0.1"
-  checksum: 7be9d93bf64257c3c095b23f6831cc796b18a8b72f306dadb1e09ff615c291c4922cc1a00fda4d6448dd8df8c955a281f6c282e7c68c5258b38de3c00fb4ab59
+"swiper@npm:11.0.2":
+  version: 11.0.2
+  resolution: "swiper@npm:11.0.2"
+  checksum: 7797269aa27a8d1308e0abd8822001009c1a34c484b36864c1690c857ca9b19dbe1dde70ca388ebec5b1b72c5ed4f00043d0426077440175ff033b66dfe77e4e
   languageName: node
   linkType: hard
 
