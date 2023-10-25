@@ -58,6 +58,7 @@ describe('ColorModeProvider/`TopBar` integration', () => {
   it('should have the right content in the `theme-color` HTML meta tag', async () => {
     const user = userEvent.setup();
     function getThemeColorData(): HTMLMetaElement | undefined {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
       return Helmet.peek().metaTags.find(function findThemeColor(tag: HTMLMetaElement) {
         const { name } = tag;
         return name === 'theme-color';
