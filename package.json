@@ -55,7 +55,7 @@
     "@nx/js": "17.0.1",
     "@nx/linter": "17.0.1",
     "@nx/react": "17.0.1",
-    "@nx/web": "17.0.1",
+    "@nx/web": "17.0.2",
     "@nx/webpack": "17.0.1",
     "@nx/workspace": "17.0.1",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.11",
