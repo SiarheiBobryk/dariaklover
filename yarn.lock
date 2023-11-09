@@ -6862,13 +6862,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest-axe@npm:3.5.7":
-  version: 3.5.7
-  resolution: "@types/jest-axe@npm:3.5.7"
+"@types/jest-axe@npm:3.5.8":
+  version: 3.5.8
+  resolution: "@types/jest-axe@npm:3.5.8"
   dependencies:
     "@types/jest": "*"
     axe-core: ^3.5.5
-  checksum: 939581917fc119250ffab78d64c54124210b9153a0248ec9a69aa65b288bd91ca3c2a02a53aaab5bff218628aa00e7936e4ac2b2870f727f839583882f0d71ac
+  checksum: 753eba3d8a7a83b7fb085fd16568a25e1bb693a70c061abe029f7166ed6fe7266b35db317502b8641ccb802290f12fcbe565dacd9924111f98f97a44b56edf72
   languageName: node
   linkType: hard
 
@@ -7892,7 +7892,7 @@ __metadata:
     "@testing-library/react": 14.0.0
     "@testing-library/user-event": 14.5.1
     "@types/jest": 29.4.0
-    "@types/jest-axe": 3.5.7
+    "@types/jest-axe": 3.5.8
     "@types/mdx": 2.0.10
     "@types/node": 20.8.10
     "@types/react": 18.2.36
