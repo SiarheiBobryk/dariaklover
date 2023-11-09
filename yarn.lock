@@ -7994,7 +7994,7 @@ __metadata:
     react-router-dom: 6.18.0
     react-scripts: 5.0.1
     react-test-renderer: 18.2.0
-    swiper: 11.0.3
+    swiper: 11.0.4
     ts-jest: 28.0.5
     ts-node: 10.9.1
     tslib: 2.6.2
@@ -22940,10 +22940,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:11.0.3":
-  version: 11.0.3
-  resolution: "swiper@npm:11.0.3"
-  checksum: 3f61c113e8c38fef7c4907980a6bcd0b7df04a5db275264dbc9fdffe1ca9b7390b10870a0a622d0f00072984b4a565b0681cfad054f22d443a58e268663213f6
+"swiper@npm:11.0.4":
+  version: 11.0.4
+  resolution: "swiper@npm:11.0.4"
+  checksum: 520a4c0c1aeb94eadc5c2cf52ae4a479a2c7fc416ed15a7623135c4f1b0dc9ad255c2d0c1ec8e7a138e685ac37e95668aebfbd5a8d86887326a08e8b683bed51
   languageName: node
   linkType: hard
 
