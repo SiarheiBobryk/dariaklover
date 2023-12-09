@@ -14,23 +14,22 @@ import '@fontsource/roboto/cyrillic-500.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
-const ui = (
-  <AppConfigProvider>
-    <CalendlyProvider>
-      <ColorModeProvider>
-        <ThemeProvider>
-          <BrowserRouter>
-            <MDXProvider>
-              <App />
-            </MDXProvider>
-          </BrowserRouter>
-        </ThemeProvider>
-      </ColorModeProvider>
-    </CalendlyProvider>
-  </AppConfigProvider>
+const app = (
+  <React.StrictMode>
+    <AppConfigProvider>
+      <CalendlyProvider>
+        <ColorModeProvider>
+          <ThemeProvider>
+            <BrowserRouter>
+              <MDXProvider>
+                <App />
+              </MDXProvider>
+            </BrowserRouter>
+          </ThemeProvider>
+        </ColorModeProvider>
+      </CalendlyProvider>
+    </AppConfigProvider>
+  </React.StrictMode>
 );
-
-// TODO: Refactor it
-const app = process.env.NODE_ENV === 'development' ? <React.StrictMode>{ui}</React.StrictMode> : ui;
 
 root.render(app);
