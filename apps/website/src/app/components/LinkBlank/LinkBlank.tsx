@@ -1,18 +1,18 @@
-import * as React from 'react';
+import { ReactNode, Ref, forwardRef } from 'react';
 
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Link from '@mui/material/Link';
 import { SxProps, Theme } from '@mui/material/styles';
 
 export interface LinkBlankProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   href: string;
   target?: string;
   sx?: SxProps<Theme>;
   rel?: string | undefined;
 }
 
-const LinkBlank = React.forwardRef(function LinkBlank(props: LinkBlankProps, ref: React.Ref<HTMLAnchorElement>) {
+const LinkBlank = forwardRef(function LinkBlank(props: LinkBlankProps, ref: Ref<HTMLAnchorElement>) {
   const { children, sx, target = '_blank', ...other } = props;
 
   return (

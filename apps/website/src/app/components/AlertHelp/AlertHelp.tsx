@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { MouseEventHandler, ReactNode, Ref, forwardRef } from 'react';
 
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
@@ -8,13 +8,13 @@ import LinkSocial from '../LinkSocial';
 
 export interface AlertHelpProps {
   title?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
   open?: boolean;
-  onClose?: React.MouseEventHandler<HTMLButtonElement>;
+  onClose?: MouseEventHandler<HTMLButtonElement>;
   severity?: 'success' | 'info' | 'warning' | 'error';
 }
 
-const AlertHelp = React.forwardRef(function AlertHelp(props: AlertHelpProps, ref: React.Ref<HTMLDivElement>) {
+const AlertHelp = forwardRef(function AlertHelp(props: AlertHelpProps, ref: Ref<HTMLDivElement>) {
   const {
     title = 'Связаться с нами',
     children = (

@@ -1,10 +1,10 @@
-import * as React from 'react';
+import { ElementType, ReactNode, Ref, forwardRef } from 'react';
 
 import Typography from '@mui/material/Typography';
 
 export interface HeadingProps {
-  children?: React.ReactNode;
-  component?: React.ElementType;
+  children?: ReactNode;
+  component?: ElementType;
   variant?:
     | 'h1'
     | 'h2'
@@ -23,7 +23,7 @@ export interface HeadingProps {
     | undefined;
 }
 
-const Heading = React.forwardRef(function Heading(props: HeadingProps, ref: React.Ref<HTMLParagraphElement>) {
+const Heading = forwardRef(function Heading(props: HeadingProps, ref: Ref<HTMLParagraphElement>) {
   const { children, component = 'h1', variant = 'h5', ...other } = props;
 
   return (

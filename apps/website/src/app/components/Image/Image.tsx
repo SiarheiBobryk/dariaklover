@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Ref, forwardRef } from 'react';
 
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
@@ -27,7 +27,7 @@ export interface ImageProps {
   caption: string;
 }
 
-const Image = React.forwardRef(function Image(props: ImageProps, ref: React.Ref<HTMLDivElement>) {
+const Image = forwardRef(function Image(props: ImageProps, ref: Ref<HTMLDivElement>) {
   const { fileName, alt, caption, ...other } = props;
 
   return (

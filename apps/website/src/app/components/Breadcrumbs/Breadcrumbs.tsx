@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Ref, forwardRef, useMemo } from 'react';
 import { Link as RouterLink, useLocation, LinkProps } from 'react-router-dom';
 
 import BreadcrumbsMui from '@mui/material/Breadcrumbs';
@@ -55,9 +55,9 @@ function LinkRouter(props: LinkRouterProps) {
 
 export interface BreadcrumbsProps {}
 
-const Breadcrumbs = React.forwardRef(function Breadcrumbs(props: BreadcrumbsProps, ref: React.Ref<HTMLDivElement>) {
+const Breadcrumbs = forwardRef(function Breadcrumbs(props: BreadcrumbsProps, ref: Ref<HTMLDivElement>) {
   const location = useLocation();
-  const pathnames = React.useMemo(
+  const pathnames = useMemo(
     function memoizePathnames() {
       return location.pathname.split('/').filter(function filterPathnames(x) {
         return x;
@@ -66,7 +66,7 @@ const Breadcrumbs = React.forwardRef(function Breadcrumbs(props: BreadcrumbsProp
     [location],
   );
 
-  const certificatesBreadcrumbNameMap: { [key: string]: string } = React.useMemo(function memoizeCertificatesBread() {
+  const certificatesBreadcrumbNameMap: { [key: string]: string } = useMemo(function memoizeCertificatesBread() {
     return Object.keys(certificatesMap).reduce(function reduceCertificatesMap(certificatesBreadcrumbNameMapRaw, key) {
       const { title, url: titleKey = '' } = certificatesMap[key] ?? {};
       return {

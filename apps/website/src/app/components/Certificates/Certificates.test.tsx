@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { createRef } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import { render, RenderResult, screen } from '@testing-library/react';
@@ -21,7 +21,7 @@ describe('<Certificates />', () => {
   });
 
   it('should forward ref', () => {
-    const ref = React.createRef();
+    const ref = createRef();
     render(
       <BrowserRouter>
         <Certificates ref={ref} data-testid="Certificates" />

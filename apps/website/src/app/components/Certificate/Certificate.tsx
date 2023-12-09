@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Ref, forwardRef } from 'react';
 
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
@@ -24,7 +24,7 @@ export interface CertificateProps {
   subtitle: string;
 }
 
-const Certificate = React.forwardRef(function Certificate(props: CertificateProps, ref: React.Ref<HTMLDivElement>) {
+const Certificate = forwardRef(function Certificate(props: CertificateProps, ref: Ref<HTMLDivElement>) {
   const { certificateId, title, subtitle, ...other } = props;
 
   return (

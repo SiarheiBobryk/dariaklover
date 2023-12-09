@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { createRef } from 'react';
 
 import { render, RenderResult, screen } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
@@ -18,7 +18,7 @@ describe('<Image />', () => {
   });
 
   it('should forward ref', () => {
-    const ref = React.createRef<HTMLImageElement>();
+    const ref = createRef<HTMLImageElement>();
     render(
       <Image
         ref={ref}

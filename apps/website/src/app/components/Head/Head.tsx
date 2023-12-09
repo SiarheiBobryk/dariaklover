@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 
 import { Config } from '@dariaklover/types';
@@ -9,7 +9,7 @@ import { AppConfigContext } from '../../providers/AppConfigProvider';
 
 function Head() {
   const theme: Theme = useTheme();
-  const { fullName, language, description, keywords, ...configs }: Config = React.useContext(AppConfigContext);
+  const { fullName, language, description, keywords, ...configs }: Config = useContext(AppConfigContext);
 
   return (
     // NOTE: We set the actual HTML `title` in the body of the `App` children

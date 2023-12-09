@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Ref, forwardRef, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Certificate, CertificatesMap } from '@dariaklover/types';
@@ -92,9 +92,9 @@ export const certificatesMap: CertificatesMap = certificates.reduce(function red
 export interface CertificatesProps {}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Certificates = React.forwardRef(function Certificates(props: CertificatesProps, ref: React.Ref<any>) {
+const Certificates = forwardRef(function Certificates(props: CertificatesProps, ref: Ref<any>) {
   const navigate = useNavigate();
-  const navigateToCertificate = React.useCallback(
+  const navigateToCertificate = useCallback(
     function memoizeNavigateToCertificate(certificateId: string) {
       navigate(`/certificates/${certificateId}`);
     },
@@ -105,7 +105,7 @@ const Certificates = React.forwardRef(function Certificates(props: CertificatesP
   const isMedium = useMediaQuery(theme.breakpoints.up('md'));
   const isSmall = useMediaQuery(theme.breakpoints.up('sm'));
   const isXSmall = useMediaQuery(theme.breakpoints.up('xs'));
-  const columns = React.useMemo(
+  const columns = useMemo(
     function memoizeColumns() {
       if (isMedium) {
         return 3;

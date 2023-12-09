@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Ref, forwardRef, useContext } from 'react';
 
 import { Config } from '@dariaklover/types';
 import { LinkProps } from '@mui/material/Link';
@@ -8,10 +8,10 @@ import LinkBlank from '../LinkBlank';
 
 export interface LinkEmailProps extends LinkProps {}
 
-const LinkEmail = React.forwardRef(function LinkEmail(props: LinkEmailProps, ref: React.Ref<HTMLAnchorElement>) {
+const LinkEmail = forwardRef(function LinkEmail(props: LinkEmailProps, ref: Ref<HTMLAnchorElement>) {
   const {
     email: { id, labelShort },
-  }: Config = React.useContext(AppConfigContext);
+  }: Config = useContext(AppConfigContext);
 
   return (
     <LinkBlank ref={ref} href={`mailto: ${id}`} rel="noopener" {...props}>

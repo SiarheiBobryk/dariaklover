@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ReactElement, createContext } from 'react';
 
 import { Config } from '@dariaklover/types';
 
@@ -48,10 +48,10 @@ export const config: Config = {
   github: 'https://github.com/SiarheiBobryk/dariaklover',
 };
 
-export const AppConfigContext = React.createContext<Config>(config);
+export const AppConfigContext = createContext<Config>(config);
 
 export interface AppConfigProviderProps {
-  children: React.ReactElement;
+  children: ReactElement;
 }
 
 function AppConfigProvider(props: AppConfigProviderProps) {

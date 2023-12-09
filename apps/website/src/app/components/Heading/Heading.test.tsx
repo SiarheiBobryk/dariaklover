@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { createRef } from 'react';
 
 import { render, RenderResult } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
@@ -17,7 +17,7 @@ describe('<Heading />', () => {
     });
 
     it('should forward ref', () => {
-      const ref = React.createRef<HTMLParagraphElement>();
+      const ref = createRef<HTMLParagraphElement>();
       const { container } = render(<Heading ref={ref} />);
       expect(container.firstChild).toBe(ref.current);
     });

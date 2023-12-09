@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
@@ -22,10 +22,10 @@ import howToBookMetaData from '../HowToBook/howToBookMetaData';
 import bookingMetaData from './bookingMetaData';
 
 function Booking() {
-  const calendlyUser: CalendlyUserDto = React.useContext<CalendlyUserDto>(CalendlyContext);
-  const [events, setEvents] = React.useState<Array<CalendlyUserEventDto>>([]);
+  const calendlyUser: CalendlyUserDto = useContext<CalendlyUserDto>(CalendlyContext);
+  const [events, setEvents] = useState<Array<CalendlyUserEventDto>>([]);
 
-  React.useEffect(
+  useEffect(
     function fetchCalendlyEvents() {
       const controller = new AbortController();
       const { signal } = controller;
