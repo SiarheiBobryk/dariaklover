@@ -12,6 +12,7 @@ import Link from '@mui/material/Link';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import packageJson from '../../../../../../package.json';
 import { AppConfigContext } from '../../providers/AppConfigProvider';
 

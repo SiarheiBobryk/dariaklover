@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Config } from '@dariaklover/types';
 import { Theme, useTheme } from '@mui/material/styles';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import packageJson from '../../../../../../package.json';
 import { AppConfigContext } from '../../providers/AppConfigProvider';
 
