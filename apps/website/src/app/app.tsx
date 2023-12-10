@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ReactNode, lazy, Suspense as ReactSuspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Fallback from './components/Fallback';
@@ -18,60 +18,60 @@ import notFoundMetaData from './pages/NotFound/notFoundMetaData';
 import pricingMetaData from './pages/Pricing/pricingMetaData';
 import referencesMetaData from './pages/References/referencesMetaData';
 
-const Articles = React.lazy(function lazyLoadArticles() {
+const Articles = lazy(function lazyLoadArticles() {
   return import('./pages/Articles');
 });
 
-const About = React.lazy(function lazyLoadAbout() {
+const About = lazy(function lazyLoadAbout() {
   return import('./pages/About');
 });
 
-const Booking = React.lazy(function lazyLoadBooking() {
+const Booking = lazy(function lazyLoadBooking() {
   return import('./pages/Booking');
 });
 
-const Certificate = React.lazy(function lazyLoadCertificate() {
+const Certificate = lazy(function lazyLoadCertificate() {
   return import('./pages/Certificate');
 });
 
-const Certificates = React.lazy(function lazyLoadCertificates() {
+const Certificates = lazy(function lazyLoadCertificates() {
   return import('./pages/Certificates');
 });
 
-const Faq = React.lazy(function lazyLoadFaq() {
+const Faq = lazy(function lazyLoadFaq() {
   return import('./pages/Faq');
 });
 
-const FocusingOnHealth = React.lazy(function lazyLoadFocusingOnHealth() {
+const FocusingOnHealth = lazy(function lazyLoadFocusingOnHealth() {
   return import('./pages/FocusingOnHealth');
 });
 
-const HowToBook = React.lazy(function lazyLoadHowToBook() {
+const HowToBook = lazy(function lazyLoadHowToBook() {
   return import('./pages/HowToBook');
 });
 
-const Help = React.lazy(function lazyLoadHelp() {
+const Help = lazy(function lazyLoadHelp() {
   return import('./pages/Help');
 });
 
-const NotFound = React.lazy(function lazyLoadNotFound() {
+const NotFound = lazy(function lazyLoadNotFound() {
   return import('./pages/NotFound');
 });
 
-const Main = React.lazy(function lazyLoadMain() {
+const Main = lazy(function lazyLoadMain() {
   return import('./pages/Main');
 });
 
-const Pricing = React.lazy(function lazyLoadPricing() {
+const Pricing = lazy(function lazyLoadPricing() {
   return import('./pages/Pricing');
 });
 
-const References = React.lazy(function lazyLoadReferences() {
+const References = lazy(function lazyLoadReferences() {
   return import('./pages/References');
 });
 
 // Uncomment if for testing the Fallback component
-// const Main = React.lazy(() => {
+// const Main = lazy(() => {
 //   return import('./pages/Main').then((module) => {
 //     return new Promise((resolve) => {
 //       setTimeout(() => {
@@ -83,12 +83,12 @@ const References = React.lazy(function lazyLoadReferences() {
 // });
 
 interface SuspenseProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 function Suspense(props: SuspenseProps) {
   const { children } = props;
-  return <React.Suspense fallback={<Fallback />}>{children}</React.Suspense>;
+  return <ReactSuspense fallback={<Fallback />}>{children}</ReactSuspense>;
 }
 
 function App() {

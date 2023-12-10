@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ReactNode, createContext, useEffect, useState } from 'react';
 
 import { CalendlyUserDto } from '@dariaklover/types';
 
@@ -17,18 +17,18 @@ export const CALENDLY_USER_DEFAULT: CalendlyUserDto = {
   uri: 'https://api.calendly.com/users/7f7c1f65-3a7a-4cef-bb27-654c751b666e',
 };
 
-export const CalendlyContext = React.createContext<CalendlyUserDto>(CALENDLY_USER_DEFAULT);
+export const CalendlyContext = createContext<CalendlyUserDto>(CALENDLY_USER_DEFAULT);
 
 export interface CalendlyProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 function CalendlyProvider(props: CalendlyProviderProps) {
   const { children } = props;
 
-  const [user, setUser] = React.useState<CalendlyUserDto>(CALENDLY_USER_DEFAULT);
+  const [user, setUser] = useState<CalendlyUserDto>(CALENDLY_USER_DEFAULT);
 
-  React.useEffect(function updateCalendlyUser() {
+  useEffect(function updateCalendlyUser() {
     const controller = new AbortController();
     const { signal } = controller;
     (async function fetchCalendlyUser() {

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { createRef } from 'react';
 
 import { render, RenderResult, screen } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
@@ -16,7 +16,7 @@ describe('<AlertHelp />', () => {
   });
 
   it('should forward ref', () => {
-    const ref = React.createRef<HTMLDivElement>();
+    const ref = createRef<HTMLDivElement>();
     render(<AlertHelp ref={ref} data-testid="AlertHelp" />);
     expect(screen.getByTestId('AlertHelp')).toBe(ref.current);
   });

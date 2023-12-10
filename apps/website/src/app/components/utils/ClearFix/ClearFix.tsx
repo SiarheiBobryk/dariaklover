@@ -1,7 +1,9 @@
+import { ReactNode } from 'react';
+
 import Box from '@mui/material/Box';
 
 export interface ClearFixProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 function ClearFix(props: ClearFixProps) {

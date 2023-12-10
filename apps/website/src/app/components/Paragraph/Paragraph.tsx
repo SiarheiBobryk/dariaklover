@@ -1,10 +1,10 @@
-import * as React from 'react';
+import { ElementType, ReactNode, Ref, forwardRef } from 'react';
 
 import Typography from '@mui/material/Typography';
 
 export interface ParagraphProps {
-  children?: React.ReactNode;
-  component?: React.ElementType;
+  children?: ReactNode;
+  component?: ElementType;
   variant?:
     | 'h1'
     | 'h2'
@@ -23,7 +23,7 @@ export interface ParagraphProps {
     | undefined;
 }
 
-const Paragraph = React.forwardRef(function Paragraph(props: ParagraphProps, ref: React.Ref<HTMLParagraphElement>) {
+const Paragraph = forwardRef(function Paragraph(props: ParagraphProps, ref: Ref<HTMLParagraphElement>) {
   const { children, component = 'p', variant = 'body1', ...other } = props;
 
   return (

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ import '@fontsource/roboto/cyrillic-500.css';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 const app = (
-  <React.StrictMode>
+  <StrictMode>
     <AppConfigProvider>
       <CalendlyProvider>
         <ColorModeProvider>
@@ -29,7 +29,7 @@ const app = (
         </ColorModeProvider>
       </CalendlyProvider>
     </AppConfigProvider>
-  </React.StrictMode>
+  </StrictMode>
 );
 
 root.render(app);

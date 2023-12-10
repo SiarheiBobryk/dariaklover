@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ReactNode, Ref, forwardRef } from 'react';
 
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import EventIcon from '@mui/icons-material/Event';
@@ -13,7 +13,7 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 
 export interface BookingCardProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   duration?: number;
   href?: string;
   title?: string;
@@ -21,7 +21,7 @@ export interface BookingCardProps {
   via?: string;
 }
 
-const BookingCard = React.forwardRef(function BookingCard(props: BookingCardProps, ref: React.Ref<HTMLDivElement>) {
+const BookingCard = forwardRef(function BookingCard(props: BookingCardProps, ref: Ref<HTMLDivElement>) {
   // ATTENTION: Keep "via" up to date with the Celendly Event
   const { title = '', duration = 60, via = 'Google Meet', href = '', uri, children, ...other } = props;
   const FREE_EVENT_URI = 'https://api.calendly.com/event_types/2f876851-1bd0-49d8-a89d-f017c56c1f17';

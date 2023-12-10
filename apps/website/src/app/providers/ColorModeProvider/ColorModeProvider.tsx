@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ReactNode, createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 import { ColorModeContextValue, Config } from '@dariaklover/types';
 import { PaletteMode } from '@mui/material';
@@ -6,10 +6,10 @@ import { PaletteMode } from '@mui/material';
 import { AppConfigContext } from '../AppConfigProvider';
 
 export interface ColorModeProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export const ColorModeContext = React.createContext<ColorModeContextValue>({
+export const ColorModeContext = createContext<ColorModeContextValue>({
   mode: 'light',
   toggleColorCallback(this: void): void {},
 });
@@ -17,17 +17,17 @@ export const ColorModeContext = React.createContext<ColorModeContextValue>({
 function ColorModeProvider(props: ColorModeProviderProps) {
   const { children } = props;
 
-  const { colorModeDefault }: Config = React.useContext(AppConfigContext);
+  const { colorModeDefault }: Config = useContext(AppConfigContext);
   const colorModeInit: PaletteMode = (localStorage.getItem('colorMode') as PaletteMode) ?? colorModeDefault;
-  const [mode, setMode] = React.useState<PaletteMode>(colorModeInit);
-  React.useEffect(
+  const [mode, setMode] = useState<PaletteMode>(colorModeInit);
+  useEffect(
     function backupColorMode() {
       localStorage.setItem('colorMode', mode);
     },
     [mode],
   );
 
-  const colorMode: ColorModeContextValue = React.useMemo(
+  const colorMode: ColorModeContextValue = useMemo(
     function memoizeColorMode() {
       return {
         toggleColorCallback(this: void): void {

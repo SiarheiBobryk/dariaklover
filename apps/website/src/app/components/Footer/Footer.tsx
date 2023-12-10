@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useContext } from 'react';
 
 import { Config } from '@dariaklover/types';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -31,7 +31,7 @@ function Footer(props: FooterProps) {
     fullName,
     github,
     email: { id: emailId },
-  }: Config = React.useContext(AppConfigContext);
+  }: Config = useContext(AppConfigContext);
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, marginBottom: 1 }} {...props}>

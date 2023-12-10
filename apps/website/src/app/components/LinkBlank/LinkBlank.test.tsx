@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { createRef } from 'react';
 
 import { render, RenderResult } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
@@ -19,7 +19,7 @@ describe('<LinkBlank />', () => {
     });
 
     it('should forward ref', () => {
-      const ref = React.createRef<HTMLAnchorElement>();
+      const ref = createRef<HTMLAnchorElement>();
       const { container } = render(<LinkBlank href="https://dariaklover.health" ref={ref} />);
       expect(container.firstChild).toBe(ref.current);
     });

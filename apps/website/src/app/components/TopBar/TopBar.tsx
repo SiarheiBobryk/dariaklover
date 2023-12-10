@@ -1,4 +1,15 @@
-import * as React from 'react';
+import {
+  MouseEvent,
+  CSSProperties,
+  ReactElement,
+  ReactNode,
+  Ref,
+  forwardRef,
+  useCallback,
+  useContext,
+  useState,
+  useMemo,
+} from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
 import { ColorModeContextValue } from '@dariaklover/types';
@@ -37,7 +48,7 @@ import News from '../News';
 export interface Page {
   to: string;
   label: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
 }
 
 export const pages: Array<Page> = [
@@ -74,7 +85,7 @@ export const pages: Array<Page> = [
 ];
 
 export interface RouterNavLinkProps {
-  children: React.ReactElement;
+  children: ReactElement;
   to: string;
 }
 
@@ -84,13 +95,13 @@ export interface StyleCallbackParams {
 
 // TODO: Move it to a separate component
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const RouterNavLinkMod = React.forwardRef(function RouterNavLinkMod(props: RouterNavLinkProps, ref: React.Ref<any>) {
+const RouterNavLinkMod = forwardRef(function RouterNavLinkMod(props: RouterNavLinkProps, ref: Ref<any>) {
   const { children, to, ...other } = props;
   const theme: Theme = useTheme();
 
-  const styleCallback = React.useCallback(
-    function styleCallback({ isActive }: StyleCallbackParams): React.CSSProperties {
-      const activeStyle: React.CSSProperties = {
+  const styleCallback = useCallback(
+    function styleCallback({ isActive }: StyleCallbackParams): CSSProperties {
+      const activeStyle: CSSProperties = {
         backgroundColor: theme.palette.action.selected,
       };
       return isActive ? activeStyle : {};
@@ -108,15 +119,15 @@ const RouterNavLinkMod = React.forwardRef(function RouterNavLinkMod(props: Route
 export interface NavButtonProps {
   to: string;
   size?: 'small' | 'medium' | 'large';
-  children: React.ReactNode;
+  children: ReactNode;
   label: string;
-  endIcon: React.ReactNode;
+  endIcon: ReactNode;
   variant?: 'text' | 'outlined' | 'contained';
   color?: 'inherit' | 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning';
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const NavButton = React.forwardRef(function NavButton(props: NavButtonProps, ref: React.Ref<any>) {
+const NavButton = forwardRef(function NavButton(props: NavButtonProps, ref: Ref<any>) {
   const { to, children, size = 'medium', label, variant = 'text', color = 'inherit', ...other } = props;
 
   return (
@@ -142,37 +153,37 @@ export interface TopBarProps {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const TopBar = React.forwardRef(function TopBar(props: TopBarProps, ref: React.Ref<any>) {
+const TopBar = forwardRef(function TopBar(props: TopBarProps, ref: Ref<any>) {
   const { ColorSwitcherButtonProps } = props;
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const theme: Theme = useTheme();
   const isLarge: boolean = useMediaQuery(theme.breakpoints.up('lg'));
 
-  const colorMode: ColorModeContextValue = React.useContext(ColorModeContext);
+  const colorMode: ColorModeContextValue = useContext(ColorModeContext);
 
-  const handleOpenNavMenu = React.useCallback(function handleOpenNavMenu(event: React.MouseEvent<HTMLElement>): void {
+  const handleOpenNavMenu = useCallback(function handleOpenNavMenu(event: MouseEvent<HTMLElement>): void {
     setAnchorElNav(event.currentTarget);
   }, []);
 
-  const handleCloseNavMenu = React.useCallback(function handleCloseNavMenu(): void {
+  const handleCloseNavMenu = useCallback(function handleCloseNavMenu(): void {
     setAnchorElNav(null);
   }, []);
 
-  const toolbarVariant = React.useMemo(
+  const toolbarVariant = useMemo(
     function memoizeVariant(): 'regular' | 'dense' {
       return isLarge ? 'regular' : 'dense';
     },
     [isLarge],
   );
 
-  const buttonSize = React.useMemo(
+  const buttonSize = useMemo(
     function memoizeSize(): 'medium' | 'small' {
       return isLarge ? 'medium' : 'small';
     },
     [isLarge],
   );
 
-  const logoFontSize = React.useMemo(
+  const logoFontSize = useMemo(
     function memoizeFontSize(): 'large' | 'medium' {
       return isLarge ? 'large' : 'medium';
     },

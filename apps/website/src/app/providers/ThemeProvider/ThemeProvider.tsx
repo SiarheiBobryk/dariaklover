@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ReactNode, useContext, useMemo } from 'react';
 
 import { ColorModeContextValue } from '@dariaklover/types';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -8,14 +8,14 @@ import { createTheme } from '../../styles';
 import { ColorModeContext } from '../ColorModeProvider/ColorModeProvider';
 
 export interface ThemeProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 function ThemeProvider(props: ThemeProviderProps) {
   const { children } = props;
-  const { mode }: ColorModeContextValue = React.useContext(ColorModeContext);
+  const { mode }: ColorModeContextValue = useContext(ColorModeContext);
 
-  const theme: Theme = React.useMemo(
+  const theme: Theme = useMemo(
     function memoizeCreateTheme() {
       return createTheme(mode);
     },

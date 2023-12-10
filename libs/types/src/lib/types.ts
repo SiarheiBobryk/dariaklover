@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { PaletteMode } from '@mui/material';
 
 export interface PageMetaData {
@@ -287,7 +288,7 @@ export interface ReferenceData {
   srcSet: string;
   alt: string;
   title: string;
-  description: React.ReactNode;
+  description: ReactNode;
 }
 
 export interface SwiperClass {

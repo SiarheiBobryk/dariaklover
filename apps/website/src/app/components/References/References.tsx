@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useCallback, useState } from 'react';
 
 import { ReferenceData, SwiperClass } from '@dariaklover/types';
 import Box from '@mui/material/Box';
@@ -34,12 +34,12 @@ export const Skeleton = styled(SkeletonMui)(function styleSkeleton({ theme }) {
 export interface ReferencesProps {}
 
 function References() {
-  const [currentSlideIndex, setCurrentSlideIndex] = React.useState<number>(0);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
   const height = 541;
   const width = 250;
   const appTheme = useTheme();
 
-  const handleOnSlideChange = React.useCallback(
+  const handleOnSlideChange = useCallback(
     function handleOnSlideChange(swiper: SwiperClass) {
       const { activeIndex } = swiper;
       setCurrentSlideIndex(Number(activeIndex));

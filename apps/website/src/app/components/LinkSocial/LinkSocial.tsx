@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Ref, forwardRef, useContext } from 'react';
 
 import { Config } from '@dariaklover/types';
 
@@ -9,9 +9,9 @@ export interface LinkSocialProps {
   social?: 'telegram' | 'instagram' | 'whatsapp';
 }
 
-const LinkSocial = React.forwardRef(function LinkSocial(props: LinkSocialProps, ref: React.Ref<HTMLAnchorElement>) {
+const LinkSocial = forwardRef(function LinkSocial(props: LinkSocialProps, ref: Ref<HTMLAnchorElement>) {
   const { social = 'telegram', ...other } = props;
-  const config: Config = React.useContext(AppConfigContext);
+  const config: Config = useContext(AppConfigContext);
 
   return (
     <LinkBlank ref={ref} href={config?.[social]?.href} rel="noopener" {...other}>

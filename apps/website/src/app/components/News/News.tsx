@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Ref, forwardRef, useCallback, useEffect, useState } from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
 import NotificationsIcon from '@mui/icons-material/Notifications';
@@ -17,11 +17,11 @@ export const newsPosted = '2023-05-18T19:42:00';
 
 export interface NewsProps {}
 
-const News = React.forwardRef(function News(props: NewsProps, ref: React.Ref<HTMLDivElement>) {
+const News = forwardRef(function News(props: NewsProps, ref: Ref<HTMLDivElement>) {
   const newsPostedTime: number = new Date(newsPosted).getTime();
-  const [newsCheckTime, setNewsCheckTime] = React.useState<number>(0);
+  const [newsCheckTime, setNewsCheckTime] = useState<number>(0);
 
-  React.useEffect(function retrieveNewsCheckDate() {
+  useEffect(function retrieveNewsCheckDate() {
     const newsCheckTimePrev = Number(localStorage.getItem('newsCheckTime'));
     if (newsCheckTimePrev) {
       setNewsCheckTime(newsCheckTimePrev);
@@ -29,17 +29,17 @@ const News = React.forwardRef(function News(props: NewsProps, ref: React.Ref<HTM
   }, []);
 
   const theme: Theme = useTheme();
-  const [open, setOpen] = React.useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
-  const handleOpen = React.useCallback(function handleOpen() {
+  const handleOpen = useCallback(function handleOpen() {
     const now = Date.now();
     setNewsCheckTime(now);
     localStorage.setItem('newsCheckTime', String(now));
     setOpen(true);
   }, []);
 
-  const handleClose = React.useCallback(function handleClose() {
+  const handleClose = useCallback(function handleClose() {
     setOpen(false);
   }, []);
 

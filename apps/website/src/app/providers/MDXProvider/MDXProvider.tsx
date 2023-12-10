@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
 import { MDXProvider as MDXProviderOrig } from '@mdx-js/react';
@@ -61,7 +62,7 @@ const components: MDXComponents = {
 };
 
 export interface MDXProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 function MDXProvider(props: MDXProviderProps) {

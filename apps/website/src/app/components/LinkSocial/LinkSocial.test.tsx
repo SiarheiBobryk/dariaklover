@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { createRef } from 'react';
 
 import { render, RenderResult, screen } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
@@ -16,7 +16,7 @@ describe('<LinkSocial />', () => {
   });
 
   it('should forward ref', () => {
-    const ref = React.createRef<HTMLAnchorElement>();
+    const ref = createRef<HTMLAnchorElement>();
     render(<LinkSocial ref={ref} data-testid="LinkSocial" />);
     expect(screen.getByTestId('LinkSocial')).toBe(ref.current);
   });
