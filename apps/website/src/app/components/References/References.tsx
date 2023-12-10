@@ -11,6 +11,7 @@ import { SwiperOptions } from 'swiper/types/swiper-options';
 
 import Heading from '../Heading';
 
+// eslint-disable-next-line import/extensions
 import { references } from './references.data';
 
 import 'swiper/css';
