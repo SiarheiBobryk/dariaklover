@@ -14,7 +14,7 @@ import Heading from '../../components/Heading';
 import LinkEmail from '../../components/LinkEmail';
 import LinkSocial from '../../components/LinkSocial';
 import Paragraph from '../../components/Paragraph';
-import { CalendlyContext } from '../../providers';
+import { CalendlyContext } from '../../providers/CalendlyProvider';
 import { getCalendlyEventsActive } from '../../services/calendlyUserService';
 import helpMetaData from '../Help/helpMetaData';
 import howToBookMetaData from '../HowToBook/howToBookMetaData';

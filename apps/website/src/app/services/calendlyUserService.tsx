@@ -5,8 +5,8 @@ import {
   CalendlyUserResponse,
 } from '@dariaklover/types';
 
-import calendlyUserEventTypeToDto from '../../mappers/calendlyUserEventTypeToDto';
-import calendlyUserToDto from '../../mappers/calendlyUserToDto';
+import calendlyUserEventTypeToDto from '../mappers/calendlyUserEventTypeToDto';
+import calendlyUserToDto from '../mappers/calendlyUserToDto';
 
 export const CALENDLY_URL = 'https://api.calendly.com';
 
