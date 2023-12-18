@@ -51,7 +51,7 @@
     "@mdx-js/react": "3.0.0",
     "@nx/cypress": "17.2.0",
     "@nx/eslint-plugin": "17.2.0",
-    "@nx/jest": "17.2.0",
+    "@nx/jest": "17.2.6",
     "@nx/js": "17.2.0",
     "@nx/linter": "17.2.0",
     "@nx/react": "17.2.0",
