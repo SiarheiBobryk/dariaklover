@@ -57,7 +57,7 @@
     "@nx/react": "17.2.0",
     "@nx/web": "17.2.0",
     "@nx/webpack": "17.2.0",
-    "@nx/workspace": "17.2.0",
+    "@nx/workspace": "17.2.6",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.11",
     "@svgr/webpack": "8.1.0",
     "@testing-library/dom": "9.3.3",
