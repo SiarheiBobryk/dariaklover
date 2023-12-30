@@ -52,7 +52,7 @@
     "@nx/cypress": "17.2.7",
     "@nx/eslint-plugin": "17.2.7",
     "@nx/jest": "17.2.7",
-    "@nx/js": "17.2.7",
+    "@nx/js": "17.2.8",
     "@nx/linter": "17.2.7",
     "@nx/react": "17.2.7",
     "@nx/web": "17.2.7",
