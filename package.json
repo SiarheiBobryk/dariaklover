@@ -50,7 +50,7 @@
     "@mdx-js/loader": "3.0.0",
     "@mdx-js/react": "3.0.0",
     "@nx/cypress": "17.2.7",
-    "@nx/eslint-plugin": "17.2.7",
+    "@nx/eslint-plugin": "17.2.8",
     "@nx/jest": "17.2.7",
     "@nx/js": "17.2.7",
     "@nx/linter": "17.2.7",
