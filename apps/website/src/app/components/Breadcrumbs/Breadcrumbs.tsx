@@ -53,6 +53,7 @@ function LinkRouter(props: LinkRouterProps) {
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface BreadcrumbsProps {}
 
 const Breadcrumbs = forwardRef(function Breadcrumbs(props: BreadcrumbsProps, ref: Ref<HTMLDivElement>) {
