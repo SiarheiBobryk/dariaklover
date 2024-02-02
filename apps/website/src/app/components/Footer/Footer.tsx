@@ -21,6 +21,7 @@ export const iconButtonA11yProps = {
   target: '_blank',
 };
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface FooterProps {}
 
 function Footer(props: FooterProps) {

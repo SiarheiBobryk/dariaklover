@@ -15,6 +15,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 export const newsPosted = '2023-05-18T19:42:00';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface NewsProps {}
 
 const News = forwardRef(function News(props: NewsProps, ref: Ref<HTMLDivElement>) {

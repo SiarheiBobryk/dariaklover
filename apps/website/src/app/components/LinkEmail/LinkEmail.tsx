@@ -6,7 +6,7 @@ import { LinkProps } from '@mui/material/Link';
 import { AppConfigContext } from '../../providers/AppConfigProvider';
 import LinkBlank from '../LinkBlank';
 
-export interface LinkEmailProps extends LinkProps {}
+export type LinkEmailProps = LinkProps;
 
 const LinkEmail = forwardRef(function LinkEmail(props: LinkEmailProps, ref: Ref<HTMLAnchorElement>) {
   const {

@@ -89,6 +89,7 @@ export const certificatesMap: CertificatesMap = certificates.reduce(function red
   };
 }, {});
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CertificatesProps {}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
