@@ -3,5 +3,8 @@ import { defineConfig } from 'cypress';
 
 export default defineConfig({
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  e2e: nxE2EPreset(__dirname),
+  e2e: {
+    ...nxE2EPreset(__dirname),
+    supportFile: false,
+  },
 });
