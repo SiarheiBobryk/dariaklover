@@ -54,7 +54,7 @@
     "@nx/jest": "18.0.4",
     "@nx/js": "18.0.4",
     "@nx/linter": "18.0.4",
-    "@nx/react": "18.0.4",
+    "@nx/react": "18.0.7",
     "@nx/web": "18.0.4",
     "@nx/webpack": "18.0.4",
     "@nx/workspace": "18.0.4",
