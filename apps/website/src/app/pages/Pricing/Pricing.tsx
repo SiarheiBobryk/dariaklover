@@ -69,13 +69,12 @@ const HTMLUnorderedList = styled('ul')(function styleHtmlList({ theme }) {
   };
 });
 
-// const Price = styled(Typography)(function stylePrice({ theme }) {
-//   return {
-//     fontSize: theme.spacing(2.75),
-//     fontWeight: theme.typography.fontWeightBold,
-//     textAlign: 'center',
-//   };
-// });
+const Price = styled(Typography)(function stylePrice({ theme }) {
+  return {
+    fontWeight: theme.typography.fontWeightBold,
+    textAlign: 'center',
+  };
+});
 
 // const PriceOld = styled('small')(function stylePriceOld({ theme }) {
 //   return {
@@ -131,7 +130,11 @@ function Pricing() {
                   </AccordionSummary>
                   <AccordionDetails>
                     <HTMLUnorderedList>
-                      <Typography component="li">1 запрос за 1 сессию</Typography>
+                      <Typography component="li">разбор 1 запроса</Typography>
+                      <Typography component="li">
+                        в зависимости от запроса мы работаем с: целями, внутренним состоянием, страхами,
+                        самоорганизацией и т.д.
+                      </Typography>
                     </HTMLUnorderedList>
                   </AccordionDetails>
                 </Accordion>
@@ -143,20 +146,20 @@ function Pricing() {
                   <AccordionDetails>
                     <HTMLUnorderedList>
                       <Typography component="li">упорядочите хаос в голове</Typography>
-                      <Typography component="li">поймете, на чем сфокусироваться</Typography>
-                      <Typography component="li">почувствуете себя лучше</Typography>
-                      <Typography component="li">определите дальнейшие шаги</Typography>
+                      <Typography component="li">составите подходящую именно вам стратегию действий</Typography>
+                      <Typography component="li">поймете, как справляться с препятствиями</Typography>
+                      <Typography component="li">улучшите свое внутреннее состояние</Typography>
                     </HTMLUnorderedList>
                   </AccordionDetails>
                 </Accordion>
               </Box>
-              {/* <Price>110 €*</Price> */}
+              <Price>60 € (вкл. НДС)</Price>
             </CardContent>
           </Card>
         </Grid>
         <Grid item xs={12} sm={4}>
           <Card elevation={2}>
-            <CardHeader title="Пакет из 5 коуч-сессий" />
+            <CardHeader title="Участие в проектах как коуч-эксперт" />
             <CardContent>
               <List dense>
                 {/* Длительность работы */}
@@ -164,21 +167,21 @@ function Pricing() {
                   <ListItemIcon>
                     <CalendarMonthIcon />
                   </ListItemIcon>
-                  <ListItemText primary="1-2 месяца" />
+                  <ListItemText primary="Обсуждается индивидуально" />
                 </ListItem>
                 {/* Количество встреч */}
                 <ListItem>
                   <ListItemIcon>
                     <QuestionAnswerIcon />
                   </ListItemIcon>
-                  <ListItemText primary="5 сессий" />
+                  <ListItemText primary="Обсуждается индивидуально" />
                 </ListItem>
                 {/* Длительность встречи */}
                 <ListItem>
                   <ListItemIcon>
                     <ScheduleIcon />
                   </ListItemIcon>
-                  <ListItemText primary="60 минут" />
+                  <ListItemText primary="Обсуждается индивидуально" />
                 </ListItem>
               </List>
               {/* Accordions container */}
@@ -189,9 +192,13 @@ function Pricing() {
                     <Typography>Включает</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
+                    <Typography>В зависимости от программы возможны форматы:</Typography>
                     <HTMLUnorderedList>
-                      <Typography component="li">1 запрос за 1 сессию</Typography>
-                      <Typography component="li">коуч-сессии 1 раз в 7-10 дней</Typography>
+                      <Typography component="li">вебинары</Typography>
+                      <Typography component="li">эфиры</Typography>
+                      <Typography component="li">коуч-сессии</Typography>
+                      <Typography component="li">мастермайнды</Typography>
+                      <Typography component="li">оффлайн-лекции (Стокгольм)</Typography>
                     </HTMLUnorderedList>
                   </AccordionDetails>
                 </Accordion>
@@ -202,18 +209,17 @@ function Pricing() {
                   </AccordionSummary>
                   <AccordionDetails>
                     <HTMLUnorderedList>
-                      <Typography component="li">упорядочите хаос в голове</Typography>
-                      <Typography component="li">поймете, на чем сфокусироваться</Typography>
-                      <Typography component="li">почувствуете себя лучше</Typography>
-                      <Typography component="li">100% начнете действовать</Typography>
+                      <Typography component="li">участники приобретут актуальные знания и практики коучинга</Typography>
+                      <Typography component="li">увеличится ценность проекта</Typography>
+                      <Typography component="li">увеличится доходимость проекта участниками</Typography>
+                      <Typography component="li">
+                        участники усилят свои результаты и смогут сохранить их в дальнейшем
+                      </Typography>
                     </HTMLUnorderedList>
                   </AccordionDetails>
                 </Accordion>
               </Box>
-              {/* Prices box */}
-              {/* <Price>
-                520 €*&nbsp;<PriceOld>550 €</PriceOld>
-              </Price> */}
+              <Price>Стоимость обсуждаются индивидуально</Price>
             </CardContent>
           </Card>
         </Grid>
@@ -227,21 +233,21 @@ function Pricing() {
                   <ListItemIcon>
                     <CalendarMonthIcon />
                   </ListItemIcon>
-                  <ListItemText primary="4 месяца" />
+                  <ListItemText primary="от 3 месяцев" />
                 </ListItem>
                 {/* Количество встреч */}
                 <ListItem>
                   <ListItemIcon>
                     <QuestionAnswerIcon />
                   </ListItemIcon>
-                  <ListItemText primary="до 16 встреч" />
+                  <ListItemText primary="от 12 онлайн-встреч" />
                 </ListItem>
                 {/* Длительность встречи */}
                 <ListItem>
                   <ListItemIcon>
                     <ScheduleIcon />
                   </ListItemIcon>
-                  <ListItemText primary="30-60 минут" />
+                  <ListItemText primary="60 минут" />
                 </ListItem>
               </List>
               {/* Accordions container */}
@@ -254,15 +260,15 @@ function Pricing() {
                   <AccordionDetails>
                     <HTMLUnorderedList>
                       <Typography component="li">консультации, коучинг, работу с подсознанием</Typography>
-                      <Typography component="li">индивидуальную программу здоровья**</Typography>
-                      <Typography component="li">1 месяц диагностики (анкетирование, анамнез, фото)</Typography>
-                      <Typography component="li">3 месяца работы по программе</Typography>
-                      <Typography component="li">2-4 встречи в месяц</Typography>
+                      <Typography component="li">диагностику (анкетирование, анамнез, фото)</Typography>
+                      <Typography component="li">индивидуальную программу здоровья</Typography>
+                      <Typography component="li">4 онлайн-встречи в месяц</Typography>
                       <Typography component="li">
-                        еженедельная поддержка, включая ответы на ваши вопросы, укрепление мотивации, дополнительные
-                        материалы по программе
+                        еженедельная поддержка, включая ответы на вопросы по программе, укрепление мотивации,
+                        дополнительные материалы
                       </Typography>
                       <Typography component="li">проверка дневников питания, заданий</Typography>
+                      <Typography component="li">договор об оказании услуги</Typography>
                     </HTMLUnorderedList>
                   </AccordionDetails>
                 </Accordion>
@@ -285,25 +291,13 @@ function Pricing() {
                   </AccordionDetails>
                 </Accordion>
               </Box>
-              {/* <Price>2500 €*</Price> */}
+              <Price>450 €/месяц (вкл. НДС)</Price>
             </CardContent>
           </Card>
         </Grid>
       </Grid>
-      {/* <Typography variant="caption" component="small">
-        * в стоимость уже включены 25% НДС
-      </Typography>
-      <br />
-      <Typography variant="caption" component="small">
-        ** программа здоровья составляется по 1 основному и 2-3 дополнительным запросам
-      </Typography> */}
-      <Alert severity="warning" variant="outlined">
-        В ближайшее время линейка услуг будет меняться. Появятся новые продукты и услуги, изменится стоимость. Уточняйте
-        актуальную информацию лично у Дарьи или следите за нашими новостями. Совсем скоро информация на сайте будет
-        обновлена.
-      </Alert>
       <Alert severity="info" variant="outlined">
-        Для новых клиентов запись на платные встречи доступна только после установочной встречи. Нажмите{' '}
+        Для новых клиентов доступна запись на бесплатную установочную встречу. Нажмите{' '}
         <Link component={RouterNavLink} to={bookingMetaData.path}>
           {bookingMetaData.heading}
         </Link>
